@@ -20,7 +20,7 @@ async function renderVideo(jobId, config, textData, hiddenLayerNames, imageData,
     if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
     // Read the config name to resolve corresponding JSON from /configs directory
-    const template_id = typeof config === 'string' ? config : (config.template_id || 'kinetic_001');
+    const template_id = typeof config === 'string' ? config : (config.template_id || 'dynamic_typography');
     const dynamicConfigPath = path.join(__dirname, '../configs', `${template_id}.json`);
 
     let activeConfig = typeof config === 'object' ? config : {};
@@ -44,17 +44,11 @@ async function renderVideo(jobId, config, textData, hiddenLayerNames, imageData,
     const logFilePath = path.join(TEMP_DIR, `log_${jobId}.txt`);
 
     // Outputs
-    const outputPath = isMultipart ? path.join(OUTPUT_DIR, `${jobId}_part${chunkIndex}.mov`) : path.join(OUTPUT_DIR, `${jobId}.mov`);
-    const finalOutput = path.join(OUTPUT_DIR, `${jobId}.mp4`);
+    // Output native .avi, but prepare a specific .mp4 for each chunk
+    const outputPath = isMultipart ? path.join(OUTPUT_DIR, `${jobId}_part${chunkIndex}.avi`) : path.join(OUTPUT_DIR, `${jobId}.avi`);
+    const finalOutput = isMultipart ? path.join(OUTPUT_DIR, `${jobId}_part${chunkIndex}.mp4`) : path.join(OUTPUT_DIR, `${jobId}.mp4`);
 
-    // Force-Erase Missing Text explicitly for ExtendScript payload
-    if (activeConfig.text_map) {
-      for (const aeLayerName of Object.values(activeConfig.text_map)) {
-        if (textData[aeLayerName] === undefined || textData[aeLayerName] === null || String(textData[aeLayerName]).trim() === "") {
-          textData[aeLayerName] = " ";
-        }
-      }
-    }
+    // Force-Erase logic removed as payload structure is now array-based and handled securely in the routes.
 
     // 1. Build and write the JSX script
     updateJob(jobId, { status: 'processing', progress: 10, message: 'Generating injection script...' });
@@ -115,14 +109,6 @@ ${trimCommand}
     } catch (e) {
       console.error('[ExtendScript Execution Error]', e);
       throw new Error(`ExtendScript injection failed: ${e.message}`);
-    } finally {
-      try {
-          // Aggressively kill the full UI and any hung background renderers
-          execSync('taskkill /f /im AfterFX.exe', { stdio: 'ignore' });
-          execSync('taskkill /f /im aerender.exe', { stdio: 'ignore' });
-      } catch (killErr) {
-          // Ignore errors here; it just means the processes were already dead
-      }
     }
 
     // Wait for Windows file locks to release
@@ -141,13 +127,13 @@ ${trimCommand}
     const aeArgs = [
       '-project', tempAepPath,
       '-comp', activeConfig.render_comp || 'MAIN_COMP',
-      '-OMtemplate', 'High Quality',
+      '-OMtemplate', 'Lossless',
       '-output', outputPath,
       '-sound', 'OFF',
       '-close', 'DO_NOT_SAVE_CHANGES'
     ];
 
-    if (start !== undefined && duration !== undefined && start > 0) {
+    if (start !== undefined && duration !== undefined && duration !== null) {
       const startFrame = Math.floor(start * 30);
       const endFrame = Math.floor((start + duration) * 30);
       aeArgs.push('-s', startFrame.toString(), '-e', endFrame.toString());
@@ -169,7 +155,7 @@ ${trimCommand}
         console.error(`[Job ${jobId}] aerender process timed out after 10 minutes. Killing process...`);
         aerenderProcess.kill('SIGKILL');
         reject(new Error("aerender process timed out after 10 minutes"));
-      }, 120 * 60 * 1000);
+      }, 120 * 60 * 1000); // 2 hours
 
       aerenderProcess.on('close', (code) => {
         clearTimeout(timeoutId);
@@ -189,26 +175,29 @@ ${trimCommand}
       throw new Error(`Aerender failed, output file is too small/corrupted at ${outputPath}. Size: ${stats.size} bytes`);
     }
 
-    // 4. Compress via FFmpeg
+    // 4. Compress via FFmpeg (ALWAYS RUN THIS TO SAVE 30GB)
+    updateJob(jobId, { status: 'processing', progress: 85, message: `Compressing part to save space...` });
+
+    let ffmpegCmd = '';
+    if (strategy === 'overlay') {
+      const baseVideoPath = path.resolve(path.join(__dirname, '../templates/configs', activeConfig.base_video));
+      ffmpegCmd = `ffmpeg -i "${baseVideoPath}" -i "${outputPath}" -filter_complex "[0:v][1:v]overlay=0:0" -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -y "${finalOutput}"`;
+    } else {
+      ffmpegCmd = `ffmpeg -i "${outputPath}" -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -y "${finalOutput}"`;
+    }
+
+    await execAsync(ffmpegCmd);
+
+    if (!fs.existsSync(finalOutput)) {
+      throw new Error(`FFmpeg failed, MP4 not found at ${finalOutput}`);
+    }
+
+    // IMMEDIATELY DELETE THE HEAVY .AVI FILE
+    if (fs.existsSync(outputPath)) fs.unlinkSync(outputPath);
+
+    // Only mark the job as completely "done" here if it's a single-part render.
+    // If it's multipart, render.js will trigger the stitcher and mark it done later.
     if (!isMultipart) {
-      updateJob(jobId, { status: 'processing', progress: 90, message: 'Compressing video...' });
-
-      let ffmpegCmd = '';
-      if (strategy === 'overlay') {
-        const baseVideoPath = path.resolve(path.join(__dirname, '../templates/configs', activeConfig.base_video));
-        ffmpegCmd = `ffmpeg -i "${baseVideoPath}" -i "${outputPath}" -filter_complex "[0:v][1:v]overlay=0:0" -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -y "${finalOutput}"`;
-      } else {
-        ffmpegCmd = `ffmpeg -i "${outputPath}" -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -y "${finalOutput}"`;
-      }
-
-      await execAsync(ffmpegCmd);
-
-      if (!fs.existsSync(finalOutput)) {
-        throw new Error(`FFmpeg failed, MP4 not found at ${finalOutput}`);
-      }
-
-      if (fs.existsSync(outputPath)) fs.unlinkSync(outputPath);
-
       updateJob(jobId, {
         status: 'done',
         progress: 100,
@@ -226,7 +215,7 @@ ${trimCommand}
       console.error(`[Job ${jobId}] Cleanup error:`, cleanupErr);
     }
 
-    return isMultipart ? outputPath : finalOutput;
+    return finalOutput;
 
   } catch (error) {
     console.error(`[Job ${jobId}] Render error:`, error);
@@ -234,7 +223,45 @@ ${trimCommand}
     throw error;
   }
 }
+// Paste this near the bottom of aeRender.js
+async function stitchMp4Videos(jobId, totalParts) {
+  const OUTPUT_DIR = path.join(__dirname, '../outputs');
+  const listPath = path.join(OUTPUT_DIR, `${jobId}_list.txt`);
+  const finalOutputPath = path.join(OUTPUT_DIR, `${jobId}.mp4`);
 
-module.exports = {
-  renderVideo
-};
+  // Create a text file that FFmpeg uses to know which MP4s to stitch
+  let fileContent = '';
+  for (let i = 0; i < totalParts; i++) {
+    const partName = `${jobId}_part${i}.mp4`;
+    fileContent += `file '${partName}'\n`;
+  }
+  require('fs').writeFileSync(listPath, fileContent);
+
+  return new Promise((resolve, reject) => {
+    // -c copy tells FFmpeg to stitch them instantly without re-encoding
+    const cmd = `ffmpeg -y -f concat -safe 0 -i "${listPath}" -c copy "${finalOutputPath}"`;
+    
+    require('child_process').exec(cmd, (error) => {
+      if (error) {
+        console.error("Stitching error:", error);
+        return reject(error);
+      }
+      
+      // Clean up the text file and the individual MP4 parts to save space
+      try {
+        require('fs').unlinkSync(listPath);
+        for (let i = 0; i < totalParts; i++) {
+          require('fs').unlinkSync(path.join(OUTPUT_DIR, `${jobId}_part${i}.mp4`));
+        }
+      } catch (cleanupErr) {
+        console.warn("Cleanup error (ignored):", cleanupErr);
+      }
+      
+      resolve(finalOutputPath);
+    });
+  });
+}
+
+// Make sure you export BOTH functions at the very bottom!
+module.exports = { renderVideo, stitchMp4Videos };
+

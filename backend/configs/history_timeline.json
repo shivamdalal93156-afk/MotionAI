@@ -1,0 +1,76 @@
+{
+  "template_id": "history_timeline",
+  "name": "Cinematic History Timeline",
+  "type": "photo_text",
+  "aep_file": "master_template.aep",
+  "render_comp": "MAIN_COMP",
+  "comp_name": "MAIN_COMP",
+  "text_comp_name": "TEXT_OVERLAY_COMP",
+  "base_video": "",
+  "base_video_ready": false,
+  "duration_seconds": 104,
+  "fps": 30,
+  "resolution": "1920x1080",
+  "layers": [
+    { "name": "API_SCENE1_YEAR", "type": "text", "label": "Scene 1: Year/Date", "max_words": 2, "scene": 1, "optional": false },
+    { "name": "API_SCENE1_DESC", "type": "text", "label": "Scene 1: Description", "max_words": 10, "scene": 1, "optional": false },
+    { "name": "API_SCENE1_TITLE", "type": "text", "label": "Scene 1: Big Cinematic Text", "max_words": 3, "scene": 1, "optional": false },
+    { "name": "Edit Placeholder 1", "type": "image", "label": "Scene 1: Background Image", "scene": 1, "optional": true, "user_upload": true, "placeholder_width": 1920, "placeholder_height": 1080 },
+    
+    { "name": "Edit Textholder 2.1", "type": "text", "label": "Scene 2: Year/Date", "max_words": 2, "scene": 2, "optional": false, "fallback": "default_text", "default_text": "1945" },
+    { "name": "Edit Textholder 2.2", "type": "text", "label": "Scene 2: Description", "max_words": 10, "scene": 2, "optional": false, "fallback": "default_text", "default_text": "Enter historical detail here." },
+    { "name": "placeholder 2", "type": "text", "label": "Scene 2: Big Cinematic Text", "max_words": 3, "scene": 2, "optional": true, "fallback": "hide" },
+    { "name": "Edit Placeholder 2", "type": "image", "label": "Scene 2: Background Image", "scene": 2, "optional": true, "fallback": "hide", "user_upload": true, "placeholder_width": 1920, "placeholder_height": 1080 },
+
+    { "name": "Edit Textholder 3.1", "type": "text", "label": "Scene 3: Year/Date", "max_words": 2, "scene": 3, "optional": false, "fallback": "default_text", "default_text": "1969" },
+    { "name": "Edit Textholder 3.2", "type": "text", "label": "Scene 3: Description", "max_words": 10, "scene": 3, "optional": false, "fallback": "default_text", "default_text": "Enter historical detail here." },
+    { "name": "placeholder 3", "type": "text", "label": "Scene 3: Big Cinematic Text", "max_words": 3, "scene": 3, "optional": true, "fallback": "hide" },
+    { "name": "Edit Placeholder 3", "type": "image", "label": "Scene 3: Background Image", "scene": 3, "optional": true, "fallback": "hide", "user_upload": true, "placeholder_width": 1920, "placeholder_height": 1080 },
+
+    { "name": "Edit Textholder 4.1", "type": "text", "label": "Scene 4: Year/Date", "max_words": 2, "scene": 4, "optional": false, "fallback": "default_text", "default_text": "1989" },
+    { "name": "Edit Textholder 4.2", "type": "text", "label": "Scene 4: Description", "max_words": 10, "scene": 4, "optional": false, "fallback": "default_text", "default_text": "Enter historical detail here." },
+    { "name": "placeholder 4", "type": "text", "label": "Scene 4: Big Cinematic Text", "max_words": 3, "scene": 4, "optional": true, "fallback": "hide" },
+    { "name": "Edit Placeholder 4", "type": "image", "label": "Scene 4: Background Image", "scene": 4, "optional": true, "fallback": "hide", "user_upload": true, "placeholder_width": 1920, "placeholder_height": 1080 },
+
+    { "name": "Edit Textholder 5.1", "type": "text", "label": "Scene 5: Year/Date", "max_words": 2, "scene": 5, "optional": false, "fallback": "default_text", "default_text": "2024" },
+    { "name": "Edit Textholder 5.2", "type": "text", "label": "Scene 5: Description", "max_words": 10, "scene": 5, "optional": false, "fallback": "default_text", "default_text": "Enter historical detail here." },
+    { "name": "placeholder 5", "type": "text", "label": "Scene 5: Big Cinematic Text", "max_words": 3, "scene": 5, "optional": true, "fallback": "hide" },
+    { "name": "Edit Placeholder 5", "type": "image", "label": "Scene 5: Background Image", "scene": 5, "optional": true, "fallback": "hide", "user_upload": true, "placeholder_width": 1920, "placeholder_height": 1080 },
+
+    { "name": "Edit Textholder 6.1", "type": "text", "label": "Scene 6: Year/Date", "max_words": 2, "scene": 6, "optional": false, "fallback": "default_text", "default_text": "2025" },
+    { "name": "Edit Textholder 6.2", "type": "text", "label": "Scene 6: Description", "max_words": 10, "scene": 6, "optional": false, "fallback": "default_text", "default_text": "Enter historical detail here." },
+    { "name": "placeholder 6", "type": "text", "label": "Scene 6: Big Cinematic Text", "max_words": 3, "scene": 6, "optional": true, "fallback": "hide" },
+    { "name": "Edit Placeholder 6", "type": "image", "label": "Scene 6: Background Image", "scene": 6, "optional": true, "fallback": "hide", "user_upload": true, "placeholder_width": 1920, "placeholder_height": 1080 },
+
+    { "name": "Edit Textholder 7.1", "type": "text", "label": "Scene 7: Year/Date", "max_words": 2, "scene": 7, "optional": false, "fallback": "default_text", "default_text": "2026" },
+    { "name": "Edit Textholder 7.2", "type": "text", "label": "Scene 7: Description", "max_words": 10, "scene": 7, "optional": false, "fallback": "default_text", "default_text": "Enter historical detail here." },
+    { "name": "placeholder 7", "type": "text", "label": "Scene 7: Big Cinematic Text", "max_words": 3, "scene": 7, "optional": true, "fallback": "hide" },
+    { "name": "Edit Placeholder 7", "type": "image", "label": "Scene 7: Background Image", "scene": 7, "optional": true, "fallback": "hide", "user_upload": true, "placeholder_width": 1920, "placeholder_height": 1080 },
+
+    { "name": "Edit Textholder 8.1", "type": "text", "label": "Scene 8: Year/Date", "max_words": 2, "scene": 8, "optional": false, "fallback": "default_text", "default_text": "2027" },
+    { "name": "Edit Textholder 8.2", "type": "text", "label": "Scene 8: Description", "max_words": 10, "scene": 8, "optional": false, "fallback": "default_text", "default_text": "Enter historical detail here." },
+    { "name": "placeholder 8", "type": "text", "label": "Scene 8: Big Cinematic Text", "max_words": 3, "scene": 8, "optional": true, "fallback": "hide" },
+    { "name": "Edit Placeholder 8", "type": "image", "label": "Scene 8: Background Image", "scene": 8, "optional": true, "fallback": "hide", "user_upload": true, "placeholder_width": 1920, "placeholder_height": 1080 },
+
+    { "name": "Edit Textholder 9.1", "type": "text", "label": "Scene 9: Year/Date", "max_words": 2, "scene": 9, "optional": false, "fallback": "default_text", "default_text": "2028" },
+    { "name": "Edit Textholder 9.2", "type": "text", "label": "Scene 9: Description", "max_words": 10, "scene": 9, "optional": false, "fallback": "default_text", "default_text": "Enter historical detail here." },
+    { "name": "placeholder 9", "type": "text", "label": "Scene 9: Big Cinematic Text", "max_words": 3, "scene": 9, "optional": true, "fallback": "hide" },
+    { "name": "Edit Placeholder 9", "type": "image", "label": "Scene 9: Background Image", "scene": 9, "optional": true, "fallback": "hide", "user_upload": true, "placeholder_width": 1920, "placeholder_height": 1080 },
+
+    { "name": "Edit Textholder 10.1", "type": "text", "label": "Scene 10: Year/Date", "max_words": 2, "scene": 10, "optional": false, "fallback": "default_text", "default_text": "2029" },
+    { "name": "Edit Textholder 10.2", "type": "text", "label": "Scene 10: Description", "max_words": 10, "scene": 10, "optional": false, "fallback": "default_text", "default_text": "Enter historical detail here." },
+    { "name": "placeholder 10", "type": "text", "label": "Scene 10: Big Cinematic Text", "max_words": 3, "scene": 10, "optional": true, "fallback": "hide" },
+    { "name": "Edit Placeholder 10", "type": "image", "label": "Scene 10: Background Image", "scene": 10, "optional": true, "fallback": "hide", "user_upload": true, "placeholder_width": 1920, "placeholder_height": 1080 },
+
+    { "name": "Edit Textholder 11.1", "type": "text", "label": "Scene 11: Year/Date", "max_words": 2, "scene": 11, "optional": false, "fallback": "default_text", "default_text": "2030" },
+    { "name": "Edit Textholder 11.2", "type": "text", "label": "Scene 11: Description", "max_words": 10, "scene": 11, "optional": false, "fallback": "default_text", "default_text": "Enter historical detail here." },
+    { "name": "placeholder 11", "type": "text", "label": "Scene 11: Big Cinematic Text", "max_words": 3, "scene": 11, "optional": true, "fallback": "hide" },
+    { "name": "Edit Placeholder 11", "type": "image", "label": "Scene 11: Background Image", "scene": 11, "optional": true, "fallback": "hide", "user_upload": true, "placeholder_width": 1920, "placeholder_height": 1080 },
+
+    { "name": "Edit Textholder 12.1", "type": "text", "label": "Scene 12: Year/Date", "max_words": 2, "scene": 12, "optional": false, "fallback": "default_text", "default_text": "2031" },
+    { "name": "Edit Textholder 12.2", "type": "text", "label": "Scene 12: Description", "max_words": 10, "scene": 12, "optional": false, "fallback": "default_text", "default_text": "Enter historical detail here." },
+    { "name": "placeholder 12", "type": "text", "label": "Scene 12: Big Cinematic Text", "max_words": 3, "scene": 12, "optional": true, "fallback": "hide" },
+    { "name": "Edit Placeholder 12", "type": "image", "label": "Scene 12: Background Image", "scene": 12, "optional": true, "fallback": "hide", "user_upload": true, "placeholder_width": 1920, "placeholder_height": 1080 }
+  ],
+  "editor_features": ["edit_text", "upload_image"]
+}

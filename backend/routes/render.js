@@ -1,232 +1,236 @@
+// const express = require('express');
+// const router = express.Router();
+// const { v4: uuidv4 } = require('uuid');
+// const fs = require('fs');
+// const path = require('path');
+
+// const { 
+//   loadTemplateConfig, applyTextFallbacks, getHiddenLayerNames,
+//   getAllTemplateSummaries
+// } = require('../services/templateManifest');
+// const { renderVideo } = require('../services/aeRender');
+// const { createJob, updateJob } = require('../services/jobStore');
+
+// router.get('/templates', (req, res) => {
+//   res.json({ success: true, templates: getAllTemplateSummaries() });
+// });
+
+// router.get('/manifest/:templateId', (req, res) => {
+//   try {
+//     const config = loadTemplateConfig(req.params.templateId);
+//     res.json({ success: true, template_id: config.template_id, name: config.name, manifest: config });
+//   } catch (error) { res.status(404).json({ success: false, message: 'Template not found' }); }
+// });
+
+// router.post('/start', (req, res) => {
+//   const { template_id, textData, imageData, strategy } = req.body;
+//   if (!template_id || !textData) return res.status(400).json({ success: false, message: 'Missing data' });
+
+//   const newConfigPath = path.join(__dirname, '../configs', `${template_id}.json`);
+//   let config, hiddenLayerNames = [];
+  
+//   if (fs.existsSync(newConfigPath)) {
+//     config = JSON.parse(fs.readFileSync(newConfigPath, 'utf8'));
+//   } else {
+//     config = loadTemplateConfig(template_id);
+//     hiddenLayerNames = getHiddenLayerNames(config, textData);
+//   }
+
+//   const jobId = uuidv4();
+//   createJob(jobId);
+
+//   (async () => {
+//     try {
+//       updateJob(jobId, { status: 'processing', progress: 10, message: 'Preparing array-based payload...' });
+
+//       // 🚀 ANTIGRAVITY FIX: Array-Based Mapping to prevent duplicate layer overwrites
+//       const chunkFinalTextData = {};
+//       let maxSceneNum = 1;
+
+//       if (config.text_map) {
+//         const orderedKeys = Object.keys(config.text_map).sort((a, b) => {
+//           const mA = a.match(/^scene(\d+)_(\d+)$/);
+//           const mB = b.match(/^scene(\d+)_(\d+)$/);
+//           if (!mA || !mB) return 0;
+//           if (Number(mA[1]) !== Number(mB[1])) return Number(mA[1]) - Number(mB[1]);
+//           return Number(mA[2]) - Number(mB[2]);
+//         });
+
+//         orderedKeys.forEach((frontendKey) => {
+//           const aeLayerName = config.text_map[frontendKey];
+//           if (!chunkFinalTextData[aeLayerName]) chunkFinalTextData[aeLayerName] = [];
+          
+//           const val = textData[frontendKey];
+//           if (val && val.trim() !== '') {
+//              chunkFinalTextData[aeLayerName].push(val);
+//              const sNum = parseInt(frontendKey.match(/^scene(\d+)/)[1], 10);
+//              if (sNum > maxSceneNum) maxSceneNum = sNum;
+//           } else {
+//              chunkFinalTextData[aeLayerName].push(" ");
+//           }
+//         });
+//       } else {
+//         Object.assign(chunkFinalTextData, textData);
+//       }
+
+//       // Automatically trims the video duration to the highest scene used
+//       let targetDuration = config.scene_outpoints ? config.scene_outpoints[`scene${maxSceneNum}`] : null;
+
+//       await renderVideo(jobId, config, chunkFinalTextData, hiddenLayerNames, imageData || {}, strategy, 0, targetDuration, 0, false);
+      
+//     } catch (error) {
+//       updateJob(jobId, { status: 'error', progress: 0, message: `Render failed: ${error.message}` });
+//     }
+//   })();
+
+//   res.json({ success: true, jobId, message: 'Render job queued' });
+// });
+
+// module.exports = router;
 const express = require('express');
 const router = express.Router();
 const { v4: uuidv4 } = require('uuid');
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
-const util = require('util');
-const execAsync = util.promisify(exec);
 
 const { 
-  loadTemplateConfig,
-  validateTextData,
-  applyTextFallbacks,
-  getHiddenLayerNames,
-  buildAIPrompt,
-  getRenderStrategy,
-  getAllTemplateSummaries,
-  configToManifest
+  loadTemplateConfig, applyTextFallbacks, getHiddenLayerNames,
+  getAllTemplateSummaries
 } = require('../services/templateManifest');
-
 const { renderVideo } = require('../services/aeRender');
 const { createJob, updateJob } = require('../services/jobStore');
 
-// GET /api/render/templates
 router.get('/templates', (req, res) => {
-  try {
-    const templates = getAllTemplateSummaries();
-    return res.json({ success: true, templates });
-  } catch (error) {
-    console.error('Error fetching templates:', error);
-    return res.status(500).json({ success: false, message: 'Failed to load templates' });
-  }
+  res.json({ success: true, templates: getAllTemplateSummaries() });
 });
 
-// GET /api/render/manifest/:templateId
 router.get('/manifest/:templateId', (req, res) => {
   try {
     const config = loadTemplateConfig(req.params.templateId);
-    return res.json({ success: true, template_id: config.template_id, name: config.name, manifest: config, emptyData: {} });
-  } catch (error) {
-    console.error(`Error loading manifest for ${req.params.templateId}:`, error);
-    return res.status(404).json({ success: false, message: 'Template not found' });
-  }
+    res.json({ success: true, template_id: config.template_id, name: config.name, manifest: config });
+  } catch (error) { res.status(404).json({ success: false, message: 'Template not found' }); }
 });
 
-// GET /api/render/manifest
-// Defaults to kinetic_001 for backwards compatibility
-router.get('/manifest', (req, res) => {
-  try {
-    const config = loadTemplateConfig('kinetic_001');
-    return res.json({ success: true, template_id: config.template_id, name: config.name, manifest: config, emptyData: {} });
-  } catch (error) {
-    console.error('Error loading default manifest:', error);
-    return res.status(500).json({ success: false, message: 'Failed to load default template' });
-  }
-});
-
-// GET /api/render/ai-prompt/:templateId
-router.get('/ai-prompt/:templateId', (req, res) => {
-  try {
-    const config = loadTemplateConfig(req.params.templateId);
-    // Optional: user query parameter could be passed for userScript
-    const userScript = req.query.script || "[User script placeholder]";
-    const prompt = buildAIPrompt(config, userScript);
-    return res.json({ success: true, prompt });
-  } catch (error) {
-    console.error(`Error loading API prompt for ${req.params.templateId}:`, error);
-    return res.status(404).json({ success: false, message: 'Template not found' });
-  }
-});
-
-// POST /api/render/start
-// POST /api/render/start
 router.post('/start', (req, res) => {
-  try {
-    const { template_id, textData, imageData, strategy } = req.body;
+  const { template_id, textData, imageData, strategy } = req.body;
+  if (!template_id || !textData) return res.status(400).json({ success: false, message: 'Missing data' });
 
-    if (!template_id || !textData) {
-      return res.status(400).json({ success: false, message: 'template_id and textData are required' });
-    }
+  const newConfigPath = path.join(__dirname, '../configs', `${template_id}.json`);
+  let config, hiddenLayerNames = [];
+  
+  if (fs.existsSync(newConfigPath)) {
+    config = JSON.parse(fs.readFileSync(newConfigPath, 'utf8'));
+  } else {
+    config = loadTemplateConfig(template_id);
+    hiddenLayerNames = getHiddenLayerNames(config, textData);
+  }
 
-    const newConfigPath = path.join(__dirname, '../configs', `${template_id}.json`);
-    let config, finalTextData, hiddenLayerNames;
-    const finalImageData = imageData || {};
+  const jobId = uuidv4();
+  createJob(jobId);
 
-    if (fs.existsSync(newConfigPath)) {
-      config = JSON.parse(fs.readFileSync(newConfigPath, 'utf8'));
-      hiddenLayerNames = [];
-      if (!config.comp_name) config.comp_name = 'MAIN_COMP';
-    } else {
-      config = loadTemplateConfig(template_id);
-      if (strategy !== 'preview' && config.text_map) {
-        const validation = validateTextData(config, textData);
-        if (!validation.valid) {
-          return res.status(400).json({
-            success: false,
-            message: 'Validation failed',
-            missing: validation.missing,
-            tooLong: validation.tooLong
+  (async () => {
+    try {
+      updateJob(jobId, { status: 'processing', progress: 5, message: 'Analyzing script length...' });
+
+      // 1. Gather all submitted words into a flat array
+      let allWords = [];
+      let templateSchemaKeys = [];
+
+      if (config.text_map) {
+        templateSchemaKeys = Object.keys(config.text_map).sort((a, b) => {
+          const mA = a.match(/^scene(\d+)_(\d+)$/);
+          const mB = b.match(/^scene(\d+)_(\d+)$/);
+          if (!mA || !mB) return 0;
+          if (Number(mA[1]) !== Number(mB[1])) return Number(mA[1]) - Number(mB[1]);
+          return Number(mA[2]) - Number(mB[2]);
+        });
+
+        // If the frontend passed a raw script, split it. Otherwise, collect from scene boxes.
+        if (textData.__script__) {
+          allWords = textData.__script__.trim().split(/\s+/).filter(w => w.length > 0);
+        } else {
+          templateSchemaKeys.forEach(k => {
+            if (textData[k] && textData[k].trim() !== '') allWords.push(textData[k]);
           });
         }
       }
-      finalTextData = applyTextFallbacks(config, textData);
-      hiddenLayerNames = getHiddenLayerNames(config, textData);
-    }
 
-    const jobId = uuidv4();
-    createJob(jobId);
+      if (allWords.length === 0) allWords = [" "];
 
-    (async () => {
-      try {
-        updateJob(jobId, { status: 'processing', progress: 5, message: 'Preparing rendering sequences...' });
+      // 2. Divide words into template-sized chunks
+      const MAX_WORDS = templateSchemaKeys.length || 34;
+      const chunks = [];
+      for (let i = 0; i < allWords.length; i += MAX_WORDS) {
+        chunks.push(allWords.slice(i, i + MAX_WORDS));
+      }
 
-        let templateSchemaKeys = [];
+      const isMultipart = chunks.length > 1;
+
+      // 3. Render loop (Stitching Engine)
+      for (let c = 0; c < chunks.length; c++) {
+        const chunk = chunks[c];
+        updateJob(jobId, { 
+          status: 'processing', 
+          progress: 10 + Math.floor((c / chunks.length) * 80), 
+          message: `Rendering part ${c + 1} of ${chunks.length}...` 
+        });
+
+        const chunkFinalTextData = {};
+        let maxSceneNum = 1;
+
         if (config.text_map) {
-          templateSchemaKeys = Object.keys(config.text_map);
-        }
+          // Map this specific chunk safely into arrays to prevent AE layer overwrites
+          for (let i = 0; i < templateSchemaKeys.length; i++) {
+            const frontendKey = templateSchemaKeys[i];
+            const aeLayerName = config.text_map[frontendKey];
+            
+            if (!chunkFinalTextData[aeLayerName]) chunkFinalTextData[aeLayerName] = [];
 
-        const MAX_WORDS = templateSchemaKeys.length || 34;
-
-        const allWords = [];
-        if (config.text_map) {
-          const orderedKeys = Object.keys(textData).filter(k => /^scene(\d+)_(\d+)$/.test(k));
-          orderedKeys.sort((a, b) => {
-            const [, a1, a2] = a.match(/^scene(\d+)_(\d+)$/).map(Number);
-            const [, b1, b2] = b.match(/^scene(\d+)_(\d+)$/).map(Number);
-            if (a1 !== b1) return a1 - b1;
-            return a2 - b2;
-          });
-          for (const reqKey of orderedKeys) {
-            const word = textData[reqKey];
-            if (typeof word === 'string' && word.trim() !== '') allWords.push(word);
+            if (i < chunk.length && chunk[i] && chunk[i].trim() !== '') {
+              chunkFinalTextData[aeLayerName].push(chunk[i]);
+              const sNum = parseInt(frontendKey.match(/^scene(\d+)/)[1], 10);
+              if (sNum > maxSceneNum) maxSceneNum = sNum;
+            } else {
+              chunkFinalTextData[aeLayerName].push(" ");
+            }
           }
         } else {
-          for (const val of Object.values(textData)) {
-            if (typeof val === 'string' && val.trim() !== '') allWords.push(val);
-          }
+          Object.assign(chunkFinalTextData, textData);
         }
 
-        const chunks = [];
-        for (let i = 0; i < Math.max(1, allWords.length); i += MAX_WORDS) {
-          chunks.push(allWords.slice(i, i + MAX_WORDS));
-        }
+        // Trim the video for this specific chunk so we don't render empty scenes
+        let targetDuration = config.scene_outpoints ? config.scene_outpoints[`scene${maxSceneNum}`] : null;
 
-        const outputParts = [];
-
-        for (let c = 0; c < chunks.length; c++) {
-          const chunk = chunks[c];
-          const chunkFinalTextData = {};
-          let maxSceneNum = 1;
-
-          if (config.text_map) {
-            for (let i = 0; i < templateSchemaKeys.length; i++) {
-              const frontendKey = templateSchemaKeys[i];
-              const aeLayerName = config.text_map[frontendKey];
-              if (i < chunk.length && chunk[i] !== undefined && chunk[i] !== null) {
-                chunkFinalTextData[aeLayerName] = chunk[i];
-                const match = frontendKey.match(/^scene(\d+)/);
-                if (match) {
-                  const sNum = parseInt(match[1], 10);
-                  if (sNum > maxSceneNum) maxSceneNum = sNum;
-                }
-              } else {
-                chunkFinalTextData[aeLayerName] = " ";
-              }
-            }
-          } else {
-            Object.assign(chunkFinalTextData, finalTextData || textData);
-          }
-
-          let targetDuration = null;
-          if (config.scene_outpoints) {
-            targetDuration = config.scene_outpoints[`scene${maxSceneNum}`] || null;
-          }
-
-          const isMultipart = chunks.length > 1;
-          if (isMultipart) {
-            updateJob(jobId, { status: 'processing', progress: 10 + (c / chunks.length * 70), message: `Rendering part ${c + 1} of ${chunks.length}...` });
-          }
-
-          const partPath = await renderVideo(jobId, config, chunkFinalTextData, hiddenLayerNames, finalImageData, strategy, 0, targetDuration, c, isMultipart);
-          outputParts.push(partPath);
-        }
-
-        if (chunks.length > 1) {
-          updateJob(jobId, { status: 'processing', progress: 90, message: 'Stitching final video sequence...' });
-
-          const concatListPath = path.join(__dirname, '../outputs', `concat_list_${jobId}.txt`);
-          let listContent = "";
-          for (const part of outputParts) {
-            listContent += `file '${part.replace(/\\/g, '/')}'\n`;
-          }
-          fs.writeFileSync(concatListPath, listContent, 'utf8');
-
-          const finalOutput = path.join(__dirname, '../outputs', `${jobId}.mp4`);
-          const ffmpegCmd = `ffmpeg -y -f concat -safe 0 -i "${concatListPath}" -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p "${finalOutput}"`;
-
-          try {
-            await execAsync(ffmpegCmd);
-          } catch (err) {
-            console.error(`[Job ${jobId}] FFmpeg Concat error:`, err);
-            updateJob(jobId, { status: 'error', progress: 0, message: `Video stitching failed: ${err.message}` });
-            return;
-          }
-
-          try {
-            if (fs.existsSync(concatListPath)) fs.unlinkSync(concatListPath);
-            for (const part of outputParts) {
-              if (fs.existsSync(part)) fs.unlinkSync(part);
-            }
-          } catch(e) {
-            console.error(`[Job ${jobId}] Cleanup error:`, e);
-          }
-
-          updateJob(jobId, { status: 'done', progress: 100, message: 'Render complete!', outputUrl: `/outputs/${jobId}.mp4` });
-        }
-
-      } catch (error) {
-        console.error(`[Job ${jobId}] Render failed:`, error);
-        updateJob(jobId, { status: 'error', progress: 0, message: `Render failed: ${error.message}` });
+        await renderVideo(
+          jobId, 
+          config, 
+          chunkFinalTextData, 
+          hiddenLayerNames, 
+          imageData || {}, 
+          strategy, 
+          0, 
+          targetDuration, 
+          c, 
+          isMultipart
+        );
       }
-    })();
 
-    return res.json({ success: true, jobId, message: 'Render job queued' });
 
-  } catch (error) {
-    console.error('Error starting render:', error);
-    return res.status(500).json({ success: false, message: error.message });
-  }
+      // If isMultipart is true, aeRender.js automatically triggered FFmpeg stitching
+      // 🚀 NEW LOGIC: Stitch the lightweight MP4s together instantly
+      if (isMultipart) {
+        updateJob(jobId, { status: 'processing', progress: 95, message: 'Stitching MP4 parts together...' });
+        const { stitchMp4Videos } = require('../services/aeRender');
+        await stitchMp4Videos(jobId, chunks.length);
+      }
+      updateJob(jobId, { status: 'done', progress: 100, message: 'Render and Stitching complete!', outputUrl: `/outputs/${jobId}.mp4` });
+
+    } catch (error) {
+      updateJob(jobId, { status: 'error', progress: 0, message: `Render failed: ${error.message}` });
+    }
+  })();
+
+  res.json({ success: true, jobId, message: 'Render job queued' });
 });
 
 module.exports = router;

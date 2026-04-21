@@ -31,7 +31,12 @@ function buildJSX(config, textData, hiddenLayerNames, imageData, templatePath, t
   // Text Data
   let textDataJsStr = 'var textData = {';
   Object.keys(textData).forEach(key => {
-    textDataJsStr += `"${key}": "${escapeForExtendScript(textData[key])}",`;
+    if (Array.isArray(textData[key])) {
+      var arrStr = textData[key].map(function(v) { return '"' + escapeForExtendScript(v) + '"'; }).join(',');
+      textDataJsStr += '"' + key + '": [' + arrStr + '],';
+    } else {
+      textDataJsStr += '"' + key + '": "' + escapeForExtendScript(textData[key]) + '",';
+    }
   });
   textDataJsStr += '};\n';
 
@@ -95,10 +100,21 @@ function buildJSX(config, textData, hiddenLayerNames, imageData, templatePath, t
                 var lName = layer.name;
 
                 // Match exact layer name to the keys provided in textData
+                // Match exact layer name to the keys provided in textData
                 if (textData.hasOwnProperty(lName)) {
                     if (layer instanceof TextLayer) {
                         try {
-                            var newText = textData[lName];
+                            var newText = "";
+                            if (textData[lName] instanceof Array) {
+                                if (textData[lName].length > 0) {
+                                    newText = textData[lName].shift();
+                                } else {
+                                    newText = " ";
+                                }
+                            } else {
+                                newText = textData[lName];
+                            }
+
                             if (newText === "" || newText === null || newText === undefined) {
                                 newText = " "; // Force a blank space to erase default text
                             }
