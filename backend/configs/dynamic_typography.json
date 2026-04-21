@@ -1,0 +1,26 @@
+{
+  "template_id": "dynamic_typography",
+  "aep_file": "DynamicTypographicAnimations.aep",
+  "render_comp": "MAIN_RENDER",
+  "max_words": 34,
+  "text_map": {
+    "scene1_1": "Creative", "scene1_2": "Motion", "scene1_3": "Words", "scene1_4": "That", "scene1_5": "Move", "scene1_6": "Fast",
+    "scene2_1": "ALIVE", "scene2_2": "Brings", "scene2_3": "Motion", "scene2_4": "Words",
+    "scene3_1": "Create", "scene3_2": "Stunning", "scene3_3": "Motion", "scene3_4": "Graphics",
+    "scene4_1": "FOR", "scene4_2": "READY", "scene4_3": "BIG", "scene4_4": "SOMETHING",
+    "scene5_1": "BIG", "scene5_2": "SALE", "scene5_3": "TODAY",
+    "scene6_1": "LIVE", "scene6_2": "THIS", "scene6_3": "FRIDAY", "scene6_4": "AT", "scene6_5": "8PM",
+    "scene7_1": "Up", "scene7_2": "to", "scene7_3": "%", "scene7_4": "70",
+    "scene8_1": "Black", "scene8_2": "Friday", "scene8_3": "Mega", "scene8_4": "Sale", "scene8_5": "NOW"
+  },
+  "scene_outpoints": {
+    "scene1": 5.0,
+    "scene2": 10.5,
+    "scene3": 15.5,
+    "scene4": 22.0,
+    "scene5": 27.5,
+    "scene6": 34.0,
+    "scene7": 40.5,
+    "scene8": 47.0
+  }
+}

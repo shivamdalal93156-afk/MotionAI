@@ -1,0 +1,31 @@
+# Credentials
+.env
+.env.*
+
+# Node
+node_modules/
+npm-debug.log
+
+# Python / AI Scripts 
+__pycache__/
+*.pyc
+venv/
+
+# Heavy Media Folders (Don't push gigabytes of renders)
+outputs/
+temp/
+uploads/
+templates/
+
+# OS Files
+.DS_Store
+Thumbs.db# Heavy Media & AE Files
+*.aep
+*.mp4
+*.mov
+*.avi
+*.prproj
+backend/uploads/
+backend/outputs/
+backend/temp/
+frontend/public/templates/
