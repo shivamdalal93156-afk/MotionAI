@@ -1,11 +1,14 @@
-
 import React, { useState, useEffect } from 'react';
 
 export default function App() {
   const [templates, setTemplates] = useState([]);
   const [selectedId, setSelectedId] = useState('');
   const [manifest, setManifest] = useState(null);
+  
+  // State for both Text and Images
   const [textData, setTextData] = useState({});
+  const [imageData, setImageData] = useState({}); 
+  
   const [status, setStatus] = useState('');
   const [finalUrl, setFinalUrl] = useState(null);
 
@@ -20,22 +23,53 @@ export default function App() {
     if (!selectedId) return;
     setManifest(null);
     setTextData({});
+    setImageData({}); // Clear old images when switching templates
     setStatus('');
     setFinalUrl(null);
 
     fetch(`http://localhost:3001/api/render/manifest/${selectedId}`)
       .then(r => r.json())
       .then(d => {
-        if (d.success && d.manifest.text_map) {
+        // UPGRADE: Now accepts templates even if they only have images
+        if (d.success && d.manifest) { 
           setManifest(d.manifest);
-          const init = {};
-          Object.keys(d.manifest.text_map).forEach(k => { init[k] = ''; });
-          setTextData(init);
+          const initText = {};
+          if (d.manifest.text_map) {
+            Object.keys(d.manifest.text_map).forEach(k => { initText[k] = ''; });
+          }
+          setTextData(initText);
         } else {
-          setStatus('Config error: JSON missing text_map.');
+          setStatus('Config error: JSON missing manifest.');
         }
       });
   }, [selectedId]);
+
+  // NEW: Sends your local image to your backend upload.js route
+  const handleImageUpload = async (key, file) => {
+    if (!file) return;
+    setStatus(`Uploading media for ${key}...`);
+    
+    const formData = new FormData();
+    formData.append('file', file); 
+
+    try {
+      const r = await fetch('http://localhost:3001/api/upload', {
+        method: 'POST',
+        body: formData
+      });
+      const d = await r.json();
+      
+      if (d.success) {
+        // Save the backend file path so ExtendScript can find it on the server
+        setImageData(prev => ({ ...prev, [key]: d.filePath || d.path || d.url }));
+        setStatus(`Successfully uploaded ${key}!`);
+      } else {
+        setStatus('Upload failed: ' + d.message);
+      }
+    } catch (err) {
+      setStatus('Upload error. Make sure your upload.js route is working!');
+    }
+  };
 
   const pollStatus = (jid) => {
     const iv = setInterval(async () => {
@@ -61,7 +95,8 @@ export default function App() {
     const r = await fetch('http://localhost:3001/api/render/start', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ template_id: selectedId, textData, strategy: 'full_render' })
+      // UPGRADE: Send both textData AND imageData to the engine
+      body: JSON.stringify({ template_id: selectedId, textData, imageData, strategy: 'full_render' })
     });
     const d = await r.json();
     if (d.success) {
@@ -86,7 +121,8 @@ export default function App() {
           {templates.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
         </select>
 
-        {Object.entries(scenes).map(([scene, keys]) => (
+        {/* DYNAMIC TEXT INJECTIONS */}
+        {Object.keys(scenes).length > 0 && Object.entries(scenes).map(([scene, keys]) => (
           <div key={scene} style={{ background: '#141414', padding: '15px', marginBottom: '15px', border: '1px solid #222' }}>
             <h4 style={{ color: '#888', marginTop: 0 }}>SCENE {scene}</h4>
             {keys.map(k => (
@@ -97,6 +133,22 @@ export default function App() {
             ))}
           </div>
         ))}
+
+        {/* DYNAMIC MEDIA INJECTIONS (NEW) */}
+        {manifest?.image_map && Object.keys(manifest.image_map).length > 0 && (
+          <div style={{ background: '#1a1a24', padding: '15px', marginBottom: '15px', border: '1px solid #3b3b5c' }}>
+            <h4 style={{ color: '#88aaff', marginTop: 0 }}>MEDIA INJECTIONS</h4>
+            {Object.keys(manifest.image_map).map(k => (
+              <div key={k} style={{ marginBottom: '10px', display: 'flex', alignItems: 'center' }}>
+                <div style={{ flex: 1 }}>
+                  <label style={{ display: 'block', fontSize: '12px', color: '#88aaff', marginBottom: '4px' }}>Target Layer: {manifest.image_map[k]}</label>
+                  <input type='file' accept="image/*,video/*" onChange={e => handleImageUpload(k, e.target.files[0])} style={{ color: '#fff', fontSize: '14px' }} />
+                </div>
+                {imageData[k] && <span style={{ color: '#10b981', fontSize: '13px', fontWeight: 'bold' }}>✓ Ready</span>}
+              </div>
+            ))}
+          </div>
+        )}
 
         {status && <div style={{ background: '#141414', padding: '15px', marginBottom: '15px', color: '#aaa', borderLeft: '3px solid #2563eb' }}>{status}</div>}
         
