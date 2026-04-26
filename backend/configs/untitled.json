@@ -1,0 +1,17 @@
+{
+  "template_id": "untitled",
+  "name": "Podcast Promo Slides",
+  "aep_file": "Podcast Promo Slides.aep",
+  "render_comp": "Podcast Promo Slides",
+  "text_map": {},
+  "image_map": {
+    "image_1": "Slide 01 Placeholder",
+    "image_2": "Slide 02 Placeholder",
+    "image_3": "Slide 04 Placeholder 01",
+    "image_4": "Slide 04 Placeholder 02",
+    "image_5": "Slide 04 Placeholder 03"
+  },
+  "scene_outpoints": {
+    "scene1": 5.66666666666667
+  }
+}

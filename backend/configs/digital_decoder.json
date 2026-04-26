@@ -1,0 +1,27 @@
+{
+  "template_id": "digital_decoder",
+  "name": "Digital Decoder Text",
+  "aep_file": "Digital Decoder Text Animation.aep",
+  "render_comp": "MAIN_RENDER",
+  "text_map": {
+    "scene1_1": "Text_01",
+    "scene2_1": "Text_02",
+    "scene3_1": "Text_03",
+    "scene4_1": "Text_04",
+    "scene5_1": "Text_05",
+    "scene6_1": "Text_06",
+    "scene7_1": "Text_07",
+    "scene8_1": "Text_08"
+  },
+  "image_map": {},
+  "scene_outpoints": {
+    "scene1": 6,
+    "scene2": 12,
+    "scene3": 18,
+    "scene4": 24,
+    "scene5": 30,
+    "scene6": 36,
+    "scene7": 42,
+    "scene8": 48
+  }
+}

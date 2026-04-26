@@ -49,13 +49,18 @@ function buildJSX(config, textData, hiddenLayerNames, imageData, templatePath, t
 
   // Image Data
   let imageDataJsStr = 'var imageData = {';
-  Object.keys(imageData).forEach(key => {
+Object.keys(imageData).forEach(key => {
     let safePath = imageData[key].replace(/\\/g, '/');
-    if (!safePath.startsWith('file:///')) {
-      safePath = 'file:///' + safePath;
+    // Remove any existing file:// prefix to start clean
+    safePath = safePath.replace(/^file:\/{2,4}/, '');
+    // If path starts with /uploads, prepend the full backend path
+    if (safePath.startsWith('/uploads') || safePath.startsWith('uploads')) {
+      safePath = safePath.replace(/^\/?uploads\//, '');
+      safePath = 'C:/Users/SHIVAM/Desktop/motionai/backend/uploads/' + safePath;
     }
+    safePath = 'file:///' + safePath;
     imageDataJsStr += `"${key}": "${safePath}",`;
-  });
+});
   imageDataJsStr += '};\n';
 
   // The actual ExtendScript code to run in AE
@@ -199,7 +204,13 @@ function buildJSX(config, textData, hiddenLayerNames, imageData, templatePath, t
                             }
                             
                             // Add the newly imported image to the composition
-                            foundComp.layers.add(importedItem);
+                            
+                            var newLayer = foundComp.layers.add(importedItem);
+newLayer.property("Scale").setValue([100, 100]);
+var scaleX = (foundComp.width / importedItem.width) * 100;
+var scaleY = (foundComp.height / importedItem.height) * 100;
+var fillScale = Math.max(scaleX, scaleY);
+newLayer.property("Scale").setValue([fillScale, fillScale]);
                             stats.imagesReplaced++;
                             logMessage("Successfully imported and replaced composition: " + imgKey);
                         } else {

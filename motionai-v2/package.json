@@ -1,0 +1,18 @@
+{
+  "name": "motionai-v2",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm:dev --workspace backend\" \"npm:dev --workspace frontend\"",
+    "build": "npm run build --workspace frontend",
+    "start": "npm run start --workspace backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
+

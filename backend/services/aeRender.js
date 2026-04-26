@@ -52,7 +52,19 @@ async function renderVideo(jobId, config, textData, hiddenLayerNames, imageData,
 
     // 1. Build and write the JSX script
     updateJob(jobId, { status: 'processing', progress: 10, message: 'Generating injection script...' });
-    let jsxContent = buildJSX(activeConfig, textData, hiddenLayerNames, imageData, templatePath, tempAepPath, logFilePath);
+    // Remap imageData slot keys to actual AE comp names using image_map
+const remappedImageData = {};
+if (activeConfig.image_map && imageData) {
+  Object.keys(imageData).forEach(slotKey => {
+    const imgConfig = activeConfig.image_map[slotKey];
+const aeCompName = typeof imgConfig === 'object' ? imgConfig.comp : imgConfig;
+    if (aeCompName) {
+      remappedImageData[aeCompName] = imageData[slotKey];
+    }
+  });
+}
+let jsxContent = buildJSX(activeConfig, textData, hiddenLayerNames, remappedImageData, templatePath, tempAepPath, logFilePath);
+
 
     let trimCommand = "";
     if (start !== undefined && duration !== undefined) {
@@ -100,20 +112,29 @@ ${trimCommand}
 
     // 2. Inject text & save temp AEP using AfterFX.com
     updateJob(jobId, { status: 'processing', progress: 20, message: 'Injecting text into After Effects...' });
-
+    // Kill any existing AE instances first
+try { execSync('taskkill /F /IM AfterFX.exe /T', {stdio:'ignore'}); } catch(e) {}
+try { execSync('taskkill /F /IM afterfx.com /T', {stdio:'ignore'}); } catch(e) {}
+await new Promise(resolve => setTimeout(resolve, 1000));
     const injectCmd = `"${AFTERFX_PATH}" -noui -r "${tempJsxPath}"`;
     try {
-      const { stdout, stderr } = await execAsync(injectCmd);
+      const { stdout, stderr } = await execAsync(injectCmd, { timeout: 300000 });
       if (stdout) console.log('[ExtendScript stdout]', stdout);
       if (stderr) console.error('[ExtendScript stderr]', stderr);
     } catch (e) {
       console.error('[ExtendScript Execution Error]', e);
-      throw new Error(`ExtendScript injection failed: ${e.message}`);
+      // Don't throw if AE quit successfully (check log file exists)
+  if (!fs.existsSync(tempAepPath)) {
+    throw new Error(`ExtendScript injection failed: ${e.message}`);
+  }
+  console.log('[ExtendScript] AE exited with signal but temp AEP exists — continuing...');
     }
 
     // Wait for Windows file locks to release
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
+await new Promise(resolve => setTimeout(resolve, 3000));
+try { require('child_process').execSync('taskkill /F /IM AfterFX.exe /T', {stdio:'ignore'}); } catch(e) {}
+try { require('child_process').execSync('taskkill /F /IM afterfx.com /T', {stdio:'ignore'}); } catch(e) {}
+await new Promise(resolve => setTimeout(resolve, 2000));
     // Verify temp AEP was created
     if (!fs.existsSync(tempAepPath)) {
       throw new Error(`Injection failed, temp AEP not found at ${tempAepPath}`);

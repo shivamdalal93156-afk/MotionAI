@@ -8,6 +8,8 @@ export default function App() {
   const [textData, setTextData] = useState({});
   const [status, setStatus] = useState('');
   const [finalUrl, setFinalUrl] = useState(null);
+  const [imageData, setImageData] = useState({});
+
 
   useEffect(() => {
     fetch('http://localhost:3001/api/render/templates')
@@ -20,13 +22,14 @@ export default function App() {
     if (!selectedId) return;
     setManifest(null);
     setTextData({});
+    setImageData({});
     setStatus('');
     setFinalUrl(null);
 
     fetch(`http://localhost:3001/api/render/manifest/${selectedId}`)
       .then(r => r.json())
       .then(d => {
-        if (d.success && d.manifest.text_map) {
+        if (d.success) {
           setManifest(d.manifest);
           const init = {};
           Object.keys(d.manifest.text_map).forEach(k => { init[k] = ''; });
@@ -61,7 +64,7 @@ export default function App() {
     const r = await fetch('http://localhost:3001/api/render/start', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ template_id: selectedId, textData, strategy: 'full_render' })
+      body: JSON.stringify({ template_id: selectedId, textData, imageData, strategy: 'full_render' })
     });
     const d = await r.json();
     if (d.success) {
@@ -97,6 +100,43 @@ export default function App() {
             ))}
           </div>
         ))}
+        {manifest?.image_map && Object.keys(manifest.image_map).length > 0 && (
+  <div style={{background:'#141414',padding:'15px',marginBottom:'15px',border:'1px solid #222'}}>
+    <h4 style={{color:'#888',marginTop:0}}>IMAGES</h4>
+    {Object.keys(manifest.image_map).map(k => {
+      const imgConfig = manifest.image_map[k];
+      const isObject = typeof imgConfig === 'object';
+      const ratio = isObject ? imgConfig.ratio : null;
+      const hint = isObject ? imgConfig.hint : null;
+      return (
+        <div key={k} style={{marginBottom:'14px'}}>
+          <div style={{display:'flex', alignItems:'center', gap:'8px', marginBottom:'4px'}}>
+            <label style={{fontSize:'12px',color:'#666'}}>{k}</label>
+            {ratio && (
+              <span style={{fontSize:'11px', background:'#1a1a2e', color:'#4a9eff', padding:'2px 8px', borderRadius:'4px', border:'1px solid #2563eb'}}>
+                {ratio}
+              </span>
+            )}
+            {hint && (
+              <span style={{fontSize:'11px', color:'#888'}}>
+                — {hint} photo recommended
+              </span>
+            )}
+          </div>
+          <input type='file' accept='image/*' onChange={e => {
+            const file = e.target.files[0];
+            if (!file) return;
+            const form = new FormData();
+            form.append('file', file);
+            fetch('http://localhost:3001/api/upload', {method:'POST',body:form})
+              .then(r => r.json())
+              .then(d => setImageData(prev => ({...prev, [k]: d.filePath})));
+          }} style={{color:'#aaa'}} />
+        </div>
+      );
+    })}
+  </div>
+)}
 
         {status && <div style={{ background: '#141414', padding: '15px', marginBottom: '15px', color: '#aaa', borderLeft: '3px solid #2563eb' }}>{status}</div>}
         

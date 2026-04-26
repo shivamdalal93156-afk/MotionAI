@@ -1,0 +1,28 @@
+{
+  "template_id": "grunge_sport_titles",
+  "name": "Grunge Sport Titles",
+  "aep_file": "Grunge Sport Titles.aep",
+  "render_comp": "Color",
+  "text_map": {
+    "scene1_text": "GAME DAY",
+    "scene2_text": "IT’S TIME TO WIN",
+    "scene3_text": "VS",
+    "scene4_text": "FLASH STORM",
+    "scene5_text": "TEAMWORK",
+    "scene6_text": "ALWAYS",
+    "scene7_text": "WINS",
+    "scene8_text": "FULL SPEED",
+    "scene9_text": "FAST",
+    "scene10_text": "BREAK"
+  },
+  "image_map": {
+
+  },
+  "scene_outpoints": {
+    "scene1": 10,
+    "scene2": 10,
+    "scene3": 10,
+    "scene4": 10,
+    "scene5": 10
+  }
+}

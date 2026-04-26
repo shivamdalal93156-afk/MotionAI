@@ -1,0 +1,29 @@
+{
+  "template_id": "3d_photo_slideshow",
+  "name": "3D Photo Slideshow",
+  "aep_file": "3D Slideshow - Photo Slideshow 24.x.aep",
+  "render_comp": "Render_HD",
+  "text_map": {},
+  "image_map": {
+    "image_1":  { "comp": "Footage_1",  "ratio": "16:9", "hint": "Landscape" },
+    "image_2":  { "comp": "Footage_2",  "ratio": "16:9", "hint": "Landscape" },
+    "image_3":  { "comp": "Footage_3",  "ratio": "16:9", "hint": "Landscape" },
+    "image_4":  { "comp": "Footage_4",  "ratio": "16:9", "hint": "Landscape" },
+    "image_5":  { "comp": "Footage_5",  "ratio": "16:9", "hint": "Landscape" },
+    "image_6":  { "comp": "Footage_6",  "ratio": "16:9", "hint": "Landscape" },
+    "image_7":  { "comp": "Footage_7",  "ratio": "16:9", "hint": "Landscape" },
+    "image_8":  { "comp": "Footage_8",  "ratio": "16:9", "hint": "Landscape" },
+    "image_9":  { "comp": "Footage_9",  "ratio": "16:9", "hint": "Landscape" },
+    "image_10": { "comp": "Footage_10", "ratio": "16:9", "hint": "Landscape" },
+    "image_11": { "comp": "Footage_11", "ratio": "16:9", "hint": "Landscape" },
+    "image_12": { "comp": "Footage_12", "ratio": "16:9", "hint": "Landscape" },
+    "image_13": { "comp": "Footage_13", "ratio": "16:9", "hint": "Landscape" },
+    "image_14": { "comp": "Footage_14", "ratio": "16:9", "hint": "Landscape" }
+  },
+  "scene_outpoints": {
+    "scene1": 5, "scene2": 10, "scene3": 15, "scene4": 20,
+    "scene5": 25, "scene6": 30, "scene7": 35, "scene8": 40,
+    "scene9": 45, "scene10": 50, "scene11": 55, "scene12": 60,
+    "scene13": 65, "scene14": 70
+  }
+}
