@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import PreviewEditor from './PreviewEditor';
 
 export default function App() {
   const [templates, setTemplates] = useState([]);
@@ -73,7 +74,10 @@ export default function App() {
       setStatus('Error: ' + d.message);
     }
   };
-
+// Route to new PreviewEditor for photo_slideshow templates
+  if (manifest?.type === 'photo_slideshow') {
+    return <PreviewEditor manifest={manifest} selectedId={selectedId} />;
+  }
   const scenes = manifest?.text_map ? Object.keys(manifest.text_map).reduce((acc, k) => {
     const s = k.match(/^scene(\d+)/)?.[1] || '1';
     (acc[s] = acc[s] || []).push(k);

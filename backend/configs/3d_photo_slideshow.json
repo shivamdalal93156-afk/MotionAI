@@ -1,6 +1,7 @@
 {
   "template_id": "3d_photo_slideshow",
   "name": "3D Photo Slideshow",
+  "type": "photo_slideshow",
   "aep_file": "3D Slideshow - Photo Slideshow 24.x.aep",
   "render_comp": "Render_HD",
   "text_map": {},
