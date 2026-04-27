@@ -1,8 +1,11 @@
-
+import CoordinatePicker from './CoordinatePicker';
 import React, { useState, useEffect } from 'react';
 import PreviewEditor from './PreviewEditor';
 
 export default function App() {
+  if (window.location.search.includes('picker')) {
+    return <CoordinatePicker />;
+  }
   const [templates, setTemplates] = useState([]);
   const [selectedId, setSelectedId] = useState('');
   const [manifest, setManifest] = useState(null);

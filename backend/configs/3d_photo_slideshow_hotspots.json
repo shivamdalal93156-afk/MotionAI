@@ -1,0 +1,82 @@
+{
+  "image_map": {
+    "image_1": {
+      "comp": "Footage_1",
+      "ratio": "16:9",
+      "hint": "Landscape",
+      "preview_x": 27.9,
+      "preview_y": 6.6,
+      "preview_w": 40,
+      "preview_h": 87.9
+    },
+    "image_2": {
+      "comp": "Footage_2",
+      "ratio": "16:9",
+      "hint": "Landscape",
+      "preview_x": 21.5,
+      "preview_y": 0,
+      "preview_w": 78.5,
+      "preview_h": 99.9
+    },
+    "image_3": {
+      "comp": "Footage_3",
+      "ratio": "16:9",
+      "hint": "Landscape"
+    },
+    "image_4": {
+      "comp": "Footage_4",
+      "ratio": "16:9",
+      "hint": "Landscape"
+    },
+    "image_5": {
+      "comp": "Footage_5",
+      "ratio": "16:9",
+      "hint": "Landscape"
+    },
+    "image_6": {
+      "comp": "Footage_6",
+      "ratio": "16:9",
+      "hint": "Landscape"
+    },
+    "image_7": {
+      "comp": "Footage_7",
+      "ratio": "16:9",
+      "hint": "Landscape"
+    },
+    "image_8": {
+      "comp": "Footage_8",
+      "ratio": "16:9",
+      "hint": "Landscape"
+    },
+    "image_9": {
+      "comp": "Footage_9",
+      "ratio": "16:9",
+      "hint": "Landscape"
+    },
+    "image_10": {
+      "comp": "Footage_10",
+      "ratio": "16:9",
+      "hint": "Landscape"
+    },
+    "image_11": {
+      "comp": "Footage_11",
+      "ratio": "16:9",
+      "hint": "Landscape"
+    },
+    "image_12": {
+      "comp": "Footage_12",
+      "ratio": "16:9",
+      "hint": "Landscape"
+    },
+    "image_13": {
+      "comp": "Footage_13",
+      "ratio": "16:9",
+      "hint": "Landscape"
+    },
+    "image_14": {
+      "comp": "Footage_14",
+      "ratio": "16:9",
+      "hint": "Landscape"
+    }
+  }
+}

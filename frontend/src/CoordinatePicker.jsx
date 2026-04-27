@@ -1,10 +1,11 @@
 import React, { useState, useRef } from 'react';
 
-export default function CoordinatePicker({ previewImage, onSave }) {
+export default function CoordinatePicker({  }) {
   const [boxes, setBoxes] = useState([]);
   const [drawing, setDrawing] = useState(false);
   const [startPos, setStartPos] = useState(null);
   const [currentBox, setCurrentBox] = useState(null);
+  const [previewImage, setPreviewImage] = useState(null);
   const [label, setLabel] = useState('');
   const imgRef = useRef(null);
 
@@ -76,7 +77,7 @@ export default function CoordinatePicker({ previewImage, onSave }) {
             const file = e.target.files[0];
             if (!file) return;
             const url = URL.createObjectURL(file);
-            onSave(url);
+            setPreviewImage(url);
           }} />
         </div>
       ) : (
