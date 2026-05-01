@@ -1,0 +1,62 @@
+{
+  "template_id": "labor_day_slideshow",
+  "name": "Labor Day Slideshow",
+  "type": "photo_slideshow",
+  "aep_file": "labor_day_slideshow/Labor Day Slideshow (converted).aep",
+  "render_comp": "Labor Day Slideshow",
+  
+  "text_map": {
+    "scene1_1": "Title-1",
+    "scene2_1": "Title-2",
+    "scene3_1": "Title-3",
+    "scene4_1": "Title-4",
+    "scene5_1": "Title-5",
+    "scene6_1": "Title-6"
+  },
+  
+  "image_map": {
+    "image_1": {
+      "comp": "Media-1",
+      "ratio": "16:9",
+      "hint": "Slide 1 Image"
+    },
+    "image_2": {
+      "comp": "Media-2",
+      "ratio": "16:9",
+      "hint": "Slide 2 Image"
+    },
+    "image_3": {
+      "comp": "Media-3",
+      "ratio": "16:9",
+      "hint": "Slide 3 Image"
+    },
+    "image_4": {
+      "comp": "Media-4",
+      "ratio": "16:9",
+      "hint": "Slide 4 Image"
+    },
+    "logo": {
+      "comp": "Insert Logo Here",
+      "ratio": "1:1",
+      "hint": "Brand Logo"
+    }
+  },
+  
+  "scene_outpoints": {
+    "scene1": 3.15,
+    "scene2": 6.21,
+    "scene3": 12.03,
+    "scene4": 17.05,
+    "scene5": 22.08,
+    "scene6": 24.07
+  },
+  
+  "scene_frame_times": {
+    "scene1": 17,
+    "scene2": 179,
+    "scene3": 253,
+    "scene4": 301,
+    "scene5": 425,
+    "scene6": 550
+  }
+}

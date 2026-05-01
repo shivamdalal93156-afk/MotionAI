@@ -1,0 +1,66 @@
+{
+  "template_id": "3d_photo_slideshow_final",
+  "name": "3D Photo Slideshow",
+  "type": "photo_slideshow",
+  "aep_file": "Real Estate.aep",
+  "render_comp": "Final Scene",
+  
+  "text_map": {
+    "scene1_1": "Text 1",
+    "scene2_1": "Text 2",
+    "scene3_1": "Text 3",
+    "scene4_1": "Text 4",
+    "scene5_1": "Text 5",
+    "scene6_1": "Text 6"
+  },
+  
+  "image_map": {
+    "image_01_to_09": {
+      "comp": "Image_01_09_Holder",
+      "preview_x": -1240,
+      "preview_y": -48,
+      "ratio": "16:9"
+    },
+    "image_10_to_13": {
+      "comp": "Image_10_13_Holder",
+      "preview_x": -1240,
+      "preview_y": -48,
+      "ratio": "16:9"
+    },
+    "image_14_to_18": {
+      "comp": "Image_14_18_Holder",
+      "preview_x": -820,
+      "preview_y": 308,
+      "ratio": "16:9"
+    },
+    "matte_02_to_08": {
+      "comp": "Image_Matte_Holder_A",
+      "preview_x": -126,
+      "preview_y": 846,
+      "ratio": "16:9"
+    },
+    "matte_09_to_16": {
+      "comp": "Image_Matte_Holder_B",
+      "preview_x": -1240,
+      "preview_y": -48,
+      "ratio": "16:9"
+    }
+  },
+  
+  "scene_outpoints": {
+    "scene1": 17.03,
+    "scene2": 13.03,
+    "scene3": 17.00,
+    "scene4": 18.22,
+    "scene5": 34.22,
+    "scene6": 50.21
+  },
+  
+  "global_settings": {
+    "color_control": {
+      "preview_x": -100,
+      "preview_y": 66
+    },
+    "fps": 25.00
+  }
+}

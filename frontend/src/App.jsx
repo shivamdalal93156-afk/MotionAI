@@ -1,103 +1,135 @@
+import { useState, useEffect } from 'react';
 import CoordinatePicker from './CoordinatePicker';
-import React, { useState, useEffect } from 'react';
 import PreviewEditor from './PreviewEditor';
+import TemplateGallery from './components/Templategallery';
+import RenderStudio from './components/Renderstudio';
+import PolygonPicker from './PolygonPicker';
+import TemplateSetupWizard from './TemplateSetupWizard';
 
 export default function App() {
-  if (window.location.search.includes('picker')) {
+  // ============ PRESERVE URL PARAMETER ROUTES ============
+  const urlParams = new URLSearchParams(window.location.search);
+
+  if (urlParams.get('setup')) {
+    return <TemplateSetupWizard templateId={urlParams.get('setup')} />;
+  }
+
+  if (urlParams.get('picker') === 'flat') {
     return <CoordinatePicker />;
   }
-  const [templates, setTemplates] = useState([]);
-  const [selectedId, setSelectedId] = useState('');
-  const [manifest, setManifest] = useState(null);
-  const [textData, setTextData] = useState({});
-  const [status, setStatus] = useState('');
-  const [finalUrl, setFinalUrl] = useState(null);
-  const [imageData, setImageData] = useState({});
 
-
-  useEffect(() => {
-    fetch('http://localhost:3001/api/render/templates')
-      .then(r => r.json())
-      .then(d => { if (d.success) setTemplates(d.templates); })
-      .catch(() => setStatus('Backend not running. Start server.js'));
-  }, []);
-
-  useEffect(() => {
-    if (!selectedId) return;
-    setManifest(null);
-    setTextData({});
-    setImageData({});
-    setStatus('');
-    setFinalUrl(null);
-
-    fetch(`http://localhost:3001/api/render/manifest/${selectedId}`)
-      .then(r => r.json())
-      .then(d => {
-        if (d.success) {
-          setManifest(d.manifest);
-          const init = {};
-          Object.keys(d.manifest.text_map).forEach(k => { init[k] = ''; });
-          setTextData(init);
-        } else {
-          setStatus('Config error: JSON missing text_map.');
-        }
-      });
-  }, [selectedId]);
-
-  const pollStatus = (jid) => {
-    const iv = setInterval(async () => {
-      const r = await fetch(`http://localhost:3001/api/jobs/${jid}`);
-      const d = await r.json();
-      if (!d.job) return;
-      setStatus(d.job.message || d.job.status);
-      if (d.job.status === 'done') {
-        clearInterval(iv);
-        setFinalUrl(d.job.outputUrl);
-        setStatus('Render Complete!');
-      } else if (d.job.status === 'error') {
-        clearInterval(iv);
-      }
-    }, 4000);
-  };
-
-  const handleRender = async () => {
-    if (!manifest) return;
-    setStatus('Warming up render engine...');
-    setFinalUrl(null);
-
-    const r = await fetch('http://localhost:3001/api/render/start', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ template_id: selectedId, textData, imageData, strategy: 'full_render' })
-    });
-    const d = await r.json();
-    if (d.success) {
-      pollStatus(d.jobId);
-    } else {
-      setStatus('Error: ' + d.message);
-    }
-  };
-// Route to new PreviewEditor for photo_slideshow templates
-  if (manifest?.type === 'photo_slideshow') {
-    return <PreviewEditor manifest={manifest} selectedId={selectedId} />;
+  if (urlParams.get('picker') === 'poly') {
+    return <PolygonPicker />;
   }
-  const scenes = manifest?.text_map ? Object.keys(manifest.text_map).reduce((acc, k) => {
-    const s = k.match(/^scene(\d+)/)?.[1] || '1';
-    (acc[s] = acc[s] || []).push(k);
-    return acc;
-  }, {}) : {};
 
+  if (urlParams.get('preview')) {
+    return <PreviewEditor templateId={urlParams.get('preview')} />;
+  }
+
+  // ============ MAIN APP LAYOUT ============
   return (
-    <div style={{ background: '#0d0d0d', minHeight: '100vh', color: '#fff', padding: '40px 20px', fontFamily: 'sans-serif' }}>
-      <div style={{ maxWidth: '680px', margin: '0 auto' }}>
-        <h2>MotionAI Engine</h2>
-        <select value={selectedId} onChange={e => setSelectedId(e.target.value)} style={{ width: '100%', padding: '10px', marginBottom: '20px', background: '#141414', color: '#fff', border: '1px solid #333' }}>
-          <option value=''>-- Select Architecture --</option>
-          {templates.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
-        </select>
+    <div className="mai-app">
+      {/* Navigation Bar */}
+      <nav className="mai-nav">
+        <div className="mai-nav-container">
+          <div className="mai-logo">
+            <span className="mai-logo-icon">⚡</span>
+            <span className="mai-logo-text">MotionAI</span>
+          </div>
+          <div className="mai-nav-links">
+            <a href="#templates" className="mai-nav-link">Templates</a>
+            <a href="#render" className="mai-nav-link">Studio</a>
+            <a href="#" className="mai-nav-link-cta">API Docs</a>
+          </div>
+        </div>
+      </nav>
 
-        {Object.entries(scenes).map(([scene, keys]) => (
-          <div key={scene} style={{ background: '#141414', padding: '15px', marginBottom: '15px', border: '1px solid #222' }}>
+      {/* Hero Section */}
+      <section className="mai-section mai-hero">
+        <div className="mai-hero-content">
+          <h1 className="mai-hero-title">
+            RENDER ANYTHING
+            <br />
+            <span className="mai-hero-accent">INSTANTLY</span>
+          </h1>
+          <p className="mai-hero-desc">
+            Professional After Effects templates, automated. No software, no waiting. Just create.
+          </p>
+          <button className="mai-btn-primary" onClick={() => document.getElementById('render-studio-section')?.scrollIntoView({ behavior: 'smooth' })}>
+            Start Creating →
+          </button>
+        </div>
+        <div className="mai-hero-visual">
+          <div className="mai-hero-card mai-hero-card-1">
+            <div className="mai-hero-card-inner">DECODER</div>
+          </div>
+          <div className="mai-hero-card mai-hero-card-2">
+            <div className="mai-hero-card-inner">TYPOGRAPHY</div>
+          </div>
+          <div className="mai-hero-card mai-hero-card-3">
+            <div className="mai-hero-card-inner">SLIDESHOW</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Template Gallery */}
+      <TemplateGallery onSelectTemplate={() => {}} />
+
+      {/* How It Works */}
+      <section className="mai-section" id="how-it-works">
+        <div className="mai-section-header">
+          <div className="mai-section-tag">The Process</div>
+          <div className="mai-section-title">HOW IT WORKS</div>
+        </div>
+        <div className="mai-how-grid">
+          <div className="mai-how-card">
+            <div className="mai-how-num">01</div>
+            <h3 className="mai-how-title">Choose Template</h3>
+            <p className="mai-how-desc">Pick from our library of professional After Effects designs</p>
+          </div>
+          <div className="mai-how-card">
+            <div className="mai-how-num">02</div>
+            <h3 className="mai-how-title">Add Your Content</h3>
+            <p className="mai-how-desc">Paste text, upload images. Auto-mapped to your template</p>
+          </div>
+          <div className="mai-how-card">
+            <div className="mai-how-num">03</div>
+            <h3 className="mai-how-title">Render & Download</h3>
+            <p className="mai-how-desc">We render on our servers. Download your MP4 in minutes</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Render Studio */}
+      <RenderStudio />
+
+      {/* Footer */}
+      <footer className="mai-footer">
+        <div className="mai-footer-content">
+          <div className="mai-footer-col">
+            <h4 className="mai-footer-title">MotionAI</h4>
+            <p className="mai-footer-text">Professional video rendering at scale</p>
+          </div>
+          <div className="mai-footer-col">
+            <h4 className="mai-footer-title">Product</h4>
+            <a href="#" className="mai-footer-link">Templates</a>
+            <a href="#" className="mai-footer-link">API</a>
+            <a href="#" className="mai-footer-link">Pricing</a>
+          </div>
+          <div className="mai-footer-col">
+            <h4 className="mai-footer-title">Company</h4>
+            <a href="#" className="mai-footer-link">About</a>
+            <a href="#" className="mai-footer-link">Blog</a>
+            <a href="#" className="mai-footer-link">Contact</a>
+          </div>
+        </div>
+        <div className="mai-footer-bottom">
+          <p>&copy; 2026 MotionAI. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
             <h4 style={{ color: '#888', marginTop: 0 }}>SCENE {scene}</h4>
             {keys.map(k => (
               <div key={k} style={{ marginBottom: '10px' }}>
