@@ -1,0 +1,19 @@
+
+How to install:
+
+1. Open the project
+2. Import footage into the project
+3. Add footage in "Placeholders"
+4. Adjust the position and scale of the footage in the "Placeholders" using "transforms"
+5. Change Text in the "Blocks" composition
+
+
+
+Render:
+
+1. Select a composition "Render IT"
+2. Press menu "Composition" > add to render queue
+3. Select video file parameters
+4. Press "Render"
+
+For questions about projects please contact: makcinema@gmail.ru

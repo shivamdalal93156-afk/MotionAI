@@ -1,0 +1,445 @@
+=== MOTIONAI COMPLETE SCAN v4.0 ===
+template: labor_day_slideshow
+aep: C:/Users/SHIVAM/Desktop/motionai/backend/templates/labor_day_slideshow/Labor Day Slideshow (converted) (converted).aep
+scanned_at: Tue May 05 2026 13:54:01 GMT+0530
+
+OPEN_OK|items:83
+
+=== RENDER COMP CANDIDATES ===
+RENDER_COMP|name:Labor Day Slideshow|dur:32.240|fps:25.000|res:1920x1080|confidence:MEDIUM|score:60
+
+=== PROJECT FOOTAGE ITEMS ===
+FOOTAGE_ITEM|id:19|name:Drop_16.mov|w:1280|h:720|instances:3|missing:undefined|isMedia:true|ext:mov|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Drop_16.mov
+FOOTAGE_ITEM|id:20|name:Grungemaps0035_3_S.jpg|w:800|h:507|instances:1|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Grungemaps0035_3_S.jpg
+FOOTAGE_ITEM|id:22|name:Layer 1 copy/Helmet-1.psd|w:853|h:661|instances:1|missing:undefined|isMedia:true|ext:psd|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Helmet-1.psd
+FOOTAGE_ITEM|id:23|name:Layer 1/Helmet-1.psd|w:853|h:661|instances:1|missing:undefined|isMedia:true|ext:psd|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Helmet-1.psd
+FOOTAGE_ITEM|id:25|name:Layer 1 copy/Helmet-2.psd|w:591|h:496|instances:1|missing:undefined|isMedia:true|ext:psd|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Helmet-2.psd
+FOOTAGE_ITEM|id:26|name:Layer 1/Helmet-2.psd|w:591|h:496|instances:2|missing:undefined|isMedia:true|ext:psd|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Helmet-2.psd
+FOOTAGE_ITEM|id:28|name:Layer 1 copy/House-1.psd|w:289|h:261|instances:1|missing:undefined|isMedia:true|ext:psd|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\House-1.psd
+FOOTAGE_ITEM|id:29|name:Layer 1/House-1.psd|w:289|h:261|instances:1|missing:undefined|isMedia:true|ext:psd|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\House-1.psd
+FOOTAGE_ITEM|id:30|name:Ink-1.mp4|w:1920|h:1080|instances:2|missing:undefined|isMedia:true|ext:mp4|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Ink-1.mp4
+FOOTAGE_ITEM|id:31|name:ivan-gromov-580411-unsplash.jpg|w:3000|h:2000|instances:5|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\ivan-gromov-580411-unsplash.jpg
+FOOTAGE_ITEM|id:32|name:Layer 1/Logo vector shape.ai|w:500|h:500|instances:1|missing:undefined|isMedia:true|ext:ai|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Logo vector shape.ai
+FOOTAGE_ITEM|id:33|name:matte 1.mp4|w:1920|h:1080|instances:2|missing:undefined|isMedia:true|ext:mp4|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\matte 1.mp4
+FOOTAGE_ITEM|id:34|name:media_place_holder.jpg|w:1920|h:1080|instances:4|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\media_place_holder.jpg
+FOOTAGE_ITEM|id:35|name:Paper_03.jpg|w:1484|h:1920|instances:13|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+FOOTAGE_ITEM|id:36|name:Particles-1.mov|w:1920|h:1080|instances:6|missing:undefined|isMedia:true|ext:mov|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Particles-1.mov
+FOOTAGE_ITEM|id:37|name:Particles-2.mov|w:1920|h:1080|instances:1|missing:undefined|isMedia:true|ext:mov|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Particles-2.mov
+FOOTAGE_ITEM|id:39|name:Layer 1 copy/Scale-1.psd|w:464|h:683|instances:1|missing:undefined|isMedia:true|ext:psd|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Scale-1.psd
+FOOTAGE_ITEM|id:40|name:Layer 1/Scale-1.psd|w:464|h:683|instances:1|missing:undefined|isMedia:true|ext:psd|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Scale-1.psd
+FOOTAGE_ITEM|id:41|name:sixteen-miles-out-Qv5OiJ7EqAI-unsplash.jpg|w:5936|h:3957|instances:1|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\sixteen-miles-out-Qv5OiJ7EqAI-unsplash.jpg
+FOOTAGE_ITEM|id:42|name:Slide-1 BG.mp4|w:1920|h:1080|instances:1|missing:undefined|isMedia:true|ext:mp4|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-1 BG.mp4
+FOOTAGE_ITEM|id:43|name:Slide-2 BG.mp4|w:1920|h:1080|instances:1|missing:undefined|isMedia:true|ext:mp4|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-2 BG.mp4
+FOOTAGE_ITEM|id:44|name:Slide-3 BG.mp4|w:1920|h:1080|instances:1|missing:undefined|isMedia:true|ext:mp4|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-3 BG.mp4
+FOOTAGE_ITEM|id:45|name:Slide-4 BG.mp4|w:1920|h:1080|instances:1|missing:undefined|isMedia:true|ext:mp4|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-4 BG.mp4
+FOOTAGE_ITEM|id:46|name:Slide-5 BG.mp4|w:1920|h:1080|instances:1|missing:undefined|isMedia:true|ext:mp4|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-5 BG.mp4
+FOOTAGE_ITEM|id:48|name:Layer 2/Tap-1.psd|w:784|h:618|instances:2|missing:undefined|isMedia:true|ext:psd|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Tap-1.psd
+FOOTAGE_ITEM|id:49|name:Layer 4/Tap-1.psd|w:784|h:618|instances:3|missing:undefined|isMedia:true|ext:psd|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Tap-1.psd
+
+=== COMP LAYER DETAIL ===
+COMP|name:Media-1|dur:20.000|fps:25.000|w:2698|h:1518|layers:1
+  FOOTAGE|name:media_place_holder.jpg|source:media_place_holder.jpg|w:1920|h:1080|in:0.000|out:20.000|absIn:0.400|absOut:20.400|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\media_place_holder.jpg
+COMP|name:Media-2|dur:20.000|fps:25.000|w:2698|h:1518|layers:1
+  FOOTAGE|name:media_place_holder.jpg|source:media_place_holder.jpg|w:1920|h:1080|in:0.000|out:20.000|absIn:0.200|absOut:20.200|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\media_place_holder.jpg
+COMP|name:Media-3|dur:20.000|fps:25.000|w:2698|h:1518|layers:1
+  FOOTAGE|name:media_place_holder.jpg|source:media_place_holder.jpg|w:1920|h:1080|in:0.000|out:20.000|absIn:0.120|absOut:20.120|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\media_place_holder.jpg
+COMP|name:Media-4|dur:20.000|fps:25.000|w:2698|h:1518|layers:1
+  FOOTAGE|name:media_place_holder.jpg|source:media_place_holder.jpg|w:1920|h:1080|in:0.000|out:20.000|absIn:0.120|absOut:20.120|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\media_place_holder.jpg
+COMP|name:Title-1|dur:9.040|fps:25.000|w:1920|h:1080|layers:3
+  TEXT|name:SLideshow|in:0.000|out:9.240|absIn:0.320|absOut:9.560|val:SLideshow
+  TEXT|name:Happy|in:0.000|out:9.240|absIn:0.320|absOut:9.560|val:Happy
+  TEXT|name:Labor Day|in:0.000|out:9.240|absIn:0.320|absOut:9.560|val:Labor Day
+COMP|name:Title-2|dur:9.040|fps:25.000|w:1920|h:1080|layers:2
+  TEXT|name:Beginning|in:0.000|out:9.240|absIn:0.400|absOut:9.640|val:Beginning
+  TEXT|name:19th century|in:0.000|out:9.240|absIn:0.400|absOut:9.640|val:19th century
+COMP|name:Title-3|dur:9.040|fps:25.000|w:1920|h:1080|layers:2
+  TEXT|name:contributions|in:0.000|out:9.240|absIn:0.200|absOut:9.440|val:contributions
+  TEXT|name:of labors|in:0.000|out:9.240|absIn:0.200|absOut:9.440|val:of labors
+COMP|name:Title-4|dur:9.040|fps:25.000|w:1920|h:1080|layers:2
+  TEXT|name:early history|in:0.000|out:9.240|absIn:0.120|absOut:9.360|val:early history
+  TEXT|name:movements |in:0.000|out:9.240|absIn:0.120|absOut:9.360|val:movements 
+COMP|name:Title-5|dur:9.040|fps:25.000|w:1920|h:1080|layers:2
+  TEXT|name:Download|in:0.000|out:9.240|absIn:0.120|absOut:9.360|val:Download
+  TEXT|name:Now|in:0.000|out:9.240|absIn:0.120|absOut:9.360|val:Now
+COMP|name:Insert Logo Here|dur:18.000|fps:25.000|w:1920|h:1080|layers:3
+  TEXT|name:Geo lab|in:0.000|out:23.560|absIn:0.200|absOut:23.760|val:Geo lab
+  FOOTAGE|name:Layer 1/Logo vector shape.ai|source:Layer 1/Logo vector shape.ai|w:500|h:500|in:0.000|out:18.320|absIn:0.200|absOut:18.520|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Logo vector shape.ai
+  TEXT|name:geolabdesigns.net|in:0.000|out:18.320|absIn:0.200|absOut:18.520|val:geolabdesigns.net
+COMP|name:Labor Day Slideshow|dur:32.240|fps:25.000|w:1920|h:1080|layers:10
+  SOLID|name:sharp
+  SOLID|name:dif
+  SOLID|name:cc
+  PRECOMP|name:Slide-6|source:Slide-6|in:25.320|out:32.240|absIn:25.320|absOut:32.240
+  PRECOMP|name:Slide-5|source:Slide-5|in:20.600|out:25.840|absIn:20.600|absOut:25.840
+  PRECOMP|name:Slide-4|source:Slide-4|in:15.520|out:21.040|absIn:15.520|absOut:21.040
+  PRECOMP|name:Slide-3|source:Slide-3|in:10.320|out:15.960|absIn:10.320|absOut:15.960
+  PRECOMP|name:Slide-2|source:Slide-2|in:5.160|out:10.840|absIn:5.160|absOut:10.840
+  PRECOMP|name:Slide-1|source:Slide-1|in:0.000|out:5.440|absIn:0.000|absOut:5.440
+  SOLID|name:BG
+COMP|name:Grunge Texture|dur:8.000|fps:25.000|w:800|h:507|layers:1
+  FOOTAGE|name:Grungemaps0035_3_S.jpg|source:Grungemaps0035_3_S.jpg|w:800|h:507|in:0.000|out:8.000|absIn:0.320|absOut:8.320|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Grungemaps0035_3_S.jpg
+COMP|name:Helmet-1|dur:26.280|fps:25.000|w:1330|h:1031|layers:3
+  SOLID|name:Null 1
+  FOOTAGE|name:Layer 1|source:Layer 1/Helmet-1.psd|w:853|h:661|in:0.000|out:26.286|absIn:0.320|absOut:26.606|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Helmet-1.psd
+  FOOTAGE|name:Layer 1 copy|source:Layer 1 copy/Helmet-1.psd|w:853|h:661|in:0.080|out:26.366|absIn:0.400|absOut:26.686|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Helmet-1.psd
+COMP|name:Helmet-2|dur:18.280|fps:25.000|w:591|h:496|layers:3
+  FOOTAGE|name:Layer 1|source:Layer 1/Helmet-2.psd|w:591|h:496|in:0.000|out:18.280|absIn:0.120|absOut:18.400|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Helmet-2.psd
+  FOOTAGE|name:Layer 2|source:Layer 1/Helmet-2.psd|w:591|h:496|in:0.000|out:18.280|absIn:0.120|absOut:18.400|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Helmet-2.psd
+  FOOTAGE|name:Layer 1 copy|source:Layer 1 copy/Helmet-2.psd|w:591|h:496|in:0.000|out:18.280|absIn:0.120|absOut:18.400|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Helmet-2.psd
+COMP|name:House-1|dur:18.280|fps:25.000|w:675|h:610|layers:3
+  SOLID|name:Null 1
+  FOOTAGE|name:Layer 1|source:Layer 1/House-1.psd|w:289|h:261|in:0.000|out:18.280|absIn:0.400|absOut:18.680|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\House-1.psd
+  FOOTAGE|name:Layer 1 copy|source:Layer 1 copy/House-1.psd|w:289|h:261|in:1.040|out:19.200|absIn:1.440|absOut:19.600|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\House-1.psd
+COMP|name:Ink-1|dur:10.040|fps:25.000|w:1920|h:1080|layers:1
+  FOOTAGE|name:Ink-1.mp4|source:Ink-1.mp4|w:1920|h:1080|in:0.000|out:20.040|absIn:0.320|absOut:20.360|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Ink-1.mp4
+COMP|name:Ink-1|dur:10.040|fps:25.000|w:1920|h:1080|layers:1
+  FOOTAGE|name:Ink-1.mp4|source:Ink-1.mp4|w:1920|h:1080|in:0.000|out:20.040|absIn:0.320|absOut:20.360|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Ink-1.mp4
+COMP|name:Language-2|dur:10.040|fps:25.000|w:1925|h:1540|layers:1
+  FOOTAGE|name:sixteen-miles-out-Qv5OiJ7EqAI-unsplash.jpg|source:sixteen-miles-out-Qv5OiJ7EqAI-unsplash.jpg|w:5936|h:3957|in:0.000|out:10.040|absIn:0.320|absOut:10.360|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\sixteen-miles-out-Qv5OiJ7EqAI-unsplash.jpg
+COMP|name:Line-2|dur:6.640|fps:25.000|w:1920|h:1080|layers:1
+  SOLID|name:Black Solid 1
+COMP|name:Line-3|dur:6.640|fps:25.000|w:1920|h:1080|layers:1
+  SOLID|name:Black Solid 1
+COMP|name:Line-4|dur:6.640|fps:25.000|w:1920|h:1080|layers:1
+  SOLID|name:Black Solid 1
+COMP|name:Line-5|dur:6.640|fps:25.000|w:1920|h:1080|layers:1
+  SOLID|name:Black Solid 1
+COMP|name:Logo Work|dur:15.000|fps:25.000|w:1000|h:1000|layers:7
+  PRECOMP|name:Insert Logo Here|source:Insert Logo Here|in:2.000|out:15.440|absIn:2.200|absOut:15.640
+  FOOTAGE|name:Drop_16.mov|source:Drop_16.mov|w:1280|h:720|in:0.720|out:7.032|absIn:0.920|absOut:7.232|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Drop_16.mov
+  PRECOMP|name:Insert Logo Here|source:Insert Logo Here|in:0.720|out:7.160|absIn:0.920|absOut:7.360
+  FOOTAGE|name:Drop_16.mov|source:Drop_16.mov|w:1280|h:720|in:0.320|out:6.632|absIn:0.520|absOut:6.832|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Drop_16.mov
+  PRECOMP|name:Insert Logo Here|source:Insert Logo Here|in:0.320|out:6.760|absIn:0.520|absOut:6.960
+  FOOTAGE|name:Drop_16.mov|source:Drop_16.mov|w:1280|h:720|in:0.000|out:6.312|absIn:0.200|absOut:6.512|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Drop_16.mov
+  PRECOMP|name:Insert Logo Here|source:Insert Logo Here|in:0.000|out:6.440|absIn:0.200|absOut:6.640
+COMP|name:matte 1|dur:8.040|fps:25.000|w:1920|h:1080|layers:1
+  FOOTAGE|name:matte 1.mp4|source:matte 1.mp4|w:1920|h:1080|in:0.000|out:8.040|absIn:0.320|absOut:8.360|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\matte 1.mp4
+COMP|name:matte 2|dur:8.040|fps:25.000|w:1920|h:1080|layers:1
+  FOOTAGE|name:matte 1.mp4|source:matte 1.mp4|w:1920|h:1080|in:0.000|out:8.040|absIn:0.200|absOut:8.240|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\matte 1.mp4
+COMP|name:Particles-3|dur:17.040|fps:25.000|w:1920|h:1080|layers:1
+  FOOTAGE|name:Particles-2.mov|source:Particles-2.mov|w:1920|h:1080|in:0.000|out:17.040|absIn:0.320|absOut:17.360|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Particles-2.mov
+COMP|name:Pre-comp 1|dur:18.280|fps:25.000|w:464|h:683|layers:2
+  SOLID|name:mask
+  PRECOMP|name:Pre-comp 2|source:Pre-comp 2|in:0.000|out:18.280|absIn:0.120|absOut:18.400
+COMP|name:Pre-comp 2|dur:18.280|fps:25.000|w:464|h:683|layers:2
+  FOOTAGE|name:Layer 1 copy|source:Layer 1 copy/Scale-1.psd|w:464|h:683|in:0.000|out:18.280|absIn:0.120|absOut:18.400|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Scale-1.psd
+  FOOTAGE|name:Layer 1|source:Layer 1/Scale-1.psd|w:464|h:683|in:0.000|out:18.280|absIn:0.120|absOut:18.400|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Scale-1.psd
+COMP|name:Scale-1|dur:18.280|fps:25.000|w:464|h:683|layers:1
+  PRECOMP|name:Pre-comp 1|source:Pre-comp 1|in:0.000|out:18.280|absIn:0.120|absOut:18.400
+COMP|name:Slide-1|dur:7.040|fps:25.000|w:1920|h:1080|layers:28
+  SOLID|name:cam move
+  SOLID|name:cam floating
+  SOLID|name:cam td
+  CAMERA_LIGHT|name:Camera 1
+  SOLID|name:Vin
+  SOLID|name:cc
+  SOLID|name:Grain
+  FOOTAGE|name:Particles-1.mov|source:Particles-1.mov|w:1920|h:1080|in:0.000|out:8.440|absIn:0.320|absOut:8.760|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Particles-1.mov
+  PRECOMP|name:Particles-3|source:Particles-3|in:0.000|out:8.440|absIn:0.320|absOut:8.760
+  PRECOMP|name:Particles-3|source:Particles-3|in:0.000|out:8.440|absIn:0.320|absOut:8.760
+  PRECOMP|name:Helmet-1|source:Helmet-1|in:0.600|out:26.880|absIn:0.920|absOut:27.200
+  PRECOMP|name:matte 1|source:matte 1|in:0.000|out:16.080|absIn:0.320|absOut:16.400
+  PRECOMP|name:Title-1 work|source:Title-1 work|in:0.000|out:7.040|absIn:0.320|absOut:7.360
+  SOLID|name:Tint
+  PRECOMP|name:Line-3|source:Line-3|in:2.160|out:7.400|absIn:2.480|absOut:7.720
+  PRECOMP|name:Line-2|source:Line-2|in:1.880|out:7.240|absIn:2.200|absOut:7.560
+  PRECOMP|name:matte 1|source:matte 1|in:0.480|out:8.520|absIn:0.800|absOut:8.840
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.800|out:10.840|absIn:1.120|absOut:11.160
+  PRECOMP|name:Ink-1|source:Ink-1|in:1.280|out:11.320|absIn:1.600|absOut:11.640
+  PRECOMP|name:Ink-1|source:Ink-1|in:1.280|out:11.320|absIn:1.600|absOut:11.640
+  FOOTAGE|name:ivan-gromov-580411-unsplash.jpg|source:ivan-gromov-580411-unsplash.jpg|w:3000|h:2000|in:0.120|out:7.240|absIn:0.440|absOut:7.560|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\ivan-gromov-580411-unsplash.jpg
+  FOOTAGE|name:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|in:0.000|out:7.240|absIn:0.320|absOut:7.560|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+  PRECOMP|name:matte 1|source:matte 1|in:1.400|out:7.400|absIn:1.720|absOut:7.720
+  FOOTAGE|name:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|in:1.400|out:7.400|absIn:1.720|absOut:7.720|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+  PRECOMP|name:matte 1|source:matte 1|in:0.800|out:7.160|absIn:1.120|absOut:7.480
+  FOOTAGE|name:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|in:0.800|out:7.160|absIn:1.120|absOut:7.480|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+  PRECOMP|name:Language-2|source:Language-2|in:1.400|out:11.440|absIn:1.720|absOut:11.760
+  FOOTAGE|name:Slide-1 BG.mp4|source:Slide-1 BG.mp4|w:1920|h:1080|in:0.000|out:7.040|absIn:0.320|absOut:7.360|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-1 BG.mp4
+COMP|name:Slide-2|dur:7.040|fps:25.000|w:1920|h:1080|layers:31
+  SOLID|name:cam move 2
+  SOLID|name:cam floating 2
+  SOLID|name:cam td 2
+  CAMERA_LIGHT|name:Camera 2
+  SOLID|name:Vin
+  SOLID|name:Grain
+  SOLID|name:cc
+  FOOTAGE|name:Particles-1.mov|source:Particles-1.mov|w:1920|h:1080|in:0.000|out:8.440|absIn:0.400|absOut:8.840|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Particles-1.mov
+  PRECOMP|name:Particles-3|source:Particles-3|in:0.000|out:8.440|absIn:0.400|absOut:8.840
+  PRECOMP|name:Particles-3|source:Particles-3|in:0.000|out:8.440|absIn:0.400|absOut:8.840
+  PRECOMP|name:House-1|source:House-1|in:0.600|out:18.880|absIn:1.000|absOut:19.280
+  PRECOMP|name:matte 1|source:matte 1|in:0.000|out:16.080|absIn:0.400|absOut:16.480
+  PRECOMP|name:Title-2 work|source:Title-2 work|in:0.000|out:7.040|absIn:0.400|absOut:7.440
+  SOLID|name:Tint
+  PRECOMP|name:Line-5|source:Line-5|in:2.160|out:7.400|absIn:2.560|absOut:7.800
+  PRECOMP|name:Line-2|source:Line-2|in:1.880|out:7.240|absIn:2.280|absOut:7.640
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.800|out:10.840|absIn:1.200|absOut:11.240
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.800|out:10.840|absIn:1.200|absOut:11.240
+  PRECOMP|name:Ink-1|source:Ink-1|in:1.280|out:11.320|absIn:1.680|absOut:11.720
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.480|out:10.520|absIn:0.880|absOut:10.920
+  PRECOMP|name:matte 1|source:matte 1|in:1.400|out:7.400|absIn:1.800|absOut:7.800
+  FOOTAGE|name:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|in:1.400|out:7.400|absIn:1.800|absOut:7.800|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+  PRECOMP|name:matte 1|source:matte 1|in:0.800|out:7.160|absIn:1.200|absOut:7.560
+  FOOTAGE|name:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|in:0.800|out:7.160|absIn:1.200|absOut:7.560|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.600|out:10.640|absIn:1.000|absOut:11.040
+  PRECOMP|name:Media-1|source:Media-1|in:0.600|out:10.640|absIn:1.000|absOut:11.040
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.360|out:10.400|absIn:0.760|absOut:10.800
+  PRECOMP|name:Media-1|source:Media-1|in:0.360|out:10.400|absIn:0.760|absOut:10.800
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.000|out:10.040|absIn:0.400|absOut:10.440
+  PRECOMP|name:Media-1|source:Media-1|in:0.000|out:10.040|absIn:0.400|absOut:10.440
+  FOOTAGE|name:Slide-2 BG.mp4|source:Slide-2 BG.mp4|w:1920|h:1080|in:0.000|out:7.040|absIn:0.400|absOut:7.440|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-2 BG.mp4
+COMP|name:Slide-3|dur:7.040|fps:25.000|w:1920|h:1080|layers:33
+  SOLID|name:cam move
+  SOLID|name:cam floating
+  SOLID|name:cam td
+  CAMERA_LIGHT|name:Camera
+  SOLID|name:Vin
+  SOLID|name:Grain
+  SOLID|name:cc
+  FOOTAGE|name:Particles-1.mov|source:Particles-1.mov|w:1920|h:1080|in:0.000|out:8.440|absIn:0.200|absOut:8.640|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Particles-1.mov
+  PRECOMP|name:Particles-3|source:Particles-3|in:0.000|out:8.440|absIn:0.200|absOut:8.640
+  PRECOMP|name:Particles-3|source:Particles-3|in:0.000|out:8.440|absIn:0.200|absOut:8.640
+  PRECOMP|name:Tap-1|source:Tap-1|in:0.000|out:18.280|absIn:0.200|absOut:18.480
+  PRECOMP|name:matte 1|source:matte 1|in:0.000|out:16.080|absIn:0.200|absOut:16.280
+  PRECOMP|name:Title-3 work|source:Title-3 work|in:0.000|out:7.040|absIn:0.200|absOut:7.240
+  SOLID|name:Tint
+  PRECOMP|name:Line-5|source:Line-5|in:1.880|out:7.240|absIn:2.080|absOut:7.440
+  PRECOMP|name:Line-2|source:Line-2|in:1.880|out:7.240|absIn:2.080|absOut:7.440
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.800|out:10.840|absIn:1.000|absOut:11.040
+  PRECOMP|name:Ink-1|source:Ink-1|in:1.280|out:11.320|absIn:1.480|absOut:11.520
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.480|out:10.520|absIn:0.680|absOut:10.720
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.480|out:10.520|absIn:0.680|absOut:10.720
+  PRECOMP|name:matte 1|source:matte 1|in:0.480|out:8.520|absIn:0.680|absOut:8.720
+  FOOTAGE|name:ivan-gromov-580411-unsplash.jpg|source:ivan-gromov-580411-unsplash.jpg|w:3000|h:2000|in:0.120|out:7.240|absIn:0.320|absOut:7.440|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\ivan-gromov-580411-unsplash.jpg
+  PRECOMP|name:matte 1|source:matte 1|in:1.400|out:7.400|absIn:1.600|absOut:7.600
+  FOOTAGE|name:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|in:1.400|out:7.400|absIn:1.600|absOut:7.600|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+  PRECOMP|name:matte 1|source:matte 1|in:0.800|out:7.160|absIn:1.000|absOut:7.360
+  FOOTAGE|name:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|in:0.800|out:7.160|absIn:1.000|absOut:7.360|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.600|out:10.640|absIn:0.800|absOut:10.840
+  PRECOMP|name:Media-2|source:Media-2|in:0.600|out:10.640|absIn:0.800|absOut:10.840
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.360|out:10.400|absIn:0.560|absOut:10.600
+  PRECOMP|name:Media-2|source:Media-2|in:0.360|out:10.400|absIn:0.560|absOut:10.600
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.000|out:10.040|absIn:0.200|absOut:10.240
+  PRECOMP|name:Media-2|source:Media-2|in:0.000|out:10.040|absIn:0.200|absOut:10.240
+  FOOTAGE|name:Slide-3 BG.mp4|source:Slide-3 BG.mp4|w:1920|h:1080|in:0.000|out:7.040|absIn:0.200|absOut:7.240|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-3 BG.mp4
+COMP|name:Slide-4|dur:7.040|fps:25.000|w:1920|h:1080|layers:30
+  SOLID|name:cam move
+  SOLID|name:cam floating
+  SOLID|name:cam td
+  CAMERA_LIGHT|name:Camera
+  SOLID|name:cc
+  SOLID|name:Vin
+  SOLID|name:Grain
+  FOOTAGE|name:Particles-1.mov|source:Particles-1.mov|w:1920|h:1080|in:0.000|out:8.440|absIn:0.120|absOut:8.560|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Particles-1.mov
+  PRECOMP|name:Particles-3|source:Particles-3|in:0.000|out:8.440|absIn:0.120|absOut:8.560
+  PRECOMP|name:Particles-3|source:Particles-3|in:0.000|out:8.440|absIn:0.120|absOut:8.560
+  PRECOMP|name:Scale-1|source:Scale-1|in:0.200|out:18.480|absIn:0.320|absOut:18.600
+  PRECOMP|name:matte 1|source:matte 1|in:0.000|out:16.080|absIn:0.120|absOut:16.200
+  PRECOMP|name:Title-4 work|source:Title-4 work|in:0.000|out:7.040|absIn:0.120|absOut:7.160
+  SOLID|name:Tint
+  PRECOMP|name:Line-5|source:Line-5|in:1.880|out:7.240|absIn:2.000|absOut:7.360
+  PRECOMP|name:Line-2|source:Line-2|in:1.880|out:7.240|absIn:2.000|absOut:7.360
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.800|out:10.840|absIn:0.920|absOut:10.960
+  PRECOMP|name:Ink-1|source:Ink-1|in:1.280|out:11.320|absIn:1.400|absOut:11.440
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.480|out:10.520|absIn:0.600|absOut:10.640
+  PRECOMP|name:matte 1|source:matte 1|in:0.480|out:8.520|absIn:0.600|absOut:8.640
+  FOOTAGE|name:ivan-gromov-580411-unsplash.jpg|source:ivan-gromov-580411-unsplash.jpg|w:3000|h:2000|in:0.120|out:7.240|absIn:0.240|absOut:7.360|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\ivan-gromov-580411-unsplash.jpg
+  PRECOMP|name:matte 1|source:matte 1|in:1.400|out:7.400|absIn:1.520|absOut:7.520
+  FOOTAGE|name:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|in:1.400|out:7.400|absIn:1.520|absOut:7.520|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.600|out:10.640|absIn:0.720|absOut:10.760
+  PRECOMP|name:Media-3|source:Media-3|in:0.600|out:10.640|absIn:0.720|absOut:10.760
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.360|out:10.400|absIn:0.480|absOut:10.520
+  PRECOMP|name:Media-3|source:Media-3|in:0.360|out:10.400|absIn:0.480|absOut:10.520
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.000|out:10.040|absIn:0.120|absOut:10.160
+  PRECOMP|name:Media-3|source:Media-3|in:0.000|out:10.040|absIn:0.120|absOut:10.160
+  FOOTAGE|name:Slide-4 BG.mp4|source:Slide-4 BG.mp4|w:1920|h:1080|in:0.000|out:7.040|absIn:0.120|absOut:7.160|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-4 BG.mp4
+COMP|name:Slide-5|dur:7.040|fps:25.000|w:1920|h:1080|layers:33
+  SOLID|name:cam move
+  SOLID|name:cam floating
+  SOLID|name:cam td
+  CAMERA_LIGHT|name:Camera
+  SOLID|name:cc
+  SOLID|name:Vin
+  SOLID|name:Grain
+  FOOTAGE|name:Particles-1.mov|source:Particles-1.mov|w:1920|h:1080|in:0.000|out:8.440|absIn:0.120|absOut:8.560|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Particles-1.mov
+  PRECOMP|name:Particles-3|source:Particles-3|in:0.000|out:8.440|absIn:0.120|absOut:8.560
+  PRECOMP|name:Particles-3|source:Particles-3|in:0.000|out:8.440|absIn:0.120|absOut:8.560
+  PRECOMP|name:Helmet-2|source:Helmet-2|in:0.000|out:18.280|absIn:0.120|absOut:18.400
+  PRECOMP|name:matte 1|source:matte 1|in:0.000|out:16.080|absIn:0.120|absOut:16.200
+  PRECOMP|name:Title-5 work|source:Title-5 work|in:0.000|out:7.040|absIn:0.120|absOut:7.160
+  SOLID|name:Tint
+  PRECOMP|name:Line-2|source:Line-2|in:2.160|out:7.400|absIn:2.280|absOut:7.520
+  PRECOMP|name:Line-2|source:Line-2|in:1.880|out:7.240|absIn:2.000|absOut:7.360
+  PRECOMP|name:Line-4|source:Line-4|in:1.880|out:7.240|absIn:2.000|absOut:7.360
+  PRECOMP|name:matte 1|source:matte 1|in:0.480|out:8.520|absIn:0.600|absOut:8.640
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.800|out:10.840|absIn:0.920|absOut:10.960
+  PRECOMP|name:Ink-1|source:Ink-1|in:1.280|out:11.320|absIn:1.400|absOut:11.440
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.480|out:10.520|absIn:0.600|absOut:10.640
+  FOOTAGE|name:ivan-gromov-580411-unsplash.jpg|source:ivan-gromov-580411-unsplash.jpg|w:3000|h:2000|in:0.120|out:7.240|absIn:0.240|absOut:7.360|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\ivan-gromov-580411-unsplash.jpg
+  PRECOMP|name:matte 1|source:matte 1|in:1.400|out:7.400|absIn:1.520|absOut:7.520
+  FOOTAGE|name:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|in:1.400|out:7.400|absIn:1.520|absOut:7.520|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+  PRECOMP|name:matte 1|source:matte 1|in:0.800|out:7.160|absIn:0.920|absOut:7.280
+  FOOTAGE|name:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|in:0.800|out:7.160|absIn:0.920|absOut:7.280|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.600|out:10.640|absIn:0.720|absOut:10.760
+  PRECOMP|name:Media-4|source:Media-4|in:0.600|out:10.640|absIn:0.720|absOut:10.760
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.360|out:10.400|absIn:0.480|absOut:10.520
+  PRECOMP|name:Media-4|source:Media-4|in:0.360|out:10.400|absIn:0.480|absOut:10.520
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.000|out:10.040|absIn:0.120|absOut:10.160
+  PRECOMP|name:Media-4|source:Media-4|in:0.000|out:10.040|absIn:0.120|absOut:10.160
+  FOOTAGE|name:Slide-5 BG.mp4|source:Slide-5 BG.mp4|w:1920|h:1080|in:0.000|out:7.040|absIn:0.120|absOut:7.160|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-5 BG.mp4
+COMP|name:Slide-6|dur:8.040|fps:25.000|w:1920|h:1080|layers:29
+  SOLID|name:cam move
+  SOLID|name:cam floating
+  SOLID|name:cam td
+  CAMERA_LIGHT|name:Camera
+  SOLID|name:cc
+  SOLID|name:Vin
+  SOLID|name:Grain
+  FOOTAGE|name:Particles-1.mov|source:Particles-1.mov|w:1920|h:1080|in:0.000|out:9.480|absIn:0.200|absOut:9.680|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Particles-1.mov
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.440|out:10.480|absIn:0.640|absOut:10.680
+  PRECOMP|name:Logo Work|source:Logo Work|in:0.440|out:11.520|absIn:0.640|absOut:11.720
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.200|out:10.240|absIn:0.400|absOut:10.440
+  PRECOMP|name:Logo Work|source:Logo Work|in:0.200|out:11.280|absIn:0.400|absOut:11.480
+  PRECOMP|name:Ink-1|source:Ink-1|in:0.000|out:10.040|absIn:0.200|absOut:10.240
+  PRECOMP|name:Logo Work|source:Logo Work|in:0.000|out:11.080|absIn:0.200|absOut:11.280
+  SOLID|name:Tint
+  PRECOMP|name:Ink-1|source:Ink-1|in:1.080|out:11.120|absIn:1.280|absOut:11.320
+  PRECOMP|name:Ink-1|source:Ink-1|in:1.280|out:11.320|absIn:1.480|absOut:11.520
+  PRECOMP|name:matte 1|source:matte 1|in:0.480|out:8.520|absIn:0.680|absOut:8.720
+  FOOTAGE|name:ivan-gromov-580411-unsplash.jpg|source:ivan-gromov-580411-unsplash.jpg|w:3000|h:2000|in:0.120|out:8.280|absIn:0.320|absOut:8.480|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\ivan-gromov-580411-unsplash.jpg
+  FOOTAGE|name:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|in:0.000|out:8.280|absIn:0.200|absOut:8.480|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+  PRECOMP|name:matte 1|source:matte 1|in:1.400|out:8.440|absIn:1.600|absOut:8.640
+  FOOTAGE|name:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|in:1.400|out:8.440|absIn:1.600|absOut:8.640|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+  PRECOMP|name:matte 1|source:matte 1|in:0.800|out:8.200|absIn:1.000|absOut:8.400
+  FOOTAGE|name:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|in:0.800|out:8.200|absIn:1.000|absOut:8.400|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+  PRECOMP|name:matte 2|source:matte 2|in:1.160|out:9.120|absIn:1.360|absOut:9.320
+  PRECOMP|name:Language-2|source:Language-2|in:1.160|out:11.200|absIn:1.360|absOut:11.400
+  PRECOMP|name:matte 2|source:matte 2|in:1.680|out:9.640|absIn:1.880|absOut:9.840
+  PRECOMP|name:Language-2|source:Language-2|in:1.680|out:11.720|absIn:1.880|absOut:11.920
+  SOLID|name:BG
+COMP|name:Tap-1|dur:18.280|fps:25.000|w:784|h:618|layers:5
+  FOOTAGE|name:Layer 3|source:Layer 4/Tap-1.psd|w:784|h:618|in:0.000|out:18.280|absIn:0.200|absOut:18.480|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Tap-1.psd
+  FOOTAGE|name:Layer 1|source:Layer 4/Tap-1.psd|w:784|h:618|in:0.000|out:18.280|absIn:0.200|absOut:18.480|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Tap-1.psd
+  FOOTAGE|name:Layer 2|source:Layer 2/Tap-1.psd|w:784|h:618|in:0.000|out:18.280|absIn:0.200|absOut:18.480|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Tap-1.psd
+  FOOTAGE|name:Layer 4|source:Layer 4/Tap-1.psd|w:784|h:618|in:0.000|out:18.280|absIn:0.200|absOut:18.480|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Tap-1.psd
+  FOOTAGE|name:Layer 1 copy|source:Layer 2/Tap-1.psd|w:784|h:618|in:0.000|out:18.280|absIn:0.200|absOut:18.480|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Tap-1.psd
+COMP|name:Title-1 work|dur:7.040|fps:25.000|w:1920|h:1080|layers:2
+  PRECOMP|name:Grunge Texture|source:Grunge Texture|in:0.000|out:7.040|absIn:0.320|absOut:7.360
+  PRECOMP|name:Title-1|source:Title-1|in:0.000|out:7.040|absIn:0.320|absOut:7.360
+COMP|name:Title-2 work|dur:7.040|fps:25.000|w:1920|h:1080|layers:2
+  PRECOMP|name:Grunge Texture|source:Grunge Texture|in:0.000|out:7.040|absIn:0.400|absOut:7.440
+  PRECOMP|name:Title-2|source:Title-2|in:0.000|out:7.040|absIn:0.400|absOut:7.440
+COMP|name:Title-3 work|dur:7.040|fps:25.000|w:1920|h:1080|layers:2
+  PRECOMP|name:Grunge Texture|source:Grunge Texture|in:0.000|out:7.040|absIn:0.200|absOut:7.240
+  PRECOMP|name:Title-3|source:Title-3|in:0.000|out:7.040|absIn:0.200|absOut:7.240
+COMP|name:Title-4 work|dur:7.040|fps:25.000|w:1920|h:1080|layers:2
+  PRECOMP|name:Grunge Texture|source:Grunge Texture|in:0.000|out:7.040|absIn:0.120|absOut:7.160
+  PRECOMP|name:Title-4|source:Title-4|in:0.000|out:7.040|absIn:0.120|absOut:7.160
+COMP|name:Title-5 work|dur:7.040|fps:25.000|w:1920|h:1080|layers:2
+  PRECOMP|name:Grunge Texture|source:Grunge Texture|in:0.000|out:7.040|absIn:0.120|absOut:7.160
+  PRECOMP|name:Title-5|source:Title-5|in:0.000|out:7.040|absIn:0.120|absOut:7.160
+
+=== INJECTABLE SUMMARY ===
+-- TEXT INJECTABLES --
+TEXT_INJECT|comp:Title-1|layer:SLideshow|absIn:0.320|absOut:9.560|val:SLideshow
+TEXT_INJECT|comp:Title-1|layer:Happy|absIn:0.320|absOut:9.560|val:Happy
+TEXT_INJECT|comp:Title-1|layer:Labor Day|absIn:0.320|absOut:9.560|val:Labor Day
+TEXT_INJECT|comp:Title-2|layer:Beginning|absIn:0.400|absOut:9.640|val:Beginning
+TEXT_INJECT|comp:Title-2|layer:19th century|absIn:0.400|absOut:9.640|val:19th century
+TEXT_INJECT|comp:Title-3|layer:contributions|absIn:0.200|absOut:9.440|val:contributions
+TEXT_INJECT|comp:Title-3|layer:of labors|absIn:0.200|absOut:9.440|val:of labors
+TEXT_INJECT|comp:Title-4|layer:early history|absIn:0.120|absOut:9.360|val:early history
+TEXT_INJECT|comp:Title-4|layer:movements |absIn:0.120|absOut:9.360|val:movements 
+TEXT_INJECT|comp:Title-5|layer:Download|absIn:0.120|absOut:9.360|val:Download
+TEXT_INJECT|comp:Title-5|layer:Now|absIn:0.120|absOut:9.360|val:Now
+TEXT_INJECT|comp:Insert Logo Here|layer:Geo lab|absIn:0.200|absOut:23.760|val:Geo lab
+TEXT_INJECT|comp:Insert Logo Here|layer:geolabdesigns.net|absIn:0.200|absOut:18.520|val:geolabdesigns.net
+
+-- IMAGE INJECTABLES --
+IMAGE_INJECT|type:replace|comp:Media-1|layer:media_place_holder.jpg|source:media_place_holder.jpg|w:1920|h:1080|absIn:0.400|absOut:20.400
+IMAGE_INJECT|type:replace|comp:Media-2|layer:media_place_holder.jpg|source:media_place_holder.jpg|w:1920|h:1080|absIn:0.200|absOut:20.200
+IMAGE_INJECT|type:replace|comp:Media-3|layer:media_place_holder.jpg|source:media_place_holder.jpg|w:1920|h:1080|absIn:0.120|absOut:20.120
+IMAGE_INJECT|type:replace|comp:Media-4|layer:media_place_holder.jpg|source:media_place_holder.jpg|w:1920|h:1080|absIn:0.120|absOut:20.120
+IMAGE_INJECT|type:replace|comp:Insert Logo Here|layer:Layer 1/Logo vector shape.ai|source:Layer 1/Logo vector shape.ai|w:500|h:500|absIn:0.200|absOut:18.520
+IMAGE_INJECT|type:replace|comp:Grunge Texture|layer:Grungemaps0035_3_S.jpg|source:Grungemaps0035_3_S.jpg|w:800|h:507|absIn:0.320|absOut:8.320
+IMAGE_INJECT|type:replace|comp:Helmet-1|layer:Layer 1|source:Layer 1/Helmet-1.psd|w:853|h:661|absIn:0.320|absOut:26.606
+IMAGE_INJECT|type:replace|comp:Helmet-1|layer:Layer 1 copy|source:Layer 1 copy/Helmet-1.psd|w:853|h:661|absIn:0.400|absOut:26.686
+IMAGE_INJECT|type:replace|comp:Helmet-2|layer:Layer 1|source:Layer 1/Helmet-2.psd|w:591|h:496|absIn:0.120|absOut:18.400
+IMAGE_INJECT|type:replace|comp:Helmet-2|layer:Layer 2|source:Layer 1/Helmet-2.psd|w:591|h:496|absIn:0.120|absOut:18.400
+IMAGE_INJECT|type:replace|comp:Helmet-2|layer:Layer 1 copy|source:Layer 1 copy/Helmet-2.psd|w:591|h:496|absIn:0.120|absOut:18.400
+IMAGE_INJECT|type:replace|comp:House-1|layer:Layer 1|source:Layer 1/House-1.psd|w:289|h:261|absIn:0.400|absOut:18.680
+IMAGE_INJECT|type:replace|comp:House-1|layer:Layer 1 copy|source:Layer 1 copy/House-1.psd|w:289|h:261|absIn:1.440|absOut:19.600
+IMAGE_INJECT|type:replace|comp:Ink-1|layer:Ink-1.mp4|source:Ink-1.mp4|w:1920|h:1080|absIn:0.320|absOut:20.360
+IMAGE_INJECT|type:replace|comp:Ink-1|layer:Ink-1.mp4|source:Ink-1.mp4|w:1920|h:1080|absIn:0.320|absOut:20.360
+IMAGE_INJECT|type:replace|comp:Language-2|layer:sixteen-miles-out-Qv5OiJ7EqAI-unsplash.jpg|source:sixteen-miles-out-Qv5OiJ7EqAI-unsplash.jpg|w:5936|h:3957|absIn:0.320|absOut:10.360
+IMAGE_INJECT|type:replace|comp:Logo Work|layer:Drop_16.mov|source:Drop_16.mov|w:1280|h:720|absIn:0.920|absOut:7.232
+IMAGE_INJECT|type:replace|comp:Logo Work|layer:Drop_16.mov|source:Drop_16.mov|w:1280|h:720|absIn:0.520|absOut:6.832
+IMAGE_INJECT|type:replace|comp:Logo Work|layer:Drop_16.mov|source:Drop_16.mov|w:1280|h:720|absIn:0.200|absOut:6.512
+IMAGE_INJECT|type:replace|comp:matte 1|layer:matte 1.mp4|source:matte 1.mp4|w:1920|h:1080|absIn:0.320|absOut:8.360
+IMAGE_INJECT|type:replace|comp:matte 2|layer:matte 1.mp4|source:matte 1.mp4|w:1920|h:1080|absIn:0.200|absOut:8.240
+IMAGE_INJECT|type:replace|comp:Particles-3|layer:Particles-2.mov|source:Particles-2.mov|w:1920|h:1080|absIn:0.320|absOut:17.360
+IMAGE_INJECT|type:replace|comp:Pre-comp 2|layer:Layer 1 copy|source:Layer 1 copy/Scale-1.psd|w:464|h:683|absIn:0.120|absOut:18.400
+IMAGE_INJECT|type:replace|comp:Pre-comp 2|layer:Layer 1|source:Layer 1/Scale-1.psd|w:464|h:683|absIn:0.120|absOut:18.400
+IMAGE_INJECT|type:replace|comp:Slide-1|layer:Particles-1.mov|source:Particles-1.mov|w:1920|h:1080|absIn:0.320|absOut:8.760
+IMAGE_INJECT|type:replace|comp:Slide-1|layer:ivan-gromov-580411-unsplash.jpg|source:ivan-gromov-580411-unsplash.jpg|w:3000|h:2000|absIn:0.440|absOut:7.560
+IMAGE_INJECT|type:replace|comp:Slide-1|layer:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|absIn:0.320|absOut:7.560
+IMAGE_INJECT|type:replace|comp:Slide-1|layer:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|absIn:1.720|absOut:7.720
+IMAGE_INJECT|type:replace|comp:Slide-1|layer:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|absIn:1.120|absOut:7.480
+IMAGE_INJECT|type:replace|comp:Slide-1|layer:Slide-1 BG.mp4|source:Slide-1 BG.mp4|w:1920|h:1080|absIn:0.320|absOut:7.360
+IMAGE_INJECT|type:replace|comp:Slide-2|layer:Particles-1.mov|source:Particles-1.mov|w:1920|h:1080|absIn:0.400|absOut:8.840
+IMAGE_INJECT|type:replace|comp:Slide-2|layer:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|absIn:1.800|absOut:7.800
+IMAGE_INJECT|type:replace|comp:Slide-2|layer:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|absIn:1.200|absOut:7.560
+IMAGE_INJECT|type:replace|comp:Slide-2|layer:Slide-2 BG.mp4|source:Slide-2 BG.mp4|w:1920|h:1080|absIn:0.400|absOut:7.440
+IMAGE_INJECT|type:replace|comp:Slide-3|layer:Particles-1.mov|source:Particles-1.mov|w:1920|h:1080|absIn:0.200|absOut:8.640
+IMAGE_INJECT|type:replace|comp:Slide-3|layer:ivan-gromov-580411-unsplash.jpg|source:ivan-gromov-580411-unsplash.jpg|w:3000|h:2000|absIn:0.320|absOut:7.440
+IMAGE_INJECT|type:replace|comp:Slide-3|layer:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|absIn:1.600|absOut:7.600
+IMAGE_INJECT|type:replace|comp:Slide-3|layer:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|absIn:1.000|absOut:7.360
+IMAGE_INJECT|type:replace|comp:Slide-3|layer:Slide-3 BG.mp4|source:Slide-3 BG.mp4|w:1920|h:1080|absIn:0.200|absOut:7.240
+IMAGE_INJECT|type:replace|comp:Slide-4|layer:Particles-1.mov|source:Particles-1.mov|w:1920|h:1080|absIn:0.120|absOut:8.560
+IMAGE_INJECT|type:replace|comp:Slide-4|layer:ivan-gromov-580411-unsplash.jpg|source:ivan-gromov-580411-unsplash.jpg|w:3000|h:2000|absIn:0.240|absOut:7.360
+IMAGE_INJECT|type:replace|comp:Slide-4|layer:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|absIn:1.520|absOut:7.520
+IMAGE_INJECT|type:replace|comp:Slide-4|layer:Slide-4 BG.mp4|source:Slide-4 BG.mp4|w:1920|h:1080|absIn:0.120|absOut:7.160
+IMAGE_INJECT|type:replace|comp:Slide-5|layer:Particles-1.mov|source:Particles-1.mov|w:1920|h:1080|absIn:0.120|absOut:8.560
+IMAGE_INJECT|type:replace|comp:Slide-5|layer:ivan-gromov-580411-unsplash.jpg|source:ivan-gromov-580411-unsplash.jpg|w:3000|h:2000|absIn:0.240|absOut:7.360
+IMAGE_INJECT|type:replace|comp:Slide-5|layer:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|absIn:1.520|absOut:7.520
+IMAGE_INJECT|type:replace|comp:Slide-5|layer:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|absIn:0.920|absOut:7.280
+IMAGE_INJECT|type:replace|comp:Slide-5|layer:Slide-5 BG.mp4|source:Slide-5 BG.mp4|w:1920|h:1080|absIn:0.120|absOut:7.160
+IMAGE_INJECT|type:replace|comp:Slide-6|layer:Particles-1.mov|source:Particles-1.mov|w:1920|h:1080|absIn:0.200|absOut:9.680
+IMAGE_INJECT|type:replace|comp:Slide-6|layer:ivan-gromov-580411-unsplash.jpg|source:ivan-gromov-580411-unsplash.jpg|w:3000|h:2000|absIn:0.320|absOut:8.480
+IMAGE_INJECT|type:replace|comp:Slide-6|layer:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|absIn:0.200|absOut:8.480
+IMAGE_INJECT|type:replace|comp:Slide-6|layer:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|absIn:1.600|absOut:8.640
+IMAGE_INJECT|type:replace|comp:Slide-6|layer:Paper_03.jpg|source:Paper_03.jpg|w:1484|h:1920|absIn:1.000|absOut:8.400
+IMAGE_INJECT|type:replace|comp:Tap-1|layer:Layer 3|source:Layer 4/Tap-1.psd|w:784|h:618|absIn:0.200|absOut:18.480
+IMAGE_INJECT|type:replace|comp:Tap-1|layer:Layer 1|source:Layer 4/Tap-1.psd|w:784|h:618|absIn:0.200|absOut:18.480
+IMAGE_INJECT|type:replace|comp:Tap-1|layer:Layer 2|source:Layer 2/Tap-1.psd|w:784|h:618|absIn:0.200|absOut:18.480
+IMAGE_INJECT|type:replace|comp:Tap-1|layer:Layer 4|source:Layer 4/Tap-1.psd|w:784|h:618|absIn:0.200|absOut:18.480
+IMAGE_INJECT|type:replace|comp:Tap-1|layer:Layer 1 copy|source:Layer 2/Tap-1.psd|w:784|h:618|absIn:0.200|absOut:18.480
+
+-- PROJECT LEVEL FOOTAGE --
+PROJECT_FOOTAGE|id:19|name:Drop_16.mov|w:1280|h:720|instances:3|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Drop_16.mov
+PROJECT_FOOTAGE|id:20|name:Grungemaps0035_3_S.jpg|w:800|h:507|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Grungemaps0035_3_S.jpg
+PROJECT_FOOTAGE|id:22|name:Layer 1 copy/Helmet-1.psd|w:853|h:661|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Helmet-1.psd
+PROJECT_FOOTAGE|id:23|name:Layer 1/Helmet-1.psd|w:853|h:661|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Helmet-1.psd
+PROJECT_FOOTAGE|id:25|name:Layer 1 copy/Helmet-2.psd|w:591|h:496|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Helmet-2.psd
+PROJECT_FOOTAGE|id:26|name:Layer 1/Helmet-2.psd|w:591|h:496|instances:2|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Helmet-2.psd
+PROJECT_FOOTAGE|id:28|name:Layer 1 copy/House-1.psd|w:289|h:261|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\House-1.psd
+PROJECT_FOOTAGE|id:29|name:Layer 1/House-1.psd|w:289|h:261|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\House-1.psd
+PROJECT_FOOTAGE|id:30|name:Ink-1.mp4|w:1920|h:1080|instances:2|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Ink-1.mp4
+PROJECT_FOOTAGE|id:31|name:ivan-gromov-580411-unsplash.jpg|w:3000|h:2000|instances:5|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\ivan-gromov-580411-unsplash.jpg
+PROJECT_FOOTAGE|id:32|name:Layer 1/Logo vector shape.ai|w:500|h:500|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Logo vector shape.ai
+PROJECT_FOOTAGE|id:33|name:matte 1.mp4|w:1920|h:1080|instances:2|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\matte 1.mp4
+PROJECT_FOOTAGE|id:34|name:media_place_holder.jpg|w:1920|h:1080|instances:4|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\media_place_holder.jpg
+PROJECT_FOOTAGE|id:35|name:Paper_03.jpg|w:1484|h:1920|instances:13|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Paper_03.jpg
+PROJECT_FOOTAGE|id:36|name:Particles-1.mov|w:1920|h:1080|instances:6|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Particles-1.mov
+PROJECT_FOOTAGE|id:37|name:Particles-2.mov|w:1920|h:1080|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Particles-2.mov
+PROJECT_FOOTAGE|id:39|name:Layer 1 copy/Scale-1.psd|w:464|h:683|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Scale-1.psd
+PROJECT_FOOTAGE|id:40|name:Layer 1/Scale-1.psd|w:464|h:683|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Scale-1.psd
+PROJECT_FOOTAGE|id:41|name:sixteen-miles-out-Qv5OiJ7EqAI-unsplash.jpg|w:5936|h:3957|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\sixteen-miles-out-Qv5OiJ7EqAI-unsplash.jpg
+PROJECT_FOOTAGE|id:42|name:Slide-1 BG.mp4|w:1920|h:1080|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-1 BG.mp4
+PROJECT_FOOTAGE|id:43|name:Slide-2 BG.mp4|w:1920|h:1080|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-2 BG.mp4
+PROJECT_FOOTAGE|id:44|name:Slide-3 BG.mp4|w:1920|h:1080|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-3 BG.mp4
+PROJECT_FOOTAGE|id:45|name:Slide-4 BG.mp4|w:1920|h:1080|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-4 BG.mp4
+PROJECT_FOOTAGE|id:46|name:Slide-5 BG.mp4|w:1920|h:1080|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-5 BG.mp4
+PROJECT_FOOTAGE|id:48|name:Layer 2/Tap-1.psd|w:784|h:618|instances:2|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Tap-1.psd
+PROJECT_FOOTAGE|id:49|name:Layer 4/Tap-1.psd|w:784|h:618|instances:3|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Tap-1.psd
+
+SCAN_COMPLETE

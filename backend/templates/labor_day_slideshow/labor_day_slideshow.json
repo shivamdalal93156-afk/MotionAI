@@ -1,0 +1,9 @@
+{
+  "compName": "FinalRender",
+  "textLayers": [
+    { "key": "title", "layerName": "Main Title" }
+  ],
+  "imageLayers": [
+    { "key": "logo", "compName": "Logo Placeholder" }
+  ]
+}

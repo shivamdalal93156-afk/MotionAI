@@ -1,0 +1,26 @@
+{
+  "aepFile": "Digital Decoder Text Animation.aep",
+  "compName": "MAIN_RENDER",
+  "fps": 30,
+  "textLayers": [
+    { "key": "text_1", "layerName": "Text_01", "compName": "Text_01" },
+    { "key": "text_2", "layerName": "Text_02", "compName": "Text_02" },
+    { "key": "text_3", "layerName": "Text_03", "compName": "Text_03" },
+    { "key": "text_4", "layerName": "Text_04", "compName": "Text_04" },
+    { "key": "text_5", "layerName": "Text_05", "compName": "Text_05" },
+    { "key": "text_6", "layerName": "Text_06", "compName": "Text_06" },
+    { "key": "text_7", "layerName": "Text_07", "compName": "Text_07" },
+    { "key": "text_8", "layerName": "Text_08", "compName": "Text_08" }
+  ],
+  "imageLayers": [],
+  "sceneMap": {
+    "scene1": { "outpoint": 6.00,  "keys": ["text_1"] },
+    "scene2": { "outpoint": 11.87, "keys": ["text_2"] },
+    "scene3": { "outpoint": 17.81, "keys": ["text_3"] },
+    "scene4": { "outpoint": 23.75, "keys": ["text_4"] },
+    "scene5": { "outpoint": 29.72, "keys": ["text_5"] },
+    "scene6": { "outpoint": 35.70, "keys": ["text_6"] },
+    "scene7": { "outpoint": 41.80, "keys": ["text_7"] },
+    "scene8": { "outpoint": 47.68, "keys": ["text_8"] }
+  }
+}

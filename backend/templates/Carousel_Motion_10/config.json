@@ -1,0 +1,36 @@
+{
+  "aepFile": "Dynamic Carousel Slideshow - Modern Carousel Presentation 24.x.aep",
+  "compName": "Motion_10",
+  "fps": 60,
+  "duration": 30.0,
+  "resolution": "3840x2160",
+  "textLayers": [],
+  "imageLayers": [
+    { "key": "image_1",  "compName": "Placeholders_Vertical_1",  "type": "comp_inject", "absIn": 10.033, "absOut": 40.033 },
+    { "key": "image_2",  "compName": "Placeholders_Vertical_2",  "type": "comp_inject", "absIn": 12.113, "absOut": 42.113 },
+    { "key": "image_3",  "compName": "Placeholders_Vertical_3",  "type": "comp_inject", "absIn": 14.193, "absOut": 44.193 },
+    { "key": "image_4",  "compName": "Placeholders_Vertical_4",  "type": "comp_inject", "absIn": 16.273, "absOut": 46.273 },
+    { "key": "image_5",  "compName": "Placeholders_Vertical_5",  "type": "comp_inject", "absIn": 18.353, "absOut": 48.353 },
+    { "key": "image_6",  "compName": "Placeholders_Vertical_6",  "type": "comp_inject", "absIn": 20.433, "absOut": 50.433 },
+    { "key": "image_7",  "compName": "Placeholders_Vertical_7",  "type": "comp_inject", "absIn": 22.513, "absOut": 52.513 },
+    { "key": "image_8",  "compName": "Placeholders_Vertical_8",  "type": "comp_inject", "absIn": 24.593, "absOut": 54.593 },
+    { "key": "image_9",  "compName": "Placeholders_Vertical_9",  "type": "comp_inject", "absIn": 26.673, "absOut": 56.673 },
+    { "key": "image_10", "compName": "Placeholders_Vertical_10", "type": "comp_inject", "absIn": 28.753, "absOut": 58.753 },
+    { "key": "image_11", "compName": "Placeholders_Vertical_11", "type": "comp_inject", "absIn": 30.833, "absOut": 60.833 },
+    { "key": "image_12", "compName": "Placeholders_Vertical_12", "type": "comp_inject", "absIn": 32.913, "absOut": 62.913 }
+  ],
+  "sceneMap": {
+    "scene1":  { "outpoint": 40.033, "keys": ["image_1"] },
+    "scene2":  { "outpoint": 42.113, "keys": ["image_2"] },
+    "scene3":  { "outpoint": 44.193, "keys": ["image_3"] },
+    "scene4":  { "outpoint": 46.273, "keys": ["image_4"] },
+    "scene5":  { "outpoint": 48.353, "keys": ["image_5"] },
+    "scene6":  { "outpoint": 50.433, "keys": ["image_6"] },
+    "scene7":  { "outpoint": 52.513, "keys": ["image_7"] },
+    "scene8":  { "outpoint": 54.593, "keys": ["image_8"] },
+    "scene9":  { "outpoint": 56.673, "keys": ["image_9"] },
+    "scene10": { "outpoint": 58.753, "keys": ["image_10"] },
+    "scene11": { "outpoint": 60.833, "keys": ["image_11"] },
+    "scene12": { "outpoint": 62.913, "keys": ["image_12"] }
+  }
+}

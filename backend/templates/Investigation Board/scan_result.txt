@@ -1,0 +1,1236 @@
+=== MOTIONAI COMPLETE SCAN v4.0 ===
+template: Investigation Board
+aep: C:/Users/SHIVAM/Desktop/motionai/backend/templates/Investigation Board/Investigation_Board_II.aep
+scanned_at: Wed May 06 2026 17:47:15 GMT+0530
+
+OPEN_OK|items:168
+
+=== RENDER COMP CANDIDATES ===
+RENDER_COMP|name:Main|dur:150.918|fps:29.970|res:1920x1080|confidence:MEDIUM|score:90
+RENDER_COMP|name:Test|dur:7.787|fps:59.973|res:1920x1080|confidence:MEDIUM|score:60
+RENDER_COMP|name:Fan|dur:180.448|fps:59.973|res:8000x4500|confidence:LOW|score:40
+RENDER_COMP|name:Background 2|dur:180.467|fps:30.000|res:9000x5000|confidence:LOW|score:40
+
+=== PROJECT FOOTAGE ITEMS ===
+FOOTAGE_ITEM|id:2|name:Background_01.jpg|w:9296|h:5568|instances:4|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_01.jpg
+FOOTAGE_ITEM|id:3|name:Background_02.jpg|w:9296|h:5568|instances:1|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_02.jpg
+FOOTAGE_ITEM|id:4|name:Background_03.jpg|w:9341|h:5622|instances:1|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_03.jpg
+FOOTAGE_ITEM|id:5|name:Badge.png|w:1308|h:993|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Badge.png
+FOOTAGE_ITEM|id:6|name:BusinessCard_01.png|w:1363|h:776|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\BusinessCard_01.png
+FOOTAGE_ITEM|id:7|name:BusinessCard_02.jpg|w:1341|h:756|instances:1|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\BusinessCard_02.jpg
+FOOTAGE_ITEM|id:8|name:CD.png|w:1000|h:1000|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\CD.png
+FOOTAGE_ITEM|id:9|name:Clip.png|w:189|h:730|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Clip.png
+FOOTAGE_ITEM|id:10|name:ClothesHanger.png|w:992|h:3494|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ClothesHanger.png
+FOOTAGE_ITEM|id:11|name:Cover.png|w:2648|h:2025|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Cover.png
+FOOTAGE_ITEM|id:12|name:Cover_02.png|w:3049|h:1435|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Cover_02.png
+FOOTAGE_ITEM|id:13|name:Dirty_01.png|w:1500|h:1424|instances:17|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+FOOTAGE_ITEM|id:14|name:Dirty_02.png|w:900|h:569|instances:17|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+FOOTAGE_ITEM|id:15|name:Dock_01.png|w:1100|h:1412|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dock_01.png
+FOOTAGE_ITEM|id:16|name:Dock_02.png|w:1100|h:1412|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dock_02.png
+FOOTAGE_ITEM|id:17|name:Dock_03.png|w:1346|h:1735|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dock_03.png
+FOOTAGE_ITEM|id:18|name:Dock_04.png|w:1346|h:1735|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dock_04.png
+FOOTAGE_ITEM|id:19|name:EnvelopePostal.png|w:3615|h:1528|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\EnvelopePostal.png
+FOOTAGE_ITEM|id:20|name:FloorPlan.jpg|w:1800|h:2164|instances:1|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\FloorPlan.jpg
+FOOTAGE_ITEM|id:21|name:knot.png|w:100|h:99|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\knot.png
+FOOTAGE_ITEM|id:22|name:Map_01.png|w:5000|h:2914|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Map_01.png
+FOOTAGE_ITEM|id:23|name:Map_02.jpg|w:992|h:937|instances:1|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Map_02.jpg
+FOOTAGE_ITEM|id:24|name:Map_04.jpg|w:1808|h:922|instances:1|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Map_04.jpg
+FOOTAGE_ITEM|id:25|name:Newspaper-Big.png|w:2270|h:3375|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Newspaper-Big.png
+FOOTAGE_ITEM|id:26|name:Newspaper-Small.png|w:2032|h:800|instances:2|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Newspaper-Small.png
+FOOTAGE_ITEM|id:27|name:Newspaper-Tall.png|w:1436|h:3824|instances:2|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Newspaper-Tall.png
+FOOTAGE_ITEM|id:28|name:Palaroid.png|w:1130|h:1364|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Palaroid.png
+FOOTAGE_ITEM|id:29|name:paper-crumpled_02.jpg|w:1146|h:903|instances:18|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+FOOTAGE_ITEM|id:30|name:ParkingViolation.png|w:626|h:864|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ParkingViolation.png
+FOOTAGE_ITEM|id:31|name:Police-Flashing.mp4|w:1920|h:1080|instances:2|missing:undefined|isMedia:true|ext:mp4|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Police-Flashing.mp4
+FOOTAGE_ITEM|id:32|name:Pushpin_01.png|w:184|h:177|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Pushpin_01.png
+FOOTAGE_ITEM|id:33|name:Pushpin_02.png|w:192|h:183|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Pushpin_02.png
+FOOTAGE_ITEM|id:34|name:ScotchTape_01.png|w:854|h:394|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_01.png
+FOOTAGE_ITEM|id:35|name:ScotchTape_02.png|w:701|h:412|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_02.png
+FOOTAGE_ITEM|id:36|name:ScotchTape_03.png|w:1017|h:422|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_03.png
+FOOTAGE_ITEM|id:37|name:ScotchTape_04.png|w:1244|h:449|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_04.png
+FOOTAGE_ITEM|id:38|name:ScotchTape_05.png|w:319|h:98|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_05.png
+FOOTAGE_ITEM|id:39|name:ScotchTape_06.png|w:1672|h:447|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_06.png
+FOOTAGE_ITEM|id:40|name:ScotchTape_07.png|w:825|h:434|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_07.png
+FOOTAGE_ITEM|id:41|name:ScotchTape_08.png|w:714|h:319|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_08.png
+FOOTAGE_ITEM|id:42|name:steam.mp4|w:482|h:502|instances:3|missing:undefined|isMedia:true|ext:mp4|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\steam.mp4
+FOOTAGE_ITEM|id:43|name:sticker.png|w:1000|h:1000|instances:5|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\sticker.png
+FOOTAGE_ITEM|id:44|name:Table.png|w:4896|h:2754|instances:3|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Table.png
+FOOTAGE_ITEM|id:45|name:Ticket_01.png|w:1257|h:494|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Ticket_01.png
+FOOTAGE_ITEM|id:46|name:Warehouse.jpg|w:852|h:480|instances:1|missing:undefined|isMedia:true|ext:jpg|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Warehouse.jpg
+FOOTAGE_ITEM|id:47|name:WhileYouWereOut.png|w:1346|h:1735|instances:1|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\WhileYouWereOut.png
+
+=== COMP LAYER DETAIL ===
+COMP|name:Investigation Board|dur:152.502|fps:59.973|w:9296|h:5568|layers:245
+  SOLID|name:Investigation Board Settings
+  SOLID|name:Shade
+  SOLID|name:Noise
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:knot|source:knot|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_02|source:Pushpin_02|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_02|source:Pushpin_02|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_02|source:Pushpin_02|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_02|source:Pushpin_02|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_02|source:Pushpin_02|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  SHAPE|name:Line 17
+  SHAPE|name:Line 15
+  SHAPE|name:Line 20
+  SHAPE|name:Line 14
+  SHAPE|name:Line 21
+  SHAPE|name:Line 18
+  SHAPE|name:Line 13
+  SHAPE|name:Line 12
+  SHAPE|name:Line 11
+  SHAPE|name:Line 10
+  SHAPE|name:Line 9
+  SHAPE|name:Line 8
+  SHAPE|name:Line 7
+  SHAPE|name:Line 5
+  SHAPE|name:Line 4
+  SHAPE|name:Line 3
+  SHAPE|name:Line 2
+  SHAPE|name:Line 1
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Clip|source:Clip|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_08|source:ScotchTape_08|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:17 - Photo|source:17 - Photo|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Dock_02|source:Dock_02|in:0.000|out:153.470|absIn:0.000|absOut:153.470
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:16 - Magazine|source:16 - Magazine|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  SHAPE|name:Line 6
+  PRECOMP|name:Pushpin_01|source:Pushpin_01|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  PRECOMP|name:Pushpin_02|source:Pushpin_02|in:0.000|out:152.502|absIn:0.000|absOut:152.502
+  SHAPE|name:Line 19
+  PRECOMP|name:15 - Photo|source:15 - Photo|in:0.000|out:299.967|absIn:0.000|absOut:299.967
+  PRECOMP|name:14 - Palaroid|source:14 - Palaroid|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:Map_01|source:Map_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:13 - Palaroid|source:13 - Palaroid|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Cover_02|source:Cover_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Sticker_03|source:Sticker_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:12 - Newspaper-Tall|source:12 - Newspaper-Tall|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ParkingViolation|source:ParkingViolation|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ParkingViolation|source:ParkingViolation|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Map_04|source:Map_04|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Map_04|source:Map_04|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Map_04|source:Map_04|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:11 - Palaroid|source:11 - Palaroid|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Sticker_05|source:Sticker_05|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Dock_04|source:Dock_04|in:0.000|out:154.587|absIn:0.000|absOut:154.587
+  PRECOMP|name:Dock_03|source:Dock_03|in:0.000|out:154.587|absIn:0.000|absOut:154.587
+  PRECOMP|name:ScotchTape_08|source:ScotchTape_08|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Sticker_02|source:Sticker_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:10 - Badge|source:10 - Badge|in:0.000|out:155.404|absIn:0.000|absOut:155.404
+  PRECOMP|name:Warehouse|source:Warehouse|in:0.000|out:154.687|absIn:0.000|absOut:154.687
+  PRECOMP|name:ScotchTape_08|source:ScotchTape_08|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_08|source:ScotchTape_08|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_05|source:ScotchTape_05|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:09 - Palaroid|source:09 - Palaroid|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:EnvelopePostal|source:EnvelopePostal|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Ticket_01|source:Ticket_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_08|source:ScotchTape_08|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:08 - Palaroid|source:08 - Palaroid|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:CD|source:CD|in:0.000|out:154.604|absIn:0.000|absOut:154.604
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_08|source:ScotchTape_08|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_05|source:ScotchTape_05|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_05|source:ScotchTape_05|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_05|source:ScotchTape_05|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_04|source:ScotchTape_04|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:BusinessCard_01|source:BusinessCard_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:07 - Photo|source:07 - Photo|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:FloorPlan|source:FloorPlan|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Map_02|source:Map_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:06 - Newspaper-Small|source:06 - Newspaper-Small|in:0.000|out:154.520|absIn:0.000|absOut:154.520
+  PRECOMP|name:ScotchTape_08|source:ScotchTape_08|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:05 - Photo|source:05 - Photo|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Dock_03|source:Dock_03|in:0.000|out:158.205|absIn:0.000|absOut:158.205
+  PRECOMP|name:Dock_02|source:Dock_02|in:0.000|out:163.024|absIn:0.000|absOut:163.024
+  PRECOMP|name:ScotchTape_08|source:ScotchTape_08|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:BusinessCard_02|source:BusinessCard_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:04 - Photo|source:04 - Photo|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Sticker_04|source:Sticker_04|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_08|source:ScotchTape_08|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_08|source:ScotchTape_08|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_08|source:ScotchTape_08|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:03 - Photo|source:03 - Photo|in:0.000|out:154.487|absIn:0.000|absOut:154.487
+  PRECOMP|name:WhileYouWereOut|source:WhileYouWereOut|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Сover|source:Сover|in:0.000|out:154.837|absIn:0.000|absOut:154.837
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_08|source:ScotchTape_08|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_05|source:ScotchTape_05|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_04|source:ScotchTape_04|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:02 - Palaroid|source:02 - Palaroid|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Dock_01|source:Dock_01|in:0.000|out:161.123|absIn:0.000|absOut:161.123
+  PRECOMP|name:Dock_03|source:Dock_03|in:0.000|out:154.587|absIn:0.000|absOut:154.587
+  PRECOMP|name:Sticker_01|source:Sticker_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_08|source:ScotchTape_08|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_07|source:ScotchTape_07|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_06|source:ScotchTape_06|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:01 - Newspaper-Big|source:01 - Newspaper-Big|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Logo|source:Logo|in:0.000|out:154.487|absIn:0.000|absOut:154.487
+  PRECOMP|name:Warehouse|source:Warehouse|in:0.000|out:210.043|absIn:0.000|absOut:210.043
+  PRECOMP|name:ParkingViolation|source:ParkingViolation|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:WhileYouWereOut|source:WhileYouWereOut|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  PRECOMP|name:Ticket_01|source:Ticket_01|in:0.000|out:299.967|absIn:0.000|absOut:299.967
+  PRECOMP|name:Background|source:Background|in:0.000|out:153.300|absIn:0.000|absOut:153.300
+COMP|name:Main|dur:150.918|fps:29.970|w:1920|h:1080|layers:104
+  SOLID|name:Main Settings
+  SHAPE|name:Vignette
+  PRECOMP|name:Police-Flashing|source:Police-Flashing|in:0.000|out:150.918|absIn:0.000|absOut:150.918
+  PRECOMP|name:Jalousie|source:Jalousie|in:0.000|out:152.503|absIn:0.000|absOut:152.503
+  SOLID|name:The End
+  CAMERA_LIGHT|name:The End
+  SOLID|name:Camera ++++
+  CAMERA_LIGHT|name:Camera +++
+  SOLID|name:Camera +++
+  CAMERA_LIGHT|name:Camera ++
+  SOLID|name:Camera ++
+  CAMERA_LIGHT|name:Camera +
+  SOLID|name:Camera 18 Name
+  CAMERA_LIGHT|name:Camera 18 Name
+  SOLID|name:Camera 18
+  CAMERA_LIGHT|name:Camera 18
+  SOLID|name:Camera 17 - Name
+  CAMERA_LIGHT|name:Camera 17 - Name
+  SOLID|name:Camera 17
+  CAMERA_LIGHT|name:Camera 17
+  SOLID|name:Camera 16 - Name
+  CAMERA_LIGHT|name:Camera 16 - Name
+  SOLID|name:Camera 16
+  CAMERA_LIGHT|name:Camera 16
+  SOLID|name:Camera 15 - Name
+  CAMERA_LIGHT|name:Camera 15 - Name
+  SOLID|name:Camera 15
+  CAMERA_LIGHT|name:Camera 15
+  SOLID|name:Camera 14 - Name
+  CAMERA_LIGHT|name:Camera 14 - Name
+  SOLID|name:Camera 14
+  CAMERA_LIGHT|name:Camera 14
+  SOLID|name:Camera 13 - Name
+  CAMERA_LIGHT|name:Camera 13 - Name
+  SOLID|name:Camera 13
+  CAMERA_LIGHT|name:Camera 13
+  SOLID|name:Camera + 2 Sticker
+  CAMERA_LIGHT|name:Camera + 2
+  SOLID|name:Camera +
+  CAMERA_LIGHT|name:Camera +
+  SOLID|name:Camera 12 - Name
+  CAMERA_LIGHT|name:Camera 12 - Name
+  SOLID|name:Camera 12
+  CAMERA_LIGHT|name:Camera 12
+  SOLID|name:Camera 11 - Name
+  CAMERA_LIGHT|name:Camera 11 - Name
+  SOLID|name:Camera 11
+  CAMERA_LIGHT|name:Camera 11
+  SOLID|name:Camera 10 - Name
+  CAMERA_LIGHT|name:Camera 10 - Name
+  SOLID|name:Camera 10
+  CAMERA_LIGHT|name:Camera 10
+  SOLID|name:Camera 9 - Name
+  CAMERA_LIGHT|name:Camera 9 - Name
+  SOLID|name:Camera 9
+  CAMERA_LIGHT|name:Camera 9
+  SOLID|name:Camera 8 - Name
+  CAMERA_LIGHT|name:Camera 8 - Name
+  SOLID|name:Camera 8
+  CAMERA_LIGHT|name:Camera 8
+  SOLID|name:Camera 7 - Name
+  CAMERA_LIGHT|name:Camera 7 - Name
+  SOLID|name:Camera 7
+  CAMERA_LIGHT|name:Camera 7
+  SOLID|name:Camera 6 - Name
+  CAMERA_LIGHT|name:Camera 6 - Name
+  SOLID|name:Camera 6
+  CAMERA_LIGHT|name:Camera 6
+  SOLID|name:Camera 5 - Name
+  CAMERA_LIGHT|name:Camera 5 - Name
+  SOLID|name:Camera 5
+  CAMERA_LIGHT|name:Camera 5
+  SOLID|name:Camera 4 - Name
+  CAMERA_LIGHT|name:Camera 4 - Name
+  SOLID|name:Camera 4
+  CAMERA_LIGHT|name:Camera 4
+  SOLID|name:Camera 3 - Name
+  CAMERA_LIGHT|name:Camera 3 - Name
+  SOLID|name:Camera 3
+  CAMERA_LIGHT|name:Camera 3
+  SOLID|name:Camera 2 - Name
+  CAMERA_LIGHT|name:Camera 2 - Name
+  SOLID|name:Camera 2 
+  CAMERA_LIGHT|name:Camera 2
+  SOLID|name:Camera 1 - Name
+  CAMERA_LIGHT|name:Camera 1 - Name
+  SOLID|name:Camera 1
+  CAMERA_LIGHT|name:Camera 1
+  SOLID|name:Camera Position - Overall Plan
+  CAMERA_LIGHT|name:Camera - Overall Plan
+  SOLID|name:Fade Out 5
+  SOLID|name:Fade Out 4
+  SOLID|name:Fade Out 3
+  SOLID|name:Fade Out 2
+  SOLID|name:Fade Out
+  SOLID|name:Fade Out - The End
+  PRECOMP|name:Table Comp|source:Table Comp|in:0.000|out:153.020|absIn:0.000|absOut:153.020
+  SHAPE|name:Vignette 4
+  SHAPE|name:Vignette 3
+  SHAPE|name:Vignette 2
+  SHAPE|name:Vignette 1
+  PRECOMP|name:Clothes Hanger|source:Clothes Hanger|in:0.000|out:3.937|absIn:0.000|absOut:3.937
+  PRECOMP|name:Investigation Board|source:Investigation Board|in:0.000|out:152.486|absIn:0.000|absOut:152.486
+  PRECOMP|name:Background|source:Background|in:0.000|out:153.287|absIn:0.000|absOut:153.287
+COMP|name:Сover|dur:180.448|fps:59.973|w:2648|h:2025|layers:3
+  TEXT|name:CONFIDENTIAL|in:0.000|out:191.604|absIn:0.000|absOut:191.604|val:CONFIDENTIAL
+  TEXT|name:Please do not open if you do not  have the required tolerance|in:0.000|out:191.604|absIn:0.000|absOut:191.604|val:Please do not open if you do not have the required tolerance
+  FOOTAGE|name:Cover.png|source:Cover.png|w:2648|h:2025|in:0.000|out:191.604|absIn:0.000|absOut:191.604|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Cover.png
+COMP|name:10 - Badge|dur:180.914|fps:29.970|w:1308|h:993|layers:22
+  SOLID|name:Settings
+  TEXT|name:VISITOR|in:0.000|out:183.717|absIn:0.000|absOut:183.717|val:VISITOR
+  TEXT|name:Help Numbering|in:0.000|out:183.717|absIn:0.000|absOut:183.717|val:10
+  SOLID|name:Footage Control
+  TEXT|name:Name|in:0.000|out:183.550|absIn:0.000|absOut:183.550|val:Jeremy
+  TEXT|name:Surname|in:0.000|out:183.550|absIn:0.000|absOut:183.550|val:Cornelius
+  FOOTAGE|name:Badge.png|source:Badge.png|w:1308|h:993|in:0.000|out:183.550|absIn:0.000|absOut:183.550|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Badge.png
+  SOLID|name:Effect - Cold Shadows
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Grayscale
+  SHAPE|name:Mask 3
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:183.951|absIn:0.000|absOut:183.951|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  SHAPE|name:Mask 2
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:183.417|absIn:0.000|absOut:183.417|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  SHAPE|name:Mask 1
+  FOOTAGE|name:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:183.417|absIn:0.000|absOut:183.417|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SHAPE|name:Background
+  SOLID|name:Photo_10
+COMP|name:Background|dur:600.003|fps:59.973|w:5000|h:3125|layers:1
+  FOOTAGE|name:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|in:0.000|out:600.007|absIn:0.000|absOut:600.007|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_01.jpg
+COMP|name:Background|dur:153.300|fps:30.000|w:9312|h:5600|layers:3
+  FOOTAGE|name:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|in:0.000|out:153.300|absIn:0.000|absOut:153.300|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_01.jpg
+  FOOTAGE|name:Background_02.jpg|source:Background_02.jpg|w:9296|h:5568|in:0.000|out:153.300|absIn:0.000|absOut:153.300|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_02.jpg
+  FOOTAGE|name:Background_03.jpg|source:Background_03.jpg|w:9341|h:5622|in:0.000|out:153.300|absIn:0.000|absOut:153.300|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_03.jpg
+COMP|name:Background 2|dur:180.467|fps:30.000|w:9000|h:5000|layers:1
+  FOOTAGE|name:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|in:0.000|out:191.133|absIn:0.000|absOut:191.133|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_01.jpg
+COMP|name:BusinessCard_01|dur:299.967|fps:29.970|w:1363|h:776|layers:4
+  TEXT|name:www.Herbert-Pail.com|in:0.000|out:299.967|absIn:0.000|absOut:299.967|val:www.Herbert-Pail.com
+  TEXT|name:PRIVATE INVESTIGATOR|in:0.000|out:299.967|absIn:0.000|absOut:299.967|val:PRIVATE INVESTIGATOR
+  TEXT|name:Herbert Paul Jones|in:0.000|out:299.967|absIn:0.000|absOut:299.967|val:Herbert Paul Jones
+  FOOTAGE|name:BusinessCard_01.png|source:BusinessCard_01.png|w:1363|h:776|in:0.000|out:299.967|absIn:0.000|absOut:299.967|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\BusinessCard_01.png
+COMP|name:BusinessCard_02|dur:299.967|fps:29.970|w:1341|h:756|layers:3
+  TEXT|name:FBI consultant|in:0.000|out:299.967|absIn:0.000|absOut:299.967|val:FBI consultant
+  TEXT|name:Peter  Cornelius  Jones|in:0.000|out:299.967|absIn:0.000|absOut:299.967|val:Peter Cornelius Jones
+  FOOTAGE|name:BusinessCard_02.jpg|source:BusinessCard_02.jpg|w:1341|h:756|in:0.000|out:299.967|absIn:0.000|absOut:299.967|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\BusinessCard_02.jpg
+COMP|name:CD|dur:210.043|fps:29.970|w:1000|h:1000|layers:1
+  FOOTAGE|name:CD.png|source:CD.png|w:1000|h:1000|in:0.000|out:226.860|absIn:0.000|absOut:226.860|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\CD.png
+COMP|name:Clip|dur:299.967|fps:29.970|w:50|h:126|layers:1
+  FOOTAGE|name:Clip.png|source:Clip.png|w:189|h:730|in:0.000|out:299.967|absIn:0.000|absOut:299.967|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Clip.png
+COMP|name:Clothes Hanger|dur:60.894|fps:29.970|w:992|h:3494|layers:1
+  FOOTAGE|name:ClothesHanger.png|source:ClothesHanger.png|w:992|h:3494|in:0.000|out:60.894|absIn:0.000|absOut:60.894|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ClothesHanger.png
+COMP|name:Cover_02|dur:179.980|fps:29.970|w:3049|h:1435|layers:1
+  FOOTAGE|name:Cover_02.png|source:Cover_02.png|w:3049|h:1435|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Cover_02.png
+COMP|name:Dock_01|dur:181.982|fps:29.970|w:1100|h:1412|layers:1
+  FOOTAGE|name:Dock_01.png|source:Dock_01.png|w:1100|h:1412|in:0.000|out:186.687|absIn:0.000|absOut:186.687|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dock_01.png
+COMP|name:Dock_02|dur:181.982|fps:29.970|w:1100|h:1412|layers:1
+  FOOTAGE|name:Dock_02.png|source:Dock_02.png|w:1100|h:1412|in:0.000|out:198.265|absIn:0.000|absOut:198.265|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dock_02.png
+COMP|name:Dock_03|dur:181.982|fps:29.970|w:1346|h:1735|layers:1
+  FOOTAGE|name:Dock_03.png|source:Dock_03.png|w:1346|h:1735|in:0.000|out:193.861|absIn:0.000|absOut:193.861|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dock_03.png
+COMP|name:Dock_04|dur:181.982|fps:29.970|w:1346|h:1735|layers:1
+  FOOTAGE|name:Dock_04.png|source:Dock_04.png|w:1346|h:1735|in:0.000|out:204.972|absIn:0.000|absOut:204.972|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dock_04.png
+COMP|name:EnvelopePostal|dur:299.967|fps:29.970|w:3615|h:1528|layers:1
+  FOOTAGE|name:EnvelopePostal.png|source:EnvelopePostal.png|w:3615|h:1528|in:0.000|out:299.967|absIn:0.000|absOut:299.967|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\EnvelopePostal.png
+COMP|name:Fan|dur:180.448|fps:59.973|w:8000|h:4500|layers:0
+COMP|name:FloorPlan|dur:299.967|fps:29.970|w:1800|h:2164|layers:1
+  FOOTAGE|name:FloorPlan.jpg|source:FloorPlan.jpg|w:1800|h:2164|in:0.000|out:299.967|absIn:0.000|absOut:299.967|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\FloorPlan.jpg
+COMP|name:Horizontal|dur:299.967|fps:29.970|w:2000|h:2000|layers:8
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:310.477|absIn:0.000|absOut:310.477
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:310.477|absIn:0.000|absOut:310.477
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:310.477|absIn:0.000|absOut:310.477
+  PRECOMP|name:ScotchTape_04|source:ScotchTape_04|in:0.000|out:310.477|absIn:0.000|absOut:310.477
+  SHAPE|name:picher horizontal 6
+  PRECOMP|name:19 - Logo|source:19 - Logo|in:0.000|out:299.967|absIn:0.000|absOut:299.967
+  SHAPE|name:picher horizontal 5
+  SHAPE|name:picher horizontal 4
+COMP|name:Jalousie|dur:212.512|fps:59.973|w:9296|h:5568|layers:5
+  CAMERA_LIGHT|name:Camera 1
+  SHAPE|name:|
+  SHAPE|name:|  |
+  SHAPE|name:=
+  SHAPE|name:Frame
+COMP|name:knot|dur:179.980|fps:29.970|w:109|h:110|layers:1
+  FOOTAGE|name:knot.png|source:knot.png|w:100|h:99|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\knot.png
+COMP|name:Logo|dur:299.967|fps:29.970|w:2000|h:2000|layers:3
+  PRECOMP|name:square|source:square|in:0.000|out:299.967|absIn:0.000|absOut:299.967
+  PRECOMP|name:horizontal|source:Horizontal|in:0.000|out:299.967|absIn:0.000|absOut:299.967
+  PRECOMP|name:vertical|source:vertical|in:0.000|out:299.967|absIn:0.000|absOut:299.967
+COMP|name:Map_01|dur:179.980|fps:29.970|w:5000|h:2914|layers:1
+  FOOTAGE|name:Map_01.png|source:Map_01.png|w:5000|h:2914|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Map_01.png
+COMP|name:Map_02|dur:299.967|fps:29.970|w:992|h:937|layers:1
+  FOOTAGE|name:Map_02.jpg|source:Map_02.jpg|w:992|h:937|in:0.000|out:299.967|absIn:0.000|absOut:299.967|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Map_02.jpg
+COMP|name:Map_04|dur:179.980|fps:29.970|w:1808|h:922|layers:1
+  FOOTAGE|name:Map_04.jpg|source:Map_04.jpg|w:1808|h:922|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Map_04.jpg
+COMP|name:Mask|dur:179.980|fps:29.970|w:1013|h:1327|layers:1
+  SHAPE|name:Mask 1
+COMP|name:Palaroid|dur:179.980|fps:29.970|w:1130|h:1364|layers:1
+  FOOTAGE|name:Palaroid.png|source:Palaroid.png|w:1130|h:1364|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Palaroid.png
+COMP|name:ParkingViolation|dur:179.980|fps:29.970|w:626|h:864|layers:1
+  FOOTAGE|name:ParkingViolation.png|source:ParkingViolation.png|w:626|h:864|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ParkingViolation.png
+COMP|name:Police-Flashing|dur:3.337|fps:29.970|w:1920|h:1080|layers:1
+  PRECOMP|name:Police-Flashing.mp4_looped|source:Police-Flashing.mp4_looped|in:0.000|out:3.337|absIn:0.000|absOut:3.337
+COMP|name:Police-Flashing.mp4_looped|dur:1.668|fps:29.970|w:1920|h:1080|layers:2
+  FOOTAGE|name:Police-Flashing.mp4|source:Police-Flashing.mp4|w:1920|h:1080|in:-0.033|out:1.668|absIn:0.000|absOut:1.668|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Police-Flashing.mp4
+  FOOTAGE|name:Police-Flashing.mp4|source:Police-Flashing.mp4|w:1920|h:1080|in:0.000|out:0.010|absIn:0.000|absOut:0.010|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Police-Flashing.mp4
+COMP|name:Pushpin_01|dur:152.502|fps:59.973|w:184|h:177|layers:1
+  FOOTAGE|name:Pushpin_01.png|source:Pushpin_01.png|w:184|h:177|in:0.000|out:152.503|absIn:0.000|absOut:152.503|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Pushpin_01.png
+COMP|name:Pushpin_02|dur:152.502|fps:59.973|w:192|h:183|layers:1
+  FOOTAGE|name:Pushpin_02.png|source:Pushpin_02.png|w:192|h:183|in:0.000|out:152.503|absIn:0.000|absOut:152.503|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Pushpin_02.png
+COMP|name:ScotchTape_01|dur:600.003|fps:59.973|w:854|h:394|layers:1
+  FOOTAGE|name:ScotchTape_01.png|source:ScotchTape_01.png|w:854|h:394|in:0.000|out:643.727|absIn:0.000|absOut:643.727|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_01.png
+COMP|name:ScotchTape_02|dur:600.003|fps:59.973|w:701|h:412|layers:1
+  FOOTAGE|name:ScotchTape_02.png|source:ScotchTape_02.png|w:701|h:412|in:0.000|out:680.577|absIn:0.000|absOut:680.577|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_02.png
+COMP|name:ScotchTape_03|dur:600.003|fps:59.973|w:1017|h:422|layers:1
+  FOOTAGE|name:ScotchTape_03.png|source:ScotchTape_03.png|w:1017|h:422|in:0.000|out:650.230|absIn:0.000|absOut:650.230|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_03.png
+COMP|name:ScotchTape_04|dur:600.003|fps:59.973|w:1244|h:449|layers:1
+  FOOTAGE|name:ScotchTape_04.png|source:ScotchTape_04.png|w:1244|h:449|in:0.000|out:655.499|absIn:0.000|absOut:655.499|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_04.png
+COMP|name:ScotchTape_05|dur:600.003|fps:59.973|w:319|h:98|layers:1
+  FOOTAGE|name:ScotchTape_05.png|source:ScotchTape_05.png|w:319|h:98|in:0.000|out:655.799|absIn:0.000|absOut:655.799|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_05.png
+COMP|name:ScotchTape_06|dur:600.003|fps:59.973|w:1672|h:447|layers:1
+  FOOTAGE|name:ScotchTape_06.png|source:ScotchTape_06.png|w:1672|h:447|in:0.000|out:620.816|absIn:0.000|absOut:620.816|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_06.png
+COMP|name:ScotchTape_07|dur:600.003|fps:59.973|w:825|h:434|layers:1
+  FOOTAGE|name:ScotchTape_07.png|source:ScotchTape_07.png|w:825|h:434|in:0.000|out:612.462|absIn:0.000|absOut:612.462|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_07.png
+COMP|name:ScotchTape_08|dur:600.003|fps:59.973|w:714|h:319|layers:1
+  FOOTAGE|name:ScotchTape_08.png|source:ScotchTape_08.png|w:714|h:319|in:0.000|out:625.468|absIn:0.000|absOut:625.468|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_08.png
+COMP|name:square|dur:299.967|fps:29.970|w:2100|h:2100|layers:8
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  PRECOMP|name:ScotchTape_04|source:ScotchTape_04|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  SHAPE|name:picher horizontal 3
+  PRECOMP|name:19 - Logo|source:19 - Logo|in:0.000|out:299.967|absIn:0.000|absOut:299.967
+  SHAPE|name:picher horizontal 2
+  SHAPE|name:picher horizontal
+COMP|name:steam|dur:13.547|fps:29.970|w:483|h:503|layers:3
+  FOOTAGE|name:steam.mp4|source:steam.mp4|w:482|h:502|in:0.000|out:13.547|absIn:0.000|absOut:13.547|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\steam.mp4
+  FOOTAGE|name:steam.mp4|source:steam.mp4|w:482|h:502|in:0.000|out:13.547|absIn:0.000|absOut:13.547|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\steam.mp4
+  FOOTAGE|name:steam.mp4|source:steam.mp4|w:482|h:502|in:0.000|out:13.547|absIn:0.000|absOut:13.547|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\steam.mp4
+COMP|name:Sticker_01|dur:179.980|fps:29.970|w:1016|h:1026|layers:2
+  TEXT|name:Get it before  everybody else!|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:Get it before everybody else!
+  FOOTAGE|name:sticker.png|source:sticker.png|w:1000|h:1000|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\sticker.png
+COMP|name:Sticker_02|dur:179.980|fps:29.970|w:1016|h:1026|layers:2
+  TEXT|name:Get to the heart  of the matter|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:Get to the heart of the matter
+  FOOTAGE|name:sticker.png|source:sticker.png|w:1000|h:1000|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\sticker.png
+COMP|name:Sticker_03|dur:179.980|fps:29.970|w:1016|h:1026|layers:2
+  TEXT|name:The police are still investigating the crime|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:The police arestill investigatingthe crime
+  FOOTAGE|name:sticker.png|source:sticker.png|w:1000|h:1000|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\sticker.png
+COMP|name:Sticker_04|dur:179.980|fps:29.970|w:1016|h:1026|layers:2
+  TEXT|name:Get to the heart  of the matter|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:Get to the heart of the matter
+  FOOTAGE|name:sticker.png|source:sticker.png|w:1000|h:1000|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\sticker.png
+COMP|name:Sticker_05|dur:179.980|fps:29.970|w:1016|h:1026|layers:2
+  TEXT|name:Jeremy Cornelius  Murphy|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:Jeremy Cornelius Murphy
+  FOOTAGE|name:sticker.png|source:sticker.png|w:1000|h:1000|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\sticker.png
+COMP|name:Table Comp|dur:180.881|fps:29.970|w:4896|h:2754|layers:12
+  SOLID|name:Shade
+  SHAPE|name:Light
+  PRECOMP|name:steam|source:steam|in:0.000|out:180.881|absIn:0.000|absOut:180.881
+  PRECOMP|name:Jalousie|source:Jalousie|in:0.000|out:183.650|absIn:0.000|absOut:183.650
+  PRECOMP|name:18 - Photo Frame|source:18 - Photo Frame|in:0.000|out:180.881|absIn:0.000|absOut:180.881
+  SHAPE|name:Mask
+  FOOTAGE|name:Table Mask|source:Table.png|w:4896|h:2754|in:0.000|out:188.188|absIn:0.000|absOut:188.188|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Table.png
+  SOLID|name:Noise
+  SOLID|name:Shade
+  FOOTAGE|name:Table.png|source:Table.png|w:4896|h:2754|in:0.000|out:188.188|absIn:0.000|absOut:188.188|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Table.png
+  SOLID|name:White Solid 2
+  SHAPE|name:bg
+COMP|name:Test|dur:7.787|fps:59.973|w:1920|h:1080|layers:3
+  SOLID|name:cc
+  CAMERA_LIGHT|name:Camera 1
+  FOOTAGE|name:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|in:0.000|out:7.787|absIn:0.000|absOut:7.787|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_01.jpg
+COMP|name:Ticket_01|dur:299.967|fps:29.970|w:1257|h:494|layers:1
+  FOOTAGE|name:Ticket_01.png|source:Ticket_01.png|w:1257|h:494|in:0.000|out:299.967|absIn:0.000|absOut:299.967|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Ticket_01.png
+COMP|name:vertical|dur:299.967|fps:29.970|w:2200|h:2200|layers:8
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:310.477|absIn:0.000|absOut:310.477
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:310.477|absIn:0.000|absOut:310.477
+  PRECOMP|name:ScotchTape_03|source:ScotchTape_03|in:0.000|out:310.477|absIn:0.000|absOut:310.477
+  PRECOMP|name:ScotchTape_04|source:ScotchTape_04|in:0.000|out:310.477|absIn:0.000|absOut:310.477
+  SHAPE|name:picher horizontal 4
+  PRECOMP|name:19 - Logo|source:19 - Logo|in:0.000|out:299.967|absIn:0.000|absOut:299.967
+  SHAPE|name:picher horizontal 3
+  SHAPE|name:picher horizontal
+COMP|name:Warehouse|dur:210.043|fps:29.970|w:852|h:480|layers:1
+  FOOTAGE|name:Warehouse.jpg|source:Warehouse.jpg|w:852|h:480|in:0.000|out:219.853|absIn:0.000|absOut:219.853|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Warehouse.jpg
+COMP|name:WhileYouWereOut|dur:179.980|fps:29.970|w:1346|h:1735|layers:1
+  FOOTAGE|name:WhileYouWereOut.png|source:WhileYouWereOut.png|w:1346|h:1735|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\WhileYouWereOut.png
+COMP|name:01 - Newspaper-Big|dur:179.980|fps:29.970|w:2270|h:3375|layers:21
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:1
+  TEXT|name:Peter James Thompson|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:Peter James Thompson
+  SOLID|name:Footage Control
+  SHAPE|name:Mask
+  FOOTAGE|name:Newspaper-Big.png|source:Newspaper-Big.png|w:2270|h:3375|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Newspaper-Big.png
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Cold Shadows
+  SHAPE|name:Mask
+  FOOTAGE|name:dirty1.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  SHAPE|name:Mask
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  SHAPE|name:Mask
+  SOLID|name:Photo_01
+COMP|name:02 - Palaroid|dur:179.980|fps:29.970|w:1130|h:1364|layers:21
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:2
+  TEXT|name:“Jimmy The Gent” Burke|in:0.000|out:317.417|absIn:0.000|absOut:317.417|val:“Jimmy The Gent” Burke
+  SOLID|name:Footage Control
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  PRECOMP|name:Palaroid|source:Palaroid|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  PRECOMP|name:Palaroid|source:Palaroid|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Cold Shadows
+  SHAPE|name:Mask
+  SOLID|name:Photo_02
+  SHAPE|name:Background
+COMP|name:03 - Photo|dur:299.967|fps:29.970|w:1692|h:1250|layers:25
+  SOLID|name:Settings
+  TEXT|name:Beverly Adrian Parrish|in:0.000|out:299.967|absIn:0.000|absOut:299.967|val:Beverly Adrian Parrish
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  SHAPE|name:[ PAPER ]
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:3
+  SOLID|name:Footage Control
+  SOLID|name:Mask
+  FOOTAGE|name:dirty1.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SOLID|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  SHAPE|name:Mask
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  SHAPE|name:Frame 3x4
+  SOLID|name:Effect - Cold Shadows
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Mask
+  SOLID|name:Photo_03
+  SHAPE|name:Shadow
+  SHAPE|name:Clouds
+COMP|name:04 - Photo|dur:299.967|fps:29.970|w:1692|h:1250|layers:21
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:4
+  SOLID|name:Footage Control
+  SOLID|name:Mask
+  FOOTAGE|name:dirty1.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SOLID|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  SHAPE|name:Mask
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  SHAPE|name:Frame 3x4
+  SOLID|name:Effect - Cold Shadows
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Mask
+  SOLID|name:Photo_04
+  SHAPE|name:Shadow
+  SHAPE|name:Clouds
+COMP|name:05 - Photo|dur:299.967|fps:29.970|w:1692|h:1250|layers:25
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:5
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  TEXT|name:Maria Rodriguez|in:0.000|out:299.967|absIn:0.000|absOut:299.967|val:Maria Rodriguez
+  SHAPE|name:[ PAPER ]
+  SOLID|name:Footage Control
+  SOLID|name:Mask
+  FOOTAGE|name:dirty1.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SOLID|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  SHAPE|name:Mask
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  SHAPE|name:Frame 3x4
+  SOLID|name:Effect - Cold Shadows
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Mask
+  SOLID|name:Photo_05
+  SHAPE|name:Shadow
+  SHAPE|name:Clouds
+COMP|name:06 - Newspaper-Small|dur:299.967|fps:29.970|w:3512|h:1428|layers:20
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:6
+  SOLID|name:Footage Control
+  SHAPE|name:Mask 2
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:325.225|absIn:0.000|absOut:325.225|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  SHAPE|name:Frame 3x4
+  SOLID|name:Effect - Cold Shadows
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Mask
+  SOLID|name:Photo_06
+  SHAPE|name:Clouds
+  TEXT|name:Sophia Johnson |in:0.000|out:299.967|absIn:0.000|absOut:299.967|val:Sophia Johnson 
+  FOOTAGE|name:Newspaper-Small.png|source:Newspaper-Small.png|w:2032|h:800|in:0.000|out:299.967|absIn:0.000|absOut:299.967|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Newspaper-Small.png
+  TEXT|name:The police power is the basis for land-use planning authority in the United States.  This authority is usually delegated by state governments to local governments,  including counties and municipalities.  It is these local governments that most frequently exercise police power in land use planning matters. The regulation of land  use based on police power is distinct from the taking of private property by the government through the power of eminent domain. If the regulation of land use is done under the authority of the|in:0.000|out:299.967|absIn:0.000|absOut:299.967|val:The police power is the basis for land-use planning authority in the United States. This authority is usually delegated by state governments to local governments, including counties and municipalities. It is these local governments that most frequently exercise police power in land use planning matters. The regulation of land use based on police power is distinct from the taking of private property by the government through the power of eminent domain. If the regulation of land use is done under the authority of the
+  FOOTAGE|name:Newspaper-Small.png|source:Newspaper-Small.png|w:2032|h:800|in:0.000|out:299.967|absIn:0.000|absOut:299.967|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Newspaper-Small.png
+COMP|name:07 - Photo|dur:299.967|fps:29.970|w:1692|h:1250|layers:25
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:7
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  TEXT|name:Beverly Adrian Parrish|in:0.000|out:299.967|absIn:0.000|absOut:299.967|val:Beverly Adrian Parrish
+  SHAPE|name:[ PAPER ]
+  SOLID|name:Footage Control
+  SOLID|name:Mask
+  FOOTAGE|name:dirty1.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SOLID|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  SHAPE|name:Mask
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  SHAPE|name:Frame 3x4
+  SOLID|name:Effect - Cold Shadows
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Mask
+  SOLID|name:Photo_07
+  SHAPE|name:Shadow
+  SHAPE|name:Clouds
+COMP|name:08 - Palaroid|dur:179.980|fps:29.970|w:1130|h:1364|layers:21
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:8
+  TEXT|name:“Jimmy The Gent” Burke|in:0.000|out:317.417|absIn:0.000|absOut:317.417|val:Emma Gallagher
+  SOLID|name:Footage Control
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  PRECOMP|name:Palaroid|source:Palaroid|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  PRECOMP|name:Palaroid|source:Palaroid|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Cold Shadows
+  SHAPE|name:Mask
+  SOLID|name:Photo_08
+  SHAPE|name:Background
+COMP|name:09 - Palaroid|dur:179.980|fps:29.970|w:1130|h:1364|layers:21
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:9
+  TEXT|name:“Jimmy The Gent” Burke|in:0.000|out:317.417|absIn:0.000|absOut:317.417|val:Isabella Wheeler 
+  SOLID|name:Footage Control
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  PRECOMP|name:Palaroid|source:Palaroid|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  PRECOMP|name:Palaroid|source:Palaroid|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Cold Shadows
+  SHAPE|name:Mask
+  SOLID|name:Photo_09
+  SHAPE|name:Background
+COMP|name:11 - Palaroid|dur:179.980|fps:29.970|w:1130|h:1364|layers:21
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:11
+  TEXT|name:“Jimmy The Gent” Burke|in:0.000|out:317.417|absIn:0.000|absOut:317.417|val:Camron Nicholas Payne
+  SOLID|name:Footage Control
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  PRECOMP|name:Palaroid|source:Palaroid|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  PRECOMP|name:Palaroid|source:Palaroid|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Cold Shadows
+  SHAPE|name:Mask
+  SOLID|name:Photo_11
+  SHAPE|name:Background
+COMP|name:12 - Newspaper-Tall|dur:179.980|fps:29.970|w:1436|h:3824|layers:21
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:12
+  SOLID|name:Footage Control
+  TEXT|name:Isabella Jones |in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:Isabella Jones
+  FOOTAGE|name:Newspaper-Tall.png|source:Newspaper-Tall.png|w:1436|h:3824|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Newspaper-Tall.png
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Cold Shadows
+  SHAPE|name:Mask 6
+  FOOTAGE|name:dirty1.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  SHAPE|name:Mask 5
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  SHAPE|name:Mask
+  SOLID|name:Photo_12
+  FOOTAGE|name:Background|source:Newspaper-Tall.png|w:1436|h:3824|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Newspaper-Tall.png
+COMP|name:13 - Palaroid|dur:179.980|fps:29.970|w:1130|h:1364|layers:21
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:13
+  TEXT|name:“Jimmy The Gent” Burke|in:0.000|out:317.417|absIn:0.000|absOut:317.417|val:John Payne
+  SOLID|name:Footage Control
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  PRECOMP|name:Palaroid|source:Palaroid|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  PRECOMP|name:Palaroid|source:Palaroid|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Cold Shadows
+  SHAPE|name:Mask
+  SOLID|name:Photo_13
+  SHAPE|name:Background
+COMP|name:14 - Palaroid|dur:179.980|fps:29.970|w:1130|h:1364|layers:21
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:14
+  TEXT|name:“Jimmy The Gent” Burke|in:0.000|out:317.417|absIn:0.000|absOut:317.417|val:Ava Thompson
+  SOLID|name:Footage Control
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SHAPE|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  PRECOMP|name:Palaroid|source:Palaroid|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  PRECOMP|name:Palaroid|source:Palaroid|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Cold Shadows
+  SHAPE|name:Mask
+  SOLID|name:Photo_14
+  SHAPE|name:Background
+COMP|name:15 - Photo|dur:299.967|fps:29.970|w:1692|h:1250|layers:25
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:15
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  TEXT|name:Roger Simon Wheeler|in:0.000|out:299.967|absIn:0.000|absOut:299.967|val:Roger Simon Wheeler
+  SHAPE|name:[ PAPER ]
+  SOLID|name:Footage Control
+  SOLID|name:Mask
+  FOOTAGE|name:dirty1.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SOLID|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  SHAPE|name:Mask
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  SHAPE|name:Frame 3x4
+  SOLID|name:Effect - Cold Shadows
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Mask
+  SOLID|name:Photo_15
+  SHAPE|name:Shadow
+  SHAPE|name:Clouds
+COMP|name:16 - Magazine|dur:179.980|fps:29.970|w:1013|h:1327|layers:38
+  SOLID|name:Settings
+  SOLID|name:Footage Control
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:16
+  PRECOMP|name:Mask|source:Mask|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SHAPE|name:[]
+  TEXT|name:PAGE 12|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:PAGE 12
+  TEXT|name:THE ULTIMATE GUIDE TO CROWD- FUNDING|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:THEULTIMATEGUIDE TOCROWD-FUNDING
+  TEXT|name:Laptop  travel ban?  Here's  what  you need  to know|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:Laptop travel ban? Here's what you need to know
+  TEXT|name:25 amazing  gifts that  women  actually  want|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:25 amazing gifts that women actually want
+  TEXT|name:50 state  road trip:  Free tourist  attractions|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:50 state road trip: Free tourist attractions
+  TEXT|name:Effective  and Safe |in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:Effective andSafe 
+  TEXT|name:SAVE UP TO 25% RIGHT NOW!!! |in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:SAVE UP TO 25% RIGHT NOW!!! 
+  TEXT|name:Got a will? Here are 11 more end-of-life documents you may need|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:Got a will?Here are11 moreend-of-lifedocumentsyou may need
+  TEXT|name:Laptop travel ban? Here's what you need to know|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:Laptoptravel ban?Here'swhatyou needto know
+  PRECOMP|name:Mask|source:Mask|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Effect - Vignette 2
+  PRECOMP|name:Mask|source:Mask|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Effect - Contrast
+  PRECOMP|name:Mask|source:Mask|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Effect - Grayscale
+  PRECOMP|name:Mask|source:Mask|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  PRECOMP|name:Mask|source:Mask|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  PRECOMP|name:Mask|source:Mask|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  FOOTAGE|name:dirty1.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  PRECOMP|name:Mask|source:Mask|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Effect - Cold Shadows
+  PRECOMP|name:Mask|source:Mask|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Effect - Old
+  PRECOMP|name:Mask|source:Mask|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Effect - Saturation
+  PRECOMP|name:Mask|source:Mask|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Effect - Vignette 1
+  TEXT|name:How|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:How
+  TEXT|name:I Did It|in:0.000|out:179.980|absIn:0.000|absOut:179.980|val:I Did It
+  PRECOMP|name:Mask|source:Mask|in:0.000|out:179.980|absIn:0.000|absOut:179.980
+  SOLID|name:Photo_16
+COMP|name:17 - Photo|dur:299.967|fps:29.970|w:1692|h:1250|layers:25
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:17
+  PRECOMP|name:ScotchTape_02|source:ScotchTape_02|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  PRECOMP|name:ScotchTape_01|source:ScotchTape_01|in:0.000|out:600.003|absIn:0.000|absOut:600.003
+  TEXT|name:John Peter Gallagher|in:0.000|out:299.967|absIn:0.000|absOut:299.967|val:John Peter Gallagher
+  SHAPE|name:[ PAPER ]
+  SOLID|name:Footage Control
+  SOLID|name:Mask
+  FOOTAGE|name:dirty1.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SOLID|name:Mask
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  SHAPE|name:Mask
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:179.980|absIn:0.000|absOut:179.980|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  SHAPE|name:Frame 3x4
+  SOLID|name:Effect - Cold Shadows
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Grayscale
+  SOLID|name:Mask
+  SOLID|name:Photo_17
+  SHAPE|name:Shadow
+  SHAPE|name:Clouds
+COMP|name:18 - Photo Frame|dur:180.881|fps:29.970|w:551|h:477|layers:22
+  SOLID|name:Settings
+  FOOTAGE|name:Table.png|source:Table.png|w:4896|h:2754|in:0.000|out:188.188|absIn:0.000|absOut:188.188|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Table.png
+  TEXT|name:Help Numbering|in:0.000|out:321.421|absIn:0.000|absOut:321.421|val:18
+  SOLID|name:Footage Control
+  SHAPE|name:Frame Shadow 2
+  SHAPE|name:Frame Shadow
+  SHAPE|name:Frame Light
+  SOLID|name:Mask 4
+  FOOTAGE|name:dirty1.png|source:Dirty_01.png|w:1500|h:1424|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+  SOLID|name:Mask 3
+  FOOTAGE|name:Dirty_02.png|source:Dirty_02.png|w:900|h:569|in:0.000|out:317.451|absIn:0.000|absOut:317.451|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+  SHAPE|name:Mask 2
+  FOOTAGE|name:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|in:0.000|out:184.585|absIn:0.000|absOut:184.585|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+  SOLID|name:Effect - Cold Shadows
+  SOLID|name:Effect - Old
+  SOLID|name:Effect - Saturation
+  SOLID|name:Effect - Vignette 1
+  SOLID|name:Effect - Vignette 2
+  SOLID|name:Effect - Contrast
+  SOLID|name:Effect - Grayscale
+  SHAPE|name:Mask
+  SOLID|name:Photo_18
+COMP|name:19 - Logo|dur:299.967|fps:29.970|w:1920|h:1080|layers:4
+  SOLID|name:Settings
+  TEXT|name:Help Numbering|in:0.000|out:318.585|absIn:0.000|absOut:318.585|val:LOGO
+  SOLID|name:Footage Control
+  SOLID|name:Photo_19 - Logo
+
+=== INJECTABLE SUMMARY ===
+-- TEXT INJECTABLES --
+TEXT_INJECT|comp:Сover|layer:CONFIDENTIAL|absIn:0.000|absOut:191.604|val:CONFIDENTIAL
+TEXT_INJECT|comp:Сover|layer:Please do not open if you do not  have the required tolerance|absIn:0.000|absOut:191.604|val:Please do not open if you do not have the required tolerance
+TEXT_INJECT|comp:10 - Badge|layer:VISITOR|absIn:0.000|absOut:183.717|val:VISITOR
+TEXT_INJECT|comp:10 - Badge|layer:Help Numbering|absIn:0.000|absOut:183.717|val:10
+TEXT_INJECT|comp:10 - Badge|layer:Name|absIn:0.000|absOut:183.550|val:Jeremy
+TEXT_INJECT|comp:10 - Badge|layer:Surname|absIn:0.000|absOut:183.550|val:Cornelius
+TEXT_INJECT|comp:BusinessCard_01|layer:www.Herbert-Pail.com|absIn:0.000|absOut:299.967|val:www.Herbert-Pail.com
+TEXT_INJECT|comp:BusinessCard_01|layer:PRIVATE INVESTIGATOR|absIn:0.000|absOut:299.967|val:PRIVATE INVESTIGATOR
+TEXT_INJECT|comp:BusinessCard_01|layer:Herbert Paul Jones|absIn:0.000|absOut:299.967|val:Herbert Paul Jones
+TEXT_INJECT|comp:BusinessCard_02|layer:FBI consultant|absIn:0.000|absOut:299.967|val:FBI consultant
+TEXT_INJECT|comp:BusinessCard_02|layer:Peter  Cornelius  Jones|absIn:0.000|absOut:299.967|val:Peter Cornelius Jones
+TEXT_INJECT|comp:Sticker_01|layer:Get it before  everybody else!|absIn:0.000|absOut:179.980|val:Get it before everybody else!
+TEXT_INJECT|comp:Sticker_02|layer:Get to the heart  of the matter|absIn:0.000|absOut:179.980|val:Get to the heart of the matter
+TEXT_INJECT|comp:Sticker_03|layer:The police are still investigating the crime|absIn:0.000|absOut:179.980|val:The police arestill investigatingthe crime
+TEXT_INJECT|comp:Sticker_04|layer:Get to the heart  of the matter|absIn:0.000|absOut:179.980|val:Get to the heart of the matter
+TEXT_INJECT|comp:Sticker_05|layer:Jeremy Cornelius  Murphy|absIn:0.000|absOut:179.980|val:Jeremy Cornelius Murphy
+TEXT_INJECT|comp:01 - Newspaper-Big|layer:Help Numbering|absIn:0.000|absOut:321.421|val:1
+TEXT_INJECT|comp:01 - Newspaper-Big|layer:Peter James Thompson|absIn:0.000|absOut:179.980|val:Peter James Thompson
+TEXT_INJECT|comp:02 - Palaroid|layer:Help Numbering|absIn:0.000|absOut:321.421|val:2
+TEXT_INJECT|comp:02 - Palaroid|layer:“Jimmy The Gent” Burke|absIn:0.000|absOut:317.417|val:“Jimmy The Gent” Burke
+TEXT_INJECT|comp:03 - Photo|layer:Beverly Adrian Parrish|absIn:0.000|absOut:299.967|val:Beverly Adrian Parrish
+TEXT_INJECT|comp:03 - Photo|layer:Help Numbering|absIn:0.000|absOut:321.421|val:3
+TEXT_INJECT|comp:04 - Photo|layer:Help Numbering|absIn:0.000|absOut:321.421|val:4
+TEXT_INJECT|comp:05 - Photo|layer:Help Numbering|absIn:0.000|absOut:321.421|val:5
+TEXT_INJECT|comp:05 - Photo|layer:Maria Rodriguez|absIn:0.000|absOut:299.967|val:Maria Rodriguez
+TEXT_INJECT|comp:06 - Newspaper-Small|layer:Help Numbering|absIn:0.000|absOut:321.421|val:6
+TEXT_INJECT|comp:06 - Newspaper-Small|layer:Sophia Johnson |absIn:0.000|absOut:299.967|val:Sophia Johnson 
+TEXT_INJECT|comp:06 - Newspaper-Small|layer:The police power is the basis for land-use planning authority in the United States.  This authority is usually delegated by state governments to local governments,  including counties and municipalities.  It is these local governments that most frequently exercise police power in land use planning matters. The regulation of land  use based on police power is distinct from the taking of private property by the government through the power of eminent domain. If the regulation of land use is done under the authority of the|absIn:0.000|absOut:299.967|val:The police power is the basis for land-use planning authority in the United States. This authority is usually delegated by state governments to local governments, including counties and municipalities. It is these local governments that most frequently exercise police power in land use planning matters. The regulation of land use based on police power is distinct from the taking of private property by the government through the power of eminent domain. If the regulation of land use is done under the authority of the
+TEXT_INJECT|comp:07 - Photo|layer:Help Numbering|absIn:0.000|absOut:321.421|val:7
+TEXT_INJECT|comp:07 - Photo|layer:Beverly Adrian Parrish|absIn:0.000|absOut:299.967|val:Beverly Adrian Parrish
+TEXT_INJECT|comp:08 - Palaroid|layer:Help Numbering|absIn:0.000|absOut:321.421|val:8
+TEXT_INJECT|comp:08 - Palaroid|layer:“Jimmy The Gent” Burke|absIn:0.000|absOut:317.417|val:Emma Gallagher
+TEXT_INJECT|comp:09 - Palaroid|layer:Help Numbering|absIn:0.000|absOut:321.421|val:9
+TEXT_INJECT|comp:09 - Palaroid|layer:“Jimmy The Gent” Burke|absIn:0.000|absOut:317.417|val:Isabella Wheeler 
+TEXT_INJECT|comp:11 - Palaroid|layer:Help Numbering|absIn:0.000|absOut:321.421|val:11
+TEXT_INJECT|comp:11 - Palaroid|layer:“Jimmy The Gent” Burke|absIn:0.000|absOut:317.417|val:Camron Nicholas Payne
+TEXT_INJECT|comp:12 - Newspaper-Tall|layer:Help Numbering|absIn:0.000|absOut:321.421|val:12
+TEXT_INJECT|comp:12 - Newspaper-Tall|layer:Isabella Jones |absIn:0.000|absOut:179.980|val:Isabella Jones
+TEXT_INJECT|comp:13 - Palaroid|layer:Help Numbering|absIn:0.000|absOut:321.421|val:13
+TEXT_INJECT|comp:13 - Palaroid|layer:“Jimmy The Gent” Burke|absIn:0.000|absOut:317.417|val:John Payne
+TEXT_INJECT|comp:14 - Palaroid|layer:Help Numbering|absIn:0.000|absOut:321.421|val:14
+TEXT_INJECT|comp:14 - Palaroid|layer:“Jimmy The Gent” Burke|absIn:0.000|absOut:317.417|val:Ava Thompson
+TEXT_INJECT|comp:15 - Photo|layer:Help Numbering|absIn:0.000|absOut:321.421|val:15
+TEXT_INJECT|comp:15 - Photo|layer:Roger Simon Wheeler|absIn:0.000|absOut:299.967|val:Roger Simon Wheeler
+TEXT_INJECT|comp:16 - Magazine|layer:Help Numbering|absIn:0.000|absOut:321.421|val:16
+TEXT_INJECT|comp:16 - Magazine|layer:PAGE 12|absIn:0.000|absOut:179.980|val:PAGE 12
+TEXT_INJECT|comp:16 - Magazine|layer:THE ULTIMATE GUIDE TO CROWD- FUNDING|absIn:0.000|absOut:179.980|val:THEULTIMATEGUIDE TOCROWD-FUNDING
+TEXT_INJECT|comp:16 - Magazine|layer:Laptop  travel ban?  Here's  what  you need  to know|absIn:0.000|absOut:179.980|val:Laptop travel ban? Here's what you need to know
+TEXT_INJECT|comp:16 - Magazine|layer:25 amazing  gifts that  women  actually  want|absIn:0.000|absOut:179.980|val:25 amazing gifts that women actually want
+TEXT_INJECT|comp:16 - Magazine|layer:50 state  road trip:  Free tourist  attractions|absIn:0.000|absOut:179.980|val:50 state road trip: Free tourist attractions
+TEXT_INJECT|comp:16 - Magazine|layer:Effective  and Safe |absIn:0.000|absOut:179.980|val:Effective andSafe 
+TEXT_INJECT|comp:16 - Magazine|layer:SAVE UP TO 25% RIGHT NOW!!! |absIn:0.000|absOut:179.980|val:SAVE UP TO 25% RIGHT NOW!!! 
+TEXT_INJECT|comp:16 - Magazine|layer:Got a will? Here are 11 more end-of-life documents you may need|absIn:0.000|absOut:179.980|val:Got a will?Here are11 moreend-of-lifedocumentsyou may need
+TEXT_INJECT|comp:16 - Magazine|layer:Laptop travel ban? Here's what you need to know|absIn:0.000|absOut:179.980|val:Laptoptravel ban?Here'swhatyou needto know
+TEXT_INJECT|comp:16 - Magazine|layer:How|absIn:0.000|absOut:179.980|val:How
+TEXT_INJECT|comp:16 - Magazine|layer:I Did It|absIn:0.000|absOut:179.980|val:I Did It
+TEXT_INJECT|comp:17 - Photo|layer:Help Numbering|absIn:0.000|absOut:321.421|val:17
+TEXT_INJECT|comp:17 - Photo|layer:John Peter Gallagher|absIn:0.000|absOut:299.967|val:John Peter Gallagher
+TEXT_INJECT|comp:18 - Photo Frame|layer:Help Numbering|absIn:0.000|absOut:321.421|val:18
+TEXT_INJECT|comp:19 - Logo|layer:Help Numbering|absIn:0.000|absOut:318.585|val:LOGO
+
+-- IMAGE INJECTABLES --
+IMAGE_INJECT|type:replace|comp:Сover|layer:Cover.png|source:Cover.png|w:2648|h:2025|absIn:0.000|absOut:191.604
+IMAGE_INJECT|type:replace|comp:10 - Badge|layer:Badge.png|source:Badge.png|w:1308|h:993|absIn:0.000|absOut:183.550
+IMAGE_INJECT|type:replace|comp:10 - Badge|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:183.951
+IMAGE_INJECT|type:replace|comp:10 - Badge|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:183.417
+IMAGE_INJECT|type:replace|comp:10 - Badge|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:183.417
+IMAGE_INJECT|type:replace|comp:Background|layer:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|absIn:0.000|absOut:600.007
+IMAGE_INJECT|type:replace|comp:Background|layer:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|absIn:0.000|absOut:153.300
+IMAGE_INJECT|type:replace|comp:Background|layer:Background_02.jpg|source:Background_02.jpg|w:9296|h:5568|absIn:0.000|absOut:153.300
+IMAGE_INJECT|type:replace|comp:Background|layer:Background_03.jpg|source:Background_03.jpg|w:9341|h:5622|absIn:0.000|absOut:153.300
+IMAGE_INJECT|type:replace|comp:Background 2|layer:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|absIn:0.000|absOut:191.133
+IMAGE_INJECT|type:replace|comp:BusinessCard_01|layer:BusinessCard_01.png|source:BusinessCard_01.png|w:1363|h:776|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:BusinessCard_02|layer:BusinessCard_02.jpg|source:BusinessCard_02.jpg|w:1341|h:756|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:CD|layer:CD.png|source:CD.png|w:1000|h:1000|absIn:0.000|absOut:226.860
+IMAGE_INJECT|type:replace|comp:Clip|layer:Clip.png|source:Clip.png|w:189|h:730|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:Clothes Hanger|layer:ClothesHanger.png|source:ClothesHanger.png|w:992|h:3494|absIn:0.000|absOut:60.894
+IMAGE_INJECT|type:replace|comp:Cover_02|layer:Cover_02.png|source:Cover_02.png|w:3049|h:1435|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Dock_01|layer:Dock_01.png|source:Dock_01.png|w:1100|h:1412|absIn:0.000|absOut:186.687
+IMAGE_INJECT|type:replace|comp:Dock_02|layer:Dock_02.png|source:Dock_02.png|w:1100|h:1412|absIn:0.000|absOut:198.265
+IMAGE_INJECT|type:replace|comp:Dock_03|layer:Dock_03.png|source:Dock_03.png|w:1346|h:1735|absIn:0.000|absOut:193.861
+IMAGE_INJECT|type:replace|comp:Dock_04|layer:Dock_04.png|source:Dock_04.png|w:1346|h:1735|absIn:0.000|absOut:204.972
+IMAGE_INJECT|type:replace|comp:EnvelopePostal|layer:EnvelopePostal.png|source:EnvelopePostal.png|w:3615|h:1528|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:FloorPlan|layer:FloorPlan.jpg|source:FloorPlan.jpg|w:1800|h:2164|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:knot|layer:knot.png|source:knot.png|w:100|h:99|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Map_01|layer:Map_01.png|source:Map_01.png|w:5000|h:2914|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Map_02|layer:Map_02.jpg|source:Map_02.jpg|w:992|h:937|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:Map_04|layer:Map_04.jpg|source:Map_04.jpg|w:1808|h:922|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Palaroid|layer:Palaroid.png|source:Palaroid.png|w:1130|h:1364|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:ParkingViolation|layer:ParkingViolation.png|source:ParkingViolation.png|w:626|h:864|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Police-Flashing.mp4_looped|layer:Police-Flashing.mp4|source:Police-Flashing.mp4|w:1920|h:1080|absIn:0.000|absOut:1.668
+IMAGE_INJECT|type:replace|comp:Police-Flashing.mp4_looped|layer:Police-Flashing.mp4|source:Police-Flashing.mp4|w:1920|h:1080|absIn:0.000|absOut:0.010
+IMAGE_INJECT|type:replace|comp:Pushpin_01|layer:Pushpin_01.png|source:Pushpin_01.png|w:184|h:177|absIn:0.000|absOut:152.503
+IMAGE_INJECT|type:replace|comp:Pushpin_02|layer:Pushpin_02.png|source:Pushpin_02.png|w:192|h:183|absIn:0.000|absOut:152.503
+IMAGE_INJECT|type:replace|comp:ScotchTape_01|layer:ScotchTape_01.png|source:ScotchTape_01.png|w:854|h:394|absIn:0.000|absOut:643.727
+IMAGE_INJECT|type:replace|comp:ScotchTape_02|layer:ScotchTape_02.png|source:ScotchTape_02.png|w:701|h:412|absIn:0.000|absOut:680.577
+IMAGE_INJECT|type:replace|comp:ScotchTape_03|layer:ScotchTape_03.png|source:ScotchTape_03.png|w:1017|h:422|absIn:0.000|absOut:650.230
+IMAGE_INJECT|type:replace|comp:ScotchTape_04|layer:ScotchTape_04.png|source:ScotchTape_04.png|w:1244|h:449|absIn:0.000|absOut:655.499
+IMAGE_INJECT|type:replace|comp:ScotchTape_05|layer:ScotchTape_05.png|source:ScotchTape_05.png|w:319|h:98|absIn:0.000|absOut:655.799
+IMAGE_INJECT|type:replace|comp:ScotchTape_06|layer:ScotchTape_06.png|source:ScotchTape_06.png|w:1672|h:447|absIn:0.000|absOut:620.816
+IMAGE_INJECT|type:replace|comp:ScotchTape_07|layer:ScotchTape_07.png|source:ScotchTape_07.png|w:825|h:434|absIn:0.000|absOut:612.462
+IMAGE_INJECT|type:replace|comp:ScotchTape_08|layer:ScotchTape_08.png|source:ScotchTape_08.png|w:714|h:319|absIn:0.000|absOut:625.468
+IMAGE_INJECT|type:replace|comp:steam|layer:steam.mp4|source:steam.mp4|w:482|h:502|absIn:0.000|absOut:13.547
+IMAGE_INJECT|type:replace|comp:steam|layer:steam.mp4|source:steam.mp4|w:482|h:502|absIn:0.000|absOut:13.547
+IMAGE_INJECT|type:replace|comp:steam|layer:steam.mp4|source:steam.mp4|w:482|h:502|absIn:0.000|absOut:13.547
+IMAGE_INJECT|type:replace|comp:Sticker_01|layer:sticker.png|source:sticker.png|w:1000|h:1000|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Sticker_02|layer:sticker.png|source:sticker.png|w:1000|h:1000|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Sticker_03|layer:sticker.png|source:sticker.png|w:1000|h:1000|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Sticker_04|layer:sticker.png|source:sticker.png|w:1000|h:1000|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Sticker_05|layer:sticker.png|source:sticker.png|w:1000|h:1000|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Table Comp|layer:Table Mask|source:Table.png|w:4896|h:2754|absIn:0.000|absOut:188.188
+IMAGE_INJECT|type:replace|comp:Table Comp|layer:Table.png|source:Table.png|w:4896|h:2754|absIn:0.000|absOut:188.188
+IMAGE_INJECT|type:replace|comp:Test|layer:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|absIn:0.000|absOut:7.787
+IMAGE_INJECT|type:replace|comp:Ticket_01|layer:Ticket_01.png|source:Ticket_01.png|w:1257|h:494|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:Warehouse|layer:Warehouse.jpg|source:Warehouse.jpg|w:852|h:480|absIn:0.000|absOut:219.853
+IMAGE_INJECT|type:replace|comp:WhileYouWereOut|layer:WhileYouWereOut.png|source:WhileYouWereOut.png|w:1346|h:1735|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:01 - Newspaper-Big|layer:Newspaper-Big.png|source:Newspaper-Big.png|w:2270|h:3375|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:01 - Newspaper-Big|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:01 - Newspaper-Big|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:01 - Newspaper-Big|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:02 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:02 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:02 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:03 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:03 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:03 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:04 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:04 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:04 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:05 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:05 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:05 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:06 - Newspaper-Small|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:325.225
+IMAGE_INJECT|type:replace|comp:06 - Newspaper-Small|layer:Newspaper-Small.png|source:Newspaper-Small.png|w:2032|h:800|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:06 - Newspaper-Small|layer:Newspaper-Small.png|source:Newspaper-Small.png|w:2032|h:800|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:07 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:07 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:07 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:08 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:08 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:08 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:09 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:09 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:09 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:11 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:11 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:11 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:Newspaper-Tall.png|source:Newspaper-Tall.png|w:1436|h:3824|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:Background|source:Newspaper-Tall.png|w:1436|h:3824|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:13 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:13 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:13 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:14 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:14 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:14 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:15 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:15 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:15 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:16 - Magazine|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:16 - Magazine|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:16 - Magazine|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:17 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:17 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:17 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:18 - Photo Frame|layer:Table.png|source:Table.png|w:4896|h:2754|absIn:0.000|absOut:188.188
+IMAGE_INJECT|type:replace|comp:18 - Photo Frame|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:18 - Photo Frame|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:18 - Photo Frame|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:184.585
+
+-- PROJECT LEVEL FOOTAGE --
+PROJECT_FOOTAGE|id:2|name:Background_01.jpg|w:9296|h:5568|instances:4|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_01.jpg
+PROJECT_FOOTAGE|id:3|name:Background_02.jpg|w:9296|h:5568|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_02.jpg
+PROJECT_FOOTAGE|id:4|name:Background_03.jpg|w:9341|h:5622|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_03.jpg
+PROJECT_FOOTAGE|id:5|name:Badge.png|w:1308|h:993|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Badge.png
+PROJECT_FOOTAGE|id:6|name:BusinessCard_01.png|w:1363|h:776|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\BusinessCard_01.png
+PROJECT_FOOTAGE|id:7|name:BusinessCard_02.jpg|w:1341|h:756|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\BusinessCard_02.jpg
+PROJECT_FOOTAGE|id:8|name:CD.png|w:1000|h:1000|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\CD.png
+PROJECT_FOOTAGE|id:9|name:Clip.png|w:189|h:730|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Clip.png
+PROJECT_FOOTAGE|id:10|name:ClothesHanger.png|w:992|h:3494|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ClothesHanger.png
+PROJECT_FOOTAGE|id:11|name:Cover.png|w:2648|h:2025|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Cover.png
+PROJECT_FOOTAGE|id:12|name:Cover_02.png|w:3049|h:1435|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Cover_02.png
+PROJECT_FOOTAGE|id:13|name:Dirty_01.png|w:1500|h:1424|instances:17|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_01.png
+PROJECT_FOOTAGE|id:14|name:Dirty_02.png|w:900|h:569|instances:17|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dirty_02.png
+PROJECT_FOOTAGE|id:15|name:Dock_01.png|w:1100|h:1412|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dock_01.png
+PROJECT_FOOTAGE|id:16|name:Dock_02.png|w:1100|h:1412|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dock_02.png
+PROJECT_FOOTAGE|id:17|name:Dock_03.png|w:1346|h:1735|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dock_03.png
+PROJECT_FOOTAGE|id:18|name:Dock_04.png|w:1346|h:1735|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Dock_04.png
+PROJECT_FOOTAGE|id:19|name:EnvelopePostal.png|w:3615|h:1528|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\EnvelopePostal.png
+PROJECT_FOOTAGE|id:20|name:FloorPlan.jpg|w:1800|h:2164|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\FloorPlan.jpg
+PROJECT_FOOTAGE|id:21|name:knot.png|w:100|h:99|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\knot.png
+PROJECT_FOOTAGE|id:22|name:Map_01.png|w:5000|h:2914|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Map_01.png
+PROJECT_FOOTAGE|id:23|name:Map_02.jpg|w:992|h:937|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Map_02.jpg
+PROJECT_FOOTAGE|id:24|name:Map_04.jpg|w:1808|h:922|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Map_04.jpg
+PROJECT_FOOTAGE|id:25|name:Newspaper-Big.png|w:2270|h:3375|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Newspaper-Big.png
+PROJECT_FOOTAGE|id:26|name:Newspaper-Small.png|w:2032|h:800|instances:2|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Newspaper-Small.png
+PROJECT_FOOTAGE|id:27|name:Newspaper-Tall.png|w:1436|h:3824|instances:2|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Newspaper-Tall.png
+PROJECT_FOOTAGE|id:28|name:Palaroid.png|w:1130|h:1364|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Palaroid.png
+PROJECT_FOOTAGE|id:29|name:paper-crumpled_02.jpg|w:1146|h:903|instances:18|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\paper-crumpled_02.jpg
+PROJECT_FOOTAGE|id:30|name:ParkingViolation.png|w:626|h:864|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ParkingViolation.png
+PROJECT_FOOTAGE|id:31|name:Police-Flashing.mp4|w:1920|h:1080|instances:2|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Police-Flashing.mp4
+PROJECT_FOOTAGE|id:32|name:Pushpin_01.png|w:184|h:177|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Pushpin_01.png
+PROJECT_FOOTAGE|id:33|name:Pushpin_02.png|w:192|h:183|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Pushpin_02.png
+PROJECT_FOOTAGE|id:34|name:ScotchTape_01.png|w:854|h:394|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_01.png
+PROJECT_FOOTAGE|id:35|name:ScotchTape_02.png|w:701|h:412|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_02.png
+PROJECT_FOOTAGE|id:36|name:ScotchTape_03.png|w:1017|h:422|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_03.png
+PROJECT_FOOTAGE|id:37|name:ScotchTape_04.png|w:1244|h:449|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_04.png
+PROJECT_FOOTAGE|id:38|name:ScotchTape_05.png|w:319|h:98|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_05.png
+PROJECT_FOOTAGE|id:39|name:ScotchTape_06.png|w:1672|h:447|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_06.png
+PROJECT_FOOTAGE|id:40|name:ScotchTape_07.png|w:825|h:434|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_07.png
+PROJECT_FOOTAGE|id:41|name:ScotchTape_08.png|w:714|h:319|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\ScotchTape_08.png
+PROJECT_FOOTAGE|id:42|name:steam.mp4|w:482|h:502|instances:3|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\steam.mp4
+PROJECT_FOOTAGE|id:43|name:sticker.png|w:1000|h:1000|instances:5|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\sticker.png
+PROJECT_FOOTAGE|id:44|name:Table.png|w:4896|h:2754|instances:3|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Table.png
+PROJECT_FOOTAGE|id:45|name:Ticket_01.png|w:1257|h:494|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Ticket_01.png
+PROJECT_FOOTAGE|id:46|name:Warehouse.jpg|w:852|h:480|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Warehouse.jpg
+PROJECT_FOOTAGE|id:47|name:WhileYouWereOut.png|w:1346|h:1735|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\WhileYouWereOut.png
+
+SCAN_COMPLETE

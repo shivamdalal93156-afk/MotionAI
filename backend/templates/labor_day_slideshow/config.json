@@ -1,0 +1,32 @@
+{
+  "aepFile": "Labor Day Slideshow (converted) (converted).aep",
+  "compName": "Labor Day Slideshow",
+  "fps": 25,
+  "duration": 32.24,
+  "resolution": "1920x1080",
+  "textLayers": [
+    { "key": "slide1_line1",  "layerName": "Happy",        "compName": "Title-1", "absIn": 0.320, "absOut": 5.440 },
+    { "key": "slide1_line2",  "layerName": "Labor Day",    "compName": "Title-1", "absIn": 0.320, "absOut": 5.440 },
+    { "key": "slide2_line1",  "layerName": "Beginning",    "compName": "Title-2", "absIn": 5.160, "absOut": 10.840 },
+    { "key": "slide2_line2",  "layerName": "19th century", "compName": "Title-2", "absIn": 5.160, "absOut": 10.840 },
+    { "key": "slide3_line1",  "layerName": "contributions","compName": "Title-3", "absIn": 10.320, "absOut": 15.960 },
+    { "key": "slide3_line2",  "layerName": "of labors",    "compName": "Title-3", "absIn": 10.320, "absOut": 15.960 },
+    { "key": "slide4_line1",  "layerName": "early history","compName": "Title-4", "absIn": 15.520, "absOut": 21.040 },
+    { "key": "slide4_line2",  "layerName": "movements",    "compName": "Title-4", "absIn": 15.520, "absOut": 21.040 },
+    { "key": "slide5_line1",  "layerName": "Download",     "compName": "Title-5", "absIn": 20.600, "absOut": 25.840 },
+    { "key": "slide5_line2",  "layerName": "Now",          "compName": "Title-5", "absIn": 20.600, "absOut": 25.840 }
+  ],
+  "imageLayers": [
+    { "key": "image_1", "compName": "Media-1", "layerName": "media_place_holder.jpg", "type": "replace", "absIn": 5.160,  "absOut": 10.840 },
+    { "key": "image_2", "compName": "Media-2", "layerName": "media_place_holder.jpg", "type": "replace", "absIn": 10.320, "absOut": 15.960 },
+    { "key": "image_3", "compName": "Media-3", "layerName": "media_place_holder.jpg", "type": "replace", "absIn": 15.520, "absOut": 21.040 },
+    { "key": "image_4", "compName": "Media-4", "layerName": "media_place_holder.jpg", "type": "replace", "absIn": 20.600, "absOut": 25.840 }
+  ],
+  "sceneMap": {
+    "scene1": { "outpoint": 5.44,  "keys": ["slide1_line1", "slide1_line2"] },
+    "scene2": { "outpoint": 10.84, "keys": ["slide2_line1", "slide2_line2", "image_1"] },
+    "scene3": { "outpoint": 15.96, "keys": ["slide3_line1", "slide3_line2", "image_2"] },
+    "scene4": { "outpoint": 21.04, "keys": ["slide4_line1", "slide4_line2", "image_3"] },
+    "scene5": { "outpoint": 25.84, "keys": ["slide5_line1", "slide5_line2", "image_4"] }
+  }
+}

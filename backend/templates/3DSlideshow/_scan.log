@@ -1,0 +1,200 @@
+=== MOTIONAI SCAN v3.0 ===
+template: 3DSlideshow
+aep: C:/Users/SHIVAM/Desktop/motionai/backend/templates/3DSlideshow/3D Slideshow - Photo Slideshow 24.x.aep
+
+OPEN OK: 56 items
+
+=== PROJECT FOOTAGE ITEMS ===
+total_footage: 0
+
+=== ALL COMPS ===
+COMP|name:Block_1|dur:15.000|fps:25.000|w:3840|h:2160|layers:7
+  PRECOMP|name:Pre-comp 1|source:Pre-comp 1|in:0.000|out:20.000
+  PRECOMP|name:Pre-comp 1|source:Pre-comp 1|in:0.000|out:20.000
+  PRECOMP|name:Footage_3|source:Footage_3|in:7.760|out:20.800
+  PRECOMP|name:Footage_2|source:Footage_2|in:3.520|out:30.000
+  PRECOMP|name:Footage_1|source:Footage_1|in:0.000|out:3.520
+  PRECOMP|name:Footage_2|source:Footage_2|in:3.000|out:30.000
+  PRECOMP|name:Footage_1|source:Footage_1|in:0.000|out:30.000
+COMP|name:Block_2|dur:15.000|fps:25.000|w:3840|h:2160|layers:8
+  PRECOMP|name:Pre-comp 2|source:Pre-comp 2|in:0.000|out:17.000
+  PRECOMP|name:Pre-comp 2|source:Pre-comp 2|in:0.000|out:17.000
+  PRECOMP|name:Footage_3|source:Footage_3|in:0.000|out:0.720
+  PRECOMP|name:Footage_6|source:Footage_6|in:7.760|out:30.000
+  PRECOMP|name:Footage_5|source:Footage_5|in:3.720|out:7.760
+  PRECOMP|name:Footage_4|source:Footage_4|in:0.720|out:3.720
+  PRECOMP|name:Footage_5|source:Footage_5|in:3.000|out:10.000
+  PRECOMP|name:Footage_4|source:Footage_4|in:0.000|out:10.000
+COMP|name:Block_3|dur:17.000|fps:25.000|w:3840|h:2160|layers:8
+  PRECOMP|name:Pre-comp 4|source:Pre-comp 4|in:3.000|out:10.000
+  PRECOMP|name:Pre-comp 4|source:Pre-comp 4|in:3.000|out:10.000
+  PRECOMP|name:Footage_8|source:Footage_8|in:3.000|out:33.000
+  PRECOMP|name:Pre-comp 3|source:Pre-comp 3|in:0.000|out:7.000
+  PRECOMP|name:Pre-comp 3|source:Pre-comp 3|in:0.000|out:7.000
+  PRECOMP|name:Footage_7|source:Footage_7|in:0.000|out:5.000
+  PRECOMP|name:Footage_8|source:Footage_8|in:3.000|out:33.000
+  PRECOMP|name:Footage_7|source:Footage_7|in:0.000|out:5.000
+COMP|name:Block_4|dur:17.000|fps:25.000|w:3840|h:2160|layers:8
+  PRECOMP|name:Pre-comp 6|source:Pre-comp 6|in:3.000|out:10.000
+  PRECOMP|name:Pre-comp 6|source:Pre-comp 6|in:3.000|out:10.000
+  PRECOMP|name:Footage_10|source:Footage_10|in:3.000|out:33.000
+  PRECOMP|name:Footage_10|source:Footage_10|in:3.000|out:33.000
+  PRECOMP|name:Pre-comp 5|source:Pre-comp 5|in:0.000|out:7.000
+  PRECOMP|name:Pre-comp 5|source:Pre-comp 5|in:0.000|out:7.000
+  PRECOMP|name:Footage_9|source:Footage_9|in:0.000|out:30.000
+  PRECOMP|name:Footage_9|source:Footage_9|in:0.000|out:30.000
+COMP|name:Block_5|dur:19.000|fps:25.000|w:3840|h:2160|layers:18
+  PRECOMP|name:Pre-comp 7|source:Pre-comp 7|in:13.000|out:20.000
+  PRECOMP|name:Pre-comp 7|source:Pre-comp 7|in:13.000|out:20.000
+  PRECOMP|name:Footage_16|source:Footage_16|in:13.000|out:43.000
+  PRECOMP|name:Pre-comp 9|source:Pre-comp 9|in:7.000|out:15.000
+  PRECOMP|name:Pre-comp 9|source:Pre-comp 9|in:7.000|out:15.000
+  PRECOMP|name:Footage_16|source:Footage_16|in:13.000|out:43.000
+  PRECOMP|name:Footage_15|source:Footage_15|in:10.480|out:15.000
+  PRECOMP|name:Footage_14|source:Footage_14|in:7.000|out:10.480
+  PRECOMP|name:Footage_15|source:Footage_15|in:10.000|out:15.000
+  PRECOMP|name:Pre-comp 8|source:Pre-comp 8|in:4.000|out:11.000
+  PRECOMP|name:Pre-comp 8|source:Pre-comp 8|in:4.000|out:11.000
+  PRECOMP|name:Footage_13|source:Footage_13|in:4.000|out:10.960
+  PRECOMP|name:Footage_14|source:Footage_14|in:7.000|out:15.000
+  PRECOMP|name:Footage_12|source:Footage_12|in:2.520|out:7.000
+  PRECOMP|name:Footage_13|source:Footage_13|in:4.000|out:10.960
+  PRECOMP|name:Footage_11|source:Footage_11|in:0.000|out:7.000
+  PRECOMP|name:Footage_12|source:Footage_12|in:2.000|out:7.040
+  PRECOMP|name:Footage_11|source:Footage_11|in:0.000|out:7.000
+COMP|name:Block_6|dur:17.000|fps:25.000|w:3840|h:2160|layers:9
+  PRECOMP|name:Pre-comp 10|source:Pre-comp 10|in:0.000|out:7.000
+  PRECOMP|name:Pre-comp 10|source:Pre-comp 10|in:0.000|out:7.000
+  PRECOMP|name:Footage_17|source:Footage_17|in:0.000|out:30.000
+  PRECOMP|name:Pre-comp 11|source:Pre-comp 11|in:3.000|out:10.000
+  PRECOMP|name:Pre-comp 11|source:Pre-comp 11|in:3.000|out:10.000
+  PRECOMP|name:Footage_19|source:Footage_19|in:6.440|out:33.000
+  PRECOMP|name:Footage_18|source:Footage_18|in:3.000|out:6.440
+  PRECOMP|name:Footage_17|source:Footage_17|in:0.000|out:30.000
+  PRECOMP|name:Footage_18|source:Footage_18|in:3.000|out:33.000
+COMP|name:Block_7|dur:12.000|fps:25.000|w:3840|h:2160|layers:8
+  PRECOMP|name:Pre-comp 12|source:Pre-comp 12|in:0.000|out:20.000
+  PRECOMP|name:Pre-comp 12|source:Pre-comp 12|in:0.000|out:20.000
+  PRECOMP|name:Footage_22|source:Footage_22|in:6.520|out:20.840
+  PRECOMP|name:Footage_21|source:Footage_21|in:3.520|out:32.800
+  PRECOMP|name:Block_6|source:Block_6|in:0.000|out:0.560
+  PRECOMP|name:Footage_20|source:Footage_20|in:0.000|out:6.320
+  PRECOMP|name:Footage_21|source:Footage_21|in:3.000|out:30.000
+  PRECOMP|name:Footage_20|source:Footage_20|in:0.000|out:30.000
+COMP|name:Pre-comp 1|dur:20.000|fps:25.000|w:3840|h:2160|layers:6
+  SOLID|name:Null 4
+  OTHER|name:Camera 1|in:0.000|out:20.000
+  OTHER|name:Point Light 3|in:0.000|out:20.000
+  OTHER|name:Point Light 2|in:0.000|out:20.000
+  OTHER|name:Point Light 1|in:0.000|out:20.000
+  SHAPE|name:Shape Layer 2
+COMP|name:Pre-comp 2|dur:17.000|fps:25.000|w:3840|h:2160|layers:6
+  SOLID|name:Null 4
+  OTHER|name:Camera 1|in:0.000|out:20.000
+  OTHER|name:Point Light 3|in:0.000|out:20.000
+  OTHER|name:Point Light 2|in:0.000|out:20.000
+  OTHER|name:Point Light 1|in:0.000|out:20.000
+  SHAPE|name:Shape Layer 2
+COMP|name:Pre-comp 3|dur:7.000|fps:25.000|w:3840|h:2160|layers:4
+  OTHER|name:Camera 1|in:0.000|out:7.000
+  OTHER|name:Point Light 2|in:0.000|out:7.000
+  OTHER|name:Point Light 1|in:0.000|out:7.000
+  SHAPE|name:Shape Layer 2
+COMP|name:Pre-comp 4|dur:7.000|fps:25.000|w:3840|h:2160|layers:4
+  OTHER|name:Camera 1|in:0.000|out:7.000
+  OTHER|name:Point Light 2|in:0.000|out:7.000
+  OTHER|name:Point Light 1|in:0.000|out:7.000
+  SHAPE|name:Shape Layer 2
+COMP|name:Pre-comp 5|dur:7.000|fps:25.000|w:3840|h:2160|layers:4
+  OTHER|name:Camera 1|in:0.000|out:7.000
+  OTHER|name:Point Light 2|in:0.000|out:7.000
+  OTHER|name:Point Light 1|in:0.000|out:7.000
+  SHAPE|name:Shape Layer 2
+COMP|name:Pre-comp 6|dur:7.000|fps:25.000|w:3840|h:2160|layers:4
+  OTHER|name:Camera 1|in:0.000|out:7.000
+  OTHER|name:Point Light 2|in:0.000|out:7.000
+  OTHER|name:Point Light 1|in:0.000|out:7.000
+  SHAPE|name:Shape Layer 2
+COMP|name:Pre-comp 7|dur:7.000|fps:25.000|w:3840|h:2160|layers:4
+  OTHER|name:Camera 1|in:0.000|out:7.000
+  OTHER|name:Point Light 2|in:0.000|out:7.000
+  OTHER|name:Point Light 1|in:0.000|out:7.000
+  SHAPE|name:Shape Layer 2
+COMP|name:Pre-comp 8|dur:7.000|fps:25.000|w:3840|h:2160|layers:4
+  OTHER|name:Camera 1|in:0.000|out:7.000
+  OTHER|name:Point Light 2|in:0.000|out:7.000
+  OTHER|name:Point Light 1|in:0.000|out:7.000
+  SHAPE|name:Shape Layer 2
+COMP|name:Pre-comp 9|dur:9.000|fps:25.000|w:3840|h:2160|layers:4
+  OTHER|name:Camera 1|in:0.000|out:9.280
+  OTHER|name:Point Light 2|in:0.000|out:9.280
+  OTHER|name:Point Light 1|in:0.000|out:9.280
+  SHAPE|name:Shape Layer 2
+COMP|name:Pre-comp 10|dur:7.000|fps:25.000|w:3840|h:2160|layers:4
+  OTHER|name:Camera 1|in:0.000|out:7.000
+  OTHER|name:Point Light 2|in:0.000|out:7.000
+  OTHER|name:Point Light 1|in:0.000|out:7.000
+  SHAPE|name:Shape Layer 2
+COMP|name:Pre-comp 11|dur:7.000|fps:25.000|w:3840|h:2160|layers:4
+  OTHER|name:Camera 1|in:0.000|out:7.000
+  OTHER|name:Point Light 2|in:0.000|out:7.000
+  OTHER|name:Point Light 1|in:0.000|out:7.000
+  SHAPE|name:Shape Layer 2
+COMP|name:Pre-comp 12|dur:20.000|fps:25.000|w:3840|h:2160|layers:6
+  SOLID|name:Null 4
+  OTHER|name:Camera 1|in:0.000|out:20.000
+  OTHER|name:Point Light 3|in:0.000|out:20.000
+  OTHER|name:Point Light 2|in:0.000|out:20.000
+  OTHER|name:Point Light 1|in:0.000|out:20.000
+  SHAPE|name:Shape Layer 2
+COMP|name:Footage_1|dur:30.000|fps:25.000|w:3000|h:4000|layers:0
+COMP|name:Footage_2|dur:30.000|fps:25.000|w:4000|h:4000|layers:0
+COMP|name:Footage_3|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_4|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_5|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_6|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_7|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_8|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_9|dur:30.000|fps:25.000|w:4000|h:4000|layers:0
+COMP|name:Footage_10|dur:30.000|fps:25.000|w:4000|h:4000|layers:0
+COMP|name:Footage_11|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_12|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_13|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_14|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_15|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_16|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_17|dur:30.000|fps:25.000|w:3000|h:4000|layers:0
+COMP|name:Footage_18|dur:30.000|fps:25.000|w:3840|h:2160|layers:0
+COMP|name:Footage_19|dur:30.000|fps:25.000|w:3840|h:2160|layers:0
+COMP|name:Footage_20|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_21|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:Footage_22|dur:30.000|fps:25.000|w:4000|h:3000|layers:0
+COMP|name:light|dur:600.000|fps:25.000|w:3840|h:2160|layers:3
+  SOLID|name:Adjustment Layer 30
+  SOLID|name:Adjustment Layer 20
+  PRECOMP|name:shape_light|source:shape_light|in:0.000|out:1198.640
+COMP|name:shape_light|dur:600.000|fps:25.000|w:3840|h:2160|layers:3
+  SOLID|name:Null 2
+  SOLID|name:Null 2
+  SHAPE|name:Shape Layer 1
+COMP|name:Main|dur:70.000|fps:25.000|w:3840|h:2160|layers:10
+  SOLID|name:color
+  PRECOMP|name:light|source:light|in:0.000|out:97.080
+  PRECOMP|name:Block_2|source:Block_2|in:10.000|out:25.000
+  PRECOMP|name:Block_5|source:Block_5|in:32.000|out:51.000
+  PRECOMP|name:Block_7|source:Block_7|in:56.000|out:68.000
+  PRECOMP|name:Block_6|source:Block_6|in:48.000|out:65.000
+  PRECOMP|name:Block_4|source:Block_4|in:26.000|out:43.000
+  PRECOMP|name:Block_3|source:Block_3|in:20.000|out:37.000
+  PRECOMP|name:Block_1|source:Block_1|in:0.000|out:15.000
+  SOLID|name:Back
+COMP|name:Render_4K|dur:70.000|fps:25.000|w:3840|h:2160|layers:1
+  PRECOMP|name:Main|source:Main|in:0.000|out:70.000
+COMP|name:Render_HD|dur:70.000|fps:25.000|w:1920|h:1080|layers:1
+  PRECOMP|name:Main|source:Main|in:0.000|out:70.000
+
+=== ROOT COMPS (candidates for render comp) ===
+ROOT|name:Render_4K|dur:70.000|3840x2160
+ROOT|name:Render_HD|dur:70.000|1920x1080
+
+SCAN_COMPLETE

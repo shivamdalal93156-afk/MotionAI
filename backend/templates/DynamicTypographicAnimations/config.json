@@ -1,0 +1,61 @@
+{
+  "aepFile": "DynamicTypographicAnimations.aep",
+  "compName": "MAIN_RENDER",
+  "fps": 25,
+  "textLayers": [
+    { "key": "scene1_1", "layerName": "Creative",  "compName": "01_RollingOut" },
+    { "key": "scene1_2", "layerName": "Motion",    "compName": "01_RollingOut" },
+    { "key": "scene1_3", "layerName": "Words",     "compName": "01_RollingOut" },
+    { "key": "scene1_4", "layerName": "That",      "compName": "01_RollingOut" },
+    { "key": "scene1_5", "layerName": "Move",      "compName": "01_RollingOut" },
+    { "key": "scene1_6", "layerName": "Fast",      "compName": "01_RollingOut" },
+
+    { "key": "scene2_1", "layerName": "ALIVE",     "compName": "02_TwistReveal" },
+    { "key": "scene2_2", "layerName": "Brings",    "compName": "02_TwistReveal" },
+    { "key": "scene2_3", "layerName": "Motion",    "compName": "02_TwistReveal" },
+    { "key": "scene2_4", "layerName": "Words",     "compName": "02_TwistReveal" },
+
+    { "key": "scene3_1", "layerName": "Create",    "compName": "03_ChainReaction" },
+    { "key": "scene3_2", "layerName": "Stunning",  "compName": "03_ChainReaction" },
+    { "key": "scene3_3", "layerName": "Motion",    "compName": "03_ChainReaction" },
+    { "key": "scene3_4", "layerName": "Graphics",  "compName": "03_ChainReaction" },
+
+    { "key": "scene4_1", "layerName": "FOR",       "compName": "04_BuildImpact" },
+    { "key": "scene4_2", "layerName": "READY",     "compName": "04_BuildImpact" },
+    { "key": "scene4_3", "layerName": "BIG",       "compName": "04_BuildImpact" },
+    { "key": "scene4_4", "layerName": "SOMETHING", "compName": "04_BuildImpact" },
+    { "key": "scene4_5", "layerName": "GET",       "compName": "04_BuildImpact" },
+
+    { "key": "scene5_1", "layerName": "BIG",       "compName": "05_SharkTail" },
+    { "key": "scene5_2", "layerName": "SALE",      "compName": "05_SharkTail" },
+    { "key": "scene5_3", "layerName": "TODAY",     "compName": "05_SharkTail" },
+
+    { "key": "scene6_1", "layerName": "LIVE",      "compName": "06_Ricochet" },
+    { "key": "scene6_2", "layerName": "THIS",      "compName": "06_Ricochet" },
+    { "key": "scene6_3", "layerName": "FRIDAY",    "compName": "06_Ricochet" },
+    { "key": "scene6_4", "layerName": "AT",        "compName": "06_Ricochet" },
+    { "key": "scene6_5", "layerName": "8PM",       "compName": "06_Ricochet" },
+
+    { "key": "scene7_1", "layerName": "Up",        "compName": "07_FinalFocus" },
+    { "key": "scene7_2", "layerName": "to",        "compName": "07_FinalFocus" },
+    { "key": "scene7_3", "layerName": "%",         "compName": "07_FinalFocus" },
+    { "key": "scene7_4", "layerName": "70",        "compName": "07_FinalFocus" },
+
+    { "key": "scene8_1", "layerName": "Black",     "compName": "08_ShakeOff" },
+    { "key": "scene8_2", "layerName": "Friday",    "compName": "08_ShakeOff" },
+    { "key": "scene8_3", "layerName": "Mega",      "compName": "08_ShakeOff" },
+    { "key": "scene8_4", "layerName": "Sale",      "compName": "08_ShakeOff" },
+    { "key": "scene8_5", "layerName": "Now",       "compName": "08_ShakeOff" }
+  ],
+  "imageLayers": [],
+  "sceneMap": {
+    "scene1": { "outpoint": 5.0,  "keys": ["scene1_1","scene1_2","scene1_3","scene1_4","scene1_5","scene1_6"] },
+    "scene2": { "outpoint": 10.5, "keys": ["scene2_1","scene2_2","scene2_3","scene2_4"] },
+    "scene3": { "outpoint": 15.5, "keys": ["scene3_1","scene3_2","scene3_3","scene3_4"] },
+    "scene4": { "outpoint": 22.0, "keys": ["scene4_1","scene4_2","scene4_3","scene4_4","scene4_5"] },
+    "scene5": { "outpoint": 27.5, "keys": ["scene5_1","scene5_2","scene5_3"] },
+    "scene6": { "outpoint": 34.0, "keys": ["scene6_1","scene6_2","scene6_3","scene6_4","scene6_5"] },
+    "scene7": { "outpoint": 40.5, "keys": ["scene7_1","scene7_2","scene7_3","scene7_4"] },
+    "scene8": { "outpoint": 47.0, "keys": ["scene8_1","scene8_2","scene8_3","scene8_4","scene8_5"] }
+  }
+}
