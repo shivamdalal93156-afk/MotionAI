@@ -1,0 +1,290 @@
+{
+  "aepFile": "Modern QR Code Titles.aep",
+  "compName": "#Render",
+  "fps": 60.0,
+  "duration": 75.950,
+  "resolution": "1920x1080",
+  "textLayers": [
+    {
+      "key": "slide1_scan_label",
+      "layerName": "scan here",
+      "compName": "1",
+      "absIn": 0.667,
+      "absOut": 5.883
+    },
+    {
+      "key": "slide2_title",
+      "layerName": "Live Music Festival 2026",
+      "compName": "2",
+      "absIn": 1.033,
+      "absOut": 7.033
+    },
+    {
+      "key": "slide2_scan_label",
+      "layerName": "scan here",
+      "compName": "2",
+      "absIn": 1.550,
+      "absOut": 7.550
+    },
+    {
+      "key": "slide3_title",
+      "layerName": "Modern Art Showcase",
+      "compName": "3",
+      "absIn": 0.983,
+      "absOut": 5.233
+    },
+    {
+      "key": "slide3_subtitle",
+      "layerName": "Explore contemporary works from emerging visual artists",
+      "compName": "3",
+      "absIn": 1.283,
+      "absOut": 5.367
+    },
+    {
+      "key": "slide3_scan_label",
+      "layerName": "scan here",
+      "compName": "3",
+      "absIn": 0.400,
+      "absOut": 5.400
+    },
+    {
+      "key": "slide4_title",
+      "layerName": "Final Championship Game",
+      "compName": "4",
+      "absIn": 0.183,
+      "absOut": 5.983
+    },
+    {
+      "key": "slide4_scan_label",
+      "layerName": "scan here",
+      "compName": "4",
+      "absIn": 0.800,
+      "absOut": 5.983
+    },
+    {
+      "key": "slide5_scan_label",
+      "layerName": "scan here",
+      "compName": "5",
+      "absIn": 0.000,
+      "absOut": 5.933
+    },
+    {
+      "key": "slide6_title",
+      "layerName": "Movie Premiere",
+      "compName": "6",
+      "absIn": 0.000,
+      "absOut": 5.967
+    },
+    {
+      "key": "slide6_scan_label",
+      "layerName": "scan here",
+      "compName": "6",
+      "absIn": 0.000,
+      "absOut": 5.967
+    },
+    {
+      "key": "slide7_title",
+      "layerName": "Creative Design Conference",
+      "compName": "7",
+      "absIn": 0.100,
+      "absOut": 5.833
+    },
+    {
+      "key": "slide8_scan_label",
+      "layerName": "scan here",
+      "compName": "8",
+      "absIn": 0.550,
+      "absOut": 6.000
+    },
+    {
+      "key": "slide9_title",
+      "layerName": "New Collection Drop",
+      "compName": "9",
+      "absIn": 0.000,
+      "absOut": 6.000
+    },
+    {
+      "key": "slide9_scan_label",
+      "layerName": "scan here",
+      "compName": "9",
+      "absIn": 0.450,
+      "absOut": 6.450
+    }
+  ],
+  "imageLayers": [
+    {
+      "key": "slide1_bg",
+      "compName": "PLACEHOLDER HERE 1!!!",
+      "layerName": "Delete This!!!.png",
+      "type": "replace",
+      "absIn": 0.000,
+      "absOut": 5.917
+    },
+    {
+      "key": "slide2_bg",
+      "compName": "PLACEHOLDER HERE 1!!!",
+      "layerName": "",
+      "type": "comp_inject",
+      "absIn": 0.000,
+      "absOut": 13.417
+    },
+    {
+      "key": "slide3_bg",
+      "compName": "PLACEHOLDER HERE 2!!!",
+      "layerName": "Delete This!!!.png",
+      "type": "replace",
+      "absIn": 0.000,
+      "absOut": 6.000
+    },
+    {
+      "key": "slide4_bg",
+      "compName": "PLACEHOLDER HERE 1!!!",
+      "layerName": "Delete This!!!.png",
+      "type": "replace",
+      "absIn": 0.000,
+      "absOut": 5.983
+    },
+    {
+      "key": "slide5_bg",
+      "compName": "PLACEHOLDER HERE 1!!!",
+      "layerName": "",
+      "type": "comp_inject",
+      "absIn": 0.000,
+      "absOut": 20.517
+    },
+    {
+      "key": "slide6_bg",
+      "compName": "PLACEHOLDER HERE 1!!!",
+      "layerName": "Delete This!!!.png",
+      "type": "replace",
+      "absIn": 0.000,
+      "absOut": 6.017
+    },
+    {
+      "key": "slide7_bg",
+      "compName": "PLACEHOLDER HERE 2!!!",
+      "layerName": "Delete This!!!.png",
+      "type": "replace",
+      "absIn": 0.000,
+      "absOut": 6.000
+    },
+    {
+      "key": "slide8_bg",
+      "compName": "PLACEHOLDER HERE 1!!!",
+      "layerName": "Delete This!!!.png",
+      "type": "replace",
+      "absIn": 0.000,
+      "absOut": 6.000
+    },
+    {
+      "key": "slide1_qr",
+      "compName": "PLACEYOURQRCODEHERE 1!!!",
+      "layerName": "",
+      "type": "comp_inject",
+      "absIn": 0.000,
+      "absOut": 5.917
+    },
+    {
+      "key": "slide2_qr",
+      "compName": "PLACEYOURQRCODEHERE 1!!!",
+      "layerName": "",
+      "type": "comp_inject",
+      "absIn": 0.000,
+      "absOut": 11.917
+    },
+    {
+      "key": "slide3_qr",
+      "compName": "PLACEYOURQRCODEHERE 1!!!",
+      "layerName": "",
+      "type": "comp_inject",
+      "absIn": 0.000,
+      "absOut": 17.900
+    },
+    {
+      "key": "slide4_qr",
+      "compName": "PLACEYOURQRCODEHERE 1!!!",
+      "layerName": "",
+      "type": "comp_inject",
+      "absIn": 0.000,
+      "absOut": 23.883
+    },
+    {
+      "key": "slide5_qr",
+      "compName": "PLACEYOURQRCODEHERE 1!!!",
+      "layerName": "",
+      "type": "comp_inject",
+      "absIn": 0.000,
+      "absOut": 29.850
+    },
+    {
+      "key": "slide6_qr",
+      "compName": "PLACEYOURQRCODEHERE 1!!!",
+      "layerName": "",
+      "type": "comp_inject",
+      "absIn": 0.000,
+      "absOut": 35.850
+    },
+    {
+      "key": "slide7_qr",
+      "compName": "PLACEYOURQRCODEHERE 1!!!",
+      "layerName": "",
+      "type": "comp_inject",
+      "absIn": 0.000,
+      "absOut": 41.850
+    },
+    {
+      "key": "slide8_qr",
+      "compName": "PLACEYOURQRCODEHERE 1!!!",
+      "layerName": "",
+      "type": "comp_inject",
+      "absIn": 0.000,
+      "absOut": 47.867
+    },
+    {
+      "key": "slide9_qr",
+      "compName": "PLACEYOURQRCODEHERE 1!!!",
+      "layerName": "",
+      "type": "comp_inject",
+      "absIn": 0.000,
+      "absOut": 53.867
+    }
+  ],
+  "sceneMap": {
+    "scene1": {
+      "outpoint": 5.917,
+      "keys": ["slide1_scan_label", "slide1_bg", "slide1_qr"]
+    },
+    "scene2": {
+      "outpoint": 11.917,
+      "keys": ["slide2_title", "slide2_scan_label", "slide2_bg", "slide2_qr"]
+    },
+    "scene3": {
+      "outpoint": 17.900,
+      "keys": ["slide4_title", "slide4_scan_label", "slide4_bg", "slide4_qr"]
+    },
+    "scene4": {
+      "outpoint": 23.883,
+      "keys": ["slide5_scan_label", "slide5_bg", "slide5_qr"]
+    },
+    "scene5": {
+      "outpoint": 29.850,
+      "keys": ["slide6_title", "slide6_scan_label", "slide6_bg", "slide6_qr"]
+    },
+    "scene6": {
+      "outpoint": 35.850,
+      "keys": ["slide9_title", "slide9_scan_label", "slide9_qr"]
+    },
+    "scene7": {
+      "outpoint": 41.850,
+      "keys": ["slide3_title", "slide3_subtitle", "slide3_scan_label", "slide3_bg", "slide3_qr"]
+    },
+    "scene8": {
+      "outpoint": 47.867,
+      "keys": ["slide7_title", "slide7_bg", "slide7_qr"]
+    },
+    "scene9": {
+      "outpoint": 53.867,
+      "keys": ["slide8_scan_label", "slide8_bg", "slide8_qr"]
+    }
+  }
+}

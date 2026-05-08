@@ -1,0 +1,340 @@
+=== MOTIONAI COMPLETE SCAN v4.0 ===
+template: DynamicTypographyTitlesPack
+aep: C:/Users/SHIVAM/Desktop/motionai/backend/templates/DynamicTypographyTitlesPack/DynamicTypographyTitlesPack.aep
+scanned_at: Fri May 08 2026 05:43:01 GMT+0530
+
+OPEN_OK|items:98
+
+=== RENDER COMP CANDIDATES ===
+RENDER_COMP|name:02_FinalImpact|dur:6.040|fps:25.000|res:3840x2160|confidence:MEDIUM|score:80
+RENDER_COMP|name:03_ArrowRush|dur:7.040|fps:25.000|res:3840x2160|confidence:LOW|score:50
+RENDER_COMP|name:04_BounceOrbit|dur:5.440|fps:25.000|res:3840x2160|confidence:LOW|score:50
+RENDER_COMP|name:05_DropPulse|dur:6.040|fps:25.000|res:3840x2160|confidence:LOW|score:50
+RENDER_COMP|name:06_SpinFlick|dur:5.440|fps:25.000|res:3840x2160|confidence:LOW|score:50
+RENDER_COMP|name:07_DragDrop|dur:5.440|fps:25.000|res:3840x2160|confidence:LOW|score:50
+RENDER_COMP|name:08_DepthFlow|dur:7.040|fps:25.000|res:3840x2160|confidence:LOW|score:50
+RENDER_COMP|name:09_ElasticSwap|dur:6.040|fps:25.000|res:3840x2160|confidence:LOW|score:50
+RENDER_COMP|name:01_KineticFlow|dur:6.040|fps:25.000|res:3840x2160|confidence:LOW|score:50
+
+=== PROJECT FOOTAGE ITEMS ===
+
+=== COMP LAYER DETAIL ===
+COMP|name:01_KineticFlow|dur:6.040|fps:25.000|w:3840|h:2160|layers:14
+  PRECOMP|name:Shake01|source:Shake01|in:1.360|out:5.880|absIn:1.360|absOut:5.880
+  SOLID|name:Null 7
+  SOLID|name:Null 6
+  SOLID|name:Null 4
+  SOLID|name:Null 3
+  SOLID|name:Null 2
+  SOLID|name:Null 1
+  TEXT|name:Trendy|in:0.000|out:6.040|absIn:0.000|absOut:6.040|val:DYNAMIC
+  TEXT|name:Dynamic|in:0.600|out:6.040|absIn:0.600|absOut:6.040|val:TYPOGRAPHY
+  TEXT|name:Promo|in:2.040|out:6.040|absIn:2.040|absOut:6.040|val:TITLES
+  SOLID|name:Null 5
+  TEXT|name:Titles|in:3.440|out:6.040|absIn:3.440|absOut:6.040|val:PACK
+  SOLID|name:CheckBox
+  SHAPE|name:Background
+COMP|name:02_FinalImpact|dur:6.040|fps:25.000|w:3840|h:2160|layers:17
+  PRECOMP|name:Shake02|source:Shake02|in:2.880|out:4.440|absIn:2.880|absOut:4.440
+  SOLID|name:Null 17
+  SOLID|name:Null 16
+  SOLID|name:Null 15
+  SOLID|name:Null 14
+  SOLID|name:Null 13
+  SOLID|name:Null 12
+  SOLID|name:Null 10
+  SOLID|name:Null 9
+  SOLID|name:Null 8
+  TEXT|name:Minimal|in:0.000|out:6.040|absIn:0.000|absOut:6.040|val:MINIMAL
+  TEXT|name:Style|in:0.680|out:6.040|absIn:0.680|absOut:6.040|val:STYLE
+  SOLID|name:Null 11
+  TEXT|name:Maximum|in:1.000|out:6.040|absIn:1.000|absOut:6.040|val:MAXIMUM
+  TEXT|name:Impact|in:2.040|out:6.040|absIn:2.040|absOut:6.040|val:IMPACT
+  SOLID|name:CheckBox
+  SHAPE|name:Background
+COMP|name:03_ArrowRush|dur:7.040|fps:25.000|w:3840|h:2160|layers:20
+  PRECOMP|name:Shake03|source:Shake03|in:1.800|out:6.840|absIn:1.800|absOut:6.840
+  SOLID|name:Null 29
+  SOLID|name:Null 28
+  SOLID|name:Null 26
+  SOLID|name:Null 25
+  SOLID|name:Null 24
+  SOLID|name:Null 23
+  SOLID|name:Null 22
+  SOLID|name:Null 21
+  SOLID|name:Null 20
+  SOLID|name:Null 18
+  TEXT|name:Designed|in:0.000|out:4.600|absIn:0.000|absOut:4.600|val:DESIGNED
+  SOLID|name:Null 19
+  TEXT|name:FOR|in:0.000|out:4.880|absIn:0.000|absOut:4.880|val:FOR
+  TEXT|name:High|in:2.520|out:4.760|absIn:2.520|absOut:4.760|val:HIGH
+  SOLID|name:Null 27
+  TEXT|name:End|in:3.720|out:4.760|absIn:3.720|absOut:4.760|val:END
+  TEXT|name:VISUALS|in:4.480|out:6.720|absIn:4.480|absOut:6.720|val:VISUALS
+  SOLID|name:CheckBox
+  SHAPE|name:Background
+COMP|name:04_BounceOrbit|dur:5.440|fps:25.000|w:3840|h:2160|layers:17
+  PRECOMP|name:Shake04|source:Shake04|in:1.760|out:5.280|absIn:1.760|absOut:5.280
+  SOLID|name:Null 38
+  SOLID|name:Null 37
+  SOLID|name:Null 35
+  SOLID|name:Null 34
+  SOLID|name:Null 32
+  SOLID|name:Null 31
+  SOLID|name:Null 30
+  TEXT|name:POWER|in:0.000|out:5.440|absIn:0.000|absOut:5.440|val:POWER
+  TEXT|name:YOUR|in:0.120|out:5.440|absIn:0.120|absOut:5.440|val:YOUR
+  TEXT|name:MESSAGE|in:0.240|out:5.440|absIn:0.240|absOut:5.440|val:MESSAGE
+  SOLID|name:Null 33
+  TEXT|name:WITH|in:0.840|out:5.440|absIn:0.840|absOut:5.440|val:WITH
+  SOLID|name:Null 36
+  TEXT|name:STYLE|in:1.520|out:5.440|absIn:1.520|absOut:5.440|val:STYLE
+  SOLID|name:CheckBox
+  SHAPE|name:Background
+COMP|name:05_DropPulse|dur:6.040|fps:25.000|w:3840|h:2160|layers:13
+  PRECOMP|name:Shake05|source:Shake05|in:0.680|out:5.760|absIn:0.680|absOut:5.760
+  SOLID|name:Null 44
+  SOLID|name:Null 43
+  SOLID|name:Null 39
+  SOLID|name:Null 41
+  TEXT|name:FAST|in:1.680|out:5.400|absIn:1.680|absOut:5.400|val:FAST
+  TEXT|name:MOVE|in:0.000|out:5.400|absIn:0.000|absOut:5.400|val:MOVE
+  SOLID|name:Null 42
+  TEXT|name:BOLD|in:3.240|out:5.400|absIn:3.240|absOut:5.400|val:BOLD
+  SOLID|name:Null 40
+  TEXT|name:STAY|in:0.000|out:5.400|absIn:0.000|absOut:5.400|val:STAY
+  SOLID|name:CheckBox
+  SHAPE|name:Background
+COMP|name:06_SpinFlick|dur:5.440|fps:25.000|w:3840|h:2160|layers:12
+  PRECOMP|name:Shake06|source:Shake06|in:0.680|out:4.840|absIn:0.680|absOut:4.840
+  SOLID|name:Null 50
+  SOLID|name:Null 48
+  SOLID|name:Null 47
+  SOLID|name:Null 45
+  SOLID|name:Null 46
+  TEXT|name:FLOW|in:0.000|out:2.200|absIn:0.000|absOut:2.200|val:FLOW
+  TEXT|name:WITH|in:1.120|out:2.080|absIn:1.120|absOut:2.080|val:WITH
+  SOLID|name:Null 49
+  TEXT|name:POWER|in:1.640|out:5.440|absIn:1.640|absOut:5.440|val:MOTION
+  SOLID|name:CheckBox
+  SHAPE|name:Background
+COMP|name:07_DragDrop|dur:5.440|fps:25.000|w:3840|h:2160|layers:13
+  PRECOMP|name:Shake07|source:Shake07|in:3.880|out:4.760|absIn:3.880|absOut:4.760
+  SOLID|name:Null 57
+  SOLID|name:Null 56
+  SOLID|name:Null 55
+  SOLID|name:Null 54
+  SOLID|name:Null 53
+  SOLID|name:Null 52
+  SOLID|name:Null 51
+  TEXT|name:Drag|in:0.000|out:5.440|absIn:0.000|absOut:5.440|val:Drag
+  TEXT|name:Drop|in:0.440|out:5.440|absIn:0.440|absOut:5.440|val:Drop
+  TEXT|name:Done|in:2.680|out:5.440|absIn:2.680|absOut:5.440|val:Done
+  SOLID|name:CheckBox
+  SHAPE|name:Background
+COMP|name:08_DepthFlow|dur:7.040|fps:25.000|w:3840|h:2160|layers:24
+  PRECOMP|name:Shake8B|source:Shake8B|in:6.600|out:6.840|absIn:6.600|absOut:6.840
+  PRECOMP|name:Shake08|source:Shake08|in:2.760|out:5.920|absIn:2.760|absOut:5.920
+  SHAPE|name:Shape Layer 9
+  SOLID|name:Null 69
+  SOLID|name:Null 70
+  SOLID|name:Null 68
+  SOLID|name:Null 66
+  SOLID|name:Null 64
+  SOLID|name:Null 62
+  SOLID|name:Null 60
+  SOLID|name:Null 58
+  TEXT|name:Modular|in:0.200|out:2.760|absIn:0.200|absOut:2.760|val:Modular
+  SOLID|name:Null 59
+  TEXT|name:Structure|in:0.440|out:2.760|absIn:0.440|absOut:2.760|val:Structure
+  SOLID|name:Null 61
+  TEXT|name:Flexible|in:1.800|out:3.720|absIn:1.800|absOut:3.720|val:Flexible
+  SOLID|name:Null 63
+  TEXT|name:POWER|in:3.000|out:4.680|absIn:3.000|absOut:4.680|val:Scenes
+  SOLID|name:Null 65
+  TEXT|name:No|in:4.000|out:5.720|absIn:4.000|absOut:5.720|val:No
+  SOLID|name:Null 67
+  TEXT|name:PlugIn|in:5.040|out:7.040|absIn:5.040|absOut:7.040|val:Plug-in
+  SOLID|name:CheckBox
+  SHAPE|name:Background
+COMP|name:09_ElasticSwap|dur:6.040|fps:25.000|w:3840|h:2160|layers:13
+  PRECOMP|name:Shake09|source:Shake09|in:3.720|out:4.760|absIn:3.720|absOut:4.760
+  SOLID|name:Null 76
+  SOLID|name:Null 72
+  SOLID|name:Null 71
+  TEXT|name:Smooth|in:0.000|out:2.560|absIn:0.000|absOut:2.560|val:Smooth
+  SOLID|name:Null 73
+  TEXT|name:Workflow|in:1.920|out:3.400|absIn:1.920|absOut:3.400|val:Workflow
+  SOLID|name:Null 75
+  TEXT|name:Simple|in:1.920|out:6.040|absIn:1.920|absOut:6.040|val:Simple
+  SOLID|name:Null 74
+  TEXT|name:Controls|in:2.560|out:6.040|absIn:2.560|absOut:6.040|val:Controls
+  SOLID|name:CheckBox
+  SHAPE|name:Background
+COMP|name:Shake01|dur:4.520|fps:25.000|w:3840|h:2160|layers:10
+  SHAPE|name:Shape Layer 8
+  SHAPE|name:Shape Layer 7
+  SHAPE|name:Shape Layer 6
+  SHAPE|name:Shape Layer 5
+  SHAPE|name:Shape Layer 4
+  SHAPE|name:Shape Layer 3
+  SHAPE|name:Shape Layer 1
+  SHAPE|name:Shape Layer 2
+  SHAPE|name:Shape Layer 12
+  SHAPE|name:Shape Layer 11
+COMP|name:Shake02|dur:1.560|fps:25.000|w:3840|h:2160|layers:6
+  SHAPE|name:Shape Layer 10
+  SHAPE|name:Shape Layer 9
+  SHAPE|name:Shape Layer 8
+  SHAPE|name:Shape Layer 7
+  SHAPE|name:Shape Layer 12
+  SHAPE|name:Shape Layer 11
+COMP|name:Shake03|dur:5.040|fps:25.000|w:3840|h:2160|layers:8
+  SHAPE|name:Shape Layer 14
+  SHAPE|name:Shape Layer 13
+  SHAPE|name:Shape Layer 12
+  SHAPE|name:Shape Layer 11
+  SHAPE|name:Shape Layer 10
+  SHAPE|name:Shape Layer 9
+  SHAPE|name:Shape Layer 8
+  SHAPE|name:Shape Layer 7
+COMP|name:Shake04|dur:3.520|fps:25.000|w:3840|h:2160|layers:30
+  SHAPE|name:Shape Layer 36
+  SHAPE|name:Shape Layer 35
+  SHAPE|name:Shape Layer 34
+  SHAPE|name:Shape Layer 33
+  SHAPE|name:Shape Layer 32
+  SHAPE|name:Shape Layer 31
+  SHAPE|name:Shape Layer 30
+  SHAPE|name:Shape Layer 29
+  SHAPE|name:Shape Layer 28
+  SHAPE|name:Shape Layer 27
+  SHAPE|name:Shape Layer 26
+  SHAPE|name:Shape Layer 25
+  SHAPE|name:Shape Layer 24
+  SHAPE|name:Shape Layer 23
+  SHAPE|name:Shape Layer 22
+  SHAPE|name:Shape Layer 21
+  SHAPE|name:Shape Layer 20
+  SHAPE|name:Shape Layer 19
+  SHAPE|name:Shape Layer 18
+  SHAPE|name:Shape Layer 17
+  SHAPE|name:Shape Layer 16
+  SHAPE|name:Shape Layer 15
+  SHAPE|name:Shape Layer 14
+  SHAPE|name:Shape Layer 13
+  SHAPE|name:Shape Layer 12
+  SHAPE|name:Shape Layer 11
+  SHAPE|name:Shape Layer 10
+  SHAPE|name:Shape Layer 9
+  SHAPE|name:Shape Layer 8
+  SHAPE|name:Shape Layer 7
+COMP|name:Shake05|dur:5.080|fps:25.000|w:3840|h:2160|layers:20
+  SHAPE|name:Shape Layer 26
+  SHAPE|name:Shape Layer 25
+  SHAPE|name:Shape Layer 24
+  SHAPE|name:Shape Layer 23
+  SHAPE|name:Shape Layer 22
+  SHAPE|name:Shape Layer 21
+  SHAPE|name:Shape Layer 20
+  SHAPE|name:Shape Layer 19
+  SHAPE|name:Shape Layer 8
+  SHAPE|name:Shape Layer 7
+  SHAPE|name:Shape Layer 18
+  SHAPE|name:Shape Layer 17
+  SHAPE|name:Shape Layer 16
+  SHAPE|name:Shape Layer 15
+  SHAPE|name:Shape Layer 14
+  SHAPE|name:Shape Layer 13
+  SHAPE|name:Shape Layer 12
+  SHAPE|name:Shape Layer 11
+  SHAPE|name:Shape Layer 10
+  SHAPE|name:Shape Layer 9
+COMP|name:Shake06|dur:4.160|fps:25.000|w:3840|h:2160|layers:12
+  SHAPE|name:Shape Layer 20
+  SHAPE|name:Shape Layer 19
+  SHAPE|name:Shape Layer 18
+  SHAPE|name:Shape Layer 17
+  SHAPE|name:Shape Layer 16
+  SHAPE|name:Shape Layer 15
+  SHAPE|name:Shape Layer 14
+  SHAPE|name:Shape Layer 13
+  SHAPE|name:Shape Layer 12
+  SHAPE|name:Shape Layer 11
+  SHAPE|name:Shape Layer 10
+  SHAPE|name:Shape Layer 9
+COMP|name:Shake07|dur:0.880|fps:25.000|w:3840|h:2160|layers:8
+  SHAPE|name:Shape Layer 14
+  SHAPE|name:Shape Layer 13
+  SHAPE|name:Shape Layer 12
+  SHAPE|name:Shape Layer 11
+  SHAPE|name:Shape Layer 10
+  SHAPE|name:Shape Layer 9
+  SHAPE|name:Shape Layer 8
+  SHAPE|name:Shape Layer 7
+COMP|name:Shake08|dur:3.160|fps:25.000|w:3840|h:2160|layers:8
+  SHAPE|name:Shape Layer 15
+  SHAPE|name:Shape Layer 14
+  SHAPE|name:Shape Layer 13
+  SHAPE|name:Shape Layer 12
+  SHAPE|name:Shape Layer 11
+  SHAPE|name:Shape Layer 10
+  SHAPE|name:Shape Layer 8
+  SHAPE|name:Shape Layer 7
+COMP|name:Shake8B|dur:0.240|fps:25.000|w:3840|h:2160|layers:2
+  SHAPE|name:Shape Layer 17
+  SHAPE|name:Shape Layer 16
+COMP|name:Shake09|dur:1.040|fps:25.000|w:3840|h:2160|layers:4
+  SHAPE|name:Shape Layer 10
+  SHAPE|name:Shape Layer 9
+  SHAPE|name:Shape Layer 8
+  SHAPE|name:Shape Layer 7
+
+=== INJECTABLE SUMMARY ===
+-- TEXT INJECTABLES --
+TEXT_INJECT|comp:01_KineticFlow|layer:Trendy|absIn:0.000|absOut:6.040|val:DYNAMIC
+TEXT_INJECT|comp:01_KineticFlow|layer:Dynamic|absIn:0.600|absOut:6.040|val:TYPOGRAPHY
+TEXT_INJECT|comp:01_KineticFlow|layer:Promo|absIn:2.040|absOut:6.040|val:TITLES
+TEXT_INJECT|comp:01_KineticFlow|layer:Titles|absIn:3.440|absOut:6.040|val:PACK
+TEXT_INJECT|comp:02_FinalImpact|layer:Minimal|absIn:0.000|absOut:6.040|val:MINIMAL
+TEXT_INJECT|comp:02_FinalImpact|layer:Style|absIn:0.680|absOut:6.040|val:STYLE
+TEXT_INJECT|comp:02_FinalImpact|layer:Maximum|absIn:1.000|absOut:6.040|val:MAXIMUM
+TEXT_INJECT|comp:02_FinalImpact|layer:Impact|absIn:2.040|absOut:6.040|val:IMPACT
+TEXT_INJECT|comp:03_ArrowRush|layer:Designed|absIn:0.000|absOut:4.600|val:DESIGNED
+TEXT_INJECT|comp:03_ArrowRush|layer:FOR|absIn:0.000|absOut:4.880|val:FOR
+TEXT_INJECT|comp:03_ArrowRush|layer:High|absIn:2.520|absOut:4.760|val:HIGH
+TEXT_INJECT|comp:03_ArrowRush|layer:End|absIn:3.720|absOut:4.760|val:END
+TEXT_INJECT|comp:03_ArrowRush|layer:VISUALS|absIn:4.480|absOut:6.720|val:VISUALS
+TEXT_INJECT|comp:04_BounceOrbit|layer:POWER|absIn:0.000|absOut:5.440|val:POWER
+TEXT_INJECT|comp:04_BounceOrbit|layer:YOUR|absIn:0.120|absOut:5.440|val:YOUR
+TEXT_INJECT|comp:04_BounceOrbit|layer:MESSAGE|absIn:0.240|absOut:5.440|val:MESSAGE
+TEXT_INJECT|comp:04_BounceOrbit|layer:WITH|absIn:0.840|absOut:5.440|val:WITH
+TEXT_INJECT|comp:04_BounceOrbit|layer:STYLE|absIn:1.520|absOut:5.440|val:STYLE
+TEXT_INJECT|comp:05_DropPulse|layer:FAST|absIn:1.680|absOut:5.400|val:FAST
+TEXT_INJECT|comp:05_DropPulse|layer:MOVE|absIn:0.000|absOut:5.400|val:MOVE
+TEXT_INJECT|comp:05_DropPulse|layer:BOLD|absIn:3.240|absOut:5.400|val:BOLD
+TEXT_INJECT|comp:05_DropPulse|layer:STAY|absIn:0.000|absOut:5.400|val:STAY
+TEXT_INJECT|comp:06_SpinFlick|layer:FLOW|absIn:0.000|absOut:2.200|val:FLOW
+TEXT_INJECT|comp:06_SpinFlick|layer:WITH|absIn:1.120|absOut:2.080|val:WITH
+TEXT_INJECT|comp:06_SpinFlick|layer:POWER|absIn:1.640|absOut:5.440|val:MOTION
+TEXT_INJECT|comp:07_DragDrop|layer:Drag|absIn:0.000|absOut:5.440|val:Drag
+TEXT_INJECT|comp:07_DragDrop|layer:Drop|absIn:0.440|absOut:5.440|val:Drop
+TEXT_INJECT|comp:07_DragDrop|layer:Done|absIn:2.680|absOut:5.440|val:Done
+TEXT_INJECT|comp:08_DepthFlow|layer:Modular|absIn:0.200|absOut:2.760|val:Modular
+TEXT_INJECT|comp:08_DepthFlow|layer:Structure|absIn:0.440|absOut:2.760|val:Structure
+TEXT_INJECT|comp:08_DepthFlow|layer:Flexible|absIn:1.800|absOut:3.720|val:Flexible
+TEXT_INJECT|comp:08_DepthFlow|layer:POWER|absIn:3.000|absOut:4.680|val:Scenes
+TEXT_INJECT|comp:08_DepthFlow|layer:No|absIn:4.000|absOut:5.720|val:No
+TEXT_INJECT|comp:08_DepthFlow|layer:PlugIn|absIn:5.040|absOut:7.040|val:Plug-in
+TEXT_INJECT|comp:09_ElasticSwap|layer:Smooth|absIn:0.000|absOut:2.560|val:Smooth
+TEXT_INJECT|comp:09_ElasticSwap|layer:Workflow|absIn:1.920|absOut:3.400|val:Workflow
+TEXT_INJECT|comp:09_ElasticSwap|layer:Simple|absIn:1.920|absOut:6.040|val:Simple
+TEXT_INJECT|comp:09_ElasticSwap|layer:Controls|absIn:2.560|absOut:6.040|val:Controls
+
+-- IMAGE INJECTABLES --
+
+-- SOLID INJECTABLES --
+
+-- PROJECT LEVEL FOOTAGE --
+
+SCAN_COMPLETE

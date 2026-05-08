@@ -1,7 +1,7 @@
-var AEP_PATH    = "C:/Users/SHIVAM/Desktop/motionai/backend/templates/DynamicTypographyTitlesPack/DynamicTypographyTitlesPack.aep";
-var LOG_PATH    = "C:/Users/SHIVAM/Desktop/motionai/backend/templates/DynamicTypographyTitlesPack/_scan.log";
-var RESULT_PATH = "C:/Users/SHIVAM/Desktop/motionai/backend/templates/DynamicTypographyTitlesPack/scan_result.txt";
-var TEMPLATE    = "DynamicTypographyTitlesPack";
+var AEP_PATH    = "C:/Users/SHIVAM/Desktop/motionai/backend/templates/Modern QR Code/Modern QR Code Titles.aep";
+var LOG_PATH    = "C:/Users/SHIVAM/Desktop/motionai/backend/templates/Modern QR Code/_scan.log";
+var RESULT_PATH = "C:/Users/SHIVAM/Desktop/motionai/backend/templates/Modern QR Code/scan_result.txt";
+var TEMPLATE    = "Modern QR Code";
 // // MotionAI - Smart Template Scanner v2.0
 
 // var PLACEHOLDER_KEYWORDS = ['placeholder', 'image', 'photo', 'media', 'footage', 'pic', 'bg', 'background', 'insert', 'here', 'your', 'slide', 'frame'];

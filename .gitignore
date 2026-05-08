@@ -1,0 +1,14 @@
+node_modules/
+backend/node_modules/
+backend/jobs/
+backend/queue/
+backend/outputs/
+backend/logs/
+backend/temp/
+backend/*.aep
+backend/*.avi
+backend/*.mp4
+frontend/vite-project/node_modules/
+frontend/vite-project/dist/
+.env
+*.env

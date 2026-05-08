@@ -1,38 +1,16 @@
-# dependencies
 node_modules/
-
-# env
-.env
-
-# outputs/temp
-outputs/
-temp/
-logs/
-queue/
 jobs/
-previews/
-uploads/
-
-# AE heavy assets
+queue/
+outputs/
+logs/
+temp/
+.env
+*.aep
+*.avi
 *.mp4
 *.mov
+*.wav
+*.mp3
 *.psd
-*.aep
-*.aepx
-*.zip
-*.rar
-
-# optional huge footage dirs
-backend/templates/**/(Footage)/
-backend/templates/**/Help/
-backend/templates/**/*.mp4
-backend/templates/**/*.mov
-backend/templates/**/*.psd
-# heavy template assets
-backend/templates/**/*.mp4
-backend/templates/**/*.mov
-backend/templates/**/*.psd
-backend/templates/**/*.aep
-backend/templates/**/*.aepx
-backend/templates/**/(Footage)/
-backend/templates/**/Help/
+*.ai
+(Footage)/

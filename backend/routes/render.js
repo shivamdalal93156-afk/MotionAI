@@ -20,9 +20,27 @@ router.get('/templates', (req, res) => {
         return {
           id: name,
           compName: config.compName,
-          textFields: (config.textLayers || []).map(l => ({ key: l.key, label: l.layerName })),
-          imageFields: (config.imageLayers || []).map(l => ({ key: l.key, label: l.compName || l.key })),
-        };
+          textFields: (config.textLayers || []).map(l => ({
+  key:     l.key,
+  label:   l.label || l.layerName,
+  absIn:   l.absIn,
+  absOut:  l.absOut,
+  compName: l.compName,
+  layerName: l.layerName,
+})),
+imageFields: (config.imageLayers || []).map(l => ({
+  key:       l.key,
+  label:     l.label || l.compName || l.key,
+  absIn:     l.absIn,
+  absOut:    l.absOut,
+  compName:  l.compName,
+  layerName: l.layerName,
+  type:      l.type,
+  ratio:     l.ratio,
+})),
+          fps: config.fps,
+          duration: config.duration,
+          sceneMap: config.sceneMap || {},}
       } catch { return null; }
     }).filter(Boolean);
 

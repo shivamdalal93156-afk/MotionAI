@@ -25,11 +25,16 @@ app.use((req, res, next) => {
 app.use(cors({
   origin: '*',
 }));
+app.use((req, res, next) => {
+  res.setHeader('ngrok-skip-browser-warning', 'true');
+  next();
+});
 app.use(express.json({ limit: '2mb' }));
 
 // Serve completed MP4s directly
 app.use('/templates', express.static(path.resolve(__dirname, 'templates')));
 app.use('/footage', express.static(path.resolve(__dirname, 'templates')));
+app.use('/outputs', express.static(path.resolve(__dirname, 'outputs')));
 // ── Routes ───────────────────────────────────────────────────────
 app.use('/api/upload', require('./routes/upload'));
 app.use('/api/render', require('./routes/render'));

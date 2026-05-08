@@ -20,10 +20,10 @@ function writeJobFile(jobId, status, data = {}) {
     if (fs.existsSync(f)) fs.unlinkSync(f);
   }
   const payload = {
-    jobId,
-    status,
+    ...data,        // spread data FIRST
+    jobId,          // then overwrite with correct values
+    status,         // status is always the new one passed in
     updatedAt: Date.now(),
-    ...data
   };
   fs.writeFileSync(
     path.join(QUEUE_DIR, `${jobId}.${status}`),

@@ -1,0 +1,299 @@
+=== MOTIONAI COMPLETE SCAN v4.0 ===
+template: Modern QR Code
+aep: C:/Users/SHIVAM/Desktop/motionai/backend/templates/Modern QR Code/Modern QR Code Titles.aep
+scanned_at: Fri May 08 2026 05:46:02 GMT+0530
+
+OPEN_OK|items:92
+
+=== RENDER COMP CANDIDATES ===
+RENDER_COMP|name:#Render|dur:75.950|fps:60.000|res:1920x1080|confidence:MEDIUM|score:90
+RENDER_COMP|name:CHANGE COLOR HERE!!!|dur:1224.300|fps:60.000|res:1920x1080|confidence:MEDIUM|score:60
+
+=== PROJECT FOOTAGE ITEMS ===
+FOOTAGE_ITEM|id:92|name:Delete This!!!.png|w:1920|h:1080|instances:7|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
+
+=== COMP LAYER DETAIL ===
+COMP|name:#Render|dur:75.950|fps:60.000|w:1920|h:1080|layers:9
+  PRECOMP|name:1|source:1|in:0.000|out:5.917|absIn:0.000|absOut:5.917
+  PRECOMP|name:2|source:2|in:5.917|out:11.917|absIn:5.917|absOut:11.917
+  PRECOMP|name:4|source:4|in:11.917|out:17.900|absIn:11.917|absOut:17.900
+  PRECOMP|name:5|source:5|in:17.900|out:23.883|absIn:17.900|absOut:23.883
+  PRECOMP|name:6|source:6|in:23.883|out:29.850|absIn:23.883|absOut:29.850
+  PRECOMP|name:9|source:9|in:29.850|out:35.850|absIn:29.850|absOut:35.850
+  PRECOMP|name:3|source:3|in:35.850|out:41.850|absIn:35.850|absOut:41.850
+  PRECOMP|name:7|source:7|in:41.850|out:47.867|absIn:41.850|absOut:47.867
+  PRECOMP|name:8|source:8|in:47.867|out:53.867|absIn:47.867|absOut:53.867
+COMP|name:PLACEHOLDER HERE 1!!!|dur:5.917|fps:60.000|w:1920|h:1080|layers:1
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:5.917|absIn:0.000|absOut:5.917|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:330|layers:1
+  SHAPE|name:Vector
+COMP|name:1|dur:5.917|fps:60.000|w:1920|h:1080|layers:11
+  SHAPE|name:Shape Layer 4
+  SOLID|name:Null 1
+  PRECOMP|name:Union Comp 2|source:Union Comp 2|in:0.033|out:5.883|absIn:0.033|absOut:5.883
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.333|out:5.667|absIn:0.333|absOut:5.667
+  TEXT|name:scan here|in:0.667|out:5.883|absIn:0.667|absOut:5.883|val:SCAN HERE
+  PRECOMP|name:Shape Layer 1 Comp 2|source:Shape Layer 1 Comp 2|in:0.483|out:5.983|absIn:0.483|absOut:5.983
+  SHAPE|name:Shape Layer 3
+  SHAPE|name:Shape Layer 2
+  SOLID|name:Union Null 1
+  PRECOMP|name:Union Comp 1|source:Union Comp 1|in:0.000|out:5.883|absIn:0.000|absOut:5.883
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:5.917|absIn:0.000|absOut:5.917
+COMP|name:PLACEHOLDER HERE 1!!!|dur:13.417|fps:60.000|w:1920|h:1080|layers:0
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:329|layers:1
+  SHAPE|name:Vector
+COMP|name:2|dur:6.000|fps:60.000|w:1920|h:1080|layers:10
+  SHAPE|name:Shape Layer 4
+  TEXT|name:scan here|in:1.550|out:7.550|absIn:1.550|absOut:7.550|val:SCAN HERE
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.883|out:5.350|absIn:0.883|absOut:5.350
+  PRECOMP|name:Shape Layer 1 Comp 1|source:Shape Layer 1 Comp 1|in:0.817|out:5.283|absIn:0.817|absOut:5.283
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.483|out:5.283|absIn:0.483|absOut:5.283
+  TEXT|name:Live Music Festival 2026|in:1.033|out:7.033|absIn:1.033|absOut:7.033|val:LIVE MUSIC FESTIVAL 2026
+  SOLID|name:Null 1
+  SHAPE|name:Shape Layer 3
+  SHAPE|name:Shape Layer 2
+  PRECOMP|name:Vector 1 Comp 1|source:Vector 1 Comp 1|in:0.467|out:5.433|absIn:0.467|absOut:5.433
+COMP|name:PLACEHOLDER HERE 1!!!|dur:6.000|fps:60.000|w:409|h:408|layers:0
+COMP|name:PLACEHOLDER HERE 2!!!|dur:6.000|fps:60.000|w:1920|h:1080|layers:1
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:6.000|absIn:0.000|absOut:6.000|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:6.000|fps:60.000|w:343|h:330|layers:1
+  SHAPE|name:Vector
+COMP|name:3|dur:6.000|fps:60.000|w:1920|h:1080|layers:14
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.950|out:5.367|absIn:0.950|absOut:5.367
+  TEXT|name:scan here|in:0.400|out:5.400|absIn:0.400|absOut:5.400|val:SCAN HERE
+  PRECOMP|name:Pre-comp 1|source:Pre-comp 1|in:0.433|out:5.583|absIn:0.433|absOut:5.583
+  PRECOMP|name:Shape Layer 1 Comp 3|source:Shape Layer 1 Comp 3|in:0.483|out:5.983|absIn:0.483|absOut:5.983
+  SHAPE|name:Shape Layer 7
+  TEXT|name:Explore contemporary works from emerging visual artists|in:1.283|out:5.367|absIn:1.283|absOut:5.367|val:Explore Contemporary Works From Emerging Visual Artists
+  TEXT|name:Modern Art Showcase|in:0.983|out:5.233|absIn:0.983|absOut:5.233|val:MODERN ART SHOWCASE
+  SHAPE|name:Shape Layer 5
+  SHAPE|name:Shape Layer 6
+  SHAPE|name:Shape Layer 4
+  SHAPE|name:Shape Layer 3
+  SHAPE|name:Shape Layer 2
+  PRECOMP|name:Pre-comp 3|source:Pre-comp 3|in:0.483|out:5.517|absIn:0.483|absOut:5.517
+  PRECOMP|name:PLACEHOLDER HERE 2!!!|source:PLACEHOLDER HERE 2!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000
+COMP|name:PLACEHOLDER HERE 1!!!|dur:5.983|fps:60.000|w:1920|h:1080|layers:1
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:5.983|absIn:0.000|absOut:5.983|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:330|layers:1
+  SHAPE|name:Vector
+COMP|name:4|dur:5.983|fps:60.000|w:1920|h:1080|layers:12
+  TEXT|name:Final Championship Game|in:0.183|out:5.983|absIn:0.183|absOut:5.983|val:FINAL CHAMPIONSHIPGAME
+  PRECOMP|name:Vector Comp 3|source:Vector Comp 3|in:0.383|out:5.650|absIn:0.383|absOut:5.650
+  PRECOMP|name:Vector Comp 2|source:Vector Comp 2|in:0.083|out:5.500|absIn:0.083|absOut:5.500
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.550|out:5.683|absIn:0.550|absOut:5.683
+  TEXT|name:scan here|in:0.800|out:5.983|absIn:0.800|absOut:5.983|val:SCAN HERE
+  PRECOMP|name:Shape Layer 6 Comp 1|source:Shape Layer 6 Comp 1|in:0.483|out:5.983|absIn:0.483|absOut:5.983
+  PRECOMP|name:Vector Comp 4|source:Vector Comp 4|in:0.000|out:5.450|absIn:0.000|absOut:5.450
+  SHAPE|name:Shape Layer 5
+  SHAPE|name:Shape Layer 4
+  SHAPE|name:Shape Layer 3
+  SHAPE|name:Shape Layer 2
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:5.983|absIn:0.000|absOut:5.983
+COMP|name:PLACEHOLDER HERE 1!!!|dur:5.983|fps:60.000|w:1920|h:1080|layers:1
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:5.983|absIn:0.000|absOut:5.983|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:377|h:364|layers:1
+  SHAPE|name:Vector
+COMP|name:5|dur:5.983|fps:60.000|w:1920|h:1080|layers:10
+  SHAPE|name:Shape Layer 6
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:5.933|absIn:0.000|absOut:5.933
+  TEXT|name:scan here|in:0.000|out:5.933|absIn:0.000|absOut:5.933|val:SCAN HERE
+  PRECOMP|name:Shape Layer 1 Comp 4|source:Shape Layer 1 Comp 4|in:0.317|out:5.683|absIn:0.317|absOut:5.683
+  PRECOMP|name:Pre-comp 4|source:Pre-comp 4|in:0.000|out:5.733|absIn:0.000|absOut:5.733
+  SHAPE|name:Shape Layer 5
+  SHAPE|name:Shape Layer 4
+  SHAPE|name:Shape Layer 3
+  SHAPE|name:Shape Layer 2
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:5.983|absIn:0.000|absOut:5.983
+COMP|name:PLACEHOLDER HERE 1!!!|dur:20.517|fps:60.000|w:4096|h:2160|layers:0
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:329|layers:1
+  SHAPE|name:Vector
+COMP|name:6|dur:5.967|fps:60.000|w:1920|h:1080|layers:9
+  SHAPE|name:Shape Layer 5
+  TEXT|name:Movie Premiere|in:0.000|out:5.967|absIn:0.000|absOut:5.967|val:MOVIE PREMIERE
+  TEXT|name:scan here|in:0.000|out:5.967|absIn:0.000|absOut:5.967|val:SCAN HERE
+  PRECOMP|name:Shape Layer 1 Comp 5|source:Shape Layer 1 Comp 5|in:0.350|out:5.850|absIn:0.350|absOut:5.850
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.000|absOut:15.000
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.183|out:15.183|absIn:0.183|absOut:15.183
+  PRECOMP|name:Vector 2 Comp 1|source:Vector 2 Comp 1|in:0.000|out:5.967|absIn:0.000|absOut:5.967
+  SHAPE|name:Shape Layer 3
+  SHAPE|name:Shape Layer 2
+COMP|name:PLACEHOLDER HERE 1!!!|dur:6.017|fps:60.000|w:1920|h:1080|layers:1
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:6.017|absIn:0.000|absOut:6.017|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
+COMP|name:7|dur:6.017|fps:60.000|w:1920|h:1080|layers:9
+  PRECOMP|name:Rectangle 7 Comp 1|source:Rectangle 7 Comp 1|in:0.067|out:5.750|absIn:0.067|absOut:5.750
+  PRECOMP|name:Vector Comp 5|source:Vector Comp 5|in:0.083|out:6.017|absIn:0.083|absOut:6.017
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:5.950|absIn:0.000|absOut:5.950
+  TEXT|name:Creative Design Conference|in:0.100|out:5.833|absIn:0.100|absOut:5.833|val:CREATIVE DESIGN CONFERENCE
+  SHAPE|name:Shape Layer 4
+  SHAPE|name:Shape Layer 5
+  SHAPE|name:Shape Layer 3
+  SHAPE|name:Shape Layer 2
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:6.017|absIn:0.000|absOut:6.017
+COMP|name:PLACEHOLDER HERE 1!!!|dur:15.000|fps:60.000|w:299|h:304|layers:1
+  SHAPE|name:Rectangle 8
+COMP|name:PLACEHOLDER HERE 2!!!|dur:6.000|fps:60.000|w:1920|h:1080|layers:1
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:6.000|absIn:0.000|absOut:6.000|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:227|h:219|layers:1
+  SHAPE|name:PLACEYOURQRCODEHERE 1!!!
+COMP|name:8|dur:6.000|fps:60.000|w:1920|h:1080|layers:10
+  PRECOMP|name:Vector Comp 1|source:Vector Comp 1|in:0.117|out:6.267|absIn:0.117|absOut:6.267
+  PRECOMP|name:Vector Comp 1|source:Vector Comp 1|in:0.000|out:6.150|absIn:0.000|absOut:6.150
+  TEXT|name:scan here|in:0.550|out:6.000|absIn:0.550|absOut:6.000|val:SCAN HERE
+  PRECOMP|name:Shape Layer 1 Comp 6|source:Shape Layer 1 Comp 6|in:0.433|out:6.000|absIn:0.433|absOut:6.000
+  PRECOMP|name:Vector Comp 1|source:Vector Comp 1|in:-1.800|out:6.150|absIn:0.000|absOut:6.150
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.167|out:6.317|absIn:0.167|absOut:6.317
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.433|out:5.983|absIn:0.433|absOut:5.983
+  SHAPE|name:Shape Layer 3
+  SHAPE|name:Shape Layer 2
+  PRECOMP|name:PLACEHOLDER HERE 2!!!|source:PLACEHOLDER HERE 2!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000
+COMP|name:PLACEHOLDER HERE 1!!!|dur:6.000|fps:60.000|w:1920|h:1080|layers:1
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:6.000|absIn:0.000|absOut:6.000|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:6.000|fps:60.000|w:382|h:369|layers:1
+  SHAPE|name:Vector
+COMP|name:9|dur:6.000|fps:60.000|w:1920|h:1080|layers:12
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000
+  SHAPE|name:Shape Layer 8
+  SHAPE|name:Shape Layer 7
+  TEXT|name:scan here|in:0.450|out:6.450|absIn:0.450|absOut:6.450|val:SCAN HERE
+  PRECOMP|name:Shape Layer 1 Comp 7|source:Shape Layer 1 Comp 7|in:0.333|out:5.833|absIn:0.333|absOut:5.833
+  TEXT|name:New Collection Drop|in:0.000|out:6.000|absIn:0.000|absOut:6.000|val:NEW COLLECTION DROP
+  SHAPE|name:Shape Layer 5
+  SHAPE|name:Shape Layer 4
+  SHAPE|name:Shape Layer 3
+  SHAPE|name:Shape Layer 2
+  PRECOMP|name:Pre-comp 5|source:Pre-comp 5|in:0.000|out:6.000|absIn:0.000|absOut:6.000
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000
+COMP|name:CHANGE COLOR HERE!!!|dur:1224.300|fps:60.000|w:1920|h:1080|layers:10
+  PRECOMP|name:8|source:8|in:0.000|out:6.000|absIn:0.000|absOut:6.000
+  PRECOMP|name:7|source:7|in:0.000|out:6.017|absIn:0.000|absOut:6.017
+  PRECOMP|name:3|source:3|in:0.000|out:6.000|absIn:0.000|absOut:6.000
+  PRECOMP|name:9|source:9|in:0.000|out:6.000|absIn:0.000|absOut:6.000
+  PRECOMP|name:6|source:6|in:0.000|out:5.967|absIn:0.000|absOut:5.967
+  PRECOMP|name:5|source:5|in:0.000|out:5.983|absIn:0.000|absOut:5.983
+  PRECOMP|name:4|source:4|in:0.000|out:5.983|absIn:0.000|absOut:5.983
+  PRECOMP|name:2|source:2|in:0.000|out:6.000|absIn:0.000|absOut:6.000
+  PRECOMP|name:1|source:1|in:0.000|out:5.917|absIn:0.000|absOut:5.917
+  SHAPE|name:Style Controller
+COMP|name:PLACEHOLDER HERE 1!!!|dur:15.000|fps:60.000|w:542|h:329|layers:2
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:13.417|absIn:0.000|absOut:13.417
+  SHAPE|name:Rectangle 4
+COMP|name:PLACEHOLDER HERE 1!!!|dur:6.000|fps:60.000|w:409|h:408|layers:2
+  SHAPE|name:Rectangle 5
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000
+COMP|name:PLACEHOLDER HERE 1!!!|dur:15.000|fps:60.000|w:342|h:688|layers:2
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:20.517|absIn:0.000|absOut:20.517
+  SHAPE|name:Rectangle 6
+COMP|name:PLACEHOLDER HERE 1!!!|dur:15.000|fps:60.000|w:205|h:198|layers:2
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.000|absOut:15.000
+  SHAPE|name:Rectangle 1
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:330|layers:2
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133
+  SHAPE|name:Rectangle 1
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:329|layers:2
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133
+  SHAPE|name:Rectangle 1
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:330|layers:2
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133
+  SHAPE|name:Rectangle 1
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:377|h:364|layers:2
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133
+  SHAPE|name:Rectangle 2
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:329|layers:2
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133
+  SHAPE|name:Rectangle 1
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:227|h:219|layers:2
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133
+  SHAPE|name:Rectangle 1
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:6.000|fps:60.000|w:382|h:369|layers:2
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:6.000|absIn:0.133|absOut:6.133
+  SHAPE|name:Rectangle 2
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:205|h:198|layers:1
+  SHAPE|name:Vector
+COMP|name:Pre-comp 1|dur:6.000|fps:60.000|w:343|h:330|layers:2
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000
+  SHAPE|name:Rectangle 1
+COMP|name:Pre-comp 3|dur:5.033|fps:60.000|w:1920|h:1080|layers:2
+  SHAPE|name:Vector
+  SHAPE|name:Vector
+COMP|name:Pre-comp 4|dur:5.733|fps:60.000|w:1920|h:1080|layers:2
+  SHAPE|name:Vector
+  SHAPE|name:Vector
+COMP|name:Pre-comp 5|dur:6.000|fps:60.000|w:1920|h:1080|layers:2
+  SHAPE|name:Union
+  SHAPE|name:Union
+COMP|name:Rectangle 7 Comp 1|dur:5.683|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Rectangle 7
+COMP|name:Shape Layer 1 Comp 1|dur:4.467|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Shape Layer 1
+COMP|name:Shape Layer 1 Comp 2|dur:5.500|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Shape Layer 1
+COMP|name:Shape Layer 1 Comp 3|dur:5.500|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Shape Layer 1
+COMP|name:Shape Layer 1 Comp 4|dur:5.367|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Shape Layer 1
+COMP|name:Shape Layer 1 Comp 5|dur:5.500|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Shape Layer 1
+COMP|name:Shape Layer 1 Comp 6|dur:5.567|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Shape Layer 1
+COMP|name:Shape Layer 1 Comp 7|dur:5.500|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Shape Layer 1
+COMP|name:Shape Layer 6 Comp 1|dur:5.500|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Shape Layer 6
+COMP|name:Union Comp 1|dur:5.883|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Union
+COMP|name:Union Comp 2|dur:5.850|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Union
+COMP|name:Vector 1 Comp 1|dur:4.967|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Vector 1
+COMP|name:Vector 2 Comp 1|dur:5.967|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Vector 2
+COMP|name:Vector Comp 1|dur:15.000|fps:60.000|w:113|h:209|layers:3
+  SHAPE|name:Shape Layer 3
+  SHAPE|name:Shape Layer 2
+  SHAPE|name:Shape Layer 1
+COMP|name:Vector Comp 2|dur:5.417|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Vector
+COMP|name:Vector Comp 3|dur:5.267|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Vector
+COMP|name:Vector Comp 4|dur:5.450|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Vector
+COMP|name:Vector Comp 5|dur:5.933|fps:60.000|w:1920|h:1080|layers:1
+  SHAPE|name:Vector
+
+=== INJECTABLE SUMMARY ===
+-- TEXT INJECTABLES --
+TEXT_INJECT|comp:1|layer:scan here|absIn:0.667|absOut:5.883|val:SCAN HERE
+TEXT_INJECT|comp:2|layer:scan here|absIn:1.550|absOut:7.550|val:SCAN HERE
+TEXT_INJECT|comp:2|layer:Live Music Festival 2026|absIn:1.033|absOut:7.033|val:LIVE MUSIC FESTIVAL 2026
+TEXT_INJECT|comp:3|layer:scan here|absIn:0.400|absOut:5.400|val:SCAN HERE
+TEXT_INJECT|comp:3|layer:Explore contemporary works from emerging visual artists|absIn:1.283|absOut:5.367|val:Explore Contemporary Works From Emerging Visual Artists
+TEXT_INJECT|comp:3|layer:Modern Art Showcase|absIn:0.983|absOut:5.233|val:MODERN ART SHOWCASE
+TEXT_INJECT|comp:4|layer:Final Championship Game|absIn:0.183|absOut:5.983|val:FINAL CHAMPIONSHIPGAME
+TEXT_INJECT|comp:4|layer:scan here|absIn:0.800|absOut:5.983|val:SCAN HERE
+TEXT_INJECT|comp:5|layer:scan here|absIn:0.000|absOut:5.933|val:SCAN HERE
+TEXT_INJECT|comp:6|layer:Movie Premiere|absIn:0.000|absOut:5.967|val:MOVIE PREMIERE
+TEXT_INJECT|comp:6|layer:scan here|absIn:0.000|absOut:5.967|val:SCAN HERE
+TEXT_INJECT|comp:7|layer:Creative Design Conference|absIn:0.100|absOut:5.833|val:CREATIVE DESIGN CONFERENCE
+TEXT_INJECT|comp:8|layer:scan here|absIn:0.550|absOut:6.000|val:SCAN HERE
+TEXT_INJECT|comp:9|layer:scan here|absIn:0.450|absOut:6.450|val:SCAN HERE
+TEXT_INJECT|comp:9|layer:New Collection Drop|absIn:0.000|absOut:6.000|val:NEW COLLECTION DROP
+
+-- IMAGE INJECTABLES --
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:5.917
+IMAGE_INJECT|type:comp_inject|comp:PLACEHOLDER HERE 1!!!|w:1920|h:1080|absIn:0.000|absOut:13.417
+IMAGE_INJECT|type:comp_inject|comp:PLACEHOLDER HERE 1!!!|w:409|h:408|absIn:0.000|absOut:6.000
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 2!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:6.000
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:5.983
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:5.983
+IMAGE_INJECT|type:comp_inject|comp:PLACEHOLDER HERE 1!!!|w:4096|h:2160|absIn:0.000|absOut:20.517
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:6.017
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 2!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:6.000
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:6.000
+
+-- SOLID INJECTABLES --
+
+-- PROJECT LEVEL FOOTAGE --
+PROJECT_FOOTAGE|id:92|name:Delete This!!!.png|w:1920|h:1080|instances:7|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
+
+SCAN_COMPLETE
