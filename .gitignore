@@ -12,3 +12,4 @@ frontend/vite-project/node_modules/
 frontend/vite-project/dist/
 .env
 *.envbackend/templates/ 
+backend/templates/Help/ 
