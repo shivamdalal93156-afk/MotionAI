@@ -11,4 +11,4 @@ backend/*.mp4
 frontend/vite-project/node_modules/
 frontend/vite-project/dist/
 .env
-*.env
+*.envbackend/templates/ 
