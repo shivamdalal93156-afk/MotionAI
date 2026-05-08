@@ -531,7 +531,11 @@ export default function App() {
 
   // fetch templates
   useEffect(() => {
-    fetch(`${API}/api/render/templates`)
+    fetch(`${API}/api/render/templates`, {
+  headers: {
+    "ngrok-skip-browser-warning": "true"
+  },
+    })
       .then(r => r.json())
       .then(d => setTemplates((Array.isArray(d)?d:d.templates||[]).map(norm).filter(t=>t.name)))
       .catch(() => {});
@@ -542,7 +546,11 @@ export default function App() {
     if (!jobId || rState==="done" || rState==="error") return;
     const iv = setInterval(async () => {
       try {
-        const r = await fetch(`${API}/api/jobs/${jobId}`);
+        const r = await fetch(`${API}/api/jobs/${jobId}`, {
+  headers: {
+    "ngrok-skip-browser-warning": "true"
+  },
+        });
         const d = await r.json();
         setJobSt(d);
         if (d.status==="done") {
