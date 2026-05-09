@@ -215,4 +215,42 @@ function _deleteFile(filePath) {
   try { if (fs.existsSync(filePath)) fs.unlinkSync(filePath); } catch {}
 }
 
-module.exports = { runFFmpeg, stitchMP4s };
+async function mergeAudioIntoVideo(videoPath, audioPath, outputPath, jobLog) {
+  const ffmpeg = process.env.FFMPEG_PATH || 'ffmpeg';
+
+  return new Promise((resolve, reject) => {
+    const { spawn } = require('child_process');
+
+    // Get video duration first to trim/pad audio correctly
+    const args = [
+      '-y',
+      '-i', videoPath,        // video input (no audio)
+      '-i', audioPath,        // user audio input
+      '-map', '0:v',          // take video from first input
+      '-map', '1:a',          // take audio from second input
+      '-c:v', 'copy',         // copy video — no re-encode, fast
+      '-c:a', 'aac',          // encode audio to AAC
+      '-b:a', '192k',         // audio bitrate
+      '-shortest',            // end when shortest stream ends
+      '-movflags', 'faststart',
+      outputPath,
+    ];
+
+    jobLog('FFMPEG_AUDIO_MERGE_START', { videoPath, audioPath, outputPath });
+
+    const ff = spawn(`"${ffmpeg}"`, args, { shell: true, stdio: ['ignore', 'pipe', 'pipe'] });
+    let stderr = '';
+    ff.stderr.on('data', d => { stderr += d.toString(); });
+
+    ff.on('close', code => {
+      if (code === 0) {
+        jobLog('FFMPEG_AUDIO_MERGE_DONE', { outputPath });
+        resolve(outputPath);
+      } else {
+        reject(new Error(`FFmpeg audio merge failed (code ${code}): ${stderr.slice(-300)}`));
+      }
+    });
+    ff.on('error', err => reject(new Error(`FFmpeg spawn error: ${err.message}`)));
+  });
+}
+module.exports = { runFFmpeg, stitchMP4s ,mergeAudioIntoVideo };

@@ -58,7 +58,7 @@ router.post('/start', (req, res) => {
     });
   }
 
-  const { template, inputData } = req.body;
+  const { template, inputData , voiceData } = req.body;
 
   if (!template || typeof template !== 'string') {
     return res.status(400).json({ error: 'MISSING_TEMPLATE', message: '`template` field is required' });
@@ -94,7 +94,7 @@ router.post('/start', (req, res) => {
     chunks = req.body.chunks;
   }
 
-  const job = createJob(template, inputData, chunks);
+  const job = createJob(template, inputData, chunks , voiceData||null);
 
   // const job = createJob(template, inputData);
 

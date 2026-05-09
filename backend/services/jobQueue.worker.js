@@ -279,6 +279,29 @@ const JOBS_DIR      = path.resolve(__dirname, '..', 'jobs');
 const TEMPLATES_DIR = path.resolve(__dirname, '..', 'templates');
 const LOG_DIR       = path.resolve(__dirname, '..', 'logs', 'jobs');
 
+async function applyVoiceAudioIfPresent(job, finalMp4Path, jobLog) {
+  if (!job.hasVoice || !job.audioPath) return finalMp4Path;
+
+  const { mergeAudioIntoVideo } = require('./ffmpegWorker');
+  const path = require('path');
+  const fs   = require('fs');
+
+  const withAudioPath = finalMp4Path.replace('.mp4', '_voiced.mp4');
+
+  try {
+    await mergeAudioIntoVideo(finalMp4Path, job.audioPath, withAudioPath, jobLog);
+    // Replace original with voiced version
+    fs.renameSync(withAudioPath, finalMp4Path);
+    jobLog('VOICE_AUDIO_MERGED', { finalMp4Path });
+    return finalMp4Path;
+  } catch (err) {
+    jobLog('VOICE_AUDIO_MERGE_FAILED', { error: err.message });
+    // Return original video without audio — don't fail the job
+    if (fs.existsSync(withAudioPath)) fs.unlinkSync(withAudioPath);
+    return finalMp4Path;
+  }
+}
+
 function makeJobLogger(jobId) {
   const logPath = path.join(LOG_DIR, `${jobId}.jsonl`);
   return function jobLog(event, data = {}) {

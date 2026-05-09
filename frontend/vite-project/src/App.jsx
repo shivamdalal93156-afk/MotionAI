@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 
-const API = "https://tripp-acinaceous-bellicosely.ngrok-free.dev";
+const API = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
+  ? "http://localhost:3001"
+  : "";
 
 // ─── Upload ───────────────────────────────────────────────────────────────────
 function useUpload() {
@@ -500,6 +502,186 @@ function TCard({ t, idx, onClick }) {
 // ═════════════════════════════════════════════════════════════════════════════
 // APP
 // ═════════════════════════════════════════════════════════════════════════════
+  function VoiceSync({ templateConfig, inputData, onVoiceReady, onVoiceClear }) {
+  const [status,   setStatus]   = useState("idle");   // idle|processing|done|error
+  const [warnings, setWarnings] = useState([]);
+  const [info,     setInfo]     = useState(null);
+  const [audioSrc, setAudioSrc] = useState(null);
+  const fileRef = useRef(null);
+
+  // Check if template is voice-syncable
+  // Only for text-heavy templates (>4 text fields, ≤4 image fields)
+  const textCount  = (templateConfig?.textLayers  || []).length;
+  const imageCount = (templateConfig?.imageLayers || []).length;
+  const isEligible = textCount >= 4 && imageCount <= 6;
+
+  if (!isEligible) return null;
+
+  const handleAudio = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setAudioSrc(URL.createObjectURL(file));
+    setStatus("processing");
+    setWarnings([]);
+    setInfo(null);
+
+    try {
+      const fd = new FormData();
+      fd.append("audio", file);
+      fd.append("templateConfig", JSON.stringify({
+        ...templateConfig,
+        // Inject current user values into textLayers so voiceSync
+        // knows what words the user typed
+        textLayers: (templateConfig.textLayers || []).map(l => ({
+          ...l,
+          value: inputData[l.key] || l.layerName || "",
+        })),
+      }));
+
+      const r = await fetch(`${API}/api/voice/process`, {
+        method: "POST",
+        body: fd,
+      });
+      const d = await r.json();
+
+      if (!r.ok || !d.success) {
+        setStatus("error");
+        setInfo({ error: d.message || "Processing failed" });
+        return;
+      }
+
+      setStatus("done");
+      setWarnings(d.warnings || []);
+      setInfo({
+        language:      d.whisperLanguage,
+        audioDuration: d.audioDuration,
+        wordCount:     d.wordCount,
+        scenes:        d.sceneResults,
+      });
+
+      // Pass result up to App
+      onVoiceReady({
+        adjustedTimings: d.adjustedTimings,
+        audioPath:       d.audioPath,
+        warnings:        d.warnings,
+      });
+
+    } catch (err) {
+      setStatus("error");
+      setInfo({ error: err.message });
+    }
+  };
+
+  const clear = () => {
+    setStatus("idle");
+    setWarnings([]);
+    setInfo(null);
+    setAudioSrc(null);
+    if (fileRef.current) fileRef.current.value = "";
+    onVoiceClear();
+  };
+
+  return (
+    <div style={{
+      margin: "0 10px 0",
+      borderTop: "1px solid var(--border)",
+      paddingTop: 10,
+    }}>
+      {/* Header */}
+      <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:8 }}>
+        <div style={{
+          width:22, height:22, borderRadius:6,
+          background: status==="done" ? "#16a34a" : status==="error" ? "#dc2626" : status==="processing" ? "#ff4500" : "var(--bg2)",
+          display:"flex", alignItems:"center", justifyContent:"center", fontSize:11, flexShrink:0,
+        }}>
+          {status==="done" ? "✓" : status==="processing" ? "…" : status==="error" ? "!" : "🎙"}
+        </div>
+        <span style={{ fontSize:12, fontWeight:600, color:"var(--ink)", flex:1 }}>
+          Voice Sync
+        </span>
+        <span style={{ fontSize:10, color:"var(--ink3)" }}>
+          {textCount} text layers
+        </span>
+      </div>
+
+      {/* Idle state — upload button */}
+      {status === "idle" && (
+        <label style={{
+          display:"flex", alignItems:"center", justifyContent:"center", gap:6,
+          padding:"9px 12px", borderRadius:8,
+          border:"1.5px dashed var(--border)", background:"var(--bg)",
+          cursor:"pointer", fontSize:12, color:"var(--ink2)",
+          transition:"border-color .12s, background .12s",
+        }}
+        onMouseEnter={e=>{e.currentTarget.style.borderColor="#ff4500";e.currentTarget.style.background="#fff8f5";}}
+        onMouseLeave={e=>{e.currentTarget.style.borderColor="var(--border)";e.currentTarget.style.background="var(--bg)";}}
+        >
+          <span style={{fontSize:16}}>🎙</span>
+          Upload your voiceover audio
+          <input ref={fileRef} type="file" accept="audio/*,.mp3,.wav,.m4a,.ogg,.flac" style={{display:"none"}} onChange={handleAudio} />
+        </label>
+      )}
+
+      {/* Processing */}
+      {status === "processing" && (
+        <div style={{ display:"flex", alignItems:"center", gap:8, padding:"9px 12px", borderRadius:8, background:"#fff8f5", border:"1px solid #ffd0b0" }}>
+          <div style={{width:14,height:14,border:"2px solid rgba(255,69,0,.2)",borderTopColor:"#ff4500",borderRadius:"50%",animation:"spin .75s linear infinite",flexShrink:0}} />
+          <span style={{fontSize:12,color:"#ff4500",fontWeight:500}}>Processing with Whisper…</span>
+          <span style={{fontSize:11,color:"var(--ink3)"}}>This may take 30–90s</span>
+        </div>
+      )}
+
+      {/* Done */}
+      {status === "done" && info && (
+        <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+          <div style={{ display:"flex", alignItems:"center", gap:6, padding:"8px 10px", borderRadius:8, background:"#f0fdf4", border:"1px solid #86efac" }}>
+            <span style={{fontSize:12,color:"#16a34a",fontWeight:600}}>✓ Voice synced</span>
+            <span style={{fontSize:11,color:"var(--ink3)",marginLeft:"auto"}}>
+              {info.wordCount} words · {info.audioDuration?.toFixed(1)}s · {info.language}
+            </span>
+            <button onClick={clear} style={{width:18,height:18,borderRadius:"50%",border:"1px solid #86efac",background:"transparent",cursor:"pointer",fontSize:10,color:"#16a34a",display:"flex",alignItems:"center",justifyContent:"center"}}>×</button>
+          </div>
+
+          {/* Audio playback */}
+          {audioSrc && (
+            <audio src={audioSrc} controls style={{width:"100%",height:32,borderRadius:6}} />
+          )}
+
+          {/* Warnings */}
+          {warnings.length > 0 && (
+            <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
+              {warnings.map((w, i) => (
+                <div key={i} style={{ padding:"6px 10px", borderRadius:6, background:"#fffbeb", border:"1px solid #fcd34d", fontSize:11, color:"#92400e" }}>
+                  ⚠ {w}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Scene breakdown */}
+          {info.scenes && info.scenes.filter(s=>s.hasText!==false).length > 0 && (
+            <div style={{ fontSize:10, color:"var(--ink3)", padding:"4px 2px" }}>
+              {info.scenes.filter(s=>s.speedRatio).map((s,i) => (
+                <span key={i} style={{ marginRight:8 }}>
+                  {s.scene}: <span style={{color: s.outOfRange?"#dc2626":"#16a34a",fontWeight:600}}>{s.speedRatio}×</span>
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Error */}
+      {status === "error" && info && (
+        <div style={{ display:"flex", alignItems:"center", gap:8, padding:"8px 10px", borderRadius:8, background:"#fef2f2", border:"1px solid #fca5a5" }}>
+          <span style={{fontSize:12,color:"#dc2626"}}>✗ {info.error}</span>
+          <button onClick={clear} style={{marginLeft:"auto",fontSize:11,color:"#dc2626",background:"transparent",border:"none",cursor:"pointer"}}>Try again</button>
+        </div>
+      )}
+    </div>
+  );
+}
 export default function App() {
   const [templates,       setTemplates]       = useState([]);
   const [sel,             setSel]             = useState(null);
@@ -512,6 +694,9 @@ export default function App() {
   const [outUrl,          setOutUrl]          = useState(null);
   const [toast,           setToast]           = useState(null);
   const [highlightedKeys, setHighlightedKeys] = useState(new Set());
+  const [voiceData,    setVoiceData]    = useState(null);  // result from /api/voice/process
+  const [voiceStatus,  setVoiceStatus]  = useState("idle"); // idle|uploading|processing|done|error
+  const [voiceWarnings,setVoiceWarnings]= useState([]);
 
   const vidRef = useRef(null);
   const upload = useUpload();
@@ -594,7 +779,186 @@ export default function App() {
       setTimeout(() => setHighlightedKeys(new Set()), 2500);
     }, 80);
   };
+  function VoiceSync({ templateConfig, inputData, onVoiceReady, onVoiceClear }) {
+  const [status,   setStatus]   = useState("idle");   // idle|processing|done|error
+  const [warnings, setWarnings] = useState([]);
+  const [info,     setInfo]     = useState(null);
+  const [audioSrc, setAudioSrc] = useState(null);
+  const fileRef = useRef(null);
 
+  // Check if template is voice-syncable
+  // Only for text-heavy templates (>4 text fields, ≤4 image fields)
+  const textCount  = (templateConfig?.textLayers  || []).length;
+  const imageCount = (templateConfig?.imageLayers || []).length;
+  const isEligible = textCount >= 4 && imageCount <= 6;
+
+  if (!isEligible) return null;
+
+  const handleAudio = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setAudioSrc(URL.createObjectURL(file));
+    setStatus("processing");
+    setWarnings([]);
+    setInfo(null);
+
+    try {
+      const fd = new FormData();
+      fd.append("audio", file);
+      fd.append("templateConfig", JSON.stringify({
+        ...templateConfig,
+        // Inject current user values into textLayers so voiceSync
+        // knows what words the user typed
+        textLayers: (templateConfig.textLayers || []).map(l => ({
+          ...l,
+          value: inputData[l.key] || l.layerName || "",
+        })),
+      }));
+
+      const r = await fetch(`${API}/api/voice/process`, {
+        method: "POST",
+        body: fd,
+      });
+      const d = await r.json();
+
+      if (!r.ok || !d.success) {
+        setStatus("error");
+        setInfo({ error: d.message || "Processing failed" });
+        return;
+      }
+
+      setStatus("done");
+      setWarnings(d.warnings || []);
+      setInfo({
+        language:      d.whisperLanguage,
+        audioDuration: d.audioDuration,
+        wordCount:     d.wordCount,
+        scenes:        d.sceneResults,
+      });
+
+      // Pass result up to App
+      onVoiceReady({
+        adjustedTimings: d.adjustedTimings,
+        audioPath:       d.audioPath,
+        warnings:        d.warnings,
+      });
+
+    } catch (err) {
+      setStatus("error");
+      setInfo({ error: err.message });
+    }
+  };
+
+  const clear = () => {
+    setStatus("idle");
+    setWarnings([]);
+    setInfo(null);
+    setAudioSrc(null);
+    if (fileRef.current) fileRef.current.value = "";
+    onVoiceClear();
+  };
+
+  return (
+    <div style={{
+      margin: "0 10px 0",
+      borderTop: "1px solid var(--border)",
+      paddingTop: 10,
+    }}>
+      {/* Header */}
+      <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:8 }}>
+        <div style={{
+          width:22, height:22, borderRadius:6,
+          background: status==="done" ? "#16a34a" : status==="error" ? "#dc2626" : status==="processing" ? "#ff4500" : "var(--bg2)",
+          display:"flex", alignItems:"center", justifyContent:"center", fontSize:11, flexShrink:0,
+        }}>
+          {status==="done" ? "✓" : status==="processing" ? "…" : status==="error" ? "!" : "🎙"}
+        </div>
+        <span style={{ fontSize:12, fontWeight:600, color:"var(--ink)", flex:1 }}>
+          Voice Sync
+        </span>
+        <span style={{ fontSize:10, color:"var(--ink3)" }}>
+          {textCount} text layers
+        </span>
+      </div>
+
+      {/* Idle state — upload button */}
+      {status === "idle" && (
+        <label style={{
+          display:"flex", alignItems:"center", justifyContent:"center", gap:6,
+          padding:"9px 12px", borderRadius:8,
+          border:"1.5px dashed var(--border)", background:"var(--bg)",
+          cursor:"pointer", fontSize:12, color:"var(--ink2)",
+          transition:"border-color .12s, background .12s",
+        }}
+        onMouseEnter={e=>{e.currentTarget.style.borderColor="#ff4500";e.currentTarget.style.background="#fff8f5";}}
+        onMouseLeave={e=>{e.currentTarget.style.borderColor="var(--border)";e.currentTarget.style.background="var(--bg)";}}
+        >
+          <span style={{fontSize:16}}>🎙</span>
+          Upload your voiceover audio
+          <input ref={fileRef} type="file" accept="audio/*,.mp3,.wav,.m4a,.ogg,.flac" style={{display:"none"}} onChange={handleAudio} />
+        </label>
+      )}
+
+      {/* Processing */}
+      {status === "processing" && (
+        <div style={{ display:"flex", alignItems:"center", gap:8, padding:"9px 12px", borderRadius:8, background:"#fff8f5", border:"1px solid #ffd0b0" }}>
+          <div style={{width:14,height:14,border:"2px solid rgba(255,69,0,.2)",borderTopColor:"#ff4500",borderRadius:"50%",animation:"spin .75s linear infinite",flexShrink:0}} />
+          <span style={{fontSize:12,color:"#ff4500",fontWeight:500}}>Processing with Whisper…</span>
+          <span style={{fontSize:11,color:"var(--ink3)"}}>This may take 30–90s</span>
+        </div>
+      )}
+
+      {/* Done */}
+      {status === "done" && info && (
+        <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+          <div style={{ display:"flex", alignItems:"center", gap:6, padding:"8px 10px", borderRadius:8, background:"#f0fdf4", border:"1px solid #86efac" }}>
+            <span style={{fontSize:12,color:"#16a34a",fontWeight:600}}>✓ Voice synced</span>
+            <span style={{fontSize:11,color:"var(--ink3)",marginLeft:"auto"}}>
+              {info.wordCount} words · {info.audioDuration?.toFixed(1)}s · {info.language}
+            </span>
+            <button onClick={clear} style={{width:18,height:18,borderRadius:"50%",border:"1px solid #86efac",background:"transparent",cursor:"pointer",fontSize:10,color:"#16a34a",display:"flex",alignItems:"center",justifyContent:"center"}}>×</button>
+          </div>
+
+          {/* Audio playback */}
+          {audioSrc && (
+            <audio src={audioSrc} controls style={{width:"100%",height:32,borderRadius:6}} />
+          )}
+
+          {/* Warnings */}
+          {warnings.length > 0 && (
+            <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
+              {warnings.map((w, i) => (
+                <div key={i} style={{ padding:"6px 10px", borderRadius:6, background:"#fffbeb", border:"1px solid #fcd34d", fontSize:11, color:"#92400e" }}>
+                  ⚠ {w}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Scene breakdown */}
+          {info.scenes && info.scenes.filter(s=>s.hasText!==false).length > 0 && (
+            <div style={{ fontSize:10, color:"var(--ink3)", padding:"4px 2px" }}>
+              {info.scenes.filter(s=>s.speedRatio).map((s,i) => (
+                <span key={i} style={{ marginRight:8 }}>
+                  {s.scene}: <span style={{color: s.outOfRange?"#dc2626":"#16a34a",fontWeight:600}}>{s.speedRatio}×</span>
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Error */}
+      {status === "error" && info && (
+        <div style={{ display:"flex", alignItems:"center", gap:8, padding:"8px 10px", borderRadius:8, background:"#fef2f2", border:"1px solid #fca5a5" }}>
+          <span style={{fontSize:12,color:"#dc2626"}}>✗ {info.error}</span>
+          <button onClick={clear} style={{marginLeft:"auto",fontSize:11,color:"#dc2626",background:"transparent",border:"none",cursor:"pointer"}}>Try again</button>
+        </div>
+      )}
+    </div>
+  );
+}
   const startRender = async () => {
     if (!sel) return;
     setRState("rendering"); setOutUrl(null); setJobId(null); setJobSt(null);
@@ -604,7 +968,7 @@ export default function App() {
       Object.entries(merged).forEach(([k,v]) => { if (v!==null&&v!==undefined&&v!=="") inputData[k]=v; });
       const r = await fetch(`${API}/api/render/start`, {
         method:"POST", headers:{"Content-Type":"application/json"},
-        body: JSON.stringify({ template:sel.name, inputData }),
+        body: JSON.stringify({ template:sel.name, inputData ,voiceData: voiceData}),
       });
       const d = await r.json();
       if (!r.ok) { setRState("error"); toast2(d.message||d.error||"Error"); return; }
@@ -771,9 +1135,37 @@ export default function App() {
               )}
               <div style={{height:10}} />
             </div>
+            <VoiceSync
+      templateConfig={config}
+      inputData={data}
+      onVoiceReady={result => {
+        setVoiceData(result);
+        setVoiceWarnings(result.warnings || []);
+      }}
+      onVoiceClear={() => {
+        setVoiceData(null);
+        setVoiceWarnings([]);
+      }}
+    />
 
             {/* submit */}
             <div style={{padding:"10px",borderTop:"1px solid var(--border)",flexShrink:0}}>
+              {voiceWarnings.length > 0 && (
+  <div
+    style={{
+      fontSize:11,
+      color:"#92400e",
+      background:"#fffbeb",
+      border:"1px solid #fcd34d",
+      borderRadius:6,
+      padding:"6px 10px",
+      marginBottom:6
+    }}
+  >
+    ⚠ Voice sync: some scenes adjusted beyond ideal range.
+    Render will still proceed.
+  </div>
+)}
               {rState==="idle" && (
                 <button onClick={startRender}
                   style={{width:"100%",background:"#ff4500",color:"white",border:"none",borderRadius:"10px",fontFamily:"Syne,sans-serif",fontSize:14,fontWeight:800,padding:13,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",gap:7,transition:"background .12s"}}

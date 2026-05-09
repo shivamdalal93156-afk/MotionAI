@@ -46,7 +46,7 @@ function readJobFile(jobId) {
   return null;
 }
 
-function createJob(template, inputData , chunks = null) {
+function createJob(template, inputData , chunks = null,voiceData) {
   const jobId = uuidv4();
   const jobDir = path.join(JOBS_DIR, jobId);
   fs.mkdirSync(jobDir, { recursive: true });
@@ -59,6 +59,9 @@ function createJob(template, inputData , chunks = null) {
     retryCount: 0,
     failureHistory: [],
     jobDir,
+    adjustedTimings: voiceData?.adjustedTimings || {},
+    audioPath:       voiceData?.audioPath       || null,
+    hasVoice:        !!voiceData?.audioPath,
   });
 
   console.log(`[queue] Job created: ${jobId} | template: ${template}| chunks: ${chunks ? chunks.length : 1}`);

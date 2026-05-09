@@ -11,6 +11,7 @@ const app  = express();
 const PORT = process.env.PORT || 3001;
 
 
+
 // Health gate middleware — rejects render requests if system not ready
 app.use((req, res, next) => {
   if (!systemReady && req.path.startsWith('/api/render')) {
@@ -23,12 +24,12 @@ app.use((req, res, next) => {
 });
 // ── Middleware ─────────────────────────────────────────────────
 
-
-app.use(cors({
-  origin:'*',
-}));
+app.use(cors({ origin: '*' }));
 app.use((req, res, next) => {
-  res.setHeader('ngrok-skip-browser-warning', 'true');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, ngrok-skip-browser-warning');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
   next();
 });
 app.use(express.json({ limit: '2mb' }));
@@ -39,6 +40,7 @@ app.use('/footage', express.static(path.resolve(__dirname, 'templates')));
 app.use('/outputs', express.static(path.resolve(__dirname, 'outputs')));
 // ── Routes ───────────────────────────────────────────────────────
 app.use('/api/upload', require('./routes/upload'));
+app.use('/api/voice', require('./routes/voice'));
 app.use('/api/render', require('./routes/render'));
 app.use('/api/jobs',   require('./routes/jobs'));
 app.use('/api/health', require('./routes/health'));
@@ -49,7 +51,14 @@ app.use('/admin',      require('./routes/admin'));
 const { readJobFile } = require('./services/jobQueue');
 
 let systemReady = false; // gates requests until preflight passes
-
+// Serve built frontend — enables same-origin deployment via ngrok
+const frontendDist = path.resolve(__dirname, '..', 'frontend', 'vite-project', 'dist');
+if (fs.existsSync(frontendDist)) {
+  app.use(express.static(frontendDist));
+  app.get('/{*path}', (req, res) => {
+    res.sendFile(path.join(frontendDist, 'index.html'));
+  });
+}
 
 // ── Startup sequence ─────────────────────────────────────────────
 async function start() {
