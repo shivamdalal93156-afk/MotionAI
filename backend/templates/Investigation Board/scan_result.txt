@@ -1,7 +1,7 @@
 === MOTIONAI COMPLETE SCAN v4.0 ===
 template: Investigation Board
-aep: C:/Users/SHIVAM/Desktop/motionai/backend/templates/Investigation Board/Investigation_Board_II.aep
-scanned_at: Wed May 06 2026 17:47:15 GMT+0530
+aep: C:/Users/SHIVAM/Desktop/motionai/backend/templates/Investigation Board/Investigation_Board_II (converted).aep
+scanned_at: Fri May 15 2026 02:43:58 GMT+0530
 
 OPEN_OK|items:168
 
@@ -1075,116 +1075,136 @@ TEXT_INJECT|comp:18 - Photo Frame|layer:Help Numbering|absIn:0.000|absOut:321.42
 TEXT_INJECT|comp:19 - Logo|layer:Help Numbering|absIn:0.000|absOut:318.585|val:LOGO
 
 -- IMAGE INJECTABLES --
-IMAGE_INJECT|type:replace|comp:Сover|layer:Cover.png|source:Cover.png|w:2648|h:2025|absIn:0.000|absOut:191.604
-IMAGE_INJECT|type:replace|comp:10 - Badge|layer:Badge.png|source:Badge.png|w:1308|h:993|absIn:0.000|absOut:183.550
-IMAGE_INJECT|type:replace|comp:10 - Badge|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:183.951
-IMAGE_INJECT|type:replace|comp:10 - Badge|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:183.417
-IMAGE_INJECT|type:replace|comp:10 - Badge|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:183.417
-IMAGE_INJECT|type:replace|comp:Background|layer:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|absIn:0.000|absOut:600.007
-IMAGE_INJECT|type:replace|comp:Background|layer:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|absIn:0.000|absOut:153.300
-IMAGE_INJECT|type:replace|comp:Background|layer:Background_02.jpg|source:Background_02.jpg|w:9296|h:5568|absIn:0.000|absOut:153.300
-IMAGE_INJECT|type:replace|comp:Background|layer:Background_03.jpg|source:Background_03.jpg|w:9341|h:5622|absIn:0.000|absOut:153.300
-IMAGE_INJECT|type:replace|comp:Background 2|layer:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|absIn:0.000|absOut:191.133
-IMAGE_INJECT|type:replace|comp:BusinessCard_01|layer:BusinessCard_01.png|source:BusinessCard_01.png|w:1363|h:776|absIn:0.000|absOut:299.967
-IMAGE_INJECT|type:replace|comp:BusinessCard_02|layer:BusinessCard_02.jpg|source:BusinessCard_02.jpg|w:1341|h:756|absIn:0.000|absOut:299.967
-IMAGE_INJECT|type:replace|comp:CD|layer:CD.png|source:CD.png|w:1000|h:1000|absIn:0.000|absOut:226.860
-IMAGE_INJECT|type:replace|comp:Clip|layer:Clip.png|source:Clip.png|w:189|h:730|absIn:0.000|absOut:299.967
-IMAGE_INJECT|type:replace|comp:Clothes Hanger|layer:ClothesHanger.png|source:ClothesHanger.png|w:992|h:3494|absIn:0.000|absOut:60.894
-IMAGE_INJECT|type:replace|comp:Cover_02|layer:Cover_02.png|source:Cover_02.png|w:3049|h:1435|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:Dock_01|layer:Dock_01.png|source:Dock_01.png|w:1100|h:1412|absIn:0.000|absOut:186.687
-IMAGE_INJECT|type:replace|comp:Dock_02|layer:Dock_02.png|source:Dock_02.png|w:1100|h:1412|absIn:0.000|absOut:198.265
-IMAGE_INJECT|type:replace|comp:Dock_03|layer:Dock_03.png|source:Dock_03.png|w:1346|h:1735|absIn:0.000|absOut:193.861
-IMAGE_INJECT|type:replace|comp:Dock_04|layer:Dock_04.png|source:Dock_04.png|w:1346|h:1735|absIn:0.000|absOut:204.972
-IMAGE_INJECT|type:replace|comp:EnvelopePostal|layer:EnvelopePostal.png|source:EnvelopePostal.png|w:3615|h:1528|absIn:0.000|absOut:299.967
-IMAGE_INJECT|type:replace|comp:FloorPlan|layer:FloorPlan.jpg|source:FloorPlan.jpg|w:1800|h:2164|absIn:0.000|absOut:299.967
-IMAGE_INJECT|type:replace|comp:knot|layer:knot.png|source:knot.png|w:100|h:99|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:Map_01|layer:Map_01.png|source:Map_01.png|w:5000|h:2914|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:Map_02|layer:Map_02.jpg|source:Map_02.jpg|w:992|h:937|absIn:0.000|absOut:299.967
-IMAGE_INJECT|type:replace|comp:Map_04|layer:Map_04.jpg|source:Map_04.jpg|w:1808|h:922|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:Palaroid|layer:Palaroid.png|source:Palaroid.png|w:1130|h:1364|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:ParkingViolation|layer:ParkingViolation.png|source:ParkingViolation.png|w:626|h:864|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:Police-Flashing.mp4_looped|layer:Police-Flashing.mp4|source:Police-Flashing.mp4|w:1920|h:1080|absIn:0.000|absOut:1.668
-IMAGE_INJECT|type:replace|comp:Police-Flashing.mp4_looped|layer:Police-Flashing.mp4|source:Police-Flashing.mp4|w:1920|h:1080|absIn:0.000|absOut:0.010
-IMAGE_INJECT|type:replace|comp:Pushpin_01|layer:Pushpin_01.png|source:Pushpin_01.png|w:184|h:177|absIn:0.000|absOut:152.503
-IMAGE_INJECT|type:replace|comp:Pushpin_02|layer:Pushpin_02.png|source:Pushpin_02.png|w:192|h:183|absIn:0.000|absOut:152.503
-IMAGE_INJECT|type:replace|comp:ScotchTape_01|layer:ScotchTape_01.png|source:ScotchTape_01.png|w:854|h:394|absIn:0.000|absOut:643.727
-IMAGE_INJECT|type:replace|comp:ScotchTape_02|layer:ScotchTape_02.png|source:ScotchTape_02.png|w:701|h:412|absIn:0.000|absOut:680.577
-IMAGE_INJECT|type:replace|comp:ScotchTape_03|layer:ScotchTape_03.png|source:ScotchTape_03.png|w:1017|h:422|absIn:0.000|absOut:650.230
-IMAGE_INJECT|type:replace|comp:ScotchTape_04|layer:ScotchTape_04.png|source:ScotchTape_04.png|w:1244|h:449|absIn:0.000|absOut:655.499
-IMAGE_INJECT|type:replace|comp:ScotchTape_05|layer:ScotchTape_05.png|source:ScotchTape_05.png|w:319|h:98|absIn:0.000|absOut:655.799
-IMAGE_INJECT|type:replace|comp:ScotchTape_06|layer:ScotchTape_06.png|source:ScotchTape_06.png|w:1672|h:447|absIn:0.000|absOut:620.816
-IMAGE_INJECT|type:replace|comp:ScotchTape_07|layer:ScotchTape_07.png|source:ScotchTape_07.png|w:825|h:434|absIn:0.000|absOut:612.462
-IMAGE_INJECT|type:replace|comp:ScotchTape_08|layer:ScotchTape_08.png|source:ScotchTape_08.png|w:714|h:319|absIn:0.000|absOut:625.468
-IMAGE_INJECT|type:replace|comp:steam|layer:steam.mp4|source:steam.mp4|w:482|h:502|absIn:0.000|absOut:13.547
-IMAGE_INJECT|type:replace|comp:steam|layer:steam.mp4|source:steam.mp4|w:482|h:502|absIn:0.000|absOut:13.547
-IMAGE_INJECT|type:replace|comp:steam|layer:steam.mp4|source:steam.mp4|w:482|h:502|absIn:0.000|absOut:13.547
-IMAGE_INJECT|type:replace|comp:Sticker_01|layer:sticker.png|source:sticker.png|w:1000|h:1000|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:Sticker_02|layer:sticker.png|source:sticker.png|w:1000|h:1000|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:Sticker_03|layer:sticker.png|source:sticker.png|w:1000|h:1000|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:Sticker_04|layer:sticker.png|source:sticker.png|w:1000|h:1000|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:Sticker_05|layer:sticker.png|source:sticker.png|w:1000|h:1000|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:Table Comp|layer:Table Mask|source:Table.png|w:4896|h:2754|absIn:0.000|absOut:188.188
-IMAGE_INJECT|type:replace|comp:Table Comp|layer:Table.png|source:Table.png|w:4896|h:2754|absIn:0.000|absOut:188.188
-IMAGE_INJECT|type:replace|comp:Test|layer:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|absIn:0.000|absOut:7.787
-IMAGE_INJECT|type:replace|comp:Ticket_01|layer:Ticket_01.png|source:Ticket_01.png|w:1257|h:494|absIn:0.000|absOut:299.967
-IMAGE_INJECT|type:replace|comp:Warehouse|layer:Warehouse.jpg|source:Warehouse.jpg|w:852|h:480|absIn:0.000|absOut:219.853
-IMAGE_INJECT|type:replace|comp:WhileYouWereOut|layer:WhileYouWereOut.png|source:WhileYouWereOut.png|w:1346|h:1735|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:01 - Newspaper-Big|layer:Newspaper-Big.png|source:Newspaper-Big.png|w:2270|h:3375|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:01 - Newspaper-Big|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:01 - Newspaper-Big|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:01 - Newspaper-Big|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:02 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:02 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:02 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:03 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:03 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:03 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:04 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:04 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:04 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:05 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:05 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:05 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:06 - Newspaper-Small|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:325.225
-IMAGE_INJECT|type:replace|comp:06 - Newspaper-Small|layer:Newspaper-Small.png|source:Newspaper-Small.png|w:2032|h:800|absIn:0.000|absOut:299.967
-IMAGE_INJECT|type:replace|comp:06 - Newspaper-Small|layer:Newspaper-Small.png|source:Newspaper-Small.png|w:2032|h:800|absIn:0.000|absOut:299.967
-IMAGE_INJECT|type:replace|comp:07 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:07 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:07 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:08 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:08 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:08 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:09 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:09 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:09 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:11 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:11 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:11 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:Newspaper-Tall.png|source:Newspaper-Tall.png|w:1436|h:3824|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:Background|source:Newspaper-Tall.png|w:1436|h:3824|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:13 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:13 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:13 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:14 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:14 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:14 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:15 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:15 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:15 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:16 - Magazine|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:16 - Magazine|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:16 - Magazine|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:17 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:17 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:17 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:179.980
-IMAGE_INJECT|type:replace|comp:18 - Photo Frame|layer:Table.png|source:Table.png|w:4896|h:2754|absIn:0.000|absOut:188.188
-IMAGE_INJECT|type:replace|comp:18 - Photo Frame|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:18 - Photo Frame|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|absIn:0.000|absOut:317.451
-IMAGE_INJECT|type:replace|comp:18 - Photo Frame|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|absIn:0.000|absOut:184.585
+IMAGE_INJECT|type:replace|comp:Сover|layer:Cover.png|source:Cover.png|w:2648|h:2025|ratio:2648:2025|absIn:0.000|absOut:191.604
+IMAGE_INJECT|type:replace|comp:10 - Badge|layer:Badge.png|source:Badge.png|w:1308|h:993|ratio:436:331|absIn:0.000|absOut:183.550
+IMAGE_INJECT|type:replace|comp:10 - Badge|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:183.951
+IMAGE_INJECT|type:replace|comp:10 - Badge|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:183.417
+IMAGE_INJECT|type:replace|comp:10 - Badge|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:183.417
+IMAGE_INJECT|type:replace|comp:Background|layer:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|ratio:581:348|absIn:0.000|absOut:600.007
+IMAGE_INJECT|type:replace|comp:Background|layer:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|ratio:581:348|absIn:0.000|absOut:153.300
+IMAGE_INJECT|type:replace|comp:Background|layer:Background_02.jpg|source:Background_02.jpg|w:9296|h:5568|ratio:581:348|absIn:0.000|absOut:153.300
+IMAGE_INJECT|type:replace|comp:Background|layer:Background_03.jpg|source:Background_03.jpg|w:9341|h:5622|ratio:9341:5622|absIn:0.000|absOut:153.300
+IMAGE_INJECT|type:replace|comp:Background 2|layer:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|ratio:581:348|absIn:0.000|absOut:191.133
+IMAGE_INJECT|type:replace|comp:BusinessCard_01|layer:BusinessCard_01.png|source:BusinessCard_01.png|w:1363|h:776|ratio:1363:776|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:BusinessCard_02|layer:BusinessCard_02.jpg|source:BusinessCard_02.jpg|w:1341|h:756|ratio:149:84|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:CD|layer:CD.png|source:CD.png|w:1000|h:1000|ratio:1:1|absIn:0.000|absOut:226.860
+IMAGE_INJECT|type:replace|comp:Clip|layer:Clip.png|source:Clip.png|w:189|h:730|ratio:189:730|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:Clothes Hanger|layer:ClothesHanger.png|source:ClothesHanger.png|w:992|h:3494|ratio:496:1747|absIn:0.000|absOut:60.894
+IMAGE_INJECT|type:replace|comp:Cover_02|layer:Cover_02.png|source:Cover_02.png|w:3049|h:1435|ratio:3049:1435|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Dock_01|layer:Dock_01.png|source:Dock_01.png|w:1100|h:1412|ratio:275:353|absIn:0.000|absOut:186.687
+IMAGE_INJECT|type:replace|comp:Dock_02|layer:Dock_02.png|source:Dock_02.png|w:1100|h:1412|ratio:275:353|absIn:0.000|absOut:198.265
+IMAGE_INJECT|type:replace|comp:Dock_03|layer:Dock_03.png|source:Dock_03.png|w:1346|h:1735|ratio:1346:1735|absIn:0.000|absOut:193.861
+IMAGE_INJECT|type:replace|comp:Dock_04|layer:Dock_04.png|source:Dock_04.png|w:1346|h:1735|ratio:1346:1735|absIn:0.000|absOut:204.972
+IMAGE_INJECT|type:replace|comp:EnvelopePostal|layer:EnvelopePostal.png|source:EnvelopePostal.png|w:3615|h:1528|ratio:3615:1528|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:FloorPlan|layer:FloorPlan.jpg|source:FloorPlan.jpg|w:1800|h:2164|ratio:450:541|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:knot|layer:knot.png|source:knot.png|w:100|h:99|ratio:100:99|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Map_01|layer:Map_01.png|source:Map_01.png|w:5000|h:2914|ratio:2500:1457|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Map_02|layer:Map_02.jpg|source:Map_02.jpg|w:992|h:937|ratio:992:937|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:Map_04|layer:Map_04.jpg|source:Map_04.jpg|w:1808|h:922|ratio:904:461|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Palaroid|layer:Palaroid.png|source:Palaroid.png|w:1130|h:1364|ratio:565:682|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:ParkingViolation|layer:ParkingViolation.png|source:ParkingViolation.png|w:626|h:864|ratio:313:432|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Police-Flashing.mp4_looped|layer:Police-Flashing.mp4|source:Police-Flashing.mp4|w:1920|h:1080|ratio:16:9|absIn:0.000|absOut:1.668
+IMAGE_INJECT|type:replace|comp:Police-Flashing.mp4_looped|layer:Police-Flashing.mp4|source:Police-Flashing.mp4|w:1920|h:1080|ratio:16:9|absIn:0.000|absOut:0.010
+IMAGE_INJECT|type:replace|comp:Pushpin_01|layer:Pushpin_01.png|source:Pushpin_01.png|w:184|h:177|ratio:184:177|absIn:0.000|absOut:152.503
+IMAGE_INJECT|type:replace|comp:Pushpin_02|layer:Pushpin_02.png|source:Pushpin_02.png|w:192|h:183|ratio:64:61|absIn:0.000|absOut:152.503
+IMAGE_INJECT|type:replace|comp:ScotchTape_01|layer:ScotchTape_01.png|source:ScotchTape_01.png|w:854|h:394|ratio:427:197|absIn:0.000|absOut:643.727
+IMAGE_INJECT|type:replace|comp:ScotchTape_02|layer:ScotchTape_02.png|source:ScotchTape_02.png|w:701|h:412|ratio:701:412|absIn:0.000|absOut:680.577
+IMAGE_INJECT|type:replace|comp:ScotchTape_03|layer:ScotchTape_03.png|source:ScotchTape_03.png|w:1017|h:422|ratio:1017:422|absIn:0.000|absOut:650.230
+IMAGE_INJECT|type:replace|comp:ScotchTape_04|layer:ScotchTape_04.png|source:ScotchTape_04.png|w:1244|h:449|ratio:1244:449|absIn:0.000|absOut:655.499
+IMAGE_INJECT|type:replace|comp:ScotchTape_05|layer:ScotchTape_05.png|source:ScotchTape_05.png|w:319|h:98|ratio:319:98|absIn:0.000|absOut:655.799
+IMAGE_INJECT|type:replace|comp:ScotchTape_06|layer:ScotchTape_06.png|source:ScotchTape_06.png|w:1672|h:447|ratio:1672:447|absIn:0.000|absOut:620.816
+IMAGE_INJECT|type:replace|comp:ScotchTape_07|layer:ScotchTape_07.png|source:ScotchTape_07.png|w:825|h:434|ratio:825:434|absIn:0.000|absOut:612.462
+IMAGE_INJECT|type:replace|comp:ScotchTape_08|layer:ScotchTape_08.png|source:ScotchTape_08.png|w:714|h:319|ratio:714:319|absIn:0.000|absOut:625.468
+IMAGE_INJECT|type:replace|comp:steam|layer:steam.mp4|source:steam.mp4|w:482|h:502|ratio:241:251|absIn:0.000|absOut:13.547
+IMAGE_INJECT|type:replace|comp:steam|layer:steam.mp4|source:steam.mp4|w:482|h:502|ratio:241:251|absIn:0.000|absOut:13.547
+IMAGE_INJECT|type:replace|comp:steam|layer:steam.mp4|source:steam.mp4|w:482|h:502|ratio:241:251|absIn:0.000|absOut:13.547
+IMAGE_INJECT|type:replace|comp:Sticker_01|layer:sticker.png|source:sticker.png|w:1000|h:1000|ratio:1:1|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Sticker_02|layer:sticker.png|source:sticker.png|w:1000|h:1000|ratio:1:1|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Sticker_03|layer:sticker.png|source:sticker.png|w:1000|h:1000|ratio:1:1|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Sticker_04|layer:sticker.png|source:sticker.png|w:1000|h:1000|ratio:1:1|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Sticker_05|layer:sticker.png|source:sticker.png|w:1000|h:1000|ratio:1:1|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:Table Comp|layer:Table Mask|source:Table.png|w:4896|h:2754|ratio:16:9|absIn:0.000|absOut:188.188
+IMAGE_INJECT|type:replace|comp:Table Comp|layer:Table.png|source:Table.png|w:4896|h:2754|ratio:16:9|absIn:0.000|absOut:188.188
+IMAGE_INJECT|type:replace|comp:Test|layer:Background_01.jpg|source:Background_01.jpg|w:9296|h:5568|ratio:581:348|absIn:0.000|absOut:7.787
+IMAGE_INJECT|type:replace|comp:Ticket_01|layer:Ticket_01.png|source:Ticket_01.png|w:1257|h:494|ratio:1257:494|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:Warehouse|layer:Warehouse.jpg|source:Warehouse.jpg|w:852|h:480|ratio:71:40|absIn:0.000|absOut:219.853
+IMAGE_INJECT|type:replace|comp:WhileYouWereOut|layer:WhileYouWereOut.png|source:WhileYouWereOut.png|w:1346|h:1735|ratio:1346:1735|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:01 - Newspaper-Big|layer:Newspaper-Big.png|source:Newspaper-Big.png|w:2270|h:3375|ratio:454:675|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:01 - Newspaper-Big|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:01 - Newspaper-Big|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:01 - Newspaper-Big|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:02 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:02 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:02 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:03 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:03 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:03 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:04 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:04 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:04 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:05 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:05 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:05 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:06 - Newspaper-Small|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:325.225
+IMAGE_INJECT|type:replace|comp:06 - Newspaper-Small|layer:Newspaper-Small.png|source:Newspaper-Small.png|w:2032|h:800|ratio:127:50|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:06 - Newspaper-Small|layer:Newspaper-Small.png|source:Newspaper-Small.png|w:2032|h:800|ratio:127:50|absIn:0.000|absOut:299.967
+IMAGE_INJECT|type:replace|comp:07 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:07 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:07 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:08 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:08 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:08 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:09 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:09 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:09 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:11 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:11 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:11 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:Newspaper-Tall.png|source:Newspaper-Tall.png|w:1436|h:3824|ratio:359:956|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:12 - Newspaper-Tall|layer:Background|source:Newspaper-Tall.png|w:1436|h:3824|ratio:359:956|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:13 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:13 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:13 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:14 - Palaroid|layer:Dirty_01.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:14 - Palaroid|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:14 - Palaroid|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:15 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:15 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:15 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:16 - Magazine|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:16 - Magazine|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:16 - Magazine|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:17 - Photo|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:17 - Photo|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:17 - Photo|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:179.980
+IMAGE_INJECT|type:replace|comp:18 - Photo Frame|layer:Table.png|source:Table.png|w:4896|h:2754|ratio:16:9|absIn:0.000|absOut:188.188
+IMAGE_INJECT|type:replace|comp:18 - Photo Frame|layer:dirty1.png|source:Dirty_01.png|w:1500|h:1424|ratio:375:356|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:18 - Photo Frame|layer:Dirty_02.png|source:Dirty_02.png|w:900|h:569|ratio:900:569|absIn:0.000|absOut:317.451
+IMAGE_INJECT|type:replace|comp:18 - Photo Frame|layer:paper-crumpled_02.jpg|source:paper-crumpled_02.jpg|w:1146|h:903|ratio:382:301|absIn:0.000|absOut:184.585
 
+-- SOLID INJECTABLES --
+SOLID_INJECT|comp:10 - Badge|layer:Photo_10|compW:1308|compH:993|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:183.550
+SOLID_INJECT|comp:01 - Newspaper-Big|layer:Photo_01|compW:2270|compH:3375|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:179.980
+SOLID_INJECT|comp:02 - Palaroid|layer:Photo_02|compW:1130|compH:1364|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:179.980
+SOLID_INJECT|comp:03 - Photo|layer:Photo_03|compW:1692|compH:1250|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:320.153
+SOLID_INJECT|comp:04 - Photo|layer:Photo_04|compW:1692|compH:1250|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:320.153
+SOLID_INJECT|comp:05 - Photo|layer:Photo_05|compW:1692|compH:1250|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:320.153
+SOLID_INJECT|comp:06 - Newspaper-Small|layer:Photo_06|compW:3512|compH:1428|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:320.153
+SOLID_INJECT|comp:07 - Photo|layer:Photo_07|compW:1692|compH:1250|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:320.153
+SOLID_INJECT|comp:08 - Palaroid|layer:Photo_08|compW:1130|compH:1364|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:179.980
+SOLID_INJECT|comp:09 - Palaroid|layer:Photo_09|compW:1130|compH:1364|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:179.980
+SOLID_INJECT|comp:11 - Palaroid|layer:Photo_11|compW:1130|compH:1364|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:179.980
+SOLID_INJECT|comp:12 - Newspaper-Tall|layer:Photo_12|compW:1436|compH:3824|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:179.980
+SOLID_INJECT|comp:13 - Palaroid|layer:Photo_13|compW:1130|compH:1364|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:179.980
+SOLID_INJECT|comp:14 - Palaroid|layer:Photo_14|compW:1130|compH:1364|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:179.980
+SOLID_INJECT|comp:15 - Photo|layer:Photo_15|compW:1692|compH:1250|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:320.153
+SOLID_INJECT|comp:16 - Magazine|layer:Photo_16|compW:1013|compH:1327|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:179.980
+SOLID_INJECT|comp:17 - Photo|layer:Photo_17|compW:1692|compH:1250|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:320.153
+SOLID_INJECT|comp:18 - Photo Frame|layer:Photo_18|compW:551|compH:477|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:183.383
+SOLID_INJECT|comp:19 - Logo|layer:Photo_19 - Logo|compW:1920|compH:1080|solidW:1920|solidH:1080|slotW:1920|slotH:1080|maskShape:rectangle|cornerRadius:0|ratio:16:9|absIn:0.000|absOut:299.967
 -- PROJECT LEVEL FOOTAGE --
 PROJECT_FOOTAGE|id:2|name:Background_01.jpg|w:9296|h:5568|instances:4|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_01.jpg
 PROJECT_FOOTAGE|id:3|name:Background_02.jpg|w:9296|h:5568|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Background_02.jpg
@@ -1232,5 +1252,371 @@ PROJECT_FOOTAGE|id:44|name:Table.png|w:4896|h:2754|instances:3|file:C:\Users\SHI
 PROJECT_FOOTAGE|id:45|name:Ticket_01.png|w:1257|h:494|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Ticket_01.png
 PROJECT_FOOTAGE|id:46|name:Warehouse.jpg|w:852|h:480|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\Warehouse.jpg
 PROJECT_FOOTAGE|id:47|name:WhileYouWereOut.png|w:1346|h:1735|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Investigation Board\(Footage)\WhileYouWereOut.png
+
+=== SCENE STRUCTURE ===
+SCENE_CONTAINER|name:Main|dur:150.918
+SCENE_TYPE|camera_based|count:42
+SCENE|block:Camera 1|mainIn:3.937|mainOut:7.174|dur:3.237|minDur:1.942|maxDur:4.856|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 1 - Name|mainIn:7.174|mainOut:10.644|dur:3.470|minDur:2.082|maxDur:5.205|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 2|mainIn:10.644|mainOut:13.914|dur:3.270|minDur:1.962|maxDur:4.905|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 2 - Name|mainIn:13.914|mainOut:16.817|dur:2.903|minDur:1.742|maxDur:4.354|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 3|mainIn:16.817|mainOut:20.821|dur:4.004|minDur:2.402|maxDur:6.006|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 3 - Name|mainIn:20.821|mainOut:23.457|dur:2.636|minDur:1.582|maxDur:3.954|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 4|mainIn:23.457|mainOut:27.027|dur:3.570|minDur:2.142|maxDur:5.355|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 4 - Name|mainIn:27.027|mainOut:30.564|dur:3.537|minDur:2.122|maxDur:5.306|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 5|mainIn:30.564|mainOut:34.768|dur:4.204|minDur:2.522|maxDur:6.306|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 5 - Name|mainIn:34.768|mainOut:38.372|dur:3.604|minDur:2.162|maxDur:5.406|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 6|mainIn:38.372|mainOut:41.608|dur:3.237|minDur:1.942|maxDur:4.856|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 6 - Name|mainIn:41.608|mainOut:44.811|dur:3.203|minDur:1.922|maxDur:4.804|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 7|mainIn:44.778|mainOut:47.948|dur:3.170|minDur:1.902|maxDur:4.755|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 7 - Name|mainIn:47.948|mainOut:50.951|dur:3.003|minDur:1.802|maxDur:4.505|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 8|mainIn:50.951|mainOut:53.954|dur:3.003|minDur:1.802|maxDur:4.505|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 8 - Name|mainIn:53.954|mainOut:57.257|dur:3.303|minDur:1.982|maxDur:4.954|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 9|mainIn:57.257|mainOut:60.627|dur:3.370|minDur:2.022|maxDur:5.055|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 9 - Name|mainIn:60.594|mainOut:63.597|dur:3.003|minDur:1.802|maxDur:4.505|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 10|mainIn:63.597|mainOut:66.934|dur:3.337|minDur:2.002|maxDur:5.006|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 10 - Name|mainIn:66.934|mainOut:69.937|dur:3.003|minDur:1.802|maxDur:4.505|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 11|mainIn:69.937|mainOut:73.006|dur:3.070|minDur:1.842|maxDur:4.605|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 11 - Name|mainIn:73.006|mainOut:76.109|dur:3.103|minDur:1.862|maxDur:4.655|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 12|mainIn:76.109|mainOut:79.279|dur:3.170|minDur:1.902|maxDur:4.755|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 12 - Name|mainIn:79.279|mainOut:82.549|dur:3.270|minDur:1.962|maxDur:4.905|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera +|mainIn:82.549|mainOut:85.752|dur:3.203|minDur:1.922|maxDur:4.804|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera + 2|mainIn:85.752|mainOut:88.889|dur:3.136|minDur:1.882|maxDur:4.704|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 13|mainIn:88.889|mainOut:92.025|dur:3.136|minDur:1.882|maxDur:4.704|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 13 - Name|mainIn:92.025|mainOut:95.095|dur:3.070|minDur:1.842|maxDur:4.605|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 14|mainIn:95.095|mainOut:98.599|dur:3.504|minDur:2.102|maxDur:5.256|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 14 - Name|mainIn:98.599|mainOut:101.502|dur:2.903|minDur:1.742|maxDur:4.354|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 15|mainIn:101.502|mainOut:105.005|dur:3.504|minDur:2.102|maxDur:5.256|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 15 - Name|mainIn:105.005|mainOut:107.741|dur:2.736|minDur:1.642|maxDur:4.104|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 16|mainIn:107.708|mainOut:111.311|dur:3.604|minDur:2.162|maxDur:5.406|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 16 - Name|mainIn:111.311|mainOut:114.081|dur:2.769|minDur:1.661|maxDur:4.154|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 17|mainIn:114.081|mainOut:117.451|dur:3.370|minDur:2.022|maxDur:5.055|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 17 - Name|mainIn:117.451|mainOut:120.320|dur:2.870|minDur:1.722|maxDur:4.305|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 18|mainIn:120.320|mainOut:123.590|dur:3.270|minDur:1.962|maxDur:4.905|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera 18 Name|mainIn:123.590|mainOut:126.393|dur:2.803|minDur:1.682|maxDur:4.204|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera +|mainIn:126.393|mainOut:129.763|dur:3.370|minDur:2.022|maxDur:5.055|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera ++|mainIn:129.763|mainOut:133.800|dur:4.037|minDur:2.422|maxDur:6.056|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Camera +++|mainIn:133.800|mainOut:140.374|dur:6.573|minDur:3.944|maxDur:9.860|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:The End|mainIn:140.374|mainOut:151.151|dur:10.777|minDur:6.466|maxDur:16.165|subBeats:1|footageCount:0|footage:|textLayers:
+
+=== EXPRESSION CONTROLS ===
+EXPR_CONTROL|comp:Investigation Board|layer:Investigation Board Settings|effect:Helping Numbers|type:checkbox|matchName:ADBE Checkbox Control|value:false|compW:9296|compH:5568
+EXPR_CONTROL|comp:Investigation Board|layer:Investigation Board Settings|effect:Helping Numbers Color|type:color|matchName:ADBE Color Control|value:#ffffff|compW:9296|compH:5568
+EXPR_CONTROL|comp:Investigation Board|layer:Investigation Board Settings|effect:Threads Color|type:color|matchName:ADBE Color Control|value:#ae2323|compW:9296|compH:5568
+EXPR_CONTROL|comp:Main|layer:Main Settings|effect:Police Flashing|type:slider|matchName:ADBE Slider Control|value:25|compW:1920|compH:1080
+EXPR_CONTROL|comp:Main|layer:Main Settings|effect:Jalousie|type:slider|matchName:ADBE Slider Control|value:15|compW:1920|compH:1080
+EXPR_CONTROL|comp:Main|layer:Main Settings|effect:Shade Color|type:color|matchName:ADBE Color Control|value:#dfb126|compW:1920|compH:1080
+EXPR_CONTROL|comp:Main|layer:Main Settings|effect:Shade Color Intensity|type:slider|matchName:ADBE Slider Control|value:20|compW:1920|compH:1080
+EXPR_CONTROL|comp:Main|layer:Main Settings|effect:Film Noise|type:slider|matchName:ADBE Slider Control|value:100|compW:1920|compH:1080
+EXPR_CONTROL|comp:Main|layer:Main Settings|effect:Background 01|type:checkbox|matchName:ADBE Checkbox Control|value:true|compW:1920|compH:1080
+EXPR_CONTROL|comp:Main|layer:Main Settings|effect:Background 02|type:checkbox|matchName:ADBE Checkbox Control|value:false|compW:1920|compH:1080
+EXPR_CONTROL|comp:Main|layer:Main Settings|effect:Background 03|type:checkbox|matchName:ADBE Checkbox Control|value:false|compW:1920|compH:1080
+EXPR_CONTROL|comp:10 - Badge|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:970|compW:1308|compH:993
+EXPR_CONTROL|comp:10 - Badge|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:553|compW:1308|compH:993
+EXPR_CONTROL|comp:10 - Badge|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:54|compW:1308|compH:993
+EXPR_CONTROL|comp:10 - Badge|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:true|compW:1308|compH:993
+EXPR_CONTROL|comp:10 - Badge|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1308|compH:993
+EXPR_CONTROL|comp:10 - Badge|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:0|compW:1308|compH:993
+EXPR_CONTROL|comp:10 - Badge|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:1308|compH:993
+EXPR_CONTROL|comp:10 - Badge|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1308|compH:993
+EXPR_CONTROL|comp:10 - Badge|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:0|compW:1308|compH:993
+EXPR_CONTROL|comp:10 - Badge|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:0|compW:1308|compH:993
+EXPR_CONTROL|comp:10 - Badge|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:0|compW:1308|compH:993
+EXPR_CONTROL|comp:10 - Badge|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1308|compH:993
+EXPR_CONTROL|comp:10 - Badge|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:0|compW:1308|compH:993
+EXPR_CONTROL|comp:01 - Newspaper-Big|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:851|compW:2270|compH:3375
+EXPR_CONTROL|comp:01 - Newspaper-Big|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:419|compW:2270|compH:3375
+EXPR_CONTROL|comp:01 - Newspaper-Big|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:91|compW:2270|compH:3375
+EXPR_CONTROL|comp:01 - Newspaper-Big|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:false|compW:2270|compH:3375
+EXPR_CONTROL|comp:01 - Newspaper-Big|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:2270|compH:3375
+EXPR_CONTROL|comp:01 - Newspaper-Big|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:0|compW:2270|compH:3375
+EXPR_CONTROL|comp:01 - Newspaper-Big|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:13|compW:2270|compH:3375
+EXPR_CONTROL|comp:01 - Newspaper-Big|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:2270|compH:3375
+EXPR_CONTROL|comp:01 - Newspaper-Big|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:12|compW:2270|compH:3375
+EXPR_CONTROL|comp:01 - Newspaper-Big|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:16|compW:2270|compH:3375
+EXPR_CONTROL|comp:01 - Newspaper-Big|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:0|compW:2270|compH:3375
+EXPR_CONTROL|comp:01 - Newspaper-Big|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:21|compW:2270|compH:3375
+EXPR_CONTROL|comp:01 - Newspaper-Big|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:28|compW:2270|compH:3375
+EXPR_CONTROL|comp:02 - Palaroid|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:544|compW:1130|compH:1364
+EXPR_CONTROL|comp:02 - Palaroid|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:502|compW:1130|compH:1364
+EXPR_CONTROL|comp:02 - Palaroid|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:54|compW:1130|compH:1364
+EXPR_CONTROL|comp:02 - Palaroid|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:true|compW:1130|compH:1364
+EXPR_CONTROL|comp:02 - Palaroid|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:02 - Palaroid|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:02 - Palaroid|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:02 - Palaroid|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:02 - Palaroid|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:02 - Palaroid|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:02 - Palaroid|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:25|compW:1130|compH:1364
+EXPR_CONTROL|comp:02 - Palaroid|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:10|compW:1130|compH:1364
+EXPR_CONTROL|comp:02 - Palaroid|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:26|compW:1130|compH:1364
+EXPR_CONTROL|comp:03 - Photo|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:759|compW:1692|compH:1250
+EXPR_CONTROL|comp:03 - Photo|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:617|compW:1692|compH:1250
+EXPR_CONTROL|comp:03 - Photo|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:62|compW:1692|compH:1250
+EXPR_CONTROL|comp:03 - Photo|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:true|compW:1692|compH:1250
+EXPR_CONTROL|comp:03 - Photo|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:16.2995594713656|compW:1692|compH:1250
+EXPR_CONTROL|comp:03 - Photo|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:22|compW:1692|compH:1250
+EXPR_CONTROL|comp:03 - Photo|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:03 - Photo|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:20|compW:1692|compH:1250
+EXPR_CONTROL|comp:03 - Photo|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:54.1850220264317|compW:1692|compH:1250
+EXPR_CONTROL|comp:03 - Photo|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:22.4669603524229|compW:1692|compH:1250
+EXPR_CONTROL|comp:03 - Photo|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:4|compW:1692|compH:1250
+EXPR_CONTROL|comp:03 - Photo|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:18|compW:1692|compH:1250
+EXPR_CONTROL|comp:03 - Photo|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:125|compW:1692|compH:1250
+EXPR_CONTROL|comp:04 - Photo|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:832|compW:1692|compH:1250
+EXPR_CONTROL|comp:04 - Photo|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:615|compW:1692|compH:1250
+EXPR_CONTROL|comp:04 - Photo|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:63|compW:1692|compH:1250
+EXPR_CONTROL|comp:04 - Photo|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:true|compW:1692|compH:1250
+EXPR_CONTROL|comp:04 - Photo|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:04 - Photo|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:04 - Photo|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:36|compW:1692|compH:1250
+EXPR_CONTROL|comp:04 - Photo|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:04 - Photo|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:04 - Photo|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:14|compW:1692|compH:1250
+EXPR_CONTROL|comp:04 - Photo|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:17|compW:1692|compH:1250
+EXPR_CONTROL|comp:04 - Photo|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:20|compW:1692|compH:1250
+EXPR_CONTROL|comp:04 - Photo|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:18|compW:1692|compH:1250
+EXPR_CONTROL|comp:05 - Photo|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:827|compW:1692|compH:1250
+EXPR_CONTROL|comp:05 - Photo|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:618|compW:1692|compH:1250
+EXPR_CONTROL|comp:05 - Photo|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:64|compW:1692|compH:1250
+EXPR_CONTROL|comp:05 - Photo|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:true|compW:1692|compH:1250
+EXPR_CONTROL|comp:05 - Photo|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:05 - Photo|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:05 - Photo|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:16|compW:1692|compH:1250
+EXPR_CONTROL|comp:05 - Photo|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:05 - Photo|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:05 - Photo|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:05 - Photo|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:05 - Photo|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:05 - Photo|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:06 - Newspaper-Small|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:2586|compW:3512|compH:1428
+EXPR_CONTROL|comp:06 - Newspaper-Small|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:702|compW:3512|compH:1428
+EXPR_CONTROL|comp:06 - Newspaper-Small|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:63|compW:3512|compH:1428
+EXPR_CONTROL|comp:06 - Newspaper-Small|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:false|compW:3512|compH:1428
+EXPR_CONTROL|comp:06 - Newspaper-Small|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:3512|compH:1428
+EXPR_CONTROL|comp:06 - Newspaper-Small|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:0|compW:3512|compH:1428
+EXPR_CONTROL|comp:06 - Newspaper-Small|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:3512|compH:1428
+EXPR_CONTROL|comp:06 - Newspaper-Small|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:3512|compH:1428
+EXPR_CONTROL|comp:06 - Newspaper-Small|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:0|compW:3512|compH:1428
+EXPR_CONTROL|comp:06 - Newspaper-Small|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:0|compW:3512|compH:1428
+EXPR_CONTROL|comp:06 - Newspaper-Small|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:0|compW:3512|compH:1428
+EXPR_CONTROL|comp:07 - Photo|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:823|compW:1692|compH:1250
+EXPR_CONTROL|comp:07 - Photo|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:614|compW:1692|compH:1250
+EXPR_CONTROL|comp:07 - Photo|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:62|compW:1692|compH:1250
+EXPR_CONTROL|comp:07 - Photo|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:true|compW:1692|compH:1250
+EXPR_CONTROL|comp:07 - Photo|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:07 - Photo|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:7|compW:1692|compH:1250
+EXPR_CONTROL|comp:07 - Photo|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:07 - Photo|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:07 - Photo|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:57|compW:1692|compH:1250
+EXPR_CONTROL|comp:07 - Photo|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:10|compW:1692|compH:1250
+EXPR_CONTROL|comp:07 - Photo|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:17|compW:1692|compH:1250
+EXPR_CONTROL|comp:07 - Photo|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:20|compW:1692|compH:1250
+EXPR_CONTROL|comp:07 - Photo|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:18|compW:1692|compH:1250
+EXPR_CONTROL|comp:08 - Palaroid|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:508|compW:1130|compH:1364
+EXPR_CONTROL|comp:08 - Palaroid|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:498|compW:1130|compH:1364
+EXPR_CONTROL|comp:08 - Palaroid|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:55|compW:1130|compH:1364
+EXPR_CONTROL|comp:08 - Palaroid|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:false|compW:1130|compH:1364
+EXPR_CONTROL|comp:08 - Palaroid|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:08 - Palaroid|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:29|compW:1130|compH:1364
+EXPR_CONTROL|comp:08 - Palaroid|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:08 - Palaroid|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:08 - Palaroid|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:08 - Palaroid|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:24|compW:1130|compH:1364
+EXPR_CONTROL|comp:08 - Palaroid|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:-3|compW:1130|compH:1364
+EXPR_CONTROL|comp:08 - Palaroid|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:10|compW:1130|compH:1364
+EXPR_CONTROL|comp:08 - Palaroid|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:26|compW:1130|compH:1364
+EXPR_CONTROL|comp:09 - Palaroid|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:582|compW:1130|compH:1364
+EXPR_CONTROL|comp:09 - Palaroid|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:507|compW:1130|compH:1364
+EXPR_CONTROL|comp:09 - Palaroid|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:54|compW:1130|compH:1364
+EXPR_CONTROL|comp:09 - Palaroid|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:true|compW:1130|compH:1364
+EXPR_CONTROL|comp:09 - Palaroid|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:09 - Palaroid|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:09 - Palaroid|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:09 - Palaroid|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:09 - Palaroid|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:09 - Palaroid|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:09 - Palaroid|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:25|compW:1130|compH:1364
+EXPR_CONTROL|comp:09 - Palaroid|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:10|compW:1130|compH:1364
+EXPR_CONTROL|comp:09 - Palaroid|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:26|compW:1130|compH:1364
+EXPR_CONTROL|comp:11 - Palaroid|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:515|compW:1130|compH:1364
+EXPR_CONTROL|comp:11 - Palaroid|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:495|compW:1130|compH:1364
+EXPR_CONTROL|comp:11 - Palaroid|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:54|compW:1130|compH:1364
+EXPR_CONTROL|comp:11 - Palaroid|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:false|compW:1130|compH:1364
+EXPR_CONTROL|comp:11 - Palaroid|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:11 - Palaroid|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:24|compW:1130|compH:1364
+EXPR_CONTROL|comp:11 - Palaroid|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:11 - Palaroid|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:11 - Palaroid|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:42|compW:1130|compH:1364
+EXPR_CONTROL|comp:11 - Palaroid|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:22|compW:1130|compH:1364
+EXPR_CONTROL|comp:11 - Palaroid|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:11 - Palaroid|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:15|compW:1130|compH:1364
+EXPR_CONTROL|comp:11 - Palaroid|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:26|compW:1130|compH:1364
+EXPR_CONTROL|comp:12 - Newspaper-Tall|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:440|compW:1436|compH:3824
+EXPR_CONTROL|comp:12 - Newspaper-Tall|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:1108|compW:1436|compH:3824
+EXPR_CONTROL|comp:12 - Newspaper-Tall|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:97|compW:1436|compH:3824
+EXPR_CONTROL|comp:12 - Newspaper-Tall|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:false|compW:1436|compH:3824
+EXPR_CONTROL|comp:12 - Newspaper-Tall|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:17|compW:1436|compH:3824
+EXPR_CONTROL|comp:12 - Newspaper-Tall|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:31|compW:1436|compH:3824
+EXPR_CONTROL|comp:12 - Newspaper-Tall|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:1436|compH:3824
+EXPR_CONTROL|comp:12 - Newspaper-Tall|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1436|compH:3824
+EXPR_CONTROL|comp:12 - Newspaper-Tall|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:90|compW:1436|compH:3824
+EXPR_CONTROL|comp:12 - Newspaper-Tall|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:0|compW:1436|compH:3824
+EXPR_CONTROL|comp:12 - Newspaper-Tall|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:0|compW:1436|compH:3824
+EXPR_CONTROL|comp:12 - Newspaper-Tall|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1436|compH:3824
+EXPR_CONTROL|comp:12 - Newspaper-Tall|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:0|compW:1436|compH:3824
+EXPR_CONTROL|comp:13 - Palaroid|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:540|compW:1130|compH:1364
+EXPR_CONTROL|comp:13 - Palaroid|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:498|compW:1130|compH:1364
+EXPR_CONTROL|comp:13 - Palaroid|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:54|compW:1130|compH:1364
+EXPR_CONTROL|comp:13 - Palaroid|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:true|compW:1130|compH:1364
+EXPR_CONTROL|comp:13 - Palaroid|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:13 - Palaroid|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:13 - Palaroid|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:13 - Palaroid|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:13 - Palaroid|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:13 - Palaroid|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:13 - Palaroid|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:13 - Palaroid|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:13 - Palaroid|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:26|compW:1130|compH:1364
+EXPR_CONTROL|comp:14 - Palaroid|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:557|compW:1130|compH:1364
+EXPR_CONTROL|comp:14 - Palaroid|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:497|compW:1130|compH:1364
+EXPR_CONTROL|comp:14 - Palaroid|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:56|compW:1130|compH:1364
+EXPR_CONTROL|comp:14 - Palaroid|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:true|compW:1130|compH:1364
+EXPR_CONTROL|comp:14 - Palaroid|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:14 - Palaroid|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:32|compW:1130|compH:1364
+EXPR_CONTROL|comp:14 - Palaroid|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:14 - Palaroid|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1130|compH:1364
+EXPR_CONTROL|comp:14 - Palaroid|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:66|compW:1130|compH:1364
+EXPR_CONTROL|comp:14 - Palaroid|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:8|compW:1130|compH:1364
+EXPR_CONTROL|comp:14 - Palaroid|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:25|compW:1130|compH:1364
+EXPR_CONTROL|comp:14 - Palaroid|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:25|compW:1130|compH:1364
+EXPR_CONTROL|comp:14 - Palaroid|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:44|compW:1130|compH:1364
+EXPR_CONTROL|comp:15 - Photo|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:828|compW:1692|compH:1250
+EXPR_CONTROL|comp:15 - Photo|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:617|compW:1692|compH:1250
+EXPR_CONTROL|comp:15 - Photo|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:62|compW:1692|compH:1250
+EXPR_CONTROL|comp:15 - Photo|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:true|compW:1692|compH:1250
+EXPR_CONTROL|comp:15 - Photo|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:11|compW:1692|compH:1250
+EXPR_CONTROL|comp:15 - Photo|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:27|compW:1692|compH:1250
+EXPR_CONTROL|comp:15 - Photo|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:14|compW:1692|compH:1250
+EXPR_CONTROL|comp:15 - Photo|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:15 - Photo|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:81|compW:1692|compH:1250
+EXPR_CONTROL|comp:15 - Photo|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:12|compW:1692|compH:1250
+EXPR_CONTROL|comp:15 - Photo|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:15 - Photo|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:18|compW:1692|compH:1250
+EXPR_CONTROL|comp:15 - Photo|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:18|compW:1692|compH:1250
+EXPR_CONTROL|comp:16 - Magazine|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:500|compW:1013|compH:1327
+EXPR_CONTROL|comp:16 - Magazine|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:633|compW:1013|compH:1327
+EXPR_CONTROL|comp:16 - Magazine|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:92|compW:1013|compH:1327
+EXPR_CONTROL|comp:16 - Magazine|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:false|compW:1013|compH:1327
+EXPR_CONTROL|comp:16 - Magazine|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1013|compH:1327
+EXPR_CONTROL|comp:16 - Magazine|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:12|compW:1013|compH:1327
+EXPR_CONTROL|comp:16 - Magazine|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:1013|compH:1327
+EXPR_CONTROL|comp:16 - Magazine|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1013|compH:1327
+EXPR_CONTROL|comp:16 - Magazine|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:12|compW:1013|compH:1327
+EXPR_CONTROL|comp:16 - Magazine|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:41|compW:1013|compH:1327
+EXPR_CONTROL|comp:16 - Magazine|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:0|compW:1013|compH:1327
+EXPR_CONTROL|comp:16 - Magazine|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1013|compH:1327
+EXPR_CONTROL|comp:16 - Magazine|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:0|compW:1013|compH:1327
+EXPR_CONTROL|comp:17 - Photo|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:849|compW:1692|compH:1250
+EXPR_CONTROL|comp:17 - Photo|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:618|compW:1692|compH:1250
+EXPR_CONTROL|comp:17 - Photo|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:62|compW:1692|compH:1250
+EXPR_CONTROL|comp:17 - Photo|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:true|compW:1692|compH:1250
+EXPR_CONTROL|comp:17 - Photo|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:17 - Photo|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:17 - Photo|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:17 - Photo|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:17 - Photo|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:17 - Photo|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:0|compW:1692|compH:1250
+EXPR_CONTROL|comp:17 - Photo|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:-5|compW:1692|compH:1250
+EXPR_CONTROL|comp:17 - Photo|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:14|compW:1692|compH:1250
+EXPR_CONTROL|comp:17 - Photo|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:18|compW:1692|compH:1250
+EXPR_CONTROL|comp:18 - Photo Frame|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:289|compW:551|compH:477
+EXPR_CONTROL|comp:18 - Photo Frame|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:220|compW:551|compH:477
+EXPR_CONTROL|comp:18 - Photo Frame|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:104|compW:551|compH:477
+EXPR_CONTROL|comp:18 - Photo Frame|layer:Settings|effect:Effect - Vignette 1|type:checkbox|matchName:ADBE Checkbox Control|value:false|compW:551|compH:477
+EXPR_CONTROL|comp:18 - Photo Frame|layer:Settings|effect:Effect - Vignette 2|type:slider|matchName:ADBE Slider Control|value:0|compW:551|compH:477
+EXPR_CONTROL|comp:18 - Photo Frame|layer:Settings|effect:Effect - Grayscale|type:slider|matchName:ADBE Slider Control|value:0|compW:551|compH:477
+EXPR_CONTROL|comp:18 - Photo Frame|layer:Settings|effect:Effect - Contrast|type:slider|matchName:ADBE Slider Control|value:0|compW:551|compH:477
+EXPR_CONTROL|comp:18 - Photo Frame|layer:Settings|effect:Effect - Saturation|type:slider|matchName:ADBE Slider Control|value:0|compW:551|compH:477
+EXPR_CONTROL|comp:18 - Photo Frame|layer:Settings|effect:Effect - Old|type:slider|matchName:ADBE Slider Control|value:0|compW:551|compH:477
+EXPR_CONTROL|comp:18 - Photo Frame|layer:Settings|effect:Effect - Cold Shadows|type:slider|matchName:ADBE Slider Control|value:0|compW:551|compH:477
+EXPR_CONTROL|comp:18 - Photo Frame|layer:Settings|effect:Effect - Dirty 1|type:slider|matchName:ADBE Slider Control|value:0|compW:551|compH:477
+EXPR_CONTROL|comp:18 - Photo Frame|layer:Settings|effect:Effect - Dirty 2|type:slider|matchName:ADBE Slider Control|value:10|compW:551|compH:477
+EXPR_CONTROL|comp:18 - Photo Frame|layer:Settings|effect:Effect - Paper|type:slider|matchName:ADBE Slider Control|value:0|compW:551|compH:477
+EXPR_CONTROL|comp:19 - Logo|layer:Settings|effect:Horizontal Position|type:slider|matchName:ADBE Slider Control|value:849|compW:1920|compH:1080
+EXPR_CONTROL|comp:19 - Logo|layer:Settings|effect:Vertical Position|type:slider|matchName:ADBE Slider Control|value:618|compW:1920|compH:1080
+EXPR_CONTROL|comp:19 - Logo|layer:Settings|effect:Scale|type:slider|matchName:ADBE Slider Control|value:62|compW:1920|compH:1080
+
+=== POSITION MARKERS ===
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:6794|y:4540|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:5848|y:4652|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_02|layerType:other|x:6811|y:3729|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:7598|y:3829|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:7684|y:2543|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:6336|y:2905|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:7491|y:1328|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:6807|y:1654|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:5849|y:1972|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:5643|y:1721|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:5269|y:2475|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:4212|y:2748|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:4280|y:2176|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_02|layerType:other|x:5207|y:2793|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_02|layerType:other|x:2715|y:2340|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_02|layerType:other|x:4091|y:2451|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_02|layerType:other|x:5080|y:2156|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:17 - Photo|layerType:other|x:769|y:718|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:2498|y:4668|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_01|layerType:other|x:4104|y:4098|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:Pushpin_02|layerType:other|x:4857|y:4337|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:15 - Photo|layerType:other|x:4964|y:4560|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:07 - Photo|layerType:other|x:1602|y:2676|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:05 - Photo|layerType:other|x:7888|y:1464|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:04 - Photo|layerType:other|x:6200|y:1092|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Investigation Board|layer:03 - Photo|layerType:other|x:4500|y:1332|visible:true|compW:9296|compH:5568
+POSITION_MARKER|comp:Main|layer:The End|layerType:solid|x:994|y:80|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:Main|layer:The End|layerType:other|x:44|y:58|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:Main|layer:Fade Out - The End|layerType:solid|x:4500|y:2500|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:10 - Badge|layer:Photo_10|layerType:solid|x:24|y:71|visible:true|compW:1308|compH:993
+POSITION_MARKER|comp:Pushpin_01|layer:Pushpin_01.png|layerType:other|x:92|y:89|visible:true|compW:184|compH:177
+POSITION_MARKER|comp:Pushpin_02|layer:Pushpin_02.png|layerType:other|x:96|y:92|visible:true|compW:192|compH:183
+POSITION_MARKER|comp:Table Comp|layer:18 - Photo Frame|layerType:other|x:682|y:2171|visible:true|compW:4896|compH:2754
+POSITION_MARKER|comp:01 - Newspaper-Big|layer:Photo_01|layerType:solid|x:532|y:736|visible:true|compW:2270|compH:3375
+POSITION_MARKER|comp:02 - Palaroid|layer:Photo_02|layerType:solid|x:43|y:174|visible:true|compW:1130|compH:1364
+POSITION_MARKER|comp:03 - Photo|layer:Photo_03|layerType:solid|x:49|y:17|visible:true|compW:1692|compH:1250
+POSITION_MARKER|comp:04 - Photo|layer:Photo_04|layerType:solid|x:49|y:17|visible:true|compW:1692|compH:1250
+POSITION_MARKER|comp:05 - Photo|layer:Photo_05|layerType:solid|x:49|y:17|visible:true|compW:1692|compH:1250
+POSITION_MARKER|comp:06 - Newspaper-Small|layer:Photo_06|layerType:solid|x:49|y:17|visible:true|compW:3512|compH:1428
+POSITION_MARKER|comp:07 - Photo|layer:Photo_07|layerType:solid|x:49|y:17|visible:true|compW:1692|compH:1250
+POSITION_MARKER|comp:08 - Palaroid|layer:Photo_08|layerType:solid|x:43|y:174|visible:true|compW:1130|compH:1364
+POSITION_MARKER|comp:09 - Palaroid|layer:Photo_09|layerType:solid|x:43|y:174|visible:true|compW:1130|compH:1364
+POSITION_MARKER|comp:11 - Palaroid|layer:Photo_11|layerType:solid|x:43|y:174|visible:true|compW:1130|compH:1364
+POSITION_MARKER|comp:12 - Newspaper-Tall|layer:Photo_12|layerType:solid|x:253|y:49|visible:true|compW:1436|compH:3824
+POSITION_MARKER|comp:13 - Palaroid|layer:Photo_13|layerType:solid|x:43|y:174|visible:true|compW:1130|compH:1364
+POSITION_MARKER|comp:14 - Palaroid|layer:Photo_14|layerType:solid|x:43|y:174|visible:true|compW:1130|compH:1364
+POSITION_MARKER|comp:15 - Photo|layer:Photo_15|layerType:solid|x:49|y:17|visible:true|compW:1692|compH:1250
+POSITION_MARKER|comp:16 - Magazine|layer:Photo_16|layerType:solid|x:30|y:24|visible:true|compW:1013|compH:1327
+POSITION_MARKER|comp:17 - Photo|layer:Photo_17|layerType:solid|x:49|y:17|visible:true|compW:1692|compH:1250
+POSITION_MARKER|comp:18 - Photo Frame|layer:Photo_18|layerType:solid|x:23|y:45|visible:true|compW:551|compH:477
+POSITION_MARKER|comp:19 - Logo|layer:Photo_19 - Logo|layerType:solid|x:179|y:-126|visible:true|compW:1920|compH:1080
+
+=== TOGGLE LAYERS ===
+TOGGLE_GROUP|comp:Horizontal|type:pattern|count:4|prefix:scotchtape
+TOGGLE_LAYER|comp:Horizontal|layer:ScotchTape_01|defaultVisible:true|type:pattern|centerX:1748|centerY:440
+TOGGLE_LAYER|comp:Horizontal|layer:ScotchTape_02|defaultVisible:true|type:pattern|centerX:244|centerY:1520
+TOGGLE_LAYER|comp:Horizontal|layer:ScotchTape_03|defaultVisible:true|type:pattern|centerX:292|centerY:460
+TOGGLE_LAYER|comp:Horizontal|layer:ScotchTape_04|defaultVisible:true|type:pattern|centerX:1672|centerY:1516
+TOGGLE_GROUP|comp:square|type:pattern|count:4|prefix:scotchtape
+TOGGLE_LAYER|comp:square|layer:ScotchTape_01|defaultVisible:true|type:pattern|centerX:173|centerY:1988
+TOGGLE_LAYER|comp:square|layer:ScotchTape_02|defaultVisible:true|type:pattern|centerX:1948|centerY:1985
+TOGGLE_LAYER|comp:square|layer:ScotchTape_03|defaultVisible:true|type:pattern|centerX:195|centerY:114
+TOGGLE_LAYER|comp:square|layer:ScotchTape_04|defaultVisible:true|type:pattern|centerX:1873|centerY:116
+TOGGLE_GROUP|comp:vertical|type:pattern|count:4|prefix:scotchtape
+TOGGLE_LAYER|comp:vertical|layer:ScotchTape_01|defaultVisible:true|type:pattern|centerX:1632|centerY:256
+TOGGLE_LAYER|comp:vertical|layer:ScotchTape_02|defaultVisible:true|type:pattern|centerX:556|centerY:1962
+TOGGLE_LAYER|comp:vertical|layer:ScotchTape_03|defaultVisible:true|type:pattern|centerX:570|centerY:284
+TOGGLE_LAYER|comp:vertical|layer:ScotchTape_04|defaultVisible:true|type:pattern|centerX:1616|centerY:1882
+
+=== SOLID COLORS ===
 
 SCAN_COMPLETE

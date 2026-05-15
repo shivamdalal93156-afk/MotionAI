@@ -3,7 +3,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 const API = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
   ? "http://localhost:3001"
   : "";
-
+// Hardcode your future Cloudflare backend URL here
 // ─── Upload ───────────────────────────────────────────────────────────────────
 function useUpload() {
   return useCallback(async (file, onProgress) => {
@@ -16,7 +16,10 @@ function useUpload() {
       };
       xhr.onload = () => {
         if (xhr.status === 200) {
-          try { resolve(JSON.parse(xhr.responseText).path || JSON.parse(xhr.responseText).filePath); }
+          try {
+  const d = JSON.parse(xhr.responseText);
+  resolve(d.filePath || d.path);  // absolute path for AE
+}
           catch { reject(new Error("Bad response")); }
         } else reject(new Error("Upload failed"));
       };
@@ -36,12 +39,22 @@ function norm(t) {
     previewBase: `${API}/templates/${name}/preview`,
     footageBase: `${API}/footage/${name}/(Footage)`,
     config: {
-      compName:    t.compName,
-      fps:         t.fps,
-      duration:    t.duration,
-      imageLayers: (t.imageFields || t.imageLayers || []),
-      textLayers:  (t.textFields  || t.textLayers  || []),
-      sceneMap:    t.sceneMap || {},
+      compName:            t.compName,
+      fps:                 t.fps,
+      duration:            t.duration,
+      imageLayers: (t.imageFields || t.imageLayers || []).map(f => ({
+  ...f,
+  slotW:        f.slotW        || null,
+  slotH:        f.slotH        || null,
+  maskShape:    f.maskShape    || 'rectangle',
+  cornerRadius: f.cornerRadius || 0,
+})),
+      textLayers:          (t.textFields          || t.textLayers          || []),
+      countryLayers:       (t.countryLayers        || []),
+      countryOptions:      (t.countryOptions       || []),
+      countryCoordinates:  (t.countryCoordinates   || {}),
+      expressionControls:  (t.expressionControls   || []),
+      sceneMap:            t.sceneMap || {},
     }
   };
 }
@@ -56,17 +69,42 @@ function keyN(k = "") {
   const m = k.match(/\d+/);
   return m ? parseInt(m[0], 10) : null;
 }
-
+function getDisplayUrl(path) {
+  if (!path) return '';
+  if (typeof path === 'string' && path.includes('uploads/')) {
+    // Strip the local C:/... prefix and use the Express static route
+    return `${API}/uploads/${path.split('uploads/').pop()}`;
+  }
+  return path;
+}
 function buildSlots(config) {
   if (!config) return { slots: [], extraText: [] };
   const imgF     = config.imageLayers || [];
   const txtF     = config.textLayers  || [];
+  const sceneMap = config.sceneMap    || {};
   const usedKeys = new Set();
 
+  // Build a map: imageKey → [textKeys from same scene]
+  const imgToTexts = {};
+  for (const scene of Object.values(sceneMap)) {
+    const keys    = scene.keys || [];
+    const imgKeys = keys.filter(k => imgF.find(l => l.key === k));
+    const txtKeys = keys.filter(k => txtF.find(l => l.key === k));
+    for (const ik of imgKeys) {
+      if (!imgToTexts[ik]) imgToTexts[ik] = [];
+      for (const tk of txtKeys) {
+        if (!imgToTexts[ik].includes(tk)) imgToTexts[ik].push(tk);
+      }
+    }
+  }
+
   const slots = imgF.map(img => {
-    const n     = keyN(img.key);
-    const texts = n !== null ? txtF.filter(t => keyN(t.key) === n) : [];
+    const pairedTxtKeys = imgToTexts[img.key] || [];
+    const texts = pairedTxtKeys
+      .map(k => txtF.find(t => t.key === k))
+      .filter(Boolean);
     texts.forEach(t => usedKeys.add(t.key));
+    usedKeys.add(img.key);
     return { img, texts };
   });
 
@@ -95,169 +133,451 @@ body{background:var(--bg);color:var(--ink);overflow:hidden;}
 `;
 
 // ─── CropTool ─────────────────────────────────────────────────────────────────
-function CropTool({ src, onDone, onCancel }) {
-  const canvasRef = useRef(null);
-  const imgRef    = useRef(new Image());
-  const s         = useRef({
-    imgW:0, imgH:0, zoom:1, minZoom:0.3, maxZoom:4,
-    panX:0, panY:0, crop:null,
-    dragging:false, panning:false, lastX:0, lastY:0,
-    resizing:null, resizeStartCrop:null, resizeStartX:0, resizeStartY:0,
-  });
-  const rafRef          = useRef(null);
-  const [ready, setReady] = useState(false);
-  const [zoom, setZoom]   = useState(1);
-  const HANDLE = 12;
+// REPLACE the entire CropTool function in App.jsx with this.
+// User gets both:
+//   - Drag corners to resize the crop box (locked to slot ratio)
+//   - Scroll wheel / pinch to zoom image inside the box
+//   - Drag inside box (not on corner) to pan the image
 
+// REPLACE the entire CropTool function in App.jsx with this.
+// User gets both:
+//   - Drag corners to resize the crop box (locked to slot ratio)
+//   - Scroll wheel / pinch to zoom image inside the box
+//   - Drag inside box (not on corner) to pan the image
+
+function CropTool({ src, onDone, onCancel, slotW = 1920, slotH = 1080, maskShape = 'rectangle', cornerRadius = 0 }) {
+  const canvasRef = useRef(null);
+  const s = useRef({
+    img: null,
+    // Crop box
+    box: null,          // { x, y, w, h } in canvas px
+    lockedRatio: slotW / slotH,
+    // Image pan/zoom (relative to box center)
+    imgScale: 1,        // current zoom
+    imgOffX: 0,         // offset from box center
+    imgOffY: 0,
+    minImgScale: 1,     // cover scale — image always fills box
+    // Interaction state
+    mode: null,         // null | 'pan' | 'resize'
+    resizeHandle: null, // 'tl'|'tr'|'bl'|'br'
+    dragStartX: 0,
+    dragStartY: 0,
+    boxAtDragStart: null,
+    lastPinchDist: null,
+  });
+  const animRef = useRef(null);
+
+  // ── Drawing ────────────────────────────────────────────────────────────────
   const draw = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    const img = imgRef.current;
-    const { zoom:z, panX, panY, crop } = s.current;
+    const ctx = canvas.getContext('2d');
+    const { img, box, imgScale, imgOffX, imgOffY } = s.current;
+    if (!img || !box) return;
+
     const W = canvas.width, H = canvas.height;
-    ctx.clearRect(0,0,W,H);
-    ctx.save(); ctx.translate(panX,panY); ctx.scale(z,z);
-    ctx.drawImage(img, 0, 0, s.current.imgW, s.current.imgH);
-    ctx.restore();
-    if (!crop) return;
-    ctx.fillStyle = "rgba(0,0,0,0.6)";
-    ctx.fillRect(0,0,W,H);
+    ctx.clearRect(0, 0, W, H);
+
+    // Draw full image on canvas (always visible)
+    const imgDrawW = img.naturalWidth  * imgScale;
+    const imgDrawH = img.naturalHeight * imgScale;
+    const cx = box.x + box.w / 2 + imgOffX;
+    const cy = box.y + box.h / 2 + imgOffY;
+
+    ctx.drawImage(img, cx - imgDrawW / 2, cy - imgDrawH / 2, imgDrawW, imgDrawH);
+
+    // Dim outside box so crop area is clear
     ctx.save();
-    ctx.globalCompositeOperation = "destination-out";
-    ctx.fillRect(crop.x, crop.y, crop.w, crop.h);
+    ctx.fillStyle = 'rgba(0,0,0,0.52)';
+    ctx.beginPath();
+    ctx.rect(0, 0, W, H);
+    shapePath(ctx, box, maskShape, cornerRadius);
+    ctx.fill('evenodd');
     ctx.restore();
+
+    // Box border
     ctx.save();
-    ctx.beginPath(); ctx.rect(crop.x, crop.y, crop.w, crop.h); ctx.clip();
-    ctx.translate(panX,panY); ctx.scale(z,z);
-    ctx.drawImage(img, 0, 0, s.current.imgW, s.current.imgH);
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 2;
+    ctx.setLineDash([5, 3]);
+    ctx.beginPath();
+    shapePath(ctx, box, maskShape, cornerRadius);
+    ctx.stroke();
     ctx.restore();
-    ctx.strokeStyle="#ff4500"; ctx.lineWidth=2;
-    ctx.strokeRect(crop.x, crop.y, crop.w, crop.h);
-    ctx.strokeStyle="rgba(255,255,255,0.2)"; ctx.lineWidth=0.5;
-    for (let i=1;i<3;i++) {
-      ctx.beginPath(); ctx.moveTo(crop.x+crop.w*i/3,crop.y); ctx.lineTo(crop.x+crop.w*i/3,crop.y+crop.h); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(crop.x,crop.y+crop.h*i/3); ctx.lineTo(crop.x+crop.w,crop.y+crop.h*i/3); ctx.stroke();
+
+    // Rule-of-thirds grid
+    ctx.save();
+    ctx.strokeStyle = 'rgba(255,255,255,0.18)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([]);
+    ctx.beginPath();
+    shapePath(ctx, box, maskShape, cornerRadius);
+    ctx.clip();
+    for (let i = 1; i < 3; i++) {
+      ctx.moveTo(box.x + box.w * i / 3, box.y);
+      ctx.lineTo(box.x + box.w * i / 3, box.y + box.h);
+      ctx.moveTo(box.x, box.y + box.h * i / 3);
+      ctx.lineTo(box.x + box.w, box.y + box.h * i / 3);
     }
-    ctx.fillStyle="#ff4500";
-    [[crop.x,crop.y],[crop.x+crop.w-HANDLE,crop.y],[crop.x,crop.y+crop.h-HANDLE],[crop.x+crop.w-HANDLE,crop.y+crop.h-HANDLE]]
-      .forEach(([hx,hy]) => ctx.fillRect(hx,hy,HANDLE,HANDLE));
-  }, []);
+    ctx.stroke();
+    ctx.restore();
 
-  const schedDraw = () => { cancelAnimationFrame(rafRef.current); rafRef.current = requestAnimationFrame(draw); };
+    // Corner resize handles
+    ctx.save();
+    ctx.setLineDash([]);
+    getHandles(box).forEach(h => {
+      ctx.beginPath();
+      ctx.arc(h.x, h.y, 7, 0, Math.PI * 2);
+      ctx.fillStyle = '#fff';
+      ctx.fill();
+      ctx.strokeStyle = '#333';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    });
+    ctx.restore();
 
+    // Corner accent marks
+    ctx.save();
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 3;
+    ctx.setLineDash([]);
+    const cs = 16;
+    const { x, y, w, h } = box;
+    [
+      [[x,y+cs],[x,y],[x+cs,y]],
+      [[x+w-cs,y],[x+w,y],[x+w,y+cs]],
+      [[x,y+h-cs],[x,y+h],[x+cs,y+h]],
+      [[x+w-cs,y+h],[x+w,y+h],[x+w,y+h-cs]],
+    ].forEach(pts => {
+      ctx.beginPath();
+      ctx.moveTo(pts[0][0],pts[0][1]);
+      ctx.lineTo(pts[1][0],pts[1][1]);
+      ctx.lineTo(pts[2][0],pts[2][1]);
+      ctx.stroke();
+    });
+    ctx.restore();
+
+    // Zoom % indicator
+    ctx.save();
+    const zoomPct = Math.round(imgScale / s.current.minImgScale * 100);
+    ctx.fillStyle = 'rgba(0,0,0,0.55)';
+    ctx.fillRect(box.x + 6, box.y + box.h - 26, 58, 20);
+    ctx.fillStyle = '#fff';
+    ctx.font = '11px monospace';
+    ctx.fillText(zoomPct + '%  zoom', box.x + 10, box.y + box.h - 11);
+    ctx.restore();
+
+    // Hint text
+    ctx.save();
+    ctx.fillStyle = 'rgba(255,255,255,0.45)';
+    ctx.font = '12px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('Scroll to zoom · Drag image to pan · Drag corners to resize', W / 2, H - 12);
+    ctx.restore();
+  }, [maskShape, cornerRadius]);
+
+  const schedDraw = useCallback(() => {
+    if (animRef.current) cancelAnimationFrame(animRef.current);
+    animRef.current = requestAnimationFrame(draw);
+  }, [draw]);
+
+  // ── Helpers ────────────────────────────────────────────────────────────────
+  function shapePath(ctx, box, shape, cr) {
+    const { x, y, w, h } = box;
+    if (shape === 'circle') {
+      ctx.ellipse(x+w/2, y+h/2, w/2, h/2, 0, 0, Math.PI*2);
+    } else if (shape === 'rounded_rect') {
+      const r = Math.min(cr, w/2, h/2);
+      ctx.moveTo(x+r, y);
+      ctx.arcTo(x+w,y, x+w,y+h, r);
+      ctx.arcTo(x+w,y+h, x,y+h, r);
+      ctx.arcTo(x,y+h, x,y, r);
+      ctx.arcTo(x,y, x+w,y, r);
+      ctx.closePath();
+    } else if (shape === 'triangle') {
+      ctx.moveTo(x+w/2, y); ctx.lineTo(x+w, y+h); ctx.lineTo(x, y+h); ctx.closePath();
+    } else {
+      ctx.rect(x, y, w, h);
+    }
+  }
+
+  function getHandles(box) {
+    const { x, y, w, h } = box;
+    return [
+      { id: 'tl', x, y },
+      { id: 'tr', x: x+w, y },
+      { id: 'bl', x, y: y+h },
+      { id: 'br', x: x+w, y: y+h },
+    ];
+  }
+
+  function hitHandle(px, py, box) {
+    for (const h of getHandles(box)) {
+      if (Math.hypot(px - h.x, py - h.y) < 14) return h.id;
+    }
+    return null;
+  }
+
+  function insideBox(px, py, box) {
+    return px >= box.x && px <= box.x + box.w && py >= box.y && py <= box.y + box.h;
+  }
+
+  // Recalculate minImgScale whenever box changes
+  function updateMinScale() {
+    const { img, box } = s.current;
+    if (!img || !box) return;
+    s.current.minImgScale = Math.max(box.w / img.naturalWidth, box.h / img.naturalHeight);
+    // If current scale is below new minimum, bump it up
+    if (s.current.imgScale < s.current.minImgScale) {
+      s.current.imgScale = s.current.minImgScale;
+    }
+    clampImgOffset();
+  }
+
+  function clampImgOffset() {
+    const { img, imgScale, box } = s.current;
+    if (!img || !box) return;
+    const imgDrawW = img.naturalWidth  * imgScale;
+    const imgDrawH = img.naturalHeight * imgScale;
+    const maxX = (imgDrawW - box.w) / 2;
+    const maxY = (imgDrawH - box.h) / 2;
+    s.current.imgOffX = Math.max(-maxX, Math.min(maxX, s.current.imgOffX));
+    s.current.imgOffY = Math.max(-maxY, Math.min(maxY, s.current.imgOffY));
+  }
+
+  function applyZoom(newScale, pivotX, pivotY) {
+    const max = s.current.minImgScale * 6;
+    newScale = Math.max(s.current.minImgScale, Math.min(max, newScale));
+    const ratio = newScale / s.current.imgScale;
+    const { box } = s.current;
+    const relX = (pivotX - (box.x + box.w/2)) - s.current.imgOffX;
+    const relY = (pivotY - (box.y + box.h/2)) - s.current.imgOffY;
+    s.current.imgOffX += relX - relX * ratio;
+    s.current.imgOffY += relY - relY * ratio;
+    s.current.imgScale = newScale;
+    clampImgOffset();
+    schedDraw();
+  }
+
+  // ── Init ───────────────────────────────────────────────────────────────────
   useEffect(() => {
-    const img = imgRef.current;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const img = new window.Image();
     img.onload = () => {
-      const canvas = canvasRef.current;
-      if (!canvas) return;
-      const maxW = Math.min(window.innerWidth*0.88, 760);
-      const maxH = window.innerHeight*0.72;
-      const fit  = Math.min(maxW/img.naturalWidth, maxH/img.naturalHeight, 1);
-      canvas.width  = Math.round(img.naturalWidth*fit);
-      canvas.height = Math.round(img.naturalHeight*fit);
-      s.current.imgW = img.naturalWidth;
-      s.current.imgH = img.naturalHeight;
-      s.current.zoom = fit;
-      s.current.minZoom = fit*0.5;
-      s.current.maxZoom = fit*8;
-      setZoom(fit);
-      const cw = canvas.width*0.75, ch = canvas.height*0.75;
-      s.current.crop = { x:(canvas.width-cw)/2, y:(canvas.height-ch)/2, w:cw, h:ch };
-      setReady(true);
+      s.current.img = img;
+      const maxW = Math.min(window.innerWidth * 0.9, 920);
+      const maxH = Math.min(window.innerHeight * 0.78, 660);
+      canvas.width  = maxW;
+      canvas.height = maxH;
+
+      const ratio = slotW / slotH;
+      let bw, bh;
+      if (maxW * 0.78 / ratio <= maxH * 0.78) {
+        bw = maxW * 0.78; bh = bw / ratio;
+      } else {
+        bh = maxH * 0.78; bw = bh * ratio;
+      }
+      s.current.box = {
+        x: (maxW - bw) / 2,
+        y: (maxH - bh) / 2,
+        w: bw, h: bh,
+      };
+      s.current.lockedRatio = ratio;
+      s.current.minImgScale = Math.max(bw / img.naturalWidth, bh / img.naturalHeight);
+      s.current.imgScale    = s.current.minImgScale;
+      s.current.imgOffX     = 0;
+      s.current.imgOffY     = 0;
       schedDraw();
     };
     img.src = src;
-    return () => cancelAnimationFrame(rafRef.current);
-  }, [src]);
+    return () => { if (animRef.current) cancelAnimationFrame(animRef.current); };
+  }, [src, slotW, slotH, schedDraw]);
 
-  useEffect(() => { if (ready) schedDraw(); }, [ready]);
+  // ── Pointer events ─────────────────────────────────────────────────────────
+  const getXY = (e) => {
+    const rect = canvasRef.current.getBoundingClientRect();
+    const t = e.touches?.[0] || e;
+    return [t.clientX - rect.left, t.clientY - rect.top];
+  };
 
-  const applyZoom = (newZ, px, py) => {
-    newZ = Math.max(s.current.minZoom, Math.min(s.current.maxZoom, newZ));
-    const ratio = newZ/s.current.zoom;
-    s.current.panX = px - ratio*(px-s.current.panX);
-    s.current.panY = py - ratio*(py-s.current.panY);
-    s.current.zoom = newZ; setZoom(newZ); schedDraw();
-  };
-  const zoomBy = d => { const c=canvasRef.current; applyZoom(s.current.zoom*d, c.width/2, c.height/2); };
-  const onWheel = e => {
+  const onDown = useCallback(e => {
     e.preventDefault();
-    const c=canvasRef.current, r=c.getBoundingClientRect();
-    applyZoom(s.current.zoom*(e.deltaY<0?1.12:0.89), e.clientX-r.left, e.clientY-r.top);
-  };
-  const getPos = e => {
-    const c=canvasRef.current, r=c.getBoundingClientRect(), t=e.touches?.[0]||e;
-    return { x:t.clientX-r.left, y:t.clientY-r.top };
-  };
-  const hitHandle = (x,y) => {
-    const {crop} = s.current; if (!crop) return null;
-    const corners = { tl:[crop.x,crop.y], tr:[crop.x+crop.w-HANDLE,crop.y], bl:[crop.x,crop.y+crop.h-HANDLE], br:[crop.x+crop.w-HANDLE,crop.y+crop.h-HANDLE] };
-    for (const [k,[hx,hy]] of Object.entries(corners)) if (x>=hx&&x<=hx+HANDLE&&y>=hy&&y<=hy+HANDLE) return k;
-    return null;
-  };
-  const inCrop = (x,y) => { const {crop}=s.current; return crop&&x>=crop.x&&x<=crop.x+crop.w&&y>=crop.y&&y<=crop.y+crop.h; };
-  const onDown = e => {
-    const {x,y}=getPos(e), h=hitHandle(x,y);
-    if (h) { s.current.resizing=h; s.current.resizeStartCrop={...s.current.crop}; s.current.resizeStartX=x; s.current.resizeStartY=y; }
-    else if (inCrop(x,y)) { s.current.dragging=true; s.current.lastX=x-s.current.crop.x; s.current.lastY=y-s.current.crop.y; }
-    else { s.current.panning=true; s.current.lastX=x; s.current.lastY=y; }
-    e.preventDefault();
-  };
-  const onMove = e => {
-    const {x,y}=getPos(e), c=canvasRef.current, W=c.width, H=c.height;
-    if (s.current.panning) {
-      s.current.panX+=x-s.current.lastX; s.current.panY+=y-s.current.lastY;
-      s.current.lastX=x; s.current.lastY=y; schedDraw();
-    } else if (s.current.dragging) {
-      s.current.crop.x=Math.max(0,Math.min(x-s.current.lastX,W-s.current.crop.w));
-      s.current.crop.y=Math.max(0,Math.min(y-s.current.lastY,H-s.current.crop.h));
-      schedDraw();
-    } else if (s.current.resizing) {
-      const sc=s.current.resizeStartCrop, dx=x-s.current.resizeStartX, dy=y-s.current.resizeStartY;
-      let {x:cx,y:cy,w:cw,h:ch}=sc; const min=40;
-      if (s.current.resizing==="br") { cw=Math.max(min,sc.w+dx); ch=Math.max(min,sc.h+dy); }
-      else if (s.current.resizing==="bl") { cw=Math.max(min,sc.w-dx); cx=sc.x+sc.w-cw; ch=Math.max(min,sc.h+dy); }
-      else if (s.current.resizing==="tr") { cw=Math.max(min,sc.w+dx); cy=sc.y+sc.h-(ch=Math.max(min,sc.h-dy)); }
-      else if (s.current.resizing==="tl") { cw=Math.max(min,sc.w-dx); cx=sc.x+sc.w-cw; cy=sc.y+sc.h-(ch=Math.max(min,sc.h-dy)); }
-      cx=Math.max(0,cx); cy=Math.max(0,cy);
-      if (cx+cw>W) cw=W-cx; if (cy+ch>H) ch=H-cy;
-      s.current.crop={x:cx,y:cy,w:cw,h:ch}; schedDraw();
+    const [x, y] = getXY(e);
+    const { box } = s.current;
+    if (!box) return;
+
+    const handle = hitHandle(x, y, box);
+    if (handle) {
+      s.current.mode = 'resize';
+      s.current.resizeHandle = handle;
+      s.current.dragStartX = x;
+      s.current.dragStartY = y;
+      s.current.boxAtDragStart = { ...box };
+    } else if (insideBox(x, y, box)) {
+      s.current.mode = 'pan';
+      s.current.dragStartX = x;
+      s.current.dragStartY = y;
     }
-    e.preventDefault();
-  };
-  const onUp = () => { s.current.dragging=false; s.current.panning=false; s.current.resizing=null; };
-  const confirm = () => {
-    const img=imgRef.current, {crop,zoom:z,panX,panY}=s.current;
-    if (!crop) return;
-    const out=document.createElement("canvas");
-    out.width=Math.round(crop.w/z); out.height=Math.round(crop.h/z);
-    out.getContext("2d").drawImage(img,(crop.x-panX)/z,(crop.y-panY)/z,crop.w/z,crop.h/z,0,0,out.width,out.height);
-    out.toBlob(blob => onDone(new File([blob],"cropped.jpg",{type:"image/jpeg"}),URL.createObjectURL(blob)),"image/jpeg",0.93);
-  };
+  }, []);
 
+  const onMove = useCallback(e => {
+    e.preventDefault();
+    const [x, y] = getXY(e);
+    const { mode, box, lockedRatio, boxAtDragStart, resizeHandle } = s.current;
+    if (!mode || !box) return;
+
+    if (mode === 'pan') {
+      s.current.imgOffX += x - s.current.dragStartX;
+      s.current.imgOffY += y - s.current.dragStartY;
+      s.current.dragStartX = x;
+      s.current.dragStartY = y;
+      clampImgOffset();
+      schedDraw();
+      return;
+    }
+
+    if (mode === 'resize') {
+      const dx = x - s.current.dragStartX;
+      const sc = boxAtDragStart;
+      const ratio = lockedRatio;
+      const min = 80;
+      let { x: bx, y: by, w: bw, h: bh } = sc;
+
+      if (resizeHandle === 'br') {
+        bw = Math.max(min, sc.w + dx); bh = bw / ratio;
+      } else if (resizeHandle === 'bl') {
+        bw = Math.max(min, sc.w - dx); bx = sc.x + sc.w - bw; bh = bw / ratio;
+      } else if (resizeHandle === 'tr') {
+        bw = Math.max(min, sc.w + dx); bh = bw / ratio; by = sc.y + sc.h - bh;
+      } else if (resizeHandle === 'tl') {
+        bw = Math.max(min, sc.w - dx); bx = sc.x + sc.w - bw; bh = bw / ratio; by = sc.y + sc.h - bh;
+      }
+
+      const W = canvasRef.current.width;
+      const H = canvasRef.current.height;
+      bx = Math.max(0, bx); by = Math.max(0, by);
+      if (bx + bw > W) { bw = W - bx; bh = bw / ratio; }
+      if (by + bh > H) { bh = H - by; bw = bh * ratio; }
+
+      s.current.box = { x: bx, y: by, w: bw, h: bh };
+      updateMinScale();
+      schedDraw();
+    }
+  }, [schedDraw]);
+
+  const onUp = useCallback(() => { s.current.mode = null; }, []);
+
+  const onWheel = useCallback(e => {
+    e.preventDefault();
+    const [x, y] = getXY(e);
+    applyZoom(s.current.imgScale * (e.deltaY < 0 ? 1.08 : 0.93), x, y);
+  }, []);
+
+  // Pinch zoom
+  const onTouchStart = useCallback(e => {
+    if (e.touches.length === 2) {
+      s.current.lastPinchDist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      s.current.mode = null; // cancel any pan/resize
+    } else {
+      onDown(e);
+    }
+  }, [onDown]);
+
+  const onTouchMove = useCallback(e => {
+    e.preventDefault();
+    if (e.touches.length === 2) {
+      const dist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      const rect = canvasRef.current.getBoundingClientRect();
+      const px = (e.touches[0].clientX + e.touches[1].clientX) / 2 - rect.left;
+      const py = (e.touches[0].clientY + e.touches[1].clientY) / 2 - rect.top;
+      if (s.current.lastPinchDist) {
+        applyZoom(s.current.imgScale * (dist / s.current.lastPinchDist), px, py);
+      }
+      s.current.lastPinchDist = dist;
+    } else {
+      onMove(e);
+    }
+  }, [onMove]);
+
+  const onTouchEnd = useCallback(e => {
+    s.current.lastPinchDist = null;
+    onUp();
+  }, [onUp]);
+
+  // ── Export ─────────────────────────────────────────────────────────────────
+  const handleDone = useCallback(() => {
+    const canvas = canvasRef.current;
+    const { img, imgScale, imgOffX, imgOffY, box } = s.current;
+    if (!img || !box) return;
+
+    // Map canvas box back to source image coordinates
+    const canvasToSrc = 1 / imgScale;
+    const imgDrawX = (box.x + box.w/2) + imgOffX - (img.naturalWidth  * imgScale) / 2;
+    const imgDrawY = (box.y + box.h/2) + imgOffY - (img.naturalHeight * imgScale) / 2;
+
+    // Box in source image px
+    const srcX = (box.x - imgDrawX) * canvasToSrc;
+    const srcY = (box.y - imgDrawY) * canvasToSrc;
+    const srcW = box.w * canvasToSrc;
+    const srcH = box.h * canvasToSrc;
+
+    // Export at exact slotW x slotH
+    const out = document.createElement('canvas');
+    out.width  = slotW;
+    out.height = slotH;
+    const ctx = out.getContext('2d');
+    ctx.drawImage(img, srcX, srcY, srcW, srcH, 0, 0, slotW, slotH);
+
+    out.toBlob(blob => { if (blob) onDone(blob); }, 'image/jpeg', 0.93);
+  }, [onDone, slotW, slotH]);
+
+  // ── Render ─────────────────────────────────────────────────────────────────
   return (
-    <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.93)",zIndex:1000,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:14}}>
-      <div style={{color:"rgba(255,255,255,.45)",fontSize:12}}>Scroll to zoom · Drag crop box to move · Drag corners to resize · Drag outside to pan</div>
-      <canvas ref={canvasRef} style={{maxWidth:"88vw",maxHeight:"72vh",cursor:"crosshair",borderRadius:8,touchAction:"none",display:ready?"block":"none"}}
-        onMouseDown={onDown} onMouseMove={onMove} onMouseUp={onUp} onMouseLeave={onUp}
-        onTouchStart={onDown} onTouchMove={onMove} onTouchEnd={onUp} onWheel={onWheel} />
-      <div style={{display:"flex",alignItems:"center",gap:8}}>
-        <button onClick={()=>zoomBy(0.8)} style={{width:32,height:32,borderRadius:8,border:"1px solid rgba(255,255,255,.15)",background:"rgba(255,255,255,.06)",color:"white",fontSize:18,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center"}}>−</button>
-        <div style={{width:100,height:4,background:"rgba(255,255,255,.12)",borderRadius:2,position:"relative",cursor:"pointer"}}
-          onClick={e=>{const r=e.currentTarget.getBoundingClientRect(),ratio=(e.clientX-r.left)/r.width;applyZoom(s.current.minZoom+ratio*(s.current.maxZoom-s.current.minZoom),canvasRef.current.width/2,canvasRef.current.height/2);}}>
-          <div style={{position:"absolute",left:0,top:0,height:"100%",background:"#ff4500",borderRadius:2,width:`${((zoom-s.current.minZoom)/(s.current.maxZoom-s.current.minZoom))*100}%`}} />
-        </div>
-        <button onClick={()=>zoomBy(1.25)} style={{width:32,height:32,borderRadius:8,border:"1px solid rgba(255,255,255,.15)",background:"rgba(255,255,255,.06)",color:"white",fontSize:18,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center"}}>+</button>
-        <span style={{fontSize:11,color:"rgba(255,255,255,.3)",minWidth:36}}>{Math.round((zoom/(s.current.minZoom||1))*100)}%</span>
+    <div style={{
+      position: 'fixed', inset: 0, zIndex: 9999,
+      background: 'rgba(0,0,0,0.85)',
+      display: 'flex', flexDirection: 'column',
+      alignItems: 'center', justifyContent: 'center', gap: 14,
+    }}>
+      <div style={{ color: '#fff', fontSize: 13, opacity: 0.75 }}>
+        {`Crop to ${slotW}×${slotH}`}
+        {maskShape !== 'rectangle' ? ` (${maskShape})` : ''}
       </div>
-      <div style={{display:"flex",gap:10}}>
-        <button onClick={onCancel} style={{padding:"10px 22px",borderRadius:8,border:"1px solid rgba(255,255,255,.15)",background:"transparent",color:"white",fontSize:13,cursor:"pointer"}}>Cancel</button>
-        <button onClick={confirm} style={{padding:"10px 28px",borderRadius:8,border:"none",background:"#ff4500",color:"white",fontSize:13,fontWeight:700,cursor:"pointer"}}>Use this crop →</button>
+      <canvas
+        ref={canvasRef}
+        style={{ cursor: 'crosshair', borderRadius: 8, touchAction: 'none', display: 'block' }}
+        onMouseDown={onDown}
+        onMouseMove={onMove}
+        onMouseUp={onUp}
+        onMouseLeave={onUp}
+        onWheel={onWheel}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      />
+      <div style={{ display: 'flex', gap: 10 }}>
+        <button onClick={onCancel} style={{
+          padding: '8px 22px', borderRadius: 7,
+          border: '1.5px solid #555', background: 'transparent',
+          color: '#ccc', cursor: 'pointer', fontSize: 13,
+        }}>Cancel</button>
+        <button onClick={handleDone} style={{
+          padding: '8px 28px', borderRadius: 7, border: 'none',
+          background: '#2563eb', color: '#fff',
+          cursor: 'pointer', fontSize: 13, fontWeight: 600,
+        }}>Use this crop</button>
       </div>
     </div>
   );
 }
+
 
 // ─── ImgSlot ──────────────────────────────────────────────────────────────────
 function ImgSlot({ slotId, imgField, textFields, data, onChange, uploadFn, footageBase, highlighted ,videoRef}) {
@@ -274,11 +594,13 @@ function ImgSlot({ slotId, imgField, textFields, data, onChange, uploadFn, foota
     fetch(placeholderSrc, { method:"HEAD" }).then(r => { if (r.ok) setPlaceholderOk(true); }).catch(()=>{});
   }, [placeholderSrc]);
 
+
   const onFile = e => {
-    const f = e.target.files?.[0];
-    if (!f) return;
-    setCropping(URL.createObjectURL(f));
-  };
+  const f = e.target.files?.[0];
+  if (!f) return;
+  setCropping(URL.createObjectURL(f));
+};
+    
   const onCropDone = async (croppedFile, croppedUrl) => {
     setCropping(null); setPreview(croppedUrl); setBusy(true); setProg(0);
     try { onChange(imgField.key, await uploadFn(croppedFile, setProg)); }
@@ -286,10 +608,19 @@ function ImgSlot({ slotId, imgField, textFields, data, onChange, uploadFn, foota
     finally { setBusy(false); }
   };
   const clear = e => { e.stopPropagation(); setPreview(null); onChange(imgField.key, null); };
-
+  const finalPreview = preview || getDisplayUrl(data[imgField.key]);
   return (
     <>
-      {cropping && <CropTool src={cropping} onDone={onCropDone} onCancel={()=>setCropping(null)} />}
+      {cropping && <CropTool
+  src={cropping}
+  onDone={onCropDone}
+  onCancel={() => setCropping(null)}
+  slotW={imgField.slotW || imgField.compW || imgField.w || 1920}
+  slotH={imgField.slotH || imgField.compH || imgField.h || 1080}
+  maskShape={imgField.maskShape || 'rectangle'}
+  cornerRadius={imgField.cornerRadius || 0}
+/>}
+{/* Add the <div here */}
       <div
         id={slotId}
         style={{
@@ -299,7 +630,7 @@ function ImgSlot({ slotId, imgField, textFields, data, onChange, uploadFn, foota
           transition:"border-color .6s,background .6s",
           marginBottom:8,
         }}
-      >
+      ></div>
         {/* header */}
         <div style={{display:"flex",alignItems:"center",gap:8,padding:"8px 12px",borderBottom:"1px solid var(--border)",background: highlighted?"#fff0e8":"var(--bg)"}}>
   <div style={{width:24,height:24,borderRadius:6,background:"#ff4500",color:"white",fontSize:10,fontWeight:800,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>
@@ -329,22 +660,22 @@ function ImgSlot({ slotId, imgField, textFields, data, onChange, uploadFn, foota
         <div style={{display:"flex"}}>
           {/* image area */}
           <div style={{width:110,height:110,flexShrink:0,position:"relative",background:"#f0eeea",borderRight:"1px solid var(--border)",overflow:"hidden",cursor:"pointer"}}>
-            {placeholderOk && !preview && (
-              <img src={placeholderSrc} alt="" style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",opacity:.35}} />
-            )}
-            {preview && <img src={preview} alt="" style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover"}} />}
-            <label
-              style={{position:"absolute",inset:0,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:4,cursor:"pointer",transition:"background .15s"}}
-              onMouseEnter={e=>e.currentTarget.style.background="rgba(0,0,0,0.45)"}
-              onMouseLeave={e=>e.currentTarget.style.background="transparent"}
-            >
-              <span style={{fontSize:20,color:"white",textShadow:"0 1px 4px rgba(0,0,0,.8)",pointerEvents:"none"}}>↑</span>
-              <span style={{fontSize:9,color:"white",fontWeight:600,textShadow:"0 1px 3px rgba(0,0,0,.8)",pointerEvents:"none"}}>{preview?"CHANGE":"UPLOAD"}</span>
-              <input type="file" accept="image/*,video/*" style={{display:"none"}} onChange={onFile} />
-            </label>
-            {preview && (
-              <button onClick={clear} style={{position:"absolute",top:4,right:4,width:18,height:18,borderRadius:"50%",background:"rgba(0,0,0,.6)",border:"none",color:"white",fontSize:10,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",zIndex:2}}>×</button>
-            )}
+            {placeholderOk && !finalPreview && (
+  <img src={placeholderSrc} alt="" style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",opacity:.35}} />
+)}
+{finalPreview && <img src={finalPreview} alt="" style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover"}} />}
+<label
+  style={{position:"absolute",inset:0,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:4,cursor:"pointer",transition:"background .15s"}}
+  onMouseEnter={e=>e.currentTarget.style.background="rgba(0,0,0,0.45)"}
+  onMouseLeave={e=>e.currentTarget.style.background="transparent"}
+>
+  <span style={{fontSize:20,color:"white",textShadow:"0 1px 4px rgba(0,0,0,.8)",pointerEvents:"none"}}>↑</span>
+  <span style={{fontSize:9,color:"white",fontWeight:600,textShadow:"0 1px 3px rgba(0,0,0,.8)",pointerEvents:"none"}}>{finalPreview?"CHANGE":"UPLOAD"}</span>
+  <input type="file" accept="image/*,video/*" style={{display:"none"}} onChange={onFile} />
+</label>
+{finalPreview && (
+  <button onClick={clear} style={{position:"absolute",top:4,right:4,width:18,height:18,borderRadius:"50%",background:"rgba(0,0,0,.6)",border:"none",color:"white",fontSize:10,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",zIndex:2}}>×</button>
+)}
             {busy && (
               <div style={{position:"absolute",bottom:0,left:0,right:0,height:2,background:"rgba(0,0,0,.2)"}}>
                 <div style={{height:"100%",width:`${prog}%`,background:"#ff4500",transition:"width .25s"}} />
@@ -369,7 +700,6 @@ function ImgSlot({ slotId, imgField, textFields, data, onChange, uploadFn, foota
             ))}
           </div>
         </div>
-      </div>
     </>
   );
 }
@@ -415,7 +745,7 @@ function SceneStrip({ templateName, config, data, videoRef, onSceneClick }) {
       <div style={{display:"flex",gap:6,overflowX:"auto",paddingBottom:2}}>
         {entries.map(([key, sc], i) => {
           const ik  = (sc.keys||[]).find(k => k.startsWith("photo_")||k.startsWith("image_"));
-          const src = ik ? data[ik] : null;
+          const src = ik ? getDisplayUrl(data[ik]) : null;
           return (
             <div key={key} onClick={()=>jump(sc,i)} title={`${clean(key)} — ${(sc.outpoint||0).toFixed(1)}s`}
               style={{flexShrink:0,width:76,cursor:"pointer",display:"flex",flexDirection:"column",gap:3,opacity:act===i?1:0.55,transition:"opacity .15s"}}>
@@ -994,6 +1324,14 @@ export default function App() {
           Motion<em style={{color:"#ff4500",fontStyle:"normal"}}>AI</em>
         </div>
         <div style={{width:1,height:18,background:"var(--border)"}} />
+        {inEditor && (
+  <div onClick={back} style={{width:32,height:32,borderRadius:8,border:"1px solid var(--border)",background:"var(--bg)",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",flexShrink:0,transition:"all .12s"}}
+    onMouseEnter={e=>{e.currentTarget.style.background="var(--ink)";e.currentTarget.style.borderColor="var(--ink)";e.currentTarget.querySelector('span').style.color="white";}}
+    onMouseLeave={e=>{e.currentTarget.style.background="var(--bg)";e.currentTarget.style.borderColor="var(--border)";e.currentTarget.querySelector('span').style.color="var(--ink2)";}}
+  >
+    <span style={{fontSize:16,color:"var(--ink2)",lineHeight:1}}>←</span>
+  </div>
+)}
         {inEditor ? (
           <>
             <span onClick={back} style={{fontSize:12,fontWeight:500,color:"var(--ink3)",cursor:"pointer"}}>Templates</span>
@@ -1047,15 +1385,109 @@ export default function App() {
     }
   }}
 />
-              {rState==="rendering" && (
-                <div style={{position:"absolute",inset:0,background:"rgba(0,0,0,.82)",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:14,color:"white",zIndex:10}}>
-                  <div style={{width:26,height:26,border:"2px solid rgba(255,255,255,.1)",borderTopColor:"#ff4500",borderRadius:"50%",animation:"spin .75s linear infinite"}} />
-                  <div style={{fontSize:12,color:"rgba(255,255,255,.45)"}}>{jobSt?.stage||"Processing…"}</div>
-                  <div style={{width:160,height:2,background:"rgba(255,255,255,.08)",borderRadius:1,overflow:"hidden"}}>
-                    <div style={{height:"100%",background:"#ff4500",borderRadius:1,width:jobSt?.progress?`${jobSt.progress}%`:"35%",transition:jobSt?.progress?"width .4s":"none",animation:jobSt?.progress?"none":"ind 1.3s infinite ease-in-out"}} />
-                  </div>
-                </div>
-              )}
+              {rState==="rendering" && (() => {
+  const st = jobSt?.status || "pending";
+  const ev = jobSt?.lastEvent || "";
+
+  // Map stage to percent + label
+  let pct   = 5;
+  let label = "Queued — waiting to start…";
+  let sub   = "";
+
+  if (st === "lock" || ev) {
+    if (ev === "JSX_GENERATED" || ev === "AE_LAUNCH") {
+      pct = 15; label = "Opening After Effects…"; sub = "Preparing your template";
+    } else if (ev === "AE_HEARTBEAT") {
+      pct = 28; label = "Injecting your content…"; sub = "Writing text and images into template";
+    } else if (ev === "AE_COMPLETE") {
+      pct = 40; label = "Template ready…"; sub = "Starting video render";
+    } else if (ev === "AERENDER_LAUNCH") {
+      pct = 45; label = "Rendering video frames…"; sub = "This takes the longest";
+    } else if (ev === "AERENDER_PROGRESS") {
+      const frame = jobSt?.lastFrame || 0;
+      const total = jobSt?.totalFrames || 0;
+      pct = total > 0
+        ? Math.round(45 + (frame / total) * 40)
+        : 60;
+      label = total > 0
+        ? `Rendering frame ${frame} of ${total}`
+        : "Rendering video frames…";
+      sub = "After Effects is working";
+    } else if (ev === "AERENDER_COMPLETE") {
+      pct = 85; label = "Render complete…"; sub = "Compressing to MP4";
+    } else if (ev === "FFMPEG_LAUNCH" || ev === "FFMPEG_PROGRESS") {
+      pct = 90; label = "Compressing video…"; sub = "Almost done";
+    } else if (ev === "FFMPEG_COMPLETE") {
+      pct = 98; label = "Finishing up…"; sub = "Saving your video";
+    } else if (ev === "STAGE") {
+      const stageStr = jobSt?.stageName || "";
+      if (stageStr.includes("1/3")) { pct = 20; label = "Injecting content into template…"; sub = "Stage 1 of 3"; }
+      else if (stageStr.includes("2/3")) { pct = 50; label = "Rendering video frames…"; sub = "Stage 2 of 3 — takes longest"; }
+      else if (stageStr.includes("3/3")) { pct = 88; label = "Compressing to MP4…"; sub = "Stage 3 of 3"; }
+    } else {
+      pct = 25; label = "Processing…"; sub = "After Effects is running";
+    }
+  }
+
+  return (
+    <div style={{
+      position:"absolute",inset:0,
+      background:"rgba(0,0,0,.88)",
+      display:"flex",flexDirection:"column",
+      alignItems:"center",justifyContent:"center",
+      gap:16,color:"white",zIndex:10,
+      padding:"0 40px",
+    }}>
+      {/* Spinner */}
+      <div style={{
+        width:32,height:32,
+        border:"2.5px solid rgba(255,255,255,.08)",
+        borderTopColor:"#ff4500",
+        borderRadius:"50%",
+        animation:"spin .8s linear infinite",
+        flexShrink:0,
+      }} />
+
+      {/* Label */}
+      <div style={{textAlign:"center"}}>
+        <div style={{fontSize:14,fontWeight:600,color:"white",marginBottom:4}}>
+          {label}
+        </div>
+        {sub && (
+          <div style={{fontSize:11,color:"rgba(255,255,255,.35)"}}>
+            {sub}
+          </div>
+        )}
+      </div>
+
+      {/* Progress bar */}
+      <div style={{width:"100%",maxWidth:280}}>
+        <div style={{
+          width:"100%",height:3,
+          background:"rgba(255,255,255,.08)",
+          borderRadius:2,overflow:"hidden",
+        }}>
+          <div style={{
+            height:"100%",
+            background:"#ff4500",
+            borderRadius:2,
+            width:`${pct}%`,
+            transition:"width .6s ease",
+          }} />
+        </div>
+        <div style={{
+          display:"flex",justifyContent:"space-between",
+          marginTop:6,fontSize:10,
+          color:"rgba(255,255,255,.25)",
+        }}>
+          <span>0%</span>
+          <span style={{color:"rgba(255,255,255,.45)",fontWeight:600}}>{pct}%</span>
+          <span>100%</span>
+        </div>
+      </div>
+    </div>
+  );
+})()}
             </div>
             {/* scene strip */}
             {config && (
@@ -1105,7 +1537,132 @@ export default function App() {
                       footageBase={sel.footageBase}
                       highlighted={highlightedKeys.has(slot.img.key) || slot.texts.some(t=>highlightedKeys.has(t.key))}
                     />
-                  ))}
+                  ))}{/* Country selectors */}
+{(config?.countryLayers || []).map((cl, i) => (
+  <div key={i} style={{
+    border: "1.5px solid var(--border)",
+    borderRadius: 12,
+    overflow: "hidden",
+    background: "var(--white)",
+    marginBottom: 8,
+  }}>
+    <div style={{
+      display: "flex", alignItems: "center", gap: 8,
+      padding: "8px 12px",
+      borderBottom: "1px solid var(--border)",
+      background: "var(--bg)",
+    }}>
+      <div style={{
+        width: 24, height: 24, borderRadius: 6,
+        background: "#3b82f6", color: "white",
+        fontSize: 10, fontWeight: 800,
+        display: "flex", alignItems: "center", justifyContent: "center",
+      }}>🌍</div>
+      <span style={{ fontSize: 12, fontWeight: 600, color: "var(--ink)", flex: 1 }}>
+        {cl.label}
+      </span>
+    </div>
+    <div style={{ padding: "10px 12px" }}>
+      <select
+        value={data[cl.key] || cl.default || ""}
+        onChange={e => setF(cl.key, e.target.value)}
+        style={{
+          width: "100%",
+          border: "1px solid var(--border)",
+          borderRadius: 6,
+          background: "var(--bg)",
+          color: "var(--ink)",
+          fontFamily: "inherit",
+          fontSize: 13,
+          padding: "7px 10px",
+          outline: "none",
+          cursor: "pointer",
+        }}
+      >
+        <option value="">— Select country —</option>
+        {(config?.countryOptions || []).map((country, ci) => (
+          <option key={ci} value={country}>{country}</option>
+        ))}
+      </select>
+    </div>
+  </div>
+))}
+{/* Expression Controls — color pickers, checkboxes, sliders */}
+{(config?.expressionControls || []).map((ec, i) => (
+  <div key={i} style={{
+    border: "1.5px solid var(--border)",
+    borderRadius: 10,
+    overflow: "hidden",
+    background: "var(--white)",
+    marginBottom: 8,
+  }}>
+    <div style={{
+      display: "flex", alignItems: "center", gap: 8,
+      padding: "8px 12px",
+      background: "var(--bg)",
+    }}>
+      <div style={{
+        width: 22, height: 22, borderRadius: 5,
+        background: ec.type === 'color' ? (data[ec.key] || ec.default || '#888') :
+                    ec.type === 'checkbox' ? '#6366f1' : '#64748b',
+        flexShrink: 0,
+        border: "1px solid var(--border)",
+      }} />
+      <span style={{ fontSize: 12, fontWeight: 600, color: "var(--ink)", flex: 1 }}>
+        {ec.label}
+      </span>
+
+      {/* Color picker */}
+      {(ec.type === 'color' || ec.type === 'solid_color') && (
+        <input
+          type="color"
+          value={data[ec.key] || ec.default || '#ffffff'}
+          onChange={e => setF(ec.key, e.target.value)}
+          style={{
+            width: 32, height: 24, borderRadius: 4,
+            border: "1px solid var(--border)",
+            cursor: "pointer", padding: 1,
+            background: "transparent",
+          }}
+        />
+      )}
+
+      {/* Checkbox toggle */}
+      {ec.type === 'checkbox' && (
+        <div
+          onClick={() => setF(ec.key, !(data[ec.key] !== undefined ? data[ec.key] : ec.default))}
+          style={{
+            width: 36, height: 20, borderRadius: 10,
+            background: (data[ec.key] !== undefined ? data[ec.key] : ec.default) ? '#16a34a' : 'var(--border)',
+            cursor: 'pointer', position: 'relative', transition: 'background .15s', flexShrink: 0,
+          }}
+        >
+          <div style={{
+            position: 'absolute', top: 2,
+            left: (data[ec.key] !== undefined ? data[ec.key] : ec.default) ? 18 : 2,
+            width: 16, height: 16, borderRadius: '50%',
+            background: 'white', transition: 'left .15s',
+          }} />
+        </div>
+      )}
+
+      {/* Slider */}
+      {ec.type === 'slider' && (
+        <input
+          type="number"
+          value={data[ec.key] !== undefined ? data[ec.key] : (ec.default || 0)}
+          onChange={e => setF(ec.key, parseFloat(e.target.value))}
+          style={{
+            width: 64, border: "1px solid var(--border)",
+            borderRadius: 5, background: "var(--bg)",
+            color: "var(--ink)", fontSize: 12,
+            padding: "3px 6px", outline: "none", textAlign: "center",
+          }}
+        />
+      )}
+    </div>
+  </div>
+))}
                 </>
               )}
 

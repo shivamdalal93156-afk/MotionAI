@@ -21,7 +21,7 @@ const MAX_SPEED = 1.25;
 
 // ── Run Whisper ───────────────────────────────────────────────────────────────
 function runWhisper(audioPath, language = null) {
-  const resultPath = audioPath + '.whisper.json';
+  const resultPath = path.join(path.resolve(__dirname, '..', 'temp'), `${Date.now()}_whisper.json`);
 
   const args = [
     VOICE_SCRIPT,

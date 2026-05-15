@@ -595,6 +595,28 @@ try {
     }
   }
   L('');
+  L('-- SOLID INJECTABLES --');
+  for (var i = 1; i <= app.project.numItems; i++) {
+    var item = app.project.item(i);
+    if (!(item instanceof CompItem)) continue;
+    for (var j = 1; j <= item.numLayers; j++) {
+      var layer = item.layer(j);
+      try {
+        if (layer.source instanceof FootageItem) {
+          var isSolidCheck = false;
+          try { isSolidCheck = (layer.source.mainSource instanceof SolidSource); } catch(e) {}
+          if (!isSolidCheck) continue;
+          var sName = layer.name.toLowerCase();
+          var isPhotoSlot = (sName.split('photo').length > 1);
+          if (!isPhotoSlot) continue;
+          var absIn  = getAbsoluteTime(item.name, layer.inPoint).toFixed(3);
+          var absOut = getAbsoluteTime(item.name, layer.outPoint).toFixed(3);
+          L('SOLID_INJECT|comp:' + item.name + '|layer:' + layer.name + '|compW:' + item.width + '|compH:' + item.height + '|absIn:' + absIn + '|absOut:' + absOut);
+        }
+      } catch(e) {}
+    }
+  }
+  L('');
 
   L('-- PROJECT LEVEL FOOTAGE --');
   for (var i = 1; i <= app.project.numItems; i++) {
@@ -614,6 +636,528 @@ try {
   }
   L('');
 
+  L('=== SCENE STRUCTURE ===');
+
+  // Find the actual scene container comp
+  // Strategy: start from top render comp, skip through single-precomp wrappers
+  // until we find a comp with multiple precomp children (the real scene container)
+  var topComp = null;
+  if (renderCandidates.length > 0) topComp = compIndex[renderCandidates[0].name];
+  if (!topComp && compIndex['Main']) topComp = compIndex['Main'];
+
+  // Drill down through single-layer wrapper comps to find real scene container
+  var sceneContainer = null;
+  var visited2 = {};
+  var current = topComp;
+  while (current && !visited2[current.name]) {
+    visited2[current.name] = true;
+    // Count precomp children that look like scene blocks
+    var precompChildren = [];
+    for (var j = 1; j <= current.numLayers; j++) {
+      var lyr = current.layer(j);
+      try {
+        if (lyr.source instanceof CompItem) {
+          var cn = lyr.source.name.toLowerCase();
+          var skipW = ['light', 'back', 'color', 'shape_light', 'adjustment'];
+          var skip2 = false;
+          for (var sw = 0; sw < skipW.length; sw++) {
+            if (cn === skipW[sw] || cn.indexOf('light') !== -1) { skip2 = true; break; }
+          }
+          if (!skip2) precompChildren.push({ layer: lyr, comp: lyr.source });
+        }
+      } catch(e) {}
+    }
+    if (precompChildren.length >= 2) {
+      // This comp has multiple meaningful precomp children — it's the scene container
+      sceneContainer = current;
+      break;
+    } else if (precompChildren.length === 1) {
+      // Single wrapper — drill down
+      current = precompChildren[0].comp;
+    } else {
+      break;
+    }
+  }
+
+  if (sceneContainer) {
+    L('SCENE_CONTAINER|name:' + sceneContainer.name + '|dur:' + sceneContainer.duration.toFixed(3));
+    // Check if this comp uses cameras as scene markers (like Investigation Board)
+    var cameraLayers = [];
+    for (var j = 1; j <= sceneContainer.numLayers; j++) {
+      var lyr = sceneContainer.layer(j);
+      try {
+        if (lyr.matchName === 'ADBE Camera Layer') {
+          var cName = lyr.name;
+          // Skip utility cameras
+          if (cName.toLowerCase().indexOf('overall') !== -1) continue;
+          if (cName.toLowerCase().indexOf('position') !== -1) continue;
+          cameraLayers.push({ name: cName, inPoint: lyr.inPoint, outPoint: lyr.outPoint });
+        }
+      } catch(e) {}
+    }
+    cameraLayers.sort(function(a,b){ return a.inPoint - b.inPoint; });
+
+    if (cameraLayers.length > 2) {
+      // Camera-based template — use cameras as scene markers
+      L('SCENE_TYPE|camera_based|count:' + cameraLayers.length);
+      for (var ci = 0; ci < cameraLayers.length; ci++) {
+        var cam = cameraLayers[ci];
+        var dur2 = (cam.outPoint - cam.inPoint).toFixed(3);
+        L('SCENE|block:' + cam.name +
+          '|mainIn:' + cam.inPoint.toFixed(3) +
+          '|mainOut:' + cam.outPoint.toFixed(3) +
+          '|dur:' + dur2 +
+          '|minDur:' + (parseFloat(dur2)*0.6).toFixed(3) +
+          '|maxDur:' + (parseFloat(dur2)*1.5).toFixed(3) +
+          '|subBeats:1|footageCount:0|footage:|textLayers:');
+      }
+    } else {
+    // Collec
+      // Collect all scene layers, sort by inPoint
+      var sceneLayers = [];
+      for (var j = 1; j <= sceneContainer.numLayers; j++) {
+        var lyr = sceneContainer.layer(j);
+        try {
+          if (lyr.source instanceof CompItem) {
+            var cn = lyr.source.name.toLowerCase();
+            var skipW2 = ['light', 'shape_light', 'adjustment'];
+            var skip3 = false;
+            for (var sw = 0; sw < skipW2.length; sw++) {
+              if (cn.indexOf(skipW2[sw]) !== -1) { skip3 = true; break; }
+            }
+            if (!skip3) sceneLayers.push({ layer: lyr, comp: lyr.source });
+          }
+        } catch(e) {}
+      }
+      sceneLayers.sort(function(a, b) { return a.layer.inPoint - b.layer.inPoint; });
+
+      for (var si = 0; si < sceneLayers.length; si++) {
+        var sl = sceneLayers[si];
+        var childComp = sl.comp;
+        var sceneIn  = sl.layer.inPoint.toFixed(3);
+        var sceneOut = sl.layer.outPoint.toFixed(3);
+        var sceneDur = (sl.layer.outPoint - sl.layer.inPoint).toFixed(3);
+
+        var footageComps   = [];
+        var textLayerNames = [];
+
+        for (var k = 1; k <= childComp.numLayers; k++) {
+          var cl = childComp.layer(k);
+          var isT = false;
+          try { if (cl.property('Source Text')) isT = true; } catch(e) {}
+          if (isT) {
+            try { textLayerNames.push(cl.name); } catch(e) {}
+            continue;
+          }
+          try {
+            if (cl.source instanceof CompItem) {
+              var gc = cl.source;
+              if (gc.numLayers === 0) {
+                var alreadyIn = false;
+                for (var fa = 0; fa < footageComps.length; fa++) {
+                  if (footageComps[fa] === gc.name) { alreadyIn = true; break; }
+                }
+                if (!alreadyIn) footageComps.push(gc.name);
+              }
+            }
+          } catch(e) {}
+        }
+
+        var subBeats = footageComps.length > 0 ? footageComps.length : 1;
+        var minDur   = (parseFloat(sceneDur) * 0.6).toFixed(3);
+        var maxDur   = (parseFloat(sceneDur) * 1.5).toFixed(3);
+
+        L('SCENE|block:' + childComp.name +
+          '|mainIn:' + sceneIn +
+          '|mainOut:' + sceneOut +
+          '|dur:' + sceneDur +
+          '|minDur:' + minDur +
+          '|maxDur:' + maxDur +
+          '|subBeats:' + subBeats +
+          '|footageCount:' + footageComps.length +
+          '|footage:' + footageComps.join(',') +
+          '|textLayers:' + textLayerNames.join(','));
+      }
+    }
+  } else {
+    L('SCENE_STRUCTURE_SKIP: could not find scene container');
+  }
+  L('');
+  // ═══════════════════════════════════════════════════════════════
+  // SECTION: EXPRESSION CONTROLS (the most important section)
+  // Every professional template uses Color Control, Checkbox Control,
+  // Slider Control, Point Control, Dropdown Menu Control on null/
+  // adjustment layers. These are the REAL user-editable controls.
+  // ═══════════════════════════════════════════════════════════════
+  L('=== EXPRESSION CONTROLS ===');
+
+  // Effect matchNames for all AE expression controllers
+  var EXPR_EFFECTS = {
+    'ADBE Color Control':    'color',
+    'ADBE Checkbox Control': 'checkbox',
+    'ADBE Slider Control':   'slider',
+    'ADBE Point Control':    'point',
+    'ADBE Angle Control':    'angle',
+    'ADBE Dropdown Control': 'dropdown',
+    'ADBE 3D Point Control': 'point3d',
+    'ADBE Layer Control':    'layer',
+  };
+
+  // Internal layer keywords — these are template mechanics, never user-facing
+  var INTERNAL_LAYER_KW = [
+    'adjustment layer', 'rig', 'guide', 'matte', 'mask comp',
+    'do not', 'dont', 'ignore', 'temp', 'deprecated',
+    'internal', 'system', 'engine', '__'
+  ];
+
+  function isInternalControlLayer(name) {
+    var n = name.toLowerCase();
+    for (var ii = 0; ii < INTERNAL_LAYER_KW.length; ii++) {
+      if (n.indexOf(INTERNAL_LAYER_KW[ii]) !== -1) return true;
+    }
+    return false;
+  }
+
+  // Scan every comp for expression control effects
+  for (var i = 1; i <= app.project.numItems; i++) {
+    var item = app.project.item(i);
+    if (!(item instanceof CompItem)) continue;
+
+    for (var j = 1; j <= item.numLayers; j++) {
+      var layer = item.layer(j);
+
+      // We want null layers, adjustment layers, solid layers that act as controllers
+      // Skip text layers and precomps (they don't hold expression controls)
+      var isTextEC = false;
+      try { if (layer.property('Source Text')) isTextEC = true; } catch(e) {}
+      if (isTextEC) continue;
+
+      var isPrecompEC = false;
+      try { if (layer.source instanceof CompItem) isPrecompEC = true; } catch(e) {}
+      if (isPrecompEC) continue;
+
+      if (isInternalControlLayer(layer.name)) continue;
+
+      // Check effects on this layer
+      var effects = layer.property('Effects');
+      if (!effects) continue;
+
+      for (var ef = 1; ef <= effects.numProperties; ef++) {
+        var effect = effects.property(ef);
+        var matchName = '';
+        try { matchName = effect.matchName; } catch(e) {}
+
+        var ctrlType = EXPR_EFFECTS[matchName];
+        if (!ctrlType) continue;
+
+        // Get the effect name (what the template author named it)
+        var effectName = '';
+        try { effectName = effect.name; } catch(e) {}
+
+        // Get current value
+        var currentVal = '';
+        try {
+          var prop = effect.property(1); // first property is always the value
+          if (ctrlType === 'color') {
+            var c = prop.value;
+            // Convert 0-1 float to hex
+            function toHex(v) {
+              var h = Math.round(v * 255).toString(16);
+              return h.length === 1 ? '0' + h : h;
+            }
+            currentVal = '#' + toHex(c[0]) + toHex(c[1]) + toHex(c[2]);
+          } else if (ctrlType === 'checkbox') {
+            currentVal = prop.value ? 'true' : 'false';
+          } else if (ctrlType === 'point') {
+            var pt = prop.value;
+            currentVal = Math.round(pt[0]) + ',' + Math.round(pt[1]);
+          } else if (ctrlType === 'point3d') {
+            var pt3 = prop.value;
+            currentVal = Math.round(pt3[0]) + ',' + Math.round(pt3[1]) + ',' + Math.round(pt3[2]);
+          } else if (ctrlType === 'dropdown') {
+            currentVal = prop.value.toString();
+          } else {
+            currentVal = prop.value.toString();
+          }
+        } catch(e) { currentVal = 'unknown'; }
+
+        L('EXPR_CONTROL|comp:' + item.name +
+          '|layer:' + layer.name +
+          '|effect:' + effectName +
+          '|type:' + ctrlType +
+          '|matchName:' + matchName +
+          '|value:' + currentVal +
+          '|compW:' + item.width + '|compH:' + item.height);
+      }
+    }
+  }
+  L('');
+
+  // ═══════════════════════════════════════════════════════════════
+  // SECTION: POSITION MARKERS
+  // Named solid/null layers that control where lines, connectors,
+  // cameras point. Detected by name keywords.
+  // ═══════════════════════════════════════════════════════════════
+  L('=== POSITION MARKERS ===');
+
+  var MARKER_KW = ['point', 'target', 'anchor', 'marker', 'pin',
+                   'from', 'to', 'start', 'end', 'connect', 'loc',
+                   'location', 'origin', 'dest', 'source', 'node'];
+
+  function isPositionMarker(name) {
+    var n = name.toLowerCase();
+    for (var mi = 0; mi < MARKER_KW.length; mi++) {
+      if (n.indexOf(MARKER_KW[mi]) !== -1) return true;
+    }
+    return false;
+  }
+
+  for (var i = 1; i <= app.project.numItems; i++) {
+    var item = app.project.item(i);
+    if (!(item instanceof CompItem)) continue;
+
+    for (var j = 1; j <= item.numLayers; j++) {
+      var layer = item.layer(j);
+      if (!isPositionMarker(layer.name)) continue;
+
+      var isTextPM = false;
+      try { if (layer.property('Source Text')) isTextPM = true; } catch(e) {}
+      if (isTextPM) continue;
+
+      var px = 0, py = 0;
+      try { var pos = layer.property('Position').value; px = Math.round(pos[0]); py = Math.round(pos[1]); } catch(e) {}
+
+      var isVisPM = true;
+      try { isVisPM = layer.enabled; } catch(e) {}
+
+      var layerTypePM = 'other';
+      try { if (layer instanceof NullLayer) layerTypePM = 'null'; } catch(e) {}
+      try {
+        if (layer.source instanceof FootageItem) {
+          var isSolidPM = false;
+          try { isSolidPM = (layer.source.mainSource instanceof SolidSource); } catch(e) {}
+          if (isSolidPM) layerTypePM = 'solid';
+        }
+      } catch(e) {}
+
+      L('POSITION_MARKER|comp:' + item.name +
+        '|layer:' + layer.name +
+        '|layerType:' + layerTypePM +
+        '|x:' + px + '|y:' + py +
+        '|visible:' + isVisPM +
+        '|compW:' + item.width + '|compH:' + item.height);
+    }
+  }
+  L('');
+
+  // ═══════════════════════════════════════════════════════════════
+  // SECTION: TOGGLE LAYERS
+  // Detects geo map country toggles and pattern-based toggles.
+  // ═══════════════════════════════════════════════════════════════
+  L('=== TOGGLE LAYERS ===');
+
+  var INTERNAL_KW = [
+    'adjustment', 'noise', 'vignette', 'shade', 'shadow', 'blur',
+    'glow', 'overlay', 'color grade', 'lut', 'grain', 'matte',
+    'mask', 'null', 'control', 'rig', 'expression', 'guide',
+    'helper', 'reference', 'temp', 'test', 'draft', 'effect',
+    'light', 'camera', 'settings', 'config', 'bg solid',
+    'background solid', 'white solid', 'black solid'
+  ];
+
+  function isInternalLayer2(name) {
+    var n = name.toLowerCase();
+    for (var ii = 0; ii < INTERNAL_KW.length; ii++) {
+      if (n.indexOf(INTERNAL_KW[ii]) !== -1) return true;
+    }
+    if (name.replace(/\s/g, '').length <= 1) return true;
+    return false;
+  }
+
+  var GEO_KW = [
+    'africa','america','asia','europe','australia','antarctica',
+    'usa','uk','india','china','russia','brazil','canada',
+    'germany','france','italy','spain','japan','korea',
+    'north','south','east','west','central',
+    'region','country','state','province','city','zone',
+    'territory','district','county','continent','outlines',
+    'mexico','argentina','peru','egypt','nigeria','ethiopia',
+    'vietnam','thailand','indonesia','malaysia','pakistan',
+    'bangladesh','myanmar','ukraine','poland','netherlands',
+    'belgium','sweden','norway','finland','denmark','switzerland',
+    'portugal','greece','turkey','iran','iraq','saudi','uae',
+    'israel','colombia','venezuela','chile','ecuador','bolivia'
+  ];
+
+  function isGeoLayer2(name) {
+    var n = name.toLowerCase();
+    for (var gi = 0; gi < GEO_KW.length; gi++) {
+      if (n.indexOf(GEO_KW[gi]) !== -1) return true;
+    }
+    return false;
+  }
+
+  var toggleGroupsFound = {};
+
+  for (var i = 1; i <= app.project.numItems; i++) {
+    var item = app.project.item(i);
+    if (!(item instanceof CompItem)) continue;
+    if (item.numLayers < 3) continue;
+
+    var toggleCandidates = [];
+    var geoCount = 0;
+
+    for (var j = 1; j <= item.numLayers; j++) {
+      var layer = item.layer(j);
+      var lName = layer.name;
+
+      var isTextTG = false;
+      try { if (layer.property('Source Text')) isTextTG = true; } catch(e) {}
+      if (isTextTG) continue;
+
+      try {
+        if (layer.matchName === 'ADBE Camera Layer' || layer.matchName === 'ADBE Light Layer') continue;
+      } catch(e) {}
+
+      if (isInternalLayer2(lName)) continue;
+
+      var isVisTG = true;
+      try { isVisTG = layer.enabled; } catch(e) {}
+
+      // Get position for center coordinates
+      var tcX = 0, tcY = 0;
+      try { var posTG = layer.property('Position').value; tcX = Math.round(posTG[0]); tcY = Math.round(posTG[1]); } catch(e) {}
+
+      var isGeo = isGeoLayer2(lName);
+      if (isGeo) geoCount++;
+
+      toggleCandidates.push({ name: lName, visible: isVisTG, isGeo: isGeo, x: tcX, y: tcY });
+    }
+
+    if (geoCount >= 3) {
+      var groupKey = item.name + '_geo';
+      if (!toggleGroupsFound[groupKey]) {
+        toggleGroupsFound[groupKey] = true;
+        L('TOGGLE_GROUP|comp:' + item.name + '|type:geo_map|count:' + geoCount);
+        for (var tc = 0; tc < toggleCandidates.length; tc++) {
+          if (toggleCandidates[tc].isGeo) {
+            L('TOGGLE_LAYER|comp:' + item.name +
+              '|layer:' + toggleCandidates[tc].name +
+              '|defaultVisible:' + toggleCandidates[tc].visible +
+              '|type:geo_map' +
+              '|centerX:' + toggleCandidates[tc].x +
+              '|centerY:' + toggleCandidates[tc].y);
+          }
+        }
+      }
+    } else if (toggleCandidates.length >= 4) {
+      var firstPrefix = '';
+      if (toggleCandidates.length > 0) {
+        var parts = toggleCandidates[0].name.split(/[\s_\-]/);
+        if (parts.length > 1) firstPrefix = parts[0].toLowerCase();
+      }
+      var patternCount = 0;
+      if (firstPrefix.length > 1) {
+        for (var tc = 0; tc < toggleCandidates.length; tc++) {
+          if (toggleCandidates[tc].name.toLowerCase().indexOf(firstPrefix) === 0) patternCount++;
+        }
+      }
+      if (patternCount >= 4) {
+        var groupKey2 = item.name + '_pattern';
+        if (!toggleGroupsFound[groupKey2]) {
+          toggleGroupsFound[groupKey2] = true;
+          L('TOGGLE_GROUP|comp:' + item.name + '|type:pattern|count:' + patternCount + '|prefix:' + firstPrefix);
+          for (var tc = 0; tc < toggleCandidates.length; tc++) {
+            if (toggleCandidates[tc].name.toLowerCase().indexOf(firstPrefix) === 0) {
+              L('TOGGLE_LAYER|comp:' + item.name +
+                '|layer:' + toggleCandidates[tc].name +
+                '|defaultVisible:' + toggleCandidates[tc].visible +
+                '|type:pattern' +
+                '|centerX:' + toggleCandidates[tc].x +
+                '|centerY:' + toggleCandidates[tc].y);
+            }
+          }
+        }
+      }
+    }
+  }
+  L('');
+
+  // ═══════════════════════════════════════════════════════════════
+  // SECTION: SOLID COLOR LAYERS (brand colors)
+  // Solid layers that are likely user-editable brand/accent colors.
+  // ═══════════════════════════════════════════════════════════════
+  L('=== SOLID COLORS ===');
+
+  var COLOR_USER_KW = [
+    'color', 'colour', 'accent', 'brand', 'primary', 'secondary',
+    'highlight', 'fill', 'bg', 'background', 'stroke', 'line',
+    'bar', 'block', 'shape', 'overlay'
+  ];
+  var COLOR_SKIP_KW = [
+    'shadow', 'vignette', 'noise', 'grain', 'matte',
+    'mask', 'dirt', 'texture', 'paper', 'tape', 'pin', 'clip'
+  ];
+
+  function isUserColorSolid(name) {
+    var n = name.toLowerCase();
+    for (var ski = 0; ski < COLOR_SKIP_KW.length; ski++) {
+      if (n.indexOf(COLOR_SKIP_KW[ski]) !== -1) return false;
+    }
+    for (var uki = 0; uki < COLOR_USER_KW.length; uki++) {
+      if (n.indexOf(COLOR_USER_KW[uki]) !== -1) return true;
+    }
+    return false;
+  }
+
+  var solidColorsSeen = {};
+
+  for (var i = 1; i <= app.project.numItems; i++) {
+    var item = app.project.item(i);
+    if (!(item instanceof CompItem)) continue;
+
+    for (var j = 1; j <= item.numLayers; j++) {
+      var layer = item.layer(j);
+
+      try {
+        if (!(layer.source instanceof FootageItem)) continue;
+        var isSolidSC = false;
+        try { isSolidSC = (layer.source.mainSource instanceof SolidSource); } catch(e) {}
+        if (!isSolidSC) continue;
+
+        var solidName = layer.name;
+        if (!isUserColorSolid(solidName)) continue;
+
+        // Deduplicate by layer name across comps
+        if (solidColorsSeen[solidName]) continue;
+        solidColorsSeen[solidName] = true;
+
+        // Get solid color
+        var r = 0, g = 0, b = 0;
+        try {
+          var solidColor = layer.source.mainSource.color;
+          r = Math.round(solidColor[0] * 255);
+          g = Math.round(solidColor[1] * 255);
+          b = Math.round(solidColor[2] * 255);
+        } catch(e) {}
+
+        function toHex2(v) { var h = v.toString(16); return h.length === 1 ? '0' + h : h; }
+        var hexColor = '#' + toHex2(r) + toHex2(g) + toHex2(b);
+
+        var absInSC = getAbsoluteTime(item.name, layer.inPoint).toFixed(3);
+        var absOutSC = getAbsoluteTime(item.name, layer.outPoint).toFixed(3);
+
+        L('SOLID_COLOR|comp:' + item.name +
+          '|layer:' + solidName +
+          '|hex:' + hexColor +
+          '|r:' + r + '|g:' + g + '|b:' + b +
+          '|absIn:' + absInSC + '|absOut:' + absOutSC);
+
+      } catch(e) {}
+    }
+  }
+  L('');
+  
   L('SCAN_COMPLETE');
 } catch(e) {
   L('EXCEPTION: ' + e.toString() + ' line:' + e.line);

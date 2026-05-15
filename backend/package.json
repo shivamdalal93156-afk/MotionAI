@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "nodemon --ignore 'jobs/*' --ignore 'queue/*' --ignore 'outputs/*' --ignore 'logs/*' --ignore 'temp/*' server.js",
+    "dev": "nodemon --ignore 'jobs/*' --ignore 'queue/*' --ignore 'outputs/*' --ignore 'logs/*' --ignore 'temp/*' --ignore 'uploads/*' server.js",
     "start": "nodemon server.js"
   },
   "dependencies": {
@@ -8,6 +8,7 @@
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "multer": "^2.1.1",
+    "sharp": "^0.34.5",
     "uuid": "^14.0.0"
   },
   "devDependencies": {

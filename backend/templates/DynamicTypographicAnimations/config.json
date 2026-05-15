@@ -39,13 +39,9 @@
     { "key": "scene7_1", "layerName": "Up",        "compName": "07_FinalFocus" },
     { "key": "scene7_2", "layerName": "to",        "compName": "07_FinalFocus" },
     { "key": "scene7_3", "layerName": "%",         "compName": "07_FinalFocus" },
-    { "key": "scene7_4", "layerName": "70",        "compName": "07_FinalFocus" },
+    { "key": "scene7_4", "layerName": "70",        "compName": "07_FinalFocus" }
 
-    { "key": "scene8_1", "layerName": "Black",     "compName": "08_ShakeOff" },
-    { "key": "scene8_2", "layerName": "Friday",    "compName": "08_ShakeOff" },
-    { "key": "scene8_3", "layerName": "Mega",      "compName": "08_ShakeOff" },
-    { "key": "scene8_4", "layerName": "Sale",      "compName": "08_ShakeOff" },
-    { "key": "scene8_5", "layerName": "Now",       "compName": "08_ShakeOff" }
+   
   ],
   "imageLayers": [],
   "sceneMap": {
@@ -55,7 +51,6 @@
     "scene4": { "outpoint": 22.0, "keys": ["scene4_1","scene4_2","scene4_3","scene4_4","scene4_5"] },
     "scene5": { "outpoint": 27.5, "keys": ["scene5_1","scene5_2","scene5_3"] },
     "scene6": { "outpoint": 34.0, "keys": ["scene6_1","scene6_2","scene6_3","scene6_4","scene6_5"] },
-    "scene7": { "outpoint": 40.5, "keys": ["scene7_1","scene7_2","scene7_3","scene7_4"] },
-    "scene8": { "outpoint": 47.0, "keys": ["scene8_1","scene8_2","scene8_3","scene8_4","scene8_5"] }
+    "scene7": { "outpoint": 40.5, "keys": ["scene7_1","scene7_2","scene7_3","scene7_4"] }
   }
 }

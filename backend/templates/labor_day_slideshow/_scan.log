@@ -1,7 +1,7 @@
 === MOTIONAI COMPLETE SCAN v4.0 ===
 template: labor_day_slideshow
 aep: C:/Users/SHIVAM/Desktop/motionai/backend/templates/labor_day_slideshow/Labor Day Slideshow (converted) (converted).aep
-scanned_at: Tue May 05 2026 13:54:01 GMT+0530
+scanned_at: Mon May 11 2026 22:02:24 GMT+0530
 
 OPEN_OK|items:83
 
@@ -414,6 +414,8 @@ IMAGE_INJECT|type:replace|comp:Tap-1|layer:Layer 2|source:Layer 2/Tap-1.psd|w:78
 IMAGE_INJECT|type:replace|comp:Tap-1|layer:Layer 4|source:Layer 4/Tap-1.psd|w:784|h:618|absIn:0.200|absOut:18.480
 IMAGE_INJECT|type:replace|comp:Tap-1|layer:Layer 1 copy|source:Layer 2/Tap-1.psd|w:784|h:618|absIn:0.200|absOut:18.480
 
+-- SOLID INJECTABLES --
+
 -- PROJECT LEVEL FOOTAGE --
 PROJECT_FOOTAGE|id:19|name:Drop_16.mov|w:1280|h:720|instances:3|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Drop_16.mov
 PROJECT_FOOTAGE|id:20|name:Grungemaps0035_3_S.jpg|w:800|h:507|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Grungemaps0035_3_S.jpg
@@ -441,5 +443,35 @@ PROJECT_FOOTAGE|id:45|name:Slide-4 BG.mp4|w:1920|h:1080|instances:1|file:C:\User
 PROJECT_FOOTAGE|id:46|name:Slide-5 BG.mp4|w:1920|h:1080|instances:1|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Slide-5 BG.mp4
 PROJECT_FOOTAGE|id:48|name:Layer 2/Tap-1.psd|w:784|h:618|instances:2|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Tap-1.psd
 PROJECT_FOOTAGE|id:49|name:Layer 4/Tap-1.psd|w:784|h:618|instances:3|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\labor_day_slideshow\Tap-1.psd
+
+=== SCENE STRUCTURE ===
+SCENE_CONTAINER|name:Labor Day Slideshow|dur:32.240
+SCENE|block:Slide-1|mainIn:0.000|mainOut:5.440|dur:5.440|minDur:3.264|maxDur:8.160|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Slide-2|mainIn:5.160|mainOut:10.840|dur:5.680|minDur:3.408|maxDur:8.520|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Slide-3|mainIn:10.320|mainOut:15.960|dur:5.640|minDur:3.384|maxDur:8.460|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Slide-4|mainIn:15.520|mainOut:21.040|dur:5.520|minDur:3.312|maxDur:8.280|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Slide-5|mainIn:20.600|mainOut:25.840|dur:5.240|minDur:3.144|maxDur:7.860|subBeats:1|footageCount:0|footage:|textLayers:
+SCENE|block:Slide-6|mainIn:25.320|mainOut:32.240|dur:6.920|minDur:4.152|maxDur:10.380|subBeats:1|footageCount:0|footage:|textLayers:
+
+=== EXPRESSION CONTROLS ===
+
+=== POSITION MARKERS ===
+POSITION_MARKER|comp:Insert Logo Here|layer:Layer 1/Logo vector shape.ai|layerType:other|x:-17|y:-45|visible:true|compW:1920|compH:1080
+
+=== TOGGLE LAYERS ===
+TOGGLE_GROUP|comp:Logo Work|type:pattern|count:4|prefix:insert
+TOGGLE_LAYER|comp:Logo Work|layer:Insert Logo Here|defaultVisible:true|type:pattern|centerX:500|centerY:500
+TOGGLE_LAYER|comp:Logo Work|layer:Insert Logo Here|defaultVisible:true|type:pattern|centerX:500|centerY:500
+TOGGLE_LAYER|comp:Logo Work|layer:Insert Logo Here|defaultVisible:true|type:pattern|centerX:500|centerY:500
+TOGGLE_LAYER|comp:Logo Work|layer:Insert Logo Here|defaultVisible:true|type:pattern|centerX:500|centerY:500
+TOGGLE_GROUP|comp:Tap-1|type:pattern|count:5|prefix:layer
+TOGGLE_LAYER|comp:Tap-1|layer:Layer 3|defaultVisible:true|type:pattern|centerX:392|centerY:309
+TOGGLE_LAYER|comp:Tap-1|layer:Layer 1|defaultVisible:true|type:pattern|centerX:392|centerY:309
+TOGGLE_LAYER|comp:Tap-1|layer:Layer 2|defaultVisible:true|type:pattern|centerX:392|centerY:309
+TOGGLE_LAYER|comp:Tap-1|layer:Layer 4|defaultVisible:true|type:pattern|centerX:366|centerY:423
+TOGGLE_LAYER|comp:Tap-1|layer:Layer 1 copy|defaultVisible:true|type:pattern|centerX:392|centerY:309
+
+=== SOLID COLORS ===
+SOLID_COLOR|comp:Labor Day Slideshow|layer:BG|hex:#000000|r:0|g:0|b:0|absIn:0.000|absOut:32.240
 
 SCAN_COMPLETE

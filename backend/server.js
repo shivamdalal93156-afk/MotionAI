@@ -9,7 +9,14 @@ const { runScheduledCleanup }   = require('./services/cleanup');
 
 const app  = express();
 const PORT = process.env.PORT || 3001;
-
+app.use(cors({ origin: '*' }));
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, ngrok-skip-browser-warning');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
 
 
 // Health gate middleware — rejects render requests if system not ready
@@ -24,20 +31,14 @@ app.use((req, res, next) => {
 });
 // ── Middleware ─────────────────────────────────────────────────
 
-app.use(cors({ origin: '*' }));
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, ngrok-skip-browser-warning');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  if (req.method === 'OPTIONS') return res.sendStatus(204);
-  next();
-});
+
 app.use(express.json({ limit: '2mb' }));
 
 // Serve completed MP4s directly
 app.use('/templates', express.static(path.resolve(__dirname, 'templates')));
 app.use('/footage', express.static(path.resolve(__dirname, 'templates')));
 app.use('/outputs', express.static(path.resolve(__dirname, 'outputs')));
+app.use('/uploads', express.static(path.resolve(__dirname, 'uploads')));
 // ── Routes ───────────────────────────────────────────────────────
 app.use('/api/upload', require('./routes/upload'));
 app.use('/api/voice', require('./routes/voice'));

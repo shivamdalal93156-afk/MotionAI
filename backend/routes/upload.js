@@ -12,23 +12,33 @@ const storage = multer.diskStorage({
     cb(null, UPLOADS_DIR);
   },
   filename: (req, file, cb) => {
-    // Keep original name but prefix with timestamp to avoid collisions
-    const ext      = path.extname(file.originalname);
-    const base     = path.basename(file.originalname, ext)
-      .replace(/[^a-zA-Z0-9_-]/g, '_')
-      .slice(0, 40);
-    const filename = `${Date.now()}_${base}${ext}`;
-    cb(null, filename);
-  },
-});
-
+  const mimeToExt = {
+    'image/jpeg': '.jpg', 'image/png': '.png',
+    'image/webp': '.webp', 'image/gif': '.gif',
+    'video/mp4': '.mp4', 'video/quicktime': '.mov',
+    'video/webm': '.webm',
+  };
+  const ext = path.extname(file.originalname).toLowerCase()
+    || mimeToExt[file.mimetype]
+    || '.jpg';
+  const base = path.basename(file.originalname, path.extname(file.originalname))
+    .replace(/[^a-zA-Z0-9_-]/g, '_')
+    .slice(0, 40) || 'upload';
+  const filename = `${Date.now()}_${base}${ext}`;
+  cb(null, filename);
+},
+})
 const fileFilter = (req, file, cb) => {
   const allowed = [
     '.jpg', '.jpeg', '.png', '.webp', '.gif',
     '.mp4', '.mov', '.avi', '.webm',
   ];
+  const allowedMime = [
+    'image/jpeg', 'image/png', 'image/webp', 'image/gif',
+    'video/mp4', 'video/quicktime', 'video/avi', 'video/webm',
+  ];
   const ext = path.extname(file.originalname).toLowerCase();
-  if (allowed.includes(ext)) {
+  if (allowed.includes(ext) || allowedMime.includes(file.mimetype)) {
     cb(null, true);
   } else {
     cb(new Error(`File type not allowed: ${ext}`));
@@ -47,18 +57,20 @@ router.post('/', upload.single('file'), (req, res) => {
     return res.status(400).json({ error: 'NO_FILE', message: 'No file received' });
   }
 
-  const filePath = req.file.path.replace(/\\/g, '/');
+  const absolutePath = req.file.path.replace(/\\/g, '/');
+const serverPath   = `/uploads/${req.file.filename}`;
 
-  res.json({
-    ok:           true,
-    fileName:     req.file.filename,
-    originalName: req.file.originalname,
-    filePath:     filePath,
-    sizeKB:       Math.round(req.file.size / 1024),
-    mimeType:     req.file.mimetype,
-  });
+res.json({
+  ok:           true,
+  fileName:     req.file.filename,
+  originalName: req.file.originalname,
+  filePath:     absolutePath,   // full path for AE injection
+  path:         absolutePath,   // alias — some frontend code uses this
+  serverPath:   serverPath,     // web-accessible URL for preview
+  sizeKB:       Math.round(req.file.size / 1024),
+  mimeType:     req.file.mimetype,
 });
-
+})
 // DELETE /api/upload/:filename — cleanup after render
 router.delete('/:filename', (req, res) => {
   const filePath = path.join(UPLOADS_DIR, path.basename(req.params.filename));
