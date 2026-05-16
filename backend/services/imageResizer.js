@@ -42,6 +42,7 @@ async function resizeToSlot(srcPath, slotW, slotH, jobDir, key) {
         position: 'center', // center crop when aspect ratios differ
         withoutEnlargement: false, // allow upscaling small images to fill slot
       })
+      .jpeg({ quality: 80, force: true }) // Force JPEG output
       .toFile(outPath);
 
     return outPath;

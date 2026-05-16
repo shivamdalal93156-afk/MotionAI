@@ -514,9 +514,16 @@ function buildJSX(job, templateConfig, jobDir) {
   }).join('\n');
 
   // Build country toggle + marker movement lines
+  // ─────────────────────────────────────────────────────────────────────────────
+// REPLACE the entire countryLines builder in aeWorker.js with this.
+// Adds automatic globe angle calculation from country pixel coordinates.
+// Works for any equirectangular map projection template.
+// ─────────────────────────────────────────────────────────────────────────────
+
   const countryLines = (templateConfig.countryLayers || []).map(cl => {
     const selectedCountry = inputData[cl.key];
     if (!selectedCountry) return `log('COUNTRY SKIP: key "${cl.key}" not in inputData');`;
+
     const safeComp        = cl.compName.replace(/'/g, "\\'");
     const safeMarkerComp  = (cl.markerComp  || '').replace(/'/g, "\\'");
     const safeMarkerLayer = (cl.markerLayer || '').replace(/'/g, "\\'");
@@ -526,9 +533,10 @@ function buildJSX(job, templateConfig, jobDir) {
     // Get coordinates from countryCoordinates in config
     const coords = templateConfig.countryCoordinates || {};
     const coord  = coords[selectedCountry] || null;
+
+    // ── Marker movement ───────────────────────────────────────────────────────
     const moveMarker = (coord && cl.markerComp && cl.markerLayer)
       ? `
-    // Move position marker to selected country center
     if ('${safeMarkerComp}' !== '' && '${safeMarkerLayer}' !== '') {
       for (var mc = 1; mc <= app.project.numItems; mc++) {
         var mComp = app.project.item(mc);
@@ -548,6 +556,117 @@ function buildJSX(job, templateConfig, jobDir) {
     }`
       : `log('MARKER SKIP: no coords for "${safeCountry}"');`;
 
+    // ── Globe angle calculation ───────────────────────────────────────────────
+    // For equirectangular map projections (used by virtually all AE globe templates):
+    //   Longitude = (centerX / mapCompWidth)  * 360 - 180  → drives Angle Y
+    //   Latitude  = (centerY / mapCompHeight) * 180 - 90   → drives Angle X (inverted)
+    //
+    // The angle controller comp dimensions come from the toggle group's comp.
+    // We use the mapCompW/mapCompH from the countryCoordinates source comp.
+    // If not available in config, fall back to detecting from the comp itself in JSX.
+
+    const mapCompW = cl.mapCompW || templateConfig.mapCompW || 0;
+    const mapCompH = cl.mapCompH || templateConfig.mapCompH || 0;
+
+    // Pre-calculate angles in Node.js if we have the dimensions
+    let angleX = null, angleY = null;
+    if (coord && mapCompW > 0 && mapCompH > 0) {
+      angleY = ((coord.x / mapCompW) * 360 - 180).toFixed(4);   // longitude
+      angleX = -((coord.y / mapCompH) * 180 - 90).toFixed(4);   // latitude inverted
+    }
+
+    // Build the angle injection JSX
+    // This sets Angle X and Angle Y on any layer that has angle controls
+    // matching keywords 'angle x', 'angle y' — works for any template
+    const setAngles = (coord && cl.angleControlComp && cl.angleControlLayer)
+      ? (() => {
+          const safeAComp  = cl.angleControlComp.replace(/'/g, "\\'");
+          const safeALayer = cl.angleControlLayer.replace(/'/g, "\\'");
+
+          // If we have pre-calculated angles, use them directly
+          // Otherwise calculate inside JSX from country pixel position
+          if (angleX !== null && angleY !== null) {
+            return `
+    // Set globe angles for "${safeCountry}"
+    (function() {
+      for (var ac = 1; ac <= app.project.numItems; ac++) {
+        var aComp = app.project.item(ac);
+        if (!(aComp instanceof CompItem)) continue;
+        if (aComp.name !== '${safeAComp}') continue;
+        for (var al = 1; al <= aComp.numLayers; al++) {
+          var aLyr = aComp.layer(al);
+          if (aLyr.name !== '${safeALayer}') continue;
+          var afx = aLyr.property('Effects');
+          if (!afx) break;
+          for (var af = 1; af <= afx.numProperties; af++) {
+            var aef = afx.property(af);
+            var aefName = '';
+            try { aefName = aef.name.toLowerCase(); } catch(e) {}
+            if (aefName.indexOf('angle x') !== -1 || aefName === 'angle x') {
+              try { aef.property(1).setValue(${angleX}); log('ANGLE X set: ${angleX} for "${safeCountry}"'); } catch(e) { log('ANGLE X fail: ' + e.toString()); }
+            }
+            if (aefName.indexOf('angle y') !== -1 || aefName === 'angle y') {
+              try { aef.property(1).setValue(${angleY}); log('ANGLE Y set: ${angleY} for "${safeCountry}"'); } catch(e) { log('ANGLE Y fail: ' + e.toString()); }
+            }
+          }
+          break;
+        }
+        break;
+      }
+    })();`;
+          } else {
+            // No pre-calculated angles — calculate inside JSX from map comp dimensions
+            return `
+    // Set globe angles dynamically for "${safeCountry}"
+    (function() {
+      // Find the map comp to get its dimensions for angle calculation
+      var mapCompW = 0, mapCompH = 0;
+      for (var mc2 = 1; mc2 <= app.project.numItems; mc2++) {
+        var mc2Item = app.project.item(mc2);
+        if (mc2Item instanceof CompItem && mc2Item.name === '${safeMarkerComp}') {
+          mapCompW = mc2Item.width;
+          mapCompH = mc2Item.height;
+          break;
+        }
+      }
+      if (mapCompW === 0 || mapCompH === 0) {
+        log('ANGLE SKIP: could not find map comp dimensions for "${safeMarkerComp}"');
+        return;
+      }
+      var countryX = ${coord ? coord.x : 0};
+      var countryY = ${coord ? coord.y : 0};
+      var calcAngleY =  (countryX / mapCompW) * 360 - 180;
+      var calcAngleX = -((countryY / mapCompH) * 180 - 90);
+
+      for (var ac = 1; ac <= app.project.numItems; ac++) {
+        var aComp = app.project.item(ac);
+        if (!(aComp instanceof CompItem)) continue;
+        if (aComp.name !== '${safeAComp}') continue;
+        for (var al = 1; al <= aComp.numLayers; al++) {
+          var aLyr = aComp.layer(al);
+          if (aLyr.name !== '${safeALayer}') continue;
+          var afx = aLyr.property('Effects');
+          if (!afx) break;
+          for (var af = 1; af <= afx.numProperties; af++) {
+            var aef = afx.property(af);
+            var aefName = '';
+            try { aefName = aef.name.toLowerCase(); } catch(e) {}
+            if (aefName.indexOf('angle x') !== -1) {
+              try { aef.property(1).setValue(calcAngleX); log('ANGLE X: ' + calcAngleX.toFixed(2) + ' for "${safeCountry}"'); } catch(e) {}
+            }
+            if (aefName.indexOf('angle y') !== -1) {
+              try { aef.property(1).setValue(calcAngleY); log('ANGLE Y: ' + calcAngleY.toFixed(2) + ' for "${safeCountry}"'); } catch(e) {}
+            }
+          }
+          break;
+        }
+        break;
+      }
+    })();`;
+          }
+        })()
+      : `log('ANGLE SKIP: no angleControlComp/Layer configured for key "${cl.key}"');`;
+
     return `
   (function() {
     var targetComp = null;
@@ -564,11 +683,8 @@ function buildJSX(job, templateConfig, jobDir) {
     for (var li = 1; li <= targetComp.numLayers; li++) {
       var l = targetComp.layer(li);
       var ln = l.name;
-      // Turn on only the selected country, turn off everything else
-      var lnTrimmed = ln;
       if (ln.length > suffix.length && ln.substring(ln.length - suffix.length) === suffix) {
-        lnTrimmed = ln.substring(0, ln.length - suffix.length);
-        // Trim spaces
+        var lnTrimmed = ln.substring(0, ln.length - suffix.length);
         while (lnTrimmed.length > 0 && lnTrimmed.charAt(lnTrimmed.length-1) === ' ') lnTrimmed = lnTrimmed.substring(0, lnTrimmed.length-1);
         while (lnTrimmed.length > 0 && lnTrimmed.charAt(0) === ' ') lnTrimmed = lnTrimmed.substring(1);
         var selected = '${safeCountry}';
@@ -585,6 +701,7 @@ function buildJSX(job, templateConfig, jobDir) {
     }
     if (!found) log('COUNTRY NOT FOUND: "${safeCountry}${suffix}" in "${safeComp}"');
     ${moveMarker}
+    ${setAngles}
   })();`;
   }).join('\n');
   const jsx = `
@@ -695,6 +812,7 @@ try {
   log('COUNTRY: setting country visibility...');
   ${countryLines}
   writeHeartbeat();
+  app.purge(PurgeTarget.ALL_CACHES);
   
   log('SAVE: writing temp AEP...');
   var tempFile = new File('${tempAepPath}');

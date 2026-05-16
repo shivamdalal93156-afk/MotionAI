@@ -431,7 +431,11 @@ async function executeJob(job) {
       if (fs.existsSync(part0)) fs.renameSync(part0, final);
 
       markJobDone(job.jobId, `/outputs/${job.jobId}.mp4`);
-      cleanJobDir(job.jobId);
+      try {
+  await cleanJobDir(jobDir);
+} catch (cleanupErr) {
+  console.log('Non-fatal cleanup error ignored.');
+}
       jobLog('JOB_COMPLETE', { outputUrl: `/outputs/${job.jobId}.mp4` });
 
     } else {

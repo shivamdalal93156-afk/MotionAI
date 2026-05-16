@@ -1,0 +1,407 @@
+{
+  "_meta": {
+    "version": "1.1",
+    "lastUpdated": "2026-05-16T03:57:52.538Z",
+    "totalTemplates": 3
+  },
+  "solidPatterns": [
+    {
+      "layerNamePattern": "Photo_XX",
+      "compPattern": "XX - Newspaper-Big",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "verified in Investigation Board"
+    },
+    {
+      "layerNamePattern": "Photo_XX",
+      "compPattern": "XX - Palaroid",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "verified in Investigation Board"
+    },
+    {
+      "layerNamePattern": "Photo_XX",
+      "compPattern": "XX - Photo",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "verified in Investigation Board"
+    },
+    {
+      "layerNamePattern": "Photo_XX",
+      "compPattern": "XX - Newspaper-Small",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "verified in Investigation Board"
+    },
+    {
+      "layerNamePattern": "Photo_XX",
+      "compPattern": "XX - Newspaper-Tall",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "verified in Investigation Board"
+    },
+    {
+      "layerNamePattern": "Photo_XX",
+      "compPattern": "XX - Magazine",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "verified in Investigation Board"
+    },
+    {
+      "layerNamePattern": "Photo_XX",
+      "compPattern": "XX - Photo Frame",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "verified in Investigation Board"
+    },
+    {
+      "layerNamePattern": "Photo_XX",
+      "compPattern": "XX - Badge",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "verified in Investigation Board"
+    },
+    {
+      "layerNamePattern": "DELETE",
+      "compPattern": "XX - F_XX_START",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "real estate 2"
+      ],
+      "note": "verified in real estate 2"
+    },
+    {
+      "layerNamePattern": "DELETE",
+      "compPattern": "XX - F_XX_FACADE",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "real estate 2"
+      ],
+      "note": "verified in real estate 2"
+    },
+    {
+      "layerNamePattern": "DELETE",
+      "compPattern": "XX - F_XX_KITCHEN",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "real estate 2"
+      ],
+      "note": "verified in real estate 2"
+    },
+    {
+      "layerNamePattern": "DELETE",
+      "compPattern": "XX - F_XX_LIVING_ROOM",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "real estate 2"
+      ],
+      "note": "verified in real estate 2"
+    },
+    {
+      "layerNamePattern": "DELETE",
+      "compPattern": "XX - F_XX_BEDROOM",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "real estate 2"
+      ],
+      "note": "verified in real estate 2"
+    },
+    {
+      "layerNamePattern": "DELETE",
+      "compPattern": "XX - F_XX_BATHROOM",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "real estate 2"
+      ],
+      "note": "verified in real estate 2"
+    },
+    {
+      "layerNamePattern": "DELETE",
+      "compPattern": "XX - F_XX_DINING_ROOM",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "real estate 2"
+      ],
+      "note": "verified in real estate 2"
+    },
+    {
+      "layerNamePattern": "DELETE",
+      "compPattern": "XX - F_XX_END",
+      "type": "solid_replace",
+      "slotW": 1920,
+      "slotH": 1080,
+      "sources": [
+        "real estate 2"
+      ],
+      "note": "verified in real estate 2"
+    }
+  ],
+  "imagePatterns": [
+    {
+      "layerNamePattern": "Map_XX.png",
+      "type": "replace",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "direct footage replace verified in Investigation Board"
+    },
+    {
+      "layerNamePattern": "Map_XX.jpg",
+      "type": "replace",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "direct footage replace verified in Investigation Board"
+    },
+    {
+      "layerNamePattern": "FloorPlan.jpg",
+      "type": "replace",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "direct footage replace verified in Investigation Board"
+    },
+    {
+      "layerNamePattern": "Warehouse.jpg",
+      "type": "replace",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "direct footage replace verified in Investigation Board"
+    },
+    {
+      "layerNamePattern": "(empty comp)",
+      "compPattern": "Footage_XX",
+      "type": "comp_inject",
+      "slotW": 3000,
+      "slotH": 4000,
+      "sources": [
+        "3DSlideshow"
+      ],
+      "note": "comp_inject verified in 3DSlideshow"
+    }
+  ],
+  "textPatterns": [
+    {
+      "compPattern": "Сover",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "text comp verified in Investigation Board"
+    },
+    {
+      "compPattern": "XX - Badge",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "text comp verified in Investigation Board"
+    },
+    {
+      "compPattern": "BusinessCard_XX",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "text comp verified in Investigation Board"
+    },
+    {
+      "compPattern": "Sticker_XX",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "text comp verified in Investigation Board"
+    },
+    {
+      "compPattern": "XX - Newspaper-Big",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "text comp verified in Investigation Board"
+    },
+    {
+      "compPattern": "XX - Palaroid",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "text comp verified in Investigation Board"
+    },
+    {
+      "compPattern": "XX - Photo",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "text comp verified in Investigation Board"
+    },
+    {
+      "compPattern": "XX - Newspaper-Small",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "text comp verified in Investigation Board"
+    },
+    {
+      "compPattern": "XX - Newspaper-Tall",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "text comp verified in Investigation Board"
+    },
+    {
+      "compPattern": "XX - Magazine",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "text comp verified in Investigation Board"
+    },
+    {
+      "compPattern": "TEXT_SCENE_XX",
+      "sources": [
+        "real estate 2"
+      ],
+      "note": "text comp verified in real estate 2"
+    }
+  ],
+  "expressionPatterns": [
+    {
+      "layerNamePattern": "Investigation Board Settings",
+      "compPattern": "Investigation Board",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "expression holder verified in Investigation Board — \"Investigation Board Settings\" holds effects"
+    },
+    {
+      "layerNamePattern": "Main Settings",
+      "compPattern": "Main",
+      "sources": [
+        "Investigation Board"
+      ],
+      "note": "expression holder verified in Investigation Board — \"Main Settings\" holds effects"
+    },
+    {
+      "layerNamePattern": "color",
+      "compPattern": "Main",
+      "sources": [
+        "3DSlideshow"
+      ],
+      "note": "expression holder verified in 3DSlideshow — \"color\" holds effects"
+    },
+    {
+      "layerNamePattern": "CONTROLLER",
+      "compPattern": "COLOR_CONTROL",
+      "sources": [
+        "real estate 2"
+      ],
+      "note": "expression holder verified in real estate 2 — \"CONTROLLER\" holds effects"
+    }
+  ],
+  "skipPatterns": [],
+  "templates": {
+    "Investigation Board": {
+      "verifiedAt": "2026-05-16T03:55:50.380Z",
+      "compName": "Main",
+      "fps": 29.97,
+      "duration": 150.918,
+      "resolution": "1920x1080",
+      "textLayerCount": 32,
+      "imageLayerCount": 22,
+      "exprControlCount": 8,
+      "injectionTypes": [
+        "solid_replace",
+        "replace"
+      ],
+      "newPatternsAdded": {
+        "solid": 8,
+        "image": 4,
+        "text": 10,
+        "expression": 2,
+        "skip": 0
+      }
+    },
+    "3DSlideshow": {
+      "verifiedAt": "2026-05-16T03:56:00.710Z",
+      "compName": "Render_HD",
+      "fps": 25,
+      "duration": 70,
+      "resolution": "1920x1080",
+      "textLayerCount": 0,
+      "imageLayerCount": 22,
+      "exprControlCount": 1,
+      "injectionTypes": [
+        "comp_inject"
+      ],
+      "newPatternsAdded": {
+        "solid": 0,
+        "image": 1,
+        "text": 0,
+        "expression": 1,
+        "skip": 0
+      }
+    },
+    "real estate 2": {
+      "verifiedAt": "2026-05-16T03:57:52.538Z",
+      "compName": "RENDER_FULL_HD",
+      "fps": 29.97,
+      "duration": 40.04,
+      "resolution": "1920x1080",
+      "textLayerCount": 23,
+      "imageLayerCount": 8,
+      "exprControlCount": 10,
+      "injectionTypes": [
+        "solid_replace"
+      ],
+      "newPatternsAdded": {
+        "solid": 8,
+        "image": 0,
+        "text": 1,
+        "expression": 1,
+        "skip": 0
+      }
+    }
+  }
+}
