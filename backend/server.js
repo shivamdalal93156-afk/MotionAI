@@ -46,6 +46,7 @@ app.use('/api/render', require('./routes/render'));
 app.use('/api/jobs',   require('./routes/jobs'));
 app.use('/api/health', require('./routes/health'));
 app.use('/admin',      require('./routes/admin'));
+app.use('/api/logo-overlay', require('./routes/logoOverlay'));
 
 // ── Watchdog (loaded after routes so it can import queue) ────────
 // Inline here — one less file import at startup

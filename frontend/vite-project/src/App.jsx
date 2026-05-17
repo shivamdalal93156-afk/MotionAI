@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import LandingPage from './LandingPage';
+
 
 const API = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
   ? "http://localhost:3001"
@@ -1012,6 +1014,304 @@ function TCard({ t, idx, onClick }) {
     </div>
   );
 }
+// ─── LogoOverlay component ────────────────────────────────────────────────────
+// Add this component to App.jsx just before the export default function App()
+// Then use it in the "done" render state section, below the download/render-again buttons
+
+
+// ─── LogoSlot component ───────────────────────────────────────────────────────
+function LogoSlot({ idx, data, onChange, onRemove, totalDuration }) {
+  const dragRef    = useRef(null);
+  const isDragging = useRef(false);
+  const [preview, setPreview] = useState(null);
+
+  const onFile = e => {
+    const f = e.target.files?.[0];
+    if (!f) return;
+    const url = URL.createObjectURL(f);
+    setPreview(url);
+    onChange(idx, 'file', f);
+    onChange(idx, 'preview', url);
+  };
+
+  const updatePos = e => {
+    const rect = dragRef.current.getBoundingClientRect();
+    const nx = Math.max(0, Math.min(100, ((e.clientX - rect.left)  / rect.width)  * 100));
+    const ny = Math.max(0, Math.min(100, ((e.clientY - rect.top)   / rect.height) * 100));
+    onChange(idx, 'x', Math.round(nx));
+    onChange(idx, 'y', Math.round(ny));
+  };
+
+  const onMouseDown = e => { isDragging.current = true; updatePos(e); };
+  const onMouseMove = e => { if (isDragging.current) updatePos(e); };
+  const onMouseUp   = ()  => { isDragging.current = false; };
+
+  const thumbSrc = data.preview || preview;
+  const inputSt  = { border:'1px solid var(--border)', borderRadius:6, background:'var(--bg)', color:'var(--ink)', fontSize:12, padding:'5px 8px', outline:'none', fontFamily:'Inter,sans-serif', width:'100%' };
+  const labelSt  = { fontSize:10, fontWeight:600, color:'var(--ink2)', marginBottom:3, display:'block' };
+
+  return (
+    <div style={{ border:'1.5px solid var(--border)', borderRadius:12, overflow:'hidden', background:'var(--white)', marginBottom:10 }}>
+      {/* Header */}
+      <div style={{ display:'flex', alignItems:'center', gap:8, padding:'8px 12px', borderBottom:'1px solid var(--border)', background:'var(--bg)' }}>
+        <div style={{ width:24, height:24, borderRadius:6, background:'#7c3aed', color:'white', fontSize:10, fontWeight:800, display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+          {idx + 1}
+        </div>
+        <span style={{ fontSize:12, fontWeight:600, color:'var(--ink)', flex:1 }}>Logo / Image {idx + 1}</span>
+        {idx > 0 && (
+          <button
+            onClick={() => onRemove(idx)}
+            style={{ width:20, height:20, borderRadius:'50%', border:'1px solid var(--border)', background:'transparent', color:'var(--ink3)', cursor:'pointer', fontSize:12, display:'flex', alignItems:'center', justifyContent:'center' }}
+          >×</button>
+        )}
+      </div>
+
+      <div style={{ padding:'10px 12px', display:'flex', flexDirection:'column', gap:10 }}>
+        {/* Upload */}
+        <label style={{
+          display:'flex', alignItems:'center', gap:8, padding:'7px 10px',
+          borderRadius:8, border:'1.5px dashed var(--border)', background:'var(--bg)',
+          cursor:'pointer', fontSize:12, color:'var(--ink2)', transition:'border-color .12s',
+        }}
+          onMouseEnter={e => e.currentTarget.style.borderColor='#7c3aed'}
+          onMouseLeave={e => e.currentTarget.style.borderColor='var(--border)'}
+        >
+          {thumbSrc
+            ? <img src={thumbSrc} alt="" style={{ height:28, maxWidth:64, objectFit:'contain', borderRadius:3 }} />
+            : <span style={{ fontSize:16 }}>+</span>
+          }
+          <span>{thumbSrc ? 'Change image' : 'Upload PNG / JPG'}</span>
+          <input type="file" accept="image/png,image/jpeg" style={{ display:'none' }} onChange={onFile} />
+        </label>
+
+        {thumbSrc && (
+          <>
+            {/* Position drag box */}
+            <div>
+              <label style={labelSt}>Position — drag to place</label>
+              <div
+                ref={dragRef}
+                style={{ width:'100%', height:80, borderRadius:8, background:'var(--bg)', border:'1px solid var(--border)', position:'relative', cursor:'crosshair', userSelect:'none', overflow:'hidden' }}
+                onMouseDown={onMouseDown}
+                onMouseMove={onMouseMove}
+                onMouseUp={onMouseUp}
+                onMouseLeave={onMouseUp}
+              >
+                {[33,66].map(p => <div key={`v${p}`} style={{ position:'absolute', left:`${p}%`, top:0, bottom:0, width:1, background:'rgba(0,0,0,.05)' }} />)}
+                {[33,66].map(p => <div key={`h${p}`} style={{ position:'absolute', top:`${p}%`, left:0, right:0, height:1, background:'rgba(0,0,0,.05)' }} />)}
+                <div style={{
+                  position:'absolute', left:`${data.x || 5}%`, top:`${data.y || 5}%`,
+                  transform:'translate(-50%,-50%)',
+                  width:20, height:20, borderRadius:4,
+                  background:'#7c3aed', border:'2px solid white',
+                  boxShadow:'0 2px 6px rgba(0,0,0,.25)',
+                  display:'flex', alignItems:'center', justifyContent:'center',
+                  fontSize:9, color:'white', fontWeight:700, pointerEvents:'none',
+                }}>L</div>
+                <div style={{ position:'absolute', bottom:3, right:6, fontSize:9, color:'var(--ink3)' }}>
+                  {data.x || 5}%, {data.y || 5}%
+                </div>
+              </div>
+            </div>
+
+            {/* Size */}
+            <div>
+              <label style={labelSt}>Size — {data.scale || 15}% of video width</label>
+              <input type="range" min={3} max={60} value={data.scale || 15}
+                onChange={e => onChange(idx, 'scale', Number(e.target.value))}
+                style={{ width:'100%', accentColor:'#7c3aed' }}
+              />
+            </div>
+
+            {/* Time range */}
+            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
+              <div>
+                <label style={labelSt}>Show from (sec)</label>
+                <input type="number" min={0} step={0.5} value={data.startSec ?? 0}
+                  onChange={e => onChange(idx, 'startSec', Number(e.target.value))}
+                  style={inputSt}
+                />
+              </div>
+              <div>
+                <label style={labelSt}>Hide at (empty = always)</label>
+                <input type="number" min={0} step={0.5} value={data.endSec ?? ''}
+                  placeholder="Until end"
+                  onChange={e => onChange(idx, 'endSec', e.target.value)}
+                  style={inputSt}
+                />
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ─── LogosTab component ───────────────────────────────────────────────────────
+// Props:
+//   logos        — array of logo slot data (state from App)
+//   setLogos     — setter
+//   rState       — render state from App
+//   jobId        — jobId after render completes
+//   API          — API base URL
+function LogosTab({ logos, setLogos, rState, jobId, API }) {
+  const [applying,   setApplying]   = useState(false);
+  const [resultUrl,  setResultUrl]  = useState(null);
+  const [error,      setError]      = useState(null);
+  const [progress,   setProgress]   = useState('');
+
+  const addSlot = () => {
+    setLogos(prev => [...prev, { file: null, preview: null, x: 5, y: 5, scale: 15, startSec: 0, endSec: '' }]);
+  };
+
+  const removeSlot = idx => {
+    setLogos(prev => prev.filter((_, i) => i !== idx));
+  };
+
+  const updateSlot = (idx, key, val) => {
+    setLogos(prev => prev.map((s, i) => i === idx ? { ...s, [key]: val } : s));
+  };
+
+  const hasAnyLogo = logos.some(l => l.file);
+  const renderDone = rState === 'done';
+
+  const applyAll = async () => {
+    if (!jobId || !hasAnyLogo) return;
+    setApplying(true); setError(null); setResultUrl(null);
+
+    try {
+      // Apply logos one by one, chaining jobId each time
+      // First call uses original jobId, subsequent calls use previous result
+      let currentJobId = jobId;
+      let currentUrl   = null;
+
+      const activeLogos = logos.filter(l => l.file);
+
+      for (let i = 0; i < activeLogos.length; i++) {
+        const logo = activeLogos[i];
+        setProgress(`Applying logo ${i + 1} of ${activeLogos.length}…`);
+
+        const fd = new FormData();
+        fd.append('logo',     logo.file);
+        fd.append('jobId',    currentJobId);
+        fd.append('x',        logo.x ?? 5);
+        fd.append('y',        logo.y ?? 5);
+        fd.append('scale',    logo.scale ?? 15);
+        fd.append('startSec', logo.startSec ?? 0);
+        fd.append('endSec',   logo.endSec === '' ? -1 : logo.endSec);
+
+        const r = await fetch(`${API}/api/logo-overlay`, { method: 'POST', body: fd });
+        const d = await r.json();
+        if (!r.ok || !d.success) throw new Error(d.error || 'Failed');
+
+        // For next iteration, use the output jobId (strip _logo suffix for chaining)
+        // The route returns outputUrl like /outputs/JOBID_logo.mp4
+        // We pass a special param to chain — backend handles JOBID_logo as input too
+        currentJobId = d.outputJobId || currentJobId + '_logo';
+        currentUrl   = `${API}${d.outputUrl}`;
+      }
+
+      setProgress('');
+      setResultUrl(currentUrl);
+    } catch (e) {
+      setProgress('');
+      setError(e.message);
+    } finally {
+      setApplying(false);
+    }
+  };
+
+  return (
+    <div style={{ flex:1, overflowY:'auto', padding:'10px 10px 0', display:'flex', flexDirection:'column' }}>
+
+      {/* Info banner */}
+      <div style={{ fontSize:11, color:'var(--ink3)', background:'var(--bg)', borderRadius:8, padding:'8px 10px', marginBottom:10, lineHeight:1.5 }}>
+        Add your logo or watermark. Each logo has its own position, size and timeline. Applied to your video after rendering.
+      </div>
+
+      {/* Logo slots */}
+      {logos.map((logo, i) => (
+        <LogoSlot key={i} idx={i} data={logo} onChange={updateSlot} onRemove={removeSlot} />
+      ))}
+
+      {/* Add logo button */}
+      <button
+        onClick={addSlot}
+        style={{
+          width:'100%', background:'transparent', border:'1.5px dashed var(--border)',
+          borderRadius:10, fontSize:12, fontWeight:500, color:'var(--ink3)',
+          padding:'10px 0', cursor:'pointer', transition:'all .12s', marginBottom:10,
+        }}
+        onMouseEnter={e => { e.currentTarget.style.borderColor='#7c3aed'; e.currentTarget.style.color='#7c3aed'; }}
+        onMouseLeave={e => { e.currentTarget.style.borderColor='var(--border)'; e.currentTarget.style.color='var(--ink3)'; }}
+      >
+        + Add another logo
+      </button>
+
+      <div style={{ flex:1 }} />
+
+      {/* Apply section */}
+      <div style={{ borderTop:'1px solid var(--border)', paddingTop:10, paddingBottom:10 }}>
+        {!renderDone && (
+          <div style={{ fontSize:11, color:'var(--ink3)', textAlign:'center', padding:'8px 0' }}>
+            Render your video first, then logos will be applied automatically.
+          </div>
+        )}
+
+        {renderDone && !hasAnyLogo && (
+          <div style={{ fontSize:11, color:'var(--ink3)', textAlign:'center', padding:'8px 0' }}>
+            Upload at least one logo above to apply.
+          </div>
+        )}
+
+        {renderDone && hasAnyLogo && !resultUrl && (
+          <>
+            {error && (
+              <div style={{ fontSize:11, color:'#dc2626', background:'#fef2f2', border:'1px solid #fca5a5', borderRadius:6, padding:'6px 10px', marginBottom:8 }}>
+                ✗ {error}
+              </div>
+            )}
+            <button
+              onClick={applyAll}
+              disabled={applying}
+              style={{
+                width:'100%', background: applying ? 'var(--bg2)' : '#7c3aed',
+                color: applying ? 'var(--ink3)' : 'white',
+                border:'none', borderRadius:10, fontSize:13, fontWeight:700,
+                padding:'12px 0', cursor: applying ? 'not-allowed' : 'pointer',
+                display:'flex', alignItems:'center', justifyContent:'center', gap:8,
+                transition:'background .15s',
+              }}
+              onMouseEnter={e => { if (!applying) e.currentTarget.style.background='#6d28d9'; }}
+              onMouseLeave={e => { if (!applying) e.currentTarget.style.background='#7c3aed'; }}
+            >
+              {applying
+                ? <><div style={{ width:13, height:13, border:'2px solid rgba(255,255,255,.3)', borderTopColor:'white', borderRadius:'50%', animation:'spin .75s linear infinite' }} />{progress || 'Applying…'}</>
+                : `🖼 Apply ${logos.filter(l=>l.file).length} logo${logos.filter(l=>l.file).length>1?'s':''} to video`
+              }
+            </button>
+          </>
+        )}
+
+        {resultUrl && (
+          <div style={{ display:'flex', flexDirection:'column', gap:7 }}>
+            <div style={{ fontSize:11, color:'#16a34a', background:'#f0fdf4', border:'1px solid #86efac', borderRadius:6, padding:'6px 10px', fontWeight:600 }}>
+              ✓ {logos.filter(l=>l.file).length} logo{logos.filter(l=>l.file).length>1?'s':''} applied successfully
+            </div>
+            <a href={resultUrl} download target="_blank" rel="noreferrer"
+              style={{ width:'100%', background:'#16a34a', color:'white', border:'none', borderRadius:10, fontSize:13, fontWeight:600, padding:11, cursor:'pointer', textDecoration:'none', display:'flex', alignItems:'center', justifyContent:'center', gap:5 }}
+            >↓ Download with logo</a>
+            <button
+              onClick={() => { setResultUrl(null); setError(null); }}
+              style={{ width:'100%', background:'transparent', border:'1px solid var(--border)', borderRadius:10, fontSize:12, padding:10, cursor:'pointer', color:'var(--ink2)' }}
+            >Change logo settings</button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
 export default function App() {
   const [templates,       setTemplates]       = useState([]);
   const [sel,             setSel]             = useState(null);
@@ -1027,6 +1327,11 @@ export default function App() {
   const [voiceData,    setVoiceData]    = useState(null);  // result from /api/voice/process
   const [voiceStatus,  setVoiceStatus]  = useState("idle"); // idle|uploading|processing|done|error
   const [voiceWarnings,setVoiceWarnings]= useState([]);
+  const [showLanding, setShowLanding] = useState(true);
+  const [logos, setLogos] = useState([
+  { file: null, preview: null, x: 5, y: 5, scale: 15, startSec: 0, endSec: '' }
+]);
+
 
   const vidRef = useRef(null);
   const upload = useUpload();
@@ -1069,13 +1374,50 @@ export default function App() {
         const d = await r.json();
         setJobSt(d);
         if (d.status==="done") {
-          clearInterval(iv); setRState("done");
-          const url = d.outputUrl
-  ? `${API}${d.outputUrl}`
-  : `${API}/outputs/${jobId}.mp4`;
-          setOutUrl(url);
-          // if (vidRef.current) { vidRef.current.src=url; vidRef.current.load(); }
-          toast2("✓ Video ready — download below");
+  clearInterval(iv);
+  const url = d.outputUrl
+    ? `${API}${d.outputUrl}`
+    : `${API}/outputs/${jobId}.mp4`;
+  
+  // Auto-apply logos if any uploaded
+  const activeLogos = logos.filter(l => l.file);
+  if (activeLogos.length > 0) {
+    setRState("applying_logos");
+    toast2("Applying logos…");
+    let currentJobId = d.jobId || jobId;
+    let finalUrl = url;
+    try {
+      for (let i = 0; i < activeLogos.length; i++) {
+        const logo = activeLogos[i];
+        const fd = new FormData();
+        fd.append('logo',     logo.file);
+        fd.append('jobId',    currentJobId);
+        fd.append('x',        logo.x ?? 5);
+        fd.append('y',        logo.y ?? 5);
+        fd.append('scale',    logo.scale ?? 15);
+        fd.append('startSec', logo.startSec ?? 0);
+        fd.append('endSec',   logo.endSec === '' ? -1 : logo.endSec);
+        const r = await fetch(`${API}/api/logo-overlay`, { method:'POST', body:fd });
+        const ld = await r.json();
+        if (!r.ok || !ld.success) throw new Error(ld.error || 'Logo failed');
+        currentJobId = ld.outputJobId || currentJobId + '_logo';
+        finalUrl = `${API}${ld.outputUrl}`;
+      }
+      setOutUrl(finalUrl);
+      setRState("done");
+      toast2("✓ Video ready with logo — download below");
+    } catch(e) {
+      // Logo failed — still give original video
+      setOutUrl(url);
+      setRState("done");
+      toast2("✓ Video ready (logo apply failed)");
+    }
+  } else {
+    setRState("done");
+    setOutUrl(url);
+    toast2("✓ Video ready — download below");
+  }
+
         } else if (d.status==="error"||d.status==="failed") {
           clearInterval(iv); setRState("error"); toast2("Render failed");
         }
@@ -1308,30 +1650,52 @@ export default function App() {
   };
 
   const reset = () => { setChunks([{}]); setChunk(0); setRState("idle"); setJobId(null); setOutUrl(null); setJobSt(null); setHighlightedKeys(new Set()); };
-  const open  = t => { setSel(t); reset(); setTab("photos"); };
+  const open  = t => { setSel(t); reset(); setTab("photos"); setLogos([{ file: null, preview: null, x: 5, y: 5, scale: 15, startSec: 0, endSec: '' }]); };
   const back  = () => { setSel(null); reset(); };
 
   const inEditor  = !!sel;
+  if (showLanding) return <LandingPage onEnter={() => setShowLanding(false)} />;
   const statusTxt = rState==="rendering"?(jobSt?.stage||"Rendering…"):rState==="done"?"Done":rState==="error"?"Error":"Ready";
 
   return (
     <>
       <style>{CSS}</style>
 
-      {/* Topbar */}
+      {/* Topbar — REPLACE the entire topbar div in App.jsx with this */}
       <div style={{height:52,display:"flex",alignItems:"center",padding:"0 18px",gap:10,background:"var(--white)",borderBottom:"1px solid var(--border)",position:"fixed",top:0,left:0,right:0,zIndex:50}}>
-        <div style={{fontFamily:"Syne,sans-serif",fontWeight:800,fontSize:18,letterSpacing:"-.03em",flexShrink:0}}>
-          Motion<em style={{color:"#ff4500",fontStyle:"normal"}}>AI</em>
-        </div>
-        <div style={{width:1,height:18,background:"var(--border)"}} />
+        
+        {/* Logo — always clickable to go back to landing */}
+        <div
+          onClick={() => setShowLanding(true)}
+          style={{fontFamily:"'Bebas Neue',sans-serif",fontWeight:400,fontSize:20,letterSpacing:".1em",cursor:"pointer",flexShrink:0}}
+        >Aootra</div>
+
+        <div style={{width:1,height:18,background:"var(--border)",flexShrink:0}} />
+
+        {/* Back button — shows in BOTH template picker and editor */}
+        {!inEditor && (
+          <div
+            onClick={() => setShowLanding(true)}
+            style={{width:32,height:32,borderRadius:8,border:"1px solid var(--border)",background:"var(--bg)",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",flexShrink:0,transition:"all .12s"}}
+            onMouseEnter={e=>{e.currentTarget.style.background="var(--ink)";e.currentTarget.style.borderColor="var(--ink)";e.currentTarget.querySelector('span').style.color="white";}}
+            onMouseLeave={e=>{e.currentTarget.style.background="var(--bg)";e.currentTarget.style.borderColor="var(--border)";e.currentTarget.querySelector('span').style.color="var(--ink2)";}}
+          >
+            <span style={{fontSize:16,color:"var(--ink2)",lineHeight:1}}>←</span>
+          </div>
+        )}
+
         {inEditor && (
-  <div onClick={back} style={{width:32,height:32,borderRadius:8,border:"1px solid var(--border)",background:"var(--bg)",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",flexShrink:0,transition:"all .12s"}}
-    onMouseEnter={e=>{e.currentTarget.style.background="var(--ink)";e.currentTarget.style.borderColor="var(--ink)";e.currentTarget.querySelector('span').style.color="white";}}
-    onMouseLeave={e=>{e.currentTarget.style.background="var(--bg)";e.currentTarget.style.borderColor="var(--border)";e.currentTarget.querySelector('span').style.color="var(--ink2)";}}
-  >
-    <span style={{fontSize:16,color:"var(--ink2)",lineHeight:1}}>←</span>
-  </div>
-)}
+          <div
+            onClick={back}
+            style={{width:32,height:32,borderRadius:8,border:"1px solid var(--border)",background:"var(--bg)",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",flexShrink:0,transition:"all .12s"}}
+            onMouseEnter={e=>{e.currentTarget.style.background="var(--ink)";e.currentTarget.style.borderColor="var(--ink)";e.currentTarget.querySelector('span').style.color="white";}}
+            onMouseLeave={e=>{e.currentTarget.style.background="var(--bg)";e.currentTarget.style.borderColor="var(--border)";e.currentTarget.querySelector('span').style.color="var(--ink2)";}}
+          >
+            <span style={{fontSize:16,color:"var(--ink2)",lineHeight:1}}>←</span>
+          </div>
+        )}
+
+        {/* Breadcrumb */}
         {inEditor ? (
           <>
             <span onClick={back} style={{fontSize:12,fontWeight:500,color:"var(--ink3)",cursor:"pointer"}}>Templates</span>
@@ -1341,7 +1705,10 @@ export default function App() {
         ) : (
           <span style={{fontSize:12,fontWeight:500,color:"var(--ink)"}}>Templates</span>
         )}
+
         <div style={{flex:1}} />
+
+        {/* Status dot */}
         <div style={{display:"flex",alignItems:"center",gap:5,fontSize:11,fontWeight:500,color:"var(--ink3)"}}>
           <div style={{width:5,height:5,borderRadius:"50%",background:rState==="rendering"?"#16a34a":rState==="error"?"#dc2626":"var(--ink3)",animation:rState==="rendering"?"blink 1.1s infinite":"none"}} />
           {statusTxt}
@@ -1428,6 +1795,7 @@ export default function App() {
       pct = 25; label = "Processing…"; sub = "After Effects is running";
     }
   }
+  
 
   return (
     <div style={{
@@ -1505,7 +1873,7 @@ export default function App() {
           <div style={{width:390,flexShrink:0,display:"flex",flexDirection:"column",background:"var(--white)",borderLeft:"1px solid var(--border)",overflow:"hidden"}}>
             {/* tab bar */}
             <div style={{display:"flex",alignItems:"center",padding:"0 12px",borderBottom:"1px solid var(--border)",height:44,gap:3,flexShrink:0}}>
-              {[{id:"photos",label:`Photos (${slots.length})`},{id:"text",label:`Text (${extraText.length})`}].map(({id,label})=>(
+              {[{id:"photos",label:`Photos (${slots.length})`},{id:"text",label:`Text (${extraText.length})`},{id:"logos",label:"Logos"}].map(({id,label})=>(
                 <button key={id} onClick={()=>setTab(id)} style={{padding:"5px 12px",borderRadius:7,fontSize:12,fontWeight:500,cursor:"pointer",border:"none",background:tab===id?"var(--ink)":"transparent",color:tab===id?"white":"var(--ink2)",transition:"all .1s"}}>{label}</button>
               ))}
               <div style={{flex:1}} />
@@ -1665,11 +2033,21 @@ export default function App() {
 ))}
                 </>
               )}
+              {tab==="logos" && (
+  <LogosTab
+    logos={logos}
+    setLogos={setLogos}
+    rState={rState}
+    jobId={jobId}
+    API={API}
+  />
+)}
 
               {/* TEXT TAB */}
               {tab==="text" && (
                 <>
                   {extraText.length===0 && <div style={{padding:"24px 0",textAlign:"center",color:"var(--ink3)",fontSize:12}}>No standalone text fields.</div>}
+
                   {Object.entries(textGroups).map(([grp,fields])=>(
                     <div key={grp}>
                       <div style={{fontSize:9,fontWeight:700,letterSpacing:".1em",textTransform:"uppercase",color:"var(--ink3)",padding:"12px 2px 6px",borderBottom:"1px solid var(--border)",marginBottom:6}}>{clean(grp)}</div>
@@ -1736,12 +2114,13 @@ export default function App() {
                   Rendering…
                 </button>
               )}
-              {rState==="done" && (
-                <div style={{display:"flex",gap:7}}>
-                  <a href={outUrl} download target="_blank" rel="noreferrer" style={{flex:1,background:"#16a34a",border:"none",borderRadius:"10px",fontFamily:"Inter,sans-serif",fontSize:12,fontWeight:600,padding:11,cursor:"pointer",color:"white",textDecoration:"none",display:"flex",alignItems:"center",justifyContent:"center",gap:5}}>↓ Download MP4</a>
-                  <button onClick={reset} style={{flex:1,background:"transparent",border:"1px solid var(--border)",borderRadius:"10px",fontFamily:"Inter,sans-serif",fontSize:12,fontWeight:500,padding:11,cursor:"pointer",color:"var(--ink2)"}}>Render again</button>
-                </div>
-              )}
+              {rState==="applying_logos" && (
+  <button disabled style={{width:"100%",background:"#7c3aed",opacity:.8,color:"white",border:"none",borderRadius:"10px",fontFamily:"Syne,sans-serif",fontSize:14,fontWeight:800,padding:13,cursor:"not-allowed",display:"flex",alignItems:"center",justifyContent:"center",gap:8}}>
+    <div style={{width:14,height:14,border:"2px solid rgba(255,255,255,.3)",borderTopColor:"white",borderRadius:"50%",animation:"spin .75s linear infinite"}} />
+    Applying logos…
+  </button>
+)}
+              {/* ADD THIS LINE after the done buttons div */}
               {rState==="error" && (
                 <div style={{display:"flex",gap:7}}>
                   <button onClick={startRender} style={{flex:2,background:"#dc2626",color:"white",border:"none",borderRadius:"10px",fontFamily:"Syne,sans-serif",fontSize:13,fontWeight:800,padding:12,cursor:"pointer"}}>Retry →</button>

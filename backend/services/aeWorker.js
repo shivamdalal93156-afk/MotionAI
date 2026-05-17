@@ -128,7 +128,6 @@ function buildJSX(job, templateConfig, jobDir) {
       return;
     }
 
-    // Find target comp by name
     var targetComp = null;
     if ('${safeCompName}' !== '') {
       for (var c = 1; c <= app.project.numItems; c++) {
@@ -140,10 +139,7 @@ function buildJSX(job, templateConfig, jobDir) {
       }
     }
 
-    // REPLACE the comp_inject block in aeWorker.js buildJSX imageLines with this.
-// Sharp has already resized the image to exact slotW x slotH before AE runs.
-// So just add the layer at 100% scale centered — no Math.max/min needed.
-
+    // ── TYPE: comp_inject ────────────────────────────────────────
     if ('${injType}' === 'comp_inject') {
       if (!targetComp) {
         log('IMAGE MISS (comp_inject): comp "${safeCompName}" not found');
@@ -158,12 +154,10 @@ function buildJSX(job, templateConfig, jobDir) {
         var srcW  = newFootage.width;
         var srcH  = newFootage.height;
 
-        // Image has been pre-resized by sharp to exact comp dimensions.
-        // Just center it at 100% scale — no fitting math needed.
-        // If for any reason dimensions differ (sharp failed), fall back to cover scale.
+        // Image pre-resized by sharp to exact comp dimensions — place at 100%.
+        // If dimensions differ (sharp failed), fall back to cover scale.
         var scale = 100;
         if (srcW > 0 && srcH > 0 && (srcW !== compW || srcH !== compH)) {
-          // Fallback: sharp resize didn't run — use cover scale
           scale = Math.max((compW / srcW) * 100, (compH / srcH) * 100);
           log('IMAGE WARN (comp_inject): size mismatch, using cover scale ' + scale.toFixed(1) + '%');
         }
@@ -175,28 +169,15 @@ function buildJSX(job, templateConfig, jobDir) {
         newLayer.outPoint  = targetComp.duration;
         newLayer.moveToEnd();
 
-        log('IMAGE OK (comp_inject): "${safeCompName}" ' +
-            'src=' + srcW + 'x' + srcH +
-            ' comp=' + compW + 'x' + compH +
-            ' scale=' + scale.toFixed(1) + '%');
+        log('IMAGE OK (comp_inject): "${safeCompName}" src=' + srcW + 'x' + srcH +
+            ' comp=' + compW + 'x' + compH + ' scale=' + scale.toFixed(1) + '%');
       } catch(e) {
         log('IMAGE FAIL (comp_inject): ' + e.toString());
       }
       return;
     }
-      
-    // ─────────────────────────────────────────────────────────────────────────────
-// REPLACE the entire solid_replace block in aeWorker.js buildJSX imageLines
-// with this. The image has already been resized to the exact slot dimensions
-// by imageResizer.js before AE runs, so zero fitting math is needed here.
-// ─────────────────────────────────────────────────────────────────────────────
 
-    // ─────────────────────────────────────────────────────────────────────────────
-// REPLACE the entire solid_replace block in aeWorker.js buildJSX imageLines
-// with this. The image has already been resized to the exact slot dimensions
-// by imageResizer.js before AE runs, so zero fitting math is needed here.
-// ─────────────────────────────────────────────────────────────────────────────
-
+    // ── TYPE: solid_replace ──────────────────────────────────────
     if ('${injType}' === 'solid_replace') {
       if (!targetComp) {
         log('IMAGE MISS (solid_replace): comp "${safeCompName}" not found');
@@ -206,18 +187,12 @@ function buildJSX(job, templateConfig, jobDir) {
         var importOpts  = new ImportOptions(imgFile);
         var newFootage  = app.project.importFile(importOpts);
 
-        // Find the layer in this comp whose SOURCE is the named solid.
-        // The layer is named [Photo_01] (with brackets) — it links to
-        // the Photo_01 solid in the project panel.
-        // We match by layer.source.name === layerName from config.
         var replaced = false;
         for (var L = 1; L <= targetComp.numLayers; L++) {
           var lyr = targetComp.layer(L);
           try {
             if (lyr.source instanceof FootageItem &&
                 lyr.source.name === '${layer.layerName}') {
-              // replaceSource: swaps footage, keeps all expressions,
-              // position, scale, mask — template handles everything itself.
               lyr.replaceSource(newFootage, false);
               log('IMAGE OK (solid_replace): layer "' + lyr.name +
                   '" source replaced -> "${safeImgPath}"');
@@ -230,16 +205,13 @@ function buildJSX(job, templateConfig, jobDir) {
         }
 
         if (!replaced) {
-          // Fallback: try replacing the solid in the project panel directly.
-          // This works when the layer name doesn't match source name exactly.
           for (var pi = 1; pi <= app.project.numItems; pi++) {
             var pItem = app.project.item(pi);
             if (pItem instanceof FootageItem &&
                 pItem.name === '${layer.layerName}') {
               try {
                 pItem.replace(imgFile);
-                log('IMAGE OK (solid_replace fallback): project item "' +
-                    '${layer.layerName}' + '" replaced -> "${safeImgPath}"');
+                log('IMAGE OK (solid_replace fallback): project item "${layer.layerName}" replaced');
                 replaced = true;
               } catch(pe) {
                 log('IMAGE FAIL (solid_replace fallback): ' + pe.toString());
@@ -250,10 +222,8 @@ function buildJSX(job, templateConfig, jobDir) {
         }
 
         if (!replaced) {
-          log('IMAGE MISS (solid_replace): no layer or project item found ' +
-              'for "${layer.layerName}" in "${safeCompName}"');
+          log('IMAGE MISS (solid_replace): no layer or project item found for "${layer.layerName}"');
         }
-
       } catch(e) {
         log('IMAGE FAIL (solid_replace): ' + e.toString());
       }
@@ -261,7 +231,6 @@ function buildJSX(job, templateConfig, jobDir) {
     }
 
     // ── TYPE: project_replace ────────────────────────────────────
-    // Replace footage item at project level by itemName
     if ('${injType}' === 'project_replace') {
       var itemName = '${safeItemName}';
       if (itemName === '') {
@@ -286,48 +255,41 @@ function buildJSX(job, templateConfig, jobDir) {
     }
 
     // ── TYPE: replace (default) ──────────────────────────────────
-    // Find footage layer inside comp (recursively) and replace it
     function autoFit(lyr, comp) {
-  try {
-    var cW = comp.width, cH = comp.height;
-    var sW = lyr.source.width, sH = lyr.source.height;
-    if (sW <= 0 || sH <= 0) return;
+      try {
+        var cW = comp.width, cH = comp.height;
+        var sW = lyr.source.width, sH = lyr.source.height;
+        if (sW <= 0 || sH <= 0) return;
+        var slotW = cW, slotH = cH;
+        try {
+          var masks = lyr.property('Masks');
+          if (masks && masks.numProperties > 0) {
+            var mask  = masks.property(1);
+            var shape = mask.property('Mask Path').value;
+            var pts   = shape.vertices;
+            var minX  = pts[0][0], maxX = pts[0][0];
+            var minY  = pts[0][1], maxY = pts[0][1];
+            for (var mi = 1; mi < pts.length; mi++) {
+              if (pts[mi][0] < minX) minX = pts[mi][0];
+              if (pts[mi][0] > maxX) maxX = pts[mi][0];
+              if (pts[mi][1] < minY) minY = pts[mi][1];
+              if (pts[mi][1] > maxY) maxY = pts[mi][1];
+            }
+            slotW = maxX - minX;
+            slotH = maxY - minY;
+            log('AUTOFIT: using mask bounds ' + Math.round(slotW) + 'x' + Math.round(slotH));
+          }
+        } catch(me) {}
+        var scale = Math.max((slotW / sW) * 100, (slotH / sH) * 100);
+        lyr.property('Anchor Point').setValue([sW / 2, sH / 2]);
+        lyr.property('Position').setValue([cW / 2, cH / 2]);
+        lyr.property('Scale').setValue([scale, scale]);
+        log('AUTOFIT: ' + Math.round(sW) + 'x' + Math.round(sH) +
+            ' -> slot ' + Math.round(slotW) + 'x' + Math.round(slotH) +
+            ' scale=' + scale.toFixed(1) + '%');
+      } catch(e) { log('AUTOFIT SKIP: ' + e.toString()); }
+    }
 
-    // Step 1: find the actual visible slot size
-    // Check if this layer has a mask — if so, use mask bounding box
-    var slotW = cW, slotH = cH;
-    try {
-      var masks = lyr.property('Masks');
-      if (masks && masks.numProperties > 0) {
-        var mask = masks.property(1);
-        var shape = mask.property('Mask Path').value;
-        var pts = shape.vertices;
-        var minX = pts[0][0], maxX = pts[0][0];
-        var minY = pts[0][1], maxY = pts[0][1];
-        for (var mi = 1; mi < pts.length; mi++) {
-          if (pts[mi][0] < minX) minX = pts[mi][0];
-          if (pts[mi][0] > maxX) maxX = pts[mi][0];
-          if (pts[mi][1] < minY) minY = pts[mi][1];
-          if (pts[mi][1] > maxY) maxY = pts[mi][1];
-        }
-        slotW = maxX - minX;
-        slotH = maxY - minY;
-        log('AUTOFIT: using mask bounds ' + Math.round(slotW) + 'x' + Math.round(slotH));
-      }
-    } catch(me) {}
-
-    // Step 2: cover scale — fill the slot completely, no empty space
-    var scale = Math.max((slotW / sW) * 100, (slotH / sH) * 100);
-
-    // Step 3: center in comp
-    lyr.property('Anchor Point').setValue([sW / 2, sH / 2]);
-    lyr.property('Position').setValue([cW / 2, cH / 2]);
-    lyr.property('Scale').setValue([scale, scale]);
-    log('AUTOFIT: ' + Math.round(sW) + 'x' + Math.round(sH) +
-        ' -> slot ' + Math.round(slotW) + 'x' + Math.round(slotH) +
-        ' scale=' + scale.toFixed(1) + '%');
-  } catch(e) { log('AUTOFIT SKIP: ' + e.toString()); }
-}
     function tryReplace(lyr, comp) {
       try { lyr.replaceSource(imgFile, false); autoFit(lyr, comp); return true; } catch(e) {}
       try { lyr.source.replace(imgFile);       autoFit(lyr, comp); return true; } catch(e) {}
@@ -360,7 +322,6 @@ function buildJSX(job, templateConfig, jobDir) {
 
     if (targetComp && searchInComp(targetComp, 1)) return;
 
-    // Fallback: project-level item name search
     if ('${safeItemName}' !== '') {
       for (var i = 1; i <= app.project.numItems; i++) {
         var projItem = app.project.item(i);
@@ -377,8 +338,8 @@ function buildJSX(job, templateConfig, jobDir) {
     log('IMAGE MISS: all strategies failed for "${safeCompName}"');
   })();`;
   }).join('\n');
-  // Build country toggle lines
-// Build expression control lines (color, checkbox, slider)
+
+  // ── Expression controls ───────────────────────────────────────
   const exprLines = (templateConfig.expressionControls || []).map(ec => {
     const value = inputData[ec.key];
     if (value === undefined || value === null || value === '') {
@@ -390,7 +351,6 @@ function buildJSX(job, templateConfig, jobDir) {
     const ecType     = ec.type || 'unknown';
 
     if (ecType === 'color') {
-      // value is hex string like "#ff7b00"
       const hex = String(value).replace('#', '');
       const r = parseInt(hex.substring(0,2),16)/255;
       const g = parseInt(hex.substring(2,4),16)/255;
@@ -513,184 +473,69 @@ function buildJSX(job, templateConfig, jobDir) {
     return `log('EXPR SKIP: unsupported type "${ecType}" for key "${ec.key}"');`;
   }).join('\n');
 
-  // Build country toggle + marker movement lines
-  // ─────────────────────────────────────────────────────────────────────────────
-// REPLACE the entire countryLines builder in aeWorker.js with this.
-// Adds automatic globe angle calculation from country pixel coordinates.
-// Works for any equirectangular map projection template.
-// ─────────────────────────────────────────────────────────────────────────────
+  // ── Country lines ─────────────────────────────────────────────
+  // Calibration: two known pixel→angle mappings stored in config.
+  // point01Time / point02Time: comp marker times from scanner.
+  // Formula derived from these two points — works for any equirectangular map template.
+  const mapCal    = templateConfig.mapCalibration || null;
+  const pt01Time  = templateConfig.point01Time    || 0.3333;
+  const pt02Time  = templateConfig.point02Time    || 8.3333;
 
-  const countryLines = (templateConfig.countryLayers || []).map(cl => {
+  const countryLines = (templateConfig.countryLayers || []).map((cl, idx) => {
     const selectedCountry = inputData[cl.key];
     if (!selectedCountry) return `log('COUNTRY SKIP: key "${cl.key}" not in inputData');`;
 
-    const safeComp        = cl.compName.replace(/'/g, "\\'");
-    const safeMarkerComp  = (cl.markerComp  || '').replace(/'/g, "\\'");
-    const safeMarkerLayer = (cl.markerLayer || '').replace(/'/g, "\\'");
-    const safeCountry     = String(selectedCountry).replace(/'/g, "\\'");
-    const suffix          = ' Outlines';
+    const safeComp     = (cl.compName           || '').replace(/'/g, "\\'");
+    const safeAComp    = (cl.angleControlComp    || 'Main').replace(/'/g, "\\'");
+    const safeALayer   = (cl.angleControlLayer   || 'Controller').replace(/'/g, "\\'");
+    const safeXSlider  = (cl.pointXSlider        || '').replace(/'/g, "\\'");
+    const safeYSlider  = (cl.pointYSlider        || '').replace(/'/g, "\\'");
+    const safeCountry  = String(selectedCountry).replace(/'/g, "\\'");
 
-    // Get coordinates from countryCoordinates in config
+    // Which marker time: country_1 uses point01Time, country_2 uses point02Time
+    const markerTime   = (idx === 0) ? pt01Time : pt02Time;
+
+    // Country coordinates from config
     const coords = templateConfig.countryCoordinates || {};
     const coord  = coords[selectedCountry] || null;
 
-    // ── Marker movement ───────────────────────────────────────────────────────
-    const moveMarker = (coord && cl.markerComp && cl.markerLayer)
-      ? `
-    if ('${safeMarkerComp}' !== '' && '${safeMarkerLayer}' !== '') {
-      for (var mc = 1; mc <= app.project.numItems; mc++) {
-        var mComp = app.project.item(mc);
-        if (!(mComp instanceof CompItem)) continue;
-        if (mComp.name !== '${safeMarkerComp}') continue;
-        for (var ml = 1; ml <= mComp.numLayers; ml++) {
-          var mLyr = mComp.layer(ml);
-          if (mLyr.name !== '${safeMarkerLayer}') continue;
-          try {
-            mLyr.property('Position').setValue([${coord.x}, ${coord.y}]);
-            log('MARKER MOVED: "${safeMarkerLayer}" -> [${coord.x}, ${coord.y}] for "${safeCountry}"');
-          } catch(e) { log('MARKER FAIL: ' + e.toString()); }
-          break;
-        }
-        break;
-      }
-    }`
-      : `log('MARKER SKIP: no coords for "${safeCountry}"');`;
-
-    // ── Globe angle calculation ───────────────────────────────────────────────
-    // For equirectangular map projections (used by virtually all AE globe templates):
-    //   Longitude = (centerX / mapCompWidth)  * 360 - 180  → drives Angle Y
-    //   Latitude  = (centerY / mapCompHeight) * 180 - 90   → drives Angle X (inverted)
-    //
-    // The angle controller comp dimensions come from the toggle group's comp.
-    // We use the mapCompW/mapCompH from the countryCoordinates source comp.
-    // If not available in config, fall back to detecting from the comp itself in JSX.
-
-    const mapCompW = cl.mapCompW || templateConfig.mapCompW || 0;
-    const mapCompH = cl.mapCompH || templateConfig.mapCompH || 0;
-
-    // Pre-calculate angles in Node.js if we have the dimensions
+    // Calculate Angle X/Y using calibration formula
     let angleX = null, angleY = null;
-    if (coord && mapCompW > 0 && mapCompH > 0) {
-      angleY = ((coord.x / mapCompW) * 360 - 180).toFixed(4);   // longitude
-      angleX = -((coord.y / mapCompH) * 180 - 90).toFixed(4);   // latitude inverted
+    if (coord && mapCal) {
+      const cal    = mapCal;
+      const slopeY = (cal.p2.angleY - cal.p1.angleY) / (cal.p2.x - cal.p1.x);
+      const offY   = cal.p1.angleY - slopeY * cal.p1.x;
+      const slopeX = (cal.p2.angleX - cal.p1.angleX) / (cal.p2.y - cal.p1.y);
+      const offX   = cal.p1.angleX - slopeX * cal.p1.y;
+      angleY = (offY   + slopeY * coord.x).toFixed(4);
+      angleX = (offX   + slopeX * coord.y).toFixed(4);
     }
 
-    // Build the angle injection JSX
-    // This sets Angle X and Angle Y on any layer that has angle controls
-    // matching keywords 'angle x', 'angle y' — works for any template
-    const setAngles = (coord && cl.angleControlComp && cl.angleControlLayer)
-      ? (() => {
-          const safeAComp  = cl.angleControlComp.replace(/'/g, "\\'");
-          const safeALayer = cl.angleControlLayer.replace(/'/g, "\\'");
-
-          // If we have pre-calculated angles, use them directly
-          // Otherwise calculate inside JSX from country pixel position
-          if (angleX !== null && angleY !== null) {
-            return `
-    // Set globe angles for "${safeCountry}"
-    (function() {
-      for (var ac = 1; ac <= app.project.numItems; ac++) {
-        var aComp = app.project.item(ac);
-        if (!(aComp instanceof CompItem)) continue;
-        if (aComp.name !== '${safeAComp}') continue;
-        for (var al = 1; al <= aComp.numLayers; al++) {
-          var aLyr = aComp.layer(al);
-          if (aLyr.name !== '${safeALayer}') continue;
-          var afx = aLyr.property('Effects');
-          if (!afx) break;
-          for (var af = 1; af <= afx.numProperties; af++) {
-            var aef = afx.property(af);
-            var aefName = '';
-            try { aefName = aef.name.toLowerCase(); } catch(e) {}
-            if (aefName.indexOf('angle x') !== -1 || aefName === 'angle x') {
-              try { aef.property(1).setValue(${angleX}); log('ANGLE X set: ${angleX} for "${safeCountry}"'); } catch(e) { log('ANGLE X fail: ' + e.toString()); }
-            }
-            if (aefName.indexOf('angle y') !== -1 || aefName === 'angle y') {
-              try { aef.property(1).setValue(${angleY}); log('ANGLE Y set: ${angleY} for "${safeCountry}"'); } catch(e) { log('ANGLE Y fail: ' + e.toString()); }
-            }
-          }
-          break;
-        }
-        break;
-      }
-    })();`;
-          } else {
-            // No pre-calculated angles — calculate inside JSX from map comp dimensions
-            return `
-    // Set globe angles dynamically for "${safeCountry}"
-    (function() {
-      // Find the map comp to get its dimensions for angle calculation
-      var mapCompW = 0, mapCompH = 0;
-      for (var mc2 = 1; mc2 <= app.project.numItems; mc2++) {
-        var mc2Item = app.project.item(mc2);
-        if (mc2Item instanceof CompItem && mc2Item.name === '${safeMarkerComp}') {
-          mapCompW = mc2Item.width;
-          mapCompH = mc2Item.height;
-          break;
-        }
-      }
-      if (mapCompW === 0 || mapCompH === 0) {
-        log('ANGLE SKIP: could not find map comp dimensions for "${safeMarkerComp}"');
-        return;
-      }
-      var countryX = ${coord ? coord.x : 0};
-      var countryY = ${coord ? coord.y : 0};
-      var calcAngleY =  (countryX / mapCompW) * 360 - 180;
-      var calcAngleX = -((countryY / mapCompH) * 180 - 90);
-
-      for (var ac = 1; ac <= app.project.numItems; ac++) {
-        var aComp = app.project.item(ac);
-        if (!(aComp instanceof CompItem)) continue;
-        if (aComp.name !== '${safeAComp}') continue;
-        for (var al = 1; al <= aComp.numLayers; al++) {
-          var aLyr = aComp.layer(al);
-          if (aLyr.name !== '${safeALayer}') continue;
-          var afx = aLyr.property('Effects');
-          if (!afx) break;
-          for (var af = 1; af <= afx.numProperties; af++) {
-            var aef = afx.property(af);
-            var aefName = '';
-            try { aefName = aef.name.toLowerCase(); } catch(e) {}
-            if (aefName.indexOf('angle x') !== -1) {
-              try { aef.property(1).setValue(calcAngleX); log('ANGLE X: ' + calcAngleX.toFixed(2) + ' for "${safeCountry}"'); } catch(e) {}
-            }
-            if (aefName.indexOf('angle y') !== -1) {
-              try { aef.property(1).setValue(calcAngleY); log('ANGLE Y: ' + calcAngleY.toFixed(2) + ' for "${safeCountry}"'); } catch(e) {}
-            }
-          }
-          break;
-        }
-        break;
-      }
-    })();`;
-          }
-        })()
-      : `log('ANGLE SKIP: no angleControlComp/Layer configured for key "${cl.key}"');`;
+    const hasAngles  = (angleX !== null && angleY !== null);
+    const hasSliders = (coord && safeXSlider && safeYSlider);
 
     return `
   (function() {
-    var targetComp = null;
+    // 1. Toggle country outline ON, all others OFF
+    var toggleComp = null;
     for (var ci = 1; ci <= app.project.numItems; ci++) {
-      if (app.project.item(ci) instanceof CompItem && app.project.item(ci).name === '${safeComp}') {
-        targetComp = app.project.item(ci);
-        break;
+      var it = app.project.item(ci);
+      if (it instanceof CompItem && it.name === '${safeComp}') {
+        toggleComp = it; break;
       }
     }
-    if (!targetComp) { log('COUNTRY MISS: comp "${safeComp}" not found'); return; }
+    if (!toggleComp) { log('COUNTRY MISS: comp "${safeComp}" not found'); return; }
 
     var found = false;
-    var suffix = '${suffix}';
-    for (var li = 1; li <= targetComp.numLayers; li++) {
-      var l = targetComp.layer(li);
+    var suffix = ' Outlines';
+    for (var li = 1; li <= toggleComp.numLayers; li++) {
+      var l  = toggleComp.layer(li);
       var ln = l.name;
-      if (ln.length > suffix.length && ln.substring(ln.length - suffix.length) === suffix) {
-        var lnTrimmed = ln.substring(0, ln.length - suffix.length);
-        while (lnTrimmed.length > 0 && lnTrimmed.charAt(lnTrimmed.length-1) === ' ') lnTrimmed = lnTrimmed.substring(0, lnTrimmed.length-1);
-        while (lnTrimmed.length > 0 && lnTrimmed.charAt(0) === ' ') lnTrimmed = lnTrimmed.substring(1);
-        var selected = '${safeCountry}';
-        while (selected.length > 0 && selected.charAt(selected.length-1) === ' ') selected = selected.substring(0, selected.length-1);
-        while (selected.length > 0 && selected.charAt(0) === ' ') selected = selected.substring(1);
-        if (lnTrimmed.toLowerCase() === selected.toLowerCase()) {
+      if (ln.length > suffix.length &&
+          ln.substring(ln.length - suffix.length) === suffix) {
+        var lnBase = ln.substring(0, ln.length - suffix.length).replace(/^\\s+|\\s+$/g, '');
+        var sel    = '${safeCountry}'.replace(/^\\s+|\\s+$/g, '');
+        if (lnBase.toLowerCase() === sel.toLowerCase()) {
           l.enabled = true;
           found = true;
           log('COUNTRY ON: "' + ln + '" in "${safeComp}"');
@@ -699,11 +544,92 @@ function buildJSX(job, templateConfig, jobDir) {
         }
       }
     }
-    if (!found) log('COUNTRY NOT FOUND: "${safeCountry}${suffix}" in "${safeComp}"');
-    ${moveMarker}
-    ${setAngles}
+    if (!found) log('COUNTRY NOT FOUND: "${safeCountry} Outlines" in "${safeComp}"');
+
+    // 2. Set Controller sliders + Angle X/Y
+    var ctrlComp = null;
+    for (var ci2 = 1; ci2 <= app.project.numItems; ci2++) {
+      var it2 = app.project.item(ci2);
+      if (it2 instanceof CompItem && it2.name === '${safeAComp}') {
+        ctrlComp = it2; break;
+      }
+    }
+    if (!ctrlComp) { log('CONTROLLER MISS: comp "${safeAComp}" not found'); return; }
+
+    var ctrlLayer = null;
+    for (var li2 = 1; li2 <= ctrlComp.numLayers; li2++) {
+      if (ctrlComp.layer(li2).name === '${safeALayer}') {
+        ctrlLayer = ctrlComp.layer(li2); break;
+      }
+    }
+    if (!ctrlLayer) { log('CONTROLLER MISS: layer "${safeALayer}" not found'); return; }
+
+    var afx = ctrlLayer.property('Effects');
+    if (!afx) { log('CONTROLLER MISS: no effects on "${safeALayer}"'); return; }
+
+    for (var fi = 1; fi <= afx.numProperties; fi++) {
+      var ef      = afx.property(fi);
+      var efName  = '';
+      try { efName = ef.name; } catch(e) { continue; }
+      var efLower = efName.toLowerCase();
+
+${hasSliders ? `
+      // Point position sliders
+      if (efName === '${safeXSlider}') {
+        try {
+          var spX = ef.property(1);
+          if (spX.numKeys > 0) {
+            // Find keyframe nearest to marker time and update it
+            var nearK = 1;
+            var nearD = Math.abs(spX.keyTime(1) - ${markerTime});
+            for (var k = 2; k <= spX.numKeys; k++) {
+              var d = Math.abs(spX.keyTime(k) - ${markerTime});
+              if (d < nearD) { nearD = d; nearK = k; }
+            }
+            spX.setValueAtKey(nearK, ${coord.x});
+          } else {
+            spX.setValue(${coord.x});
+          }
+          log('SLIDER OK: "${safeXSlider}" = ${coord.x} for "${safeCountry}"');
+        } catch(e) { log('SLIDER FAIL (X): ' + e.toString()); }
+      }
+      if (efName === '${safeYSlider}') {
+        try {
+          var spY = ef.property(1);
+          if (spY.numKeys > 0) {
+            var nearKY = 1;
+            var nearDY = Math.abs(spY.keyTime(1) - ${markerTime});
+            for (var k2 = 2; k2 <= spY.numKeys; k2++) {
+              var d2 = Math.abs(spY.keyTime(k2) - ${markerTime});
+              if (d2 < nearDY) { nearDY = d2; nearKY = k2; }
+            }
+            spY.setValueAtKey(nearKY, ${coord.y});
+          } else {
+            spY.setValue(${coord.y});
+          }
+          log('SLIDER OK: "${safeYSlider}" = ${coord.y} for "${safeCountry}"');
+        } catch(e) { log('SLIDER FAIL (Y): ' + e.toString()); }
+      }` : `      // No point sliders configured for this country slot`}
+
+${hasAngles ? `
+      // Angle X / Angle Y — use setValueAtTime at the marker time
+      // This modifies the existing keyframe AT that time without touching others
+      if (efLower === 'angle x' || efLower.indexOf('angle x') !== -1) {
+        try {
+          ef.property(1).setValueAtTime(${markerTime}, ${angleX});
+          log('ANGLE X OK: ${angleX} for "${safeCountry}" at t=${markerTime}');
+        } catch(e) { log('ANGLE X FAIL: ' + e.toString()); }
+      }
+      if (efLower === 'angle y' || efLower.indexOf('angle y') !== -1) {
+        try {
+          ef.property(1).setValueAtTime(${markerTime}, ${angleY});
+          log('ANGLE Y OK: ${angleY} for "${safeCountry}" at t=${markerTime}');
+        } catch(e) { log('ANGLE Y FAIL: ' + e.toString()); }
+      }` : `      // No calibration data — angle rotation skipped for "${safeCountry}"`}
+    }
   })();`;
   }).join('\n');
+
   const jsx = `
 // MotionAI ExtendScript — Job: ${job.jobId}
 // Generated: ${new Date().toISOString()}
@@ -731,55 +657,9 @@ try {
     app.quit();
   }
   app.beginSuppressDialogs();
-
   app.open(projFile);
-  
-  // Force software rendering (no GPU)
-  
   log('PROJECT OPEN: ' + app.project.numItems + ' items');
   writeHeartbeat();
-  // // ── Resolution normalizer ─────────────────────────────────────
-  // // If render comp is higher than 1920x1080, scale it down
-  // (function() {
-  //   var targetComp = null;
-  //   for (var ci = 1; ci <= app.project.numItems; ci++) {
-  //     var item = app.project.item(ci);
-  //     if (item instanceof CompItem && item.name === '${templateConfig.compName}') {
-  //       targetComp = item;
-  //       break;
-  //     }
-  //   }
-  //   if (!targetComp) { log('RES: render comp not found'); return; }
-
-  //   var origW = targetComp.width;
-  //   var origH = targetComp.height;
-
-  //   if (origW <= 1920 && origH <= 1080) {
-  //     log('RES: already 1080p or lower (' + origW + 'x' + origH + '), no change');
-  //     return;
-  //   }
-
-  //   // Calculate scale to fit within 1920x1080 maintaining aspect ratio
-  //   var scaleW = 1920 / origW;
-  //   var scaleH = 1080 / origH;
-  //   var scale  = scaleW < scaleH ? scaleW : scaleH;
-
-  //   var newW = Math.round(origW * scale);
-  //   var newH = Math.round(origH * scale);
-
-  //   // Round to even numbers (required for video codecs)
-  //   if (newW % 2 !== 0) newW -= 1;
-  //   if (newH % 2 !== 0) newH -= 1;
-
-  //   try {
-  //     targetComp.width  = newW;
-  //     targetComp.height = newH;
-  //     log('RES: scaled from ' + origW + 'x' + origH + ' to ' + newW + 'x' + newH);
-  //   } catch(e) {
-  //     log('RES: could not resize comp: ' + e.toString());
-  //   }
-  // })();
-  // writeHeartbeat();
 
   log('RELINK: scanning for missing footage...');
   for (var i = 1; i <= app.project.numItems; i++) {
@@ -804,16 +684,17 @@ try {
   log('IMAGE: replacing footage items...');
   ${imageLines}
   writeHeartbeat();
+
   log('EXPR: setting expression controls...');
   ${exprLines}
   writeHeartbeat();
 
-  // ── Country Toggle ───────────────────────────────────────────
   log('COUNTRY: setting country visibility...');
   ${countryLines}
   writeHeartbeat();
+
   app.purge(PurgeTarget.ALL_CACHES);
-  
+
   log('SAVE: writing temp AEP...');
   var tempFile = new File('${tempAepPath}');
   app.project.save(tempFile);
@@ -848,33 +729,31 @@ async function runAEInjection(job, templateConfig, jobDir, jobLog) {
   const templateDir  = path.join(templatesDir, job.template);
 
   installTemplateFonts(templateDir, jobLog);
-  // Resize all solid_replace images to exact slot dimensions before AE runs
-const resizedInputData = await resizeAllSlots(job.inputData, templateConfig, jobDir);
-const resizedJob = { ...job, inputData: resizedInputData };
-const { jsxPath, tempAepPath, logPath, heartbeatPath } = buildJSX(resizedJob, templateConfig, jobDir);
+
+  const resizedInputData = await resizeAllSlots(job.inputData, templateConfig, jobDir);
+  const resizedJob = { ...job, inputData: resizedInputData };
+  const { jsxPath, tempAepPath, logPath, heartbeatPath } = buildJSX(resizedJob, templateConfig, jobDir);
 
   jobLog('AE_LAUNCH', { jsxPath });
 
-// Suppress AE font/footage dialogs via prefs before launch
-try {
-  for (const prefsPath of PREFS_PATHS) {
-    if (!fs.existsSync(prefsPath)) continue;
-    const prefsFile = path.join(prefsPath, 'Adobe After Effects 26.0 Prefs.txt');
-    const prefsFile2 = path.join(prefsPath, 'Adobe After Effects 26.2 Prefs.txt');
-    for (const pf of [prefsFile, prefsFile2]) {
-      if (!fs.existsSync(pf)) continue;
-      let content = fs.readFileSync(pf, 'utf8');
-      // Suppress missing font dialog
-      if (!content.includes('"ShowMissingFontDialog"')) {
-        content += '\n"ShowMissingFontDialog" = "0"\n';
-        fs.writeFileSync(pf, content, 'utf8');
-        jobLog('AE_PREFS_FONT_DIALOG_SUPPRESSED', { file: pf });
+  try {
+    for (const prefsPath of PREFS_PATHS) {
+      if (!fs.existsSync(prefsPath)) continue;
+      const prefsFile  = path.join(prefsPath, 'Adobe After Effects 26.0 Prefs.txt');
+      const prefsFile2 = path.join(prefsPath, 'Adobe After Effects 26.2 Prefs.txt');
+      for (const pf of [prefsFile, prefsFile2]) {
+        if (!fs.existsSync(pf)) continue;
+        let content = fs.readFileSync(pf, 'utf8');
+        if (!content.includes('"ShowMissingFontDialog"')) {
+          content += '\n"ShowMissingFontDialog" = "0"\n';
+          fs.writeFileSync(pf, content, 'utf8');
+          jobLog('AE_PREFS_FONT_DIALOG_SUPPRESSED', { file: pf });
+        }
       }
     }
+  } catch(e) {
+    jobLog('AE_PREFS_PATCH_FAIL', { error: e.message });
   }
-} catch(e) {
-  jobLog('AE_PREFS_PATCH_FAIL', { error: e.message });
-}
 
   await killAllAEProcesses();
 
