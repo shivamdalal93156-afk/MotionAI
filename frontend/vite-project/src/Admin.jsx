@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-const TOKEN = "changethis123"; // move to env in production
+const TOKEN = import.meta.env.VITE_ADMIN_TOKEN;
 const API   = "http://localhost:3001";
 
 const STATUS_COLOR = {

@@ -80,7 +80,7 @@ router.post('/action', (req, res) => {
 // GET /admin/limits — see all IP render counts today
 router.get('/limits', (req, res) => {
   // Reuse the rateLimiter's internal store via a fake req/res
-  const fakeReq = { query: { key: process.env.ADMIN_KEY || 'aootra-admin-2026', action: 'list' } };
+  const fakeReq = { query: { key: process.env.ADMIN_TOKEN, action: 'list' } };
   const fakeRes = { json: (data) => res.json(data), status: () => fakeRes };
   rlAdmin(fakeReq, fakeRes);
 });
@@ -89,7 +89,7 @@ router.get('/limits', (req, res) => {
 // body: { action: 'reset'|'block'|'reset-all', ip: 'x.x.x.x' }
 router.post('/limits', (req, res) => {
   const { action, ip } = req.body;
-  const fakeReq = { query: { key: process.env.ADMIN_KEY || 'aootra-admin-2026', action, ip } };
+  const fakeReq = { query: { key: process.env.ADMIN_TOKEN, action, ip } };
   const fakeRes = { json: (data) => res.json(data), status: () => fakeRes };
   rlAdmin(fakeReq, fakeRes);
 });
