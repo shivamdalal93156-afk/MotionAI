@@ -3,7 +3,7 @@
 // Admin reset: GET /api/admin/reset?ip=x.x.x.x&key=YOUR_SECRET
 
 const DAILY_LIMIT = 5;
-const ADMIN_KEY   = process.env.ADMIN_KEY || 'aootra-admin-2026'; // change in .env
+const ADMIN_KEY   = process.env.ADMIN_TOKEN;
 
 // In-memory store: { "ip": { count: 3, date: "2026-05-17" } }
 const store = {};
