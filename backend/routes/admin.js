@@ -5,6 +5,7 @@ const fs   = require('fs');
 const path = require('path');
 const { releaseLock, getQueueStats, readJobFile } = require('../services/jobQueue');
 const { flushOrphanAVIs, runScheduledCleanup } = require('../services/cleanup');
+const { adminRoutes: rlAdmin } = require('../middleware/rateLimiter');
 
 function requireToken(req, res, next) {
   const token = req.query.token || req.headers['x-admin-token'];
@@ -76,5 +77,20 @@ router.post('/action', (req, res) => {
     return res.status(500).json({ error: err.message });
   }
 });
+// GET /admin/limits — see all IP render counts today
+router.get('/limits', (req, res) => {
+  // Reuse the rateLimiter's internal store via a fake req/res
+  const fakeReq = { query: { key: process.env.ADMIN_KEY || 'aootra-admin-2026', action: 'list' } };
+  const fakeRes = { json: (data) => res.json(data), status: () => fakeRes };
+  rlAdmin(fakeReq, fakeRes);
+});
 
+// POST /admin/limits — reset, block an IP
+// body: { action: 'reset'|'block'|'reset-all', ip: 'x.x.x.x' }
+router.post('/limits', (req, res) => {
+  const { action, ip } = req.body;
+  const fakeReq = { query: { key: process.env.ADMIN_KEY || 'aootra-admin-2026', action, ip } };
+  const fakeRes = { json: (data) => res.json(data), status: () => fakeRes };
+  rlAdmin(fakeReq, fakeRes);
+});
 module.exports = router;

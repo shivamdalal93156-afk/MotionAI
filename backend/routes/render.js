@@ -3,6 +3,7 @@ const router  = express.Router();
 const fs      = require('fs');
 const path    = require('path');
 const { createJob } = require('../services/jobQueue');
+const { renderLimiter } = require('../middleware/rateLimiter');
 
 const TEMPLATES_DIR = path.resolve(__dirname, '..', 'templates');
 // GET /api/render/templates — list all available templates with their fields
@@ -57,7 +58,7 @@ cornerRadius: l.cornerRadius || 0,
     res.status(500).json({ error: e.message });
   }
 });
-router.post('/start', (req, res) => {
+router.post('/start',renderLimiter, (req, res) => {
   // Guard against empty body
   if (!req.body || typeof req.body !== 'object') {
     return res.status(400).json({

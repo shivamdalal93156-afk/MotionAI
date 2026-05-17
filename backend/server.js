@@ -6,6 +6,7 @@ const fs         = require('fs');
 const { runPreflight }          = require('./services/preflight');
 const { recoverInterruptedJobs, getQueueStats } = require('./services/jobQueue');
 const { runScheduledCleanup }   = require('./services/cleanup');
+const { renderLimiter, adminRoutes } = require('./middleware/rateLimiter');
 
 const app  = express();
 const PORT = process.env.PORT || 3001;
@@ -47,6 +48,7 @@ app.use('/api/jobs',   require('./routes/jobs'));
 app.use('/api/health', require('./routes/health'));
 app.use('/admin',      require('./routes/admin'));
 app.use('/api/logo-overlay', require('./routes/logoOverlay'));
+
 
 // ── Watchdog (loaded after routes so it can import queue) ────────
 // Inline here — one less file import at startup

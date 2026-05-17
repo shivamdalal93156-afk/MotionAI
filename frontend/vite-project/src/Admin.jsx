@@ -53,9 +53,117 @@ function ActionButton({ label, action, onAction, color = "#3b82f6" }) {
   );
 }
 
+// ── Rate Limiter Section ─────────────────────────────────────────────────────
+function RateLimits() {
+  const [limits, setLimits]   = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [msg, setMsg]         = useState(null);
+
+  const fetchLimits = useCallback(async () => {
+    try {
+      const res = await fetch(`${API}/admin/limits?token=${TOKEN}`, {
+        headers: { "x-admin-token": TOKEN }
+      });
+      const d = await res.json();
+      setLimits(d.active || []);
+    } catch {}
+  }, []);
+
+  useEffect(() => { fetchLimits(); }, [fetchLimits]);
+
+  async function limitAction(action, ip) {
+    setLoading(true);
+    setMsg(null);
+    try {
+      const res = await fetch(`${API}/admin/limits?token=${TOKEN}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-admin-token": TOKEN },
+        body: JSON.stringify({ action, ip }),
+      });
+      const d = await res.json();
+      setMsg(d.message || d.error || "Done");
+      await fetchLimits();
+    } catch (e) {
+      setMsg(`Error: ${e.message}`);
+    }
+    setLoading(false);
+    setTimeout(() => setMsg(null), 3000);
+  }
+
+  return (
+    <div style={{ background: "#111114", border: "1px solid #1e1e24", borderRadius: "10px", padding: "20px", marginBottom: "28px" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "14px" }}>
+        <div style={{ fontSize: "10px", color: "#52525b", letterSpacing: "0.1em" }}>RENDER LIMITS (today)</div>
+        <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+          {msg && <span style={{ fontSize: "11px", color: "#10b981" }}>{msg}</span>}
+          <button onClick={fetchLimits} style={{
+            background: "#1e1e24", border: "1px solid #27272a", borderRadius: "6px",
+            color: "#71717a", fontFamily: "inherit", fontSize: "11px",
+            padding: "4px 10px", cursor: "pointer",
+          }}>↻ Refresh</button>
+          <button onClick={() => limitAction('reset-all')} disabled={loading} style={{
+            background: "#ef444411", border: "1px solid #ef444433", borderRadius: "6px",
+            color: "#ef4444", fontFamily: "inherit", fontSize: "11px",
+            padding: "4px 10px", cursor: "pointer",
+          }}>Reset All</button>
+        </div>
+      </div>
+
+      {limits.length === 0 ? (
+        <div style={{ fontSize: "12px", color: "#3f3f46" }}>No active sessions today</div>
+      ) : (
+        <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+          {limits.map(({ ip, count, remaining }) => (
+            <div key={ip} style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 80px 80px auto auto",
+              alignItems: "center",
+              gap: "12px",
+              padding: "8px 12px",
+              background: "#18181b",
+              borderRadius: "8px",
+              fontSize: "11px",
+            }}>
+              <span style={{ color: "#a1a1aa", fontFamily: "monospace" }}>{ip}</span>
+
+              {/* Usage bar */}
+              <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                <div style={{ flex: 1, background: "#27272a", borderRadius: "3px", height: "4px", overflow: "hidden" }}>
+                  <div style={{
+                    height: "100%", borderRadius: "3px",
+                    background: remaining === 0 ? "#ef4444" : count >= 3 ? "#f59e0b" : "#10b981",
+                    width: `${(count / 5) * 100}%`,
+                    transition: "width 0.3s",
+                  }} />
+                </div>
+              </div>
+
+              <span style={{ color: "#52525b", fontSize: "10px", textAlign: "right" }}>
+                {count}/5 used
+              </span>
+
+              <button onClick={() => limitAction('reset', ip)} disabled={loading} style={{
+                background: "#10b98111", border: "1px solid #10b98133", borderRadius: "5px",
+                color: "#10b981", fontFamily: "inherit", fontSize: "10px",
+                padding: "3px 8px", cursor: "pointer",
+              }}>Unlock</button>
+
+              <button onClick={() => limitAction('block', ip)} disabled={loading} style={{
+                background: "#ef444411", border: "1px solid #ef444433", borderRadius: "5px",
+                color: "#ef4444", fontFamily: "inherit", fontSize: "10px",
+                padding: "3px 8px", cursor: "pointer",
+              }}>Block</button>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function Admin() {
-  const [data, setData]         = useState(null);
-  const [error, setError]       = useState(null);
+  const [data, setData]               = useState(null);
+  const [error, setError]             = useState(null);
   const [lastRefresh, setLastRefresh] = useState(null);
 
   const fetchStats = useCallback(async () => {
@@ -176,6 +284,9 @@ export default function Admin() {
           </div>
         </div>
       </div>
+
+      {/* Rate Limits */}
+      <RateLimits />
 
       {/* Job history */}
       <div style={{ background: "#111114", border: "1px solid #1e1e24", borderRadius: "10px", padding: "20px" }}>
