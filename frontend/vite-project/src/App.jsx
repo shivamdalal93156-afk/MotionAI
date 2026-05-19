@@ -580,128 +580,339 @@ function CropTool({ src, onDone, onCancel, slotW = 1920, slotH = 1080, maskShape
   );
 }
 
+// ─── PASTE THIS ENTIRE BLOCK to replace the existing ImgSlot function ────────
 
-// ─── ImgSlot ──────────────────────────────────────────────────────────────────
-function ImgSlot({ slotId, imgField, textFields, data, onChange, uploadFn, footageBase, highlighted ,videoRef}) {
+const VIDEO_EXTS = ['mp4','mov','avi','webm','mkv','m4v','wmv','flv'];
+
+function isVideoFile(file) {
+  if (!file) return false;
+  if (typeof file === 'string') {
+    // It's a path/url string — check extension
+    const ext = file.split('?')[0].split('.').pop().toLowerCase();
+    return VIDEO_EXTS.includes(ext);
+  }
+  if (file.type && file.type.startsWith('video/')) return true;
+  const ext = (file.name || '').split('.').pop().toLowerCase();
+  return VIDEO_EXTS.includes(ext);
+}
+
+function VideoTrimSlider({ file, trimStart, onChange, templateDuration }) {
+  const [duration, setDuration] = useState(0);
+  const videoRef = useRef(null);
+
+  // Get video duration when file is set
+  useEffect(() => {
+    if (!file) return;
+    const url = typeof file === 'string' ? file : URL.createObjectURL(file);
+    const v = document.createElement('video');
+    v.preload = 'metadata';
+    v.onloadedmetadata = () => {
+      setDuration(v.duration);
+      URL.revokeObjectURL(url);
+    };
+    v.src = url;
+  }, [file]);
+
+  if (!duration || duration <= templateDuration) return null;
+
+  // Max start point — can't start so late that there's not enough video left
+  const maxStart = Math.max(0, duration - templateDuration);
+  const endPoint = Math.min(duration, trimStart + templateDuration);
+
+  return (
+    <div style={{
+      padding: '8px 10px',
+      borderTop: '1px solid var(--border)',
+      background: 'var(--bg)',
+    }}>
+      <div style={{
+        display: 'flex', justifyContent: 'space-between',
+        fontSize: 10, fontWeight: 600, color: 'var(--ink2)',
+        marginBottom: 4,
+      }}>
+        <span>Video trim</span>
+        <span style={{ fontFamily: 'monospace', color: 'var(--ink)' }}>
+          {trimStart.toFixed(1)}s → {endPoint.toFixed(1)}s
+          <span style={{ color: 'var(--ink3)', marginLeft: 4 }}>
+            (using {templateDuration.toFixed(1)}s of {duration.toFixed(1)}s)
+          </span>
+        </span>
+      </div>
+
+      {/* Timeline bar */}
+      <div style={{ position: 'relative', height: 28, marginBottom: 4 }}>
+        {/* Full bar */}
+        <div style={{
+          position: 'absolute', top: 10, left: 0, right: 0,
+          height: 8, borderRadius: 4,
+          background: 'var(--border)',
+        }} />
+
+        {/* Selected range */}
+        <div style={{
+          position: 'absolute', top: 10,
+          left: `${(trimStart / duration) * 100}%`,
+          width: `${(templateDuration / duration) * 100}%`,
+          height: 8, borderRadius: 4,
+          background: '#ff4500',
+          pointerEvents: 'none',
+        }} />
+
+        {/* Range input */}
+        <input
+          type="range"
+          min={0}
+          max={maxStart}
+          step={0.5}
+          value={trimStart}
+          onChange={e => onChange(parseFloat(e.target.value))}
+          style={{
+            position: 'absolute', top: 0, left: 0, right: 0,
+            width: '100%', height: '100%',
+            opacity: 0, cursor: 'pointer', margin: 0,
+          }}
+        />
+      </div>
+
+      <div style={{
+        display: 'flex', justifyContent: 'space-between',
+        fontSize: 9, color: 'var(--ink3)', fontFamily: 'monospace',
+      }}>
+        <span>0s</span>
+        <span style={{ color: '#ff4500', fontWeight: 600 }}>
+          ← drag to choose start point
+        </span>
+        <span>{duration.toFixed(1)}s</span>
+      </div>
+    </div>
+  );
+}
+
+
+function ImgSlot({ slotId, imgField, textFields, data, onChange, uploadFn, footageBase, highlighted, videoRef ,templateDuration}) {
   const [preview,  setPreview]  = useState(null);
   const [cropping, setCropping] = useState(null);
   const [busy,     setBusy]     = useState(false);
   const [prog,     setProg]     = useState(0);
   const [placeholderOk, setPlaceholderOk] = useState(false);
+  const [trimStart, setTrimStart] = useState(0);
+  const rawFileRef = useRef(null);   // stores actual File object for VideoTrimSlider
+
+
 
   const placeholderSrc = imgField.layerName ? `${footageBase}/${imgField.layerName}` : null;
 
   useEffect(() => {
     if (!placeholderSrc) return;
-    fetch(placeholderSrc, { method:"HEAD" }).then(r => { if (r.ok) setPlaceholderOk(true); }).catch(()=>{});
+    fetch(placeholderSrc, { method: "HEAD" })
+      .then(r => { if (r.ok) setPlaceholderOk(true); })
+      .catch(() => {});
   }, [placeholderSrc]);
 
-
+  // ── File selected ──────────────────────────────────────────────────────────
   const onFile = e => {
-  const f = e.target.files?.[0];
-  if (!f) return;
-  setCropping(URL.createObjectURL(f));
-};
-    
-  const onCropDone = async (croppedFile, croppedUrl) => {
-    setCropping(null); setPreview(croppedUrl); setBusy(true); setProg(0);
-    try { onChange(imgField.key, await uploadFn(croppedFile, setProg)); }
-    catch { setPreview(null); }
-    finally { setBusy(false); }
+    const f = e.target.files?.[0];
+    if (!f) return;
+    rawFileRef.current = f;  
+
+
+    if (isVideoFile(f)) {
+      // VIDEO — skip crop, upload directly
+      const objectUrl = URL.createObjectURL(f);
+      setPreview(objectUrl);
+      setBusy(true);
+      setProg(0);
+      uploadFn(f, setProg)
+        .then(path => { onChange(imgField.key, path); })
+        .catch(() => { setPreview(null); })
+        .finally(() => { setBusy(false); });
+    } else {
+      // IMAGE — open crop tool
+      setCropping(URL.createObjectURL(f));
+    }
   };
-  const clear = e => { e.stopPropagation(); setPreview(null); onChange(imgField.key, null); };
+
+  // ── Crop done (image only) ─────────────────────────────────────────────────
+  const onCropDone = async (blob) => {
+    const croppedFile = new File([blob], 'cropped.jpg', { type: 'image/jpeg' });
+    const croppedUrl  = URL.createObjectURL(blob);
+    setCropping(null);
+    setPreview(croppedUrl);
+    setBusy(true);
+    setProg(0);
+    try {
+      onChange(imgField.key, await uploadFn(croppedFile, setProg));
+    } catch {
+      setPreview(null);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const clear = e => {
+  e.stopPropagation();
+  setPreview(null);
+  setTrimStart(0);
+  rawFileRef.current = null;  // ← ADD THIS LINE
+  onChange(imgField.key, null);
+  onChange('videoTrimStart', 0);  // ← ADD THIS LINE
+};
+ const onTrimChange = (val) => {
+  setTrimStart(val);
+  onChange('videoTrimStart', val);
+};
+
   const finalPreview = preview || getDisplayUrl(data[imgField.key]);
+  const finalIsVideo = finalPreview ? isVideoFile({ name: String(data[imgField.key] || finalPreview || '') }) : false;
+
   return (
     <>
-      {cropping && <CropTool
-  src={cropping}
-  onDone={onCropDone}
-  onCancel={() => setCropping(null)}
-  slotW={imgField.slotW || imgField.compW || imgField.w || 1920}
-  slotH={imgField.slotH || imgField.compH || imgField.h || 1080}
-  maskShape={imgField.maskShape || 'rectangle'}
-  cornerRadius={imgField.cornerRadius || 0}
-/>}
-{/* Add the <div here */}
+      {cropping && (
+        <CropTool
+          src={cropping}
+          onDone={onCropDone}
+          onCancel={() => setCropping(null)}
+          slotW={imgField.slotW || imgField.compW || imgField.w || 1920}
+          slotH={imgField.slotH || imgField.compH || imgField.h || 1080}
+          maskShape={imgField.maskShape || 'rectangle'}
+          cornerRadius={imgField.cornerRadius || 0}
+        />
+      )}
+
       <div
         id={slotId}
         style={{
           border: highlighted ? "2px solid #ff4500" : "1.5px solid var(--border)",
-          borderRadius:12, overflow:"hidden",
+          borderRadius: 12,
+          overflow: "hidden",
           background: highlighted ? "#fff5f0" : "var(--white)",
-          transition:"border-color .6s,background .6s",
-          marginBottom:8,
+          transition: "border-color .6s,background .6s",
+          marginBottom: 8,
         }}
-      ></div>
-        {/* header */}
-        <div style={{display:"flex",alignItems:"center",gap:8,padding:"8px 12px",borderBottom:"1px solid var(--border)",background: highlighted?"#fff0e8":"var(--bg)"}}>
-  <div style={{width:24,height:24,borderRadius:6,background:"#ff4500",color:"white",fontSize:10,fontWeight:800,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>
-    {keyN(imgField.key) || "?"}
-  </div>
-  <span style={{fontSize:12,fontWeight:600,color:"var(--ink)",flex:1}}>{clean(imgField.label||imgField.key)}</span>
-  {(imgField.absIn !== null && imgField.absIn !== undefined) ? (
-  <button
-    onClick={() => {
-      if (!videoRef || !videoRef.current) return;
-      videoRef.current.currentTime = imgField.absIn;
-      videoRef.current.play().catch(() => {});
-      setTimeout(() => {
-        if (videoRef && videoRef.current) videoRef.current.pause();
-      }, 3000);
-    }}
-    style={{padding:"2px 7px",borderRadius:4,border:"1px solid var(--border)",background:"transparent",color:"var(--ink2)",fontSize:10,fontWeight:600,cursor:"pointer",flexShrink:0,fontFamily:"monospace"}}
-    onMouseEnter={e=>{e.currentTarget.style.background="#ff4500";e.currentTarget.style.color="white";e.currentTarget.style.borderColor="#ff4500";}}
-    onMouseLeave={e=>{e.currentTarget.style.background="transparent";e.currentTarget.style.color="var(--ink2)";e.currentTarget.style.borderColor="var(--border)";}}
-  >
-    {Number(imgField.absIn).toFixed(1)}s
-  </button>
-) : null}
-  {busy && <span style={{fontSize:10,color:"#ff4500"}}>{prog}%</span>}
-</div>
-        {/* body */}
-        <div style={{display:"flex"}}>
-          {/* image area */}
-          <div style={{width:110,height:110,flexShrink:0,position:"relative",background:"#f0eeea",borderRight:"1px solid var(--border)",overflow:"hidden",cursor:"pointer"}}>
+      >
+        {/* Header */}
+        <div style={{ display:"flex", alignItems:"center", gap:8, padding:"8px 12px", borderBottom:"1px solid var(--border)", background: highlighted ? "#fff0e8" : "var(--bg)" }}>
+          <div style={{ width:24, height:24, borderRadius:6, background:"#ff4500", color:"white", fontSize:10, fontWeight:800, display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
+            {keyN(imgField.key) || "?"}
+          </div>
+          <span style={{ fontSize:12, fontWeight:600, color:"var(--ink)", flex:1 }}>
+            {clean(imgField.label || imgField.key)}
+          </span>
+          {(imgField.absIn !== null && imgField.absIn !== undefined) ? (
+            <button
+              onClick={() => {
+                if (!videoRef || !videoRef.current) return;
+                videoRef.current.currentTime = imgField.absIn;
+                videoRef.current.play().catch(() => {});
+                setTimeout(() => {
+                  if (videoRef && videoRef.current) videoRef.current.pause();
+                }, 3000);
+              }}
+              style={{ padding:"2px 7px", borderRadius:4, border:"1px solid var(--border)", background:"transparent", color:"var(--ink2)", fontSize:10, fontWeight:600, cursor:"pointer", flexShrink:0, fontFamily:"monospace" }}
+              onMouseEnter={e => { e.currentTarget.style.background="#ff4500"; e.currentTarget.style.color="white"; e.currentTarget.style.borderColor="#ff4500"; }}
+              onMouseLeave={e => { e.currentTarget.style.background="transparent"; e.currentTarget.style.color="var(--ink2)"; e.currentTarget.style.borderColor="var(--border)"; }}
+            >
+              {Number(imgField.absIn).toFixed(1)}s
+            </button>
+          ) : null}
+          {busy && <span style={{ fontSize:10, color:"#ff4500" }}>{prog}%</span>}
+        </div>
+
+        {/* Body */}
+        <div style={{ display:"flex" }}>
+          {/* Media area */}
+          <div style={{ width:110, height:110, flexShrink:0, position:"relative", background:"#f0eeea", borderRight:"1px solid var(--border)", overflow:"hidden", cursor:"pointer" }}>
+
+            {/* Placeholder */}
             {placeholderOk && !finalPreview && (
-  <img src={placeholderSrc} alt="" style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",opacity:.35}} />
-)}
-{finalPreview && <img src={finalPreview} alt="" style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover"}} />}
-<label
-  style={{position:"absolute",inset:0,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:4,cursor:"pointer",transition:"background .15s"}}
-  onMouseEnter={e=>e.currentTarget.style.background="rgba(0,0,0,0.45)"}
-  onMouseLeave={e=>e.currentTarget.style.background="transparent"}
->
-  <span style={{fontSize:20,color:"white",textShadow:"0 1px 4px rgba(0,0,0,.8)",pointerEvents:"none"}}>↑</span>
-  <span style={{fontSize:9,color:"white",fontWeight:600,textShadow:"0 1px 3px rgba(0,0,0,.8)",pointerEvents:"none"}}>{finalPreview?"CHANGE":"UPLOAD"}</span>
-  <input type="file" accept="image/*,video/*" style={{display:"none"}} onChange={onFile} />
-</label>
-{finalPreview && (
-  <button onClick={clear} style={{position:"absolute",top:4,right:4,width:18,height:18,borderRadius:"50%",background:"rgba(0,0,0,.6)",border:"none",color:"white",fontSize:10,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",zIndex:2}}>×</button>
-)}
+              <img src={placeholderSrc} alt="" style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", opacity:.35 }} />
+            )}
+
+            {/* Preview — video or image */}
+            {finalPreview && finalIsVideo && (
+              <video
+                src={finalPreview}
+                muted autoPlay loop playsInline
+                style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover" }}
+              />
+            )}
+            {finalPreview && !finalIsVideo && (
+              <img src={finalPreview} alt="" style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover" }} />
+            )}
+
+            {/* Upload label */}
+            <label
+              style={{ position:"absolute", inset:0, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:4, cursor:"pointer", transition:"background .15s" }}
+              onMouseEnter={e => e.currentTarget.style.background = "rgba(0,0,0,0.45)"}
+              onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+            >
+              <span style={{ fontSize:20, color:"white", textShadow:"0 1px 4px rgba(0,0,0,.8)", pointerEvents:"none" }}>↑</span>
+              <span style={{ fontSize:9, color:"white", fontWeight:600, textShadow:"0 1px 3px rgba(0,0,0,.8)", pointerEvents:"none" }}>
+                {finalPreview ? "CHANGE" : "UPLOAD"}
+              </span>
+              <input
+                type="file"
+                accept="image/*,video/mp4,video/mov,video/quicktime,video/avi,video/webm,video/*"
+                style={{ display:"none" }}
+                onChange={onFile}
+              />
+            </label>
+            {finalIsVideo && (
+      <VideoTrimSlider
+        file={rawFileRef.current}
+        trimStart={trimStart}
+        onChange={onTrimChange}
+        templateDuration={templateDuration || 0}
+      />
+    )}
+
+            {/* Clear button */}
+            {finalPreview && (
+              <button onClick={clear} style={{ position:"absolute", top:4, right:4, width:18, height:18, borderRadius:"50%", background:"rgba(0,0,0,.6)", border:"none", color:"white", fontSize:10, cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center", zIndex:2 }}>×</button>
+            )}
+
+            {/* Upload progress bar */}
             {busy && (
-              <div style={{position:"absolute",bottom:0,left:0,right:0,height:2,background:"rgba(0,0,0,.2)"}}>
-                <div style={{height:"100%",width:`${prog}%`,background:"#ff4500",transition:"width .25s"}} />
+              <div style={{ position:"absolute", bottom:0, left:0, right:0, height:2, background:"rgba(0,0,0,.2)" }}>
+                <div style={{ height:"100%", width:`${prog}%`, background:"#ff4500", transition:"width .25s" }} />
               </div>
             )}
           </div>
-          {/* text fields */}
-          <div style={{flex:1,padding:"8px 10px",display:"flex",flexDirection:"column",gap:6}}>
-            {textFields.length === 0 && <div style={{fontSize:11,color:"var(--ink3)",paddingTop:4}}>Image only slot</div>}
+
+          {/* Text fields */}
+          <div style={{ flex:1, padding:"8px 10px", display:"flex", flexDirection:"column", gap:6 }}>
+            {textFields.length === 0 && (
+              <div style={{ fontSize:11, color:"var(--ink3)", paddingTop:4 }}>
+                {finalIsVideo ? 'Video slot' : 'Image only slot'}
+              </div>
+            )}
             {textFields.map((tf, i) => (
-              <div key={i} style={{display:"flex",flexDirection:"column",gap:3}}>
-                <label style={{fontSize:10,fontWeight:600,color:"var(--ink2)"}}>{clean(tf.label||tf.key)}</label>
-                {(tf.label||"").length > 80
-                  ? <textarea value={data[tf.key]||""} onChange={e=>onChange(tf.key,e.target.value)} placeholder="Enter text…"
-                      style={{border:"1px solid var(--border)",borderRadius:6,background:"var(--bg)",color:"var(--ink)",fontFamily:"Inter,sans-serif",fontSize:12,padding:"5px 8px",width:"100%",outline:"none",resize:"none",minHeight:48,lineHeight:1.4,transition:"border-color .12s"}}
-                      onFocus={e=>e.target.style.borderColor="#ff4500"} onBlur={e=>e.target.style.borderColor="var(--border)"} />
-                  : <input type="text" value={data[tf.key]||""} onChange={e=>onChange(tf.key,e.target.value)} placeholder="Enter name or text…"
-                      style={{border:"1px solid var(--border)",borderRadius:6,background:"var(--bg)",color:"var(--ink)",fontFamily:"Inter,sans-serif",fontSize:12,padding:"6px 8px",width:"100%",outline:"none",transition:"border-color .12s"}}
-                      onFocus={e=>e.target.style.borderColor="#ff4500"} onBlur={e=>e.target.style.borderColor="var(--border)"} />
+              <div key={i} style={{ display:"flex", flexDirection:"column", gap:3 }}>
+                <label style={{ fontSize:10, fontWeight:600, color:"var(--ink2)" }}>{clean(tf.label || tf.key)}</label>
+                {(tf.label || "").length > 80
+                  ? <textarea
+                      value={data[tf.key] || ""}
+                      onChange={e => onChange(tf.key, e.target.value)}
+                      placeholder="Enter text…"
+                      style={{ border:"1px solid var(--border)", borderRadius:6, background:"var(--bg)", color:"var(--ink)", fontFamily:"Inter,sans-serif", fontSize:12, padding:"5px 8px", width:"100%", outline:"none", resize:"none", minHeight:48, lineHeight:1.4, transition:"border-color .12s" }}
+                      onFocus={e => e.target.style.borderColor="#ff4500"}
+                      onBlur={e => e.target.style.borderColor="var(--border)"}
+                    />
+                  : <input
+                      type="text"
+                      value={data[tf.key] || ""}
+                      onChange={e => onChange(tf.key, e.target.value)}
+                      placeholder="Enter name or text…"
+                      style={{ border:"1px solid var(--border)", borderRadius:6, background:"var(--bg)", color:"var(--ink)", fontFamily:"Inter,sans-serif", fontSize:12, padding:"6px 8px", width:"100%", outline:"none", transition:"border-color .12s" }}
+                      onFocus={e => e.target.style.borderColor="#ff4500"}
+                      onBlur={e => e.target.style.borderColor="var(--border)"}
+                    />
                 }
               </div>
             ))}
           </div>
         </div>
+      </div>
     </>
   );
 }
@@ -1763,29 +1974,26 @@ export default function App() {
 
   if (st === "lock" || ev) {
     if (ev === "JSX_GENERATED" || ev === "AE_LAUNCH") {
-      pct = 15; label = "Opening After Effects…"; sub = "Preparing your template";
-    } else if (ev === "AE_HEARTBEAT") {
-      pct = 28; label = "Injecting your content…"; sub = "Writing text and images into template";
-    } else if (ev === "AE_COMPLETE") {
-      pct = 40; label = "Template ready…"; sub = "Starting video render";
-    } else if (ev === "AERENDER_LAUNCH") {
-      pct = 45; label = "Rendering video frames…"; sub = "This takes the longest";
-    } else if (ev === "AERENDER_PROGRESS") {
-      const frame = jobSt?.lastFrame || 0;
-      const total = jobSt?.totalFrames || 0;
-      pct = total > 0
-        ? Math.round(45 + (frame / total) * 40)
-        : 60;
-      label = total > 0
-        ? `Rendering frame ${frame} of ${total}`
-        : "Rendering video frames…";
-      sub = "After Effects is working";
-    } else if (ev === "AERENDER_COMPLETE") {
-      pct = 85; label = "Render complete…"; sub = "Compressing to MP4";
-    } else if (ev === "FFMPEG_LAUNCH" || ev === "FFMPEG_PROGRESS") {
-      pct = 90; label = "Compressing video…"; sub = "Almost done";
-    } else if (ev === "FFMPEG_COMPLETE") {
-      pct = 98; label = "Finishing up…"; sub = "Saving your video";
+  pct = 15; label = "Preparing your template…"; sub = "Setting up your content";
+} else if (ev === "AE_HEARTBEAT") {
+  pct = 28; label = "Applying your changes…"; sub = "Text and images are being placed";
+} else if (ev === "AE_COMPLETE") {
+  pct = 40; label = "Template ready…"; sub = "Starting video render";
+} else if (ev === "AERENDER_LAUNCH") {
+  pct = 45; label = "Rendering your video…"; sub = "This is the longest step, please wait";
+} else if (ev === "AERENDER_PROGRESS") {
+  const frame = jobSt?.lastFrame || 0;
+  const total = jobSt?.totalFrames || 0;
+  pct = total > 0 ? Math.round(45 + (frame / total) * 40) : 62;
+  label = total > 0 ? `Rendering frame ${frame} of ${total}` : "Rendering your video…";
+  sub = total > 0 ? `${Math.round((frame/total)*100)}% of frames complete` : "Please wait…";
+} else if (ev === "AERENDER_COMPLETE") {
+  pct = 86; label = "Video rendered…"; sub = "Packaging your file";
+} else if (ev === "FFMPEG_LAUNCH" || ev === "FFMPEG_PROGRESS") {
+  pct = 92; label = "Packaging your video…"; sub = "Almost ready";
+} else if (ev === "FFMPEG_COMPLETE") {
+  pct = 98; label = "Almost done…"; sub = "Your video is being saved";
+
     } else if (ev === "STAGE") {
       const stageStr = jobSt?.stageName || "";
       if (stageStr.includes("1/3")) { pct = 20; label = "Injecting content into template…"; sub = "Stage 1 of 3"; }
@@ -1903,6 +2111,7 @@ export default function App() {
                       onChange={setF}
                       uploadFn={upload}
                       footageBase={sel.footageBase}
+                      templateDuration={sel?.config?.duration || 0}
                       highlighted={highlightedKeys.has(slot.img.key) || slot.texts.some(t=>highlightedKeys.has(t.key))}
                     />
                   ))}{/* Country selectors */}

@@ -612,20 +612,61 @@ ${hasSliders ? `
       }` : `      // No point sliders configured for this country slot`}
 
 ${hasAngles ? `
-      // Angle X / Angle Y — use setValueAtTime at the marker time
-      // This modifies the existing keyframe AT that time without touching others
-      if (efLower === 'angle x' || efLower.indexOf('angle x') !== -1) {
+      // Angle X / Angle Y — find keyframe nearest to markerTime and use setValueAtKey
+      // setValueAtTime can fail on some AE versions; setValueAtKey is more reliable
+      (function() {
         try {
-          ef.property(1).setValueAtTime(${markerTime}, ${angleX});
-          log('ANGLE X OK: ${angleX} for "${safeCountry}" at t=${markerTime}');
-        } catch(e) { log('ANGLE X FAIL: ' + e.toString()); }
-      }
-      if (efLower === 'angle y' || efLower.indexOf('angle y') !== -1) {
-        try {
-          ef.property(1).setValueAtTime(${markerTime}, ${angleY});
-          log('ANGLE Y OK: ${angleY} for "${safeCountry}" at t=${markerTime}');
-        } catch(e) { log('ANGLE Y FAIL: ' + e.toString()); }
-      }` : `      // No calibration data — angle rotation skipped for "${safeCountry}"`}
+          var axEf = ctrlLayer.effect('Angle X');
+          var ayEf = ctrlLayer.effect('Angle Y');
+          if (!axEf || !ayEf) {
+            log('ANGLE FAIL: Angle X or Angle Y effect not found on "${safeALayer}"');
+            return;
+          }
+          var axProp = axEf.property('Angle');
+          var ayProp = ayEf.property('Angle');
+          if (!axProp || !ayProp) {
+            log('ANGLE FAIL: Angle property not found inside effect');
+            return;
+          }
+
+          // Find keyframe nearest to markerTime within 0.5s tolerance
+          var tolerance = 0.5;
+
+          // Angle X
+          var axSet = false;
+          for (var ak = 1; ak <= axProp.numKeys; ak++) {
+            if (Math.abs(axProp.keyTime(ak) - ${markerTime}) < tolerance) {
+              axProp.setValueAtKey(ak, ${angleX});
+              log('ANGLE X OK: ${angleX} for "${safeCountry}" at keyframe ' + ak + ' t=' + axProp.keyTime(ak));
+              axSet = true;
+              break;
+            }
+          }
+          if (!axSet) {
+            // No keyframe near markerTime — create one
+            axProp.setValueAtTime(${markerTime}, ${angleX});
+            log('ANGLE X OK (new key): ${angleX} for "${safeCountry}" at t=${markerTime}');
+          }
+
+          // Angle Y
+          var aySet = false;
+          for (var yk = 1; yk <= ayProp.numKeys; yk++) {
+            if (Math.abs(ayProp.keyTime(yk) - ${markerTime}) < tolerance) {
+              ayProp.setValueAtKey(yk, ${angleY});
+              log('ANGLE Y OK: ${angleY} for "${safeCountry}" at keyframe ' + yk + ' t=' + ayProp.keyTime(yk));
+              aySet = true;
+              break;
+            }
+          }
+          if (!aySet) {
+            ayProp.setValueAtTime(${markerTime}, ${angleY});
+            log('ANGLE Y OK (new key): ${angleY} for "${safeCountry}" at t=${markerTime}');
+          }
+
+        } catch(e) {
+          log('ANGLE FAIL: ' + e.toString());
+        }
+      })();` : `      // No calibration data — angle rotation skipped for "${safeCountry}"`}
     }
   })();`;
   }).join('\n');
@@ -697,6 +738,7 @@ try {
 
   log('SAVE: writing temp AEP...');
   var tempFile = new File('${tempAepPath}');
+  app.project.gpuAccelType = GpuAccelType.SOFTWARE;
   app.project.save(tempFile);
   log('SAVE COMPLETE');
   writeHeartbeat();
@@ -797,7 +839,7 @@ async function runAEInjection(job, templateConfig, jobDir, jobLog) {
         reject(new Error('AE_INJECTION_TIMEOUT: exceeded 5 minute limit'));
       }
     }, TIMEOUT_MS);
-
+    
     ae.on('close', async (code) => {
       clearInterval(heartbeatInterval);
       clearTimeout(hardTimeout);
