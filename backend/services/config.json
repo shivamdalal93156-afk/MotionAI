@@ -1,0 +1,99 @@
+{
+  "resolution": "1920x1080",
+  "sceneMap": {
+    "Template 2": {
+      "outpoint": 15.015015015015
+    }
+  },
+  "layers": [
+    {
+      "name": "Change Color",
+      "type": "solid",
+      "method": "unknown",
+      "flagged": true,
+      "comp": "Template 2",
+      "effects": [
+        "Color 1",
+        "Color 2",
+        "Color 3",
+        "Color 4",
+        "Color 5",
+        "Color 6",
+        "Text color 1",
+        "Text color 2"
+      ],
+      "expressions": false,
+      "isPrecomp": false
+    },
+    {
+      "name": "NATIONAL INCIDENT PROTECTION",
+      "type": "text",
+      "method": "text_replace",
+      "flagged": false,
+      "comp": "Template 2",
+      "effects": [
+        "Fill"
+      ],
+      "expressions": true,
+      "isPrecomp": false
+    },
+    {
+      "name": "TRAGEDY HAPPED IN SOUTH CITY",
+      "type": "text",
+      "method": "text_replace",
+      "flagged": false,
+      "comp": "Template 2",
+      "effects": [
+        "Fill"
+      ],
+      "expressions": true,
+      "isPrecomp": false
+    },
+    {
+      "name": "Report showed major damage before Florida condo collapse",
+      "type": "text",
+      "method": "text_replace",
+      "flagged": false,
+      "comp": "Template 2",
+      "effects": [
+        "Fill"
+      ],
+      "expressions": true,
+      "isPrecomp": false
+    },
+    {
+      "name": "London, England",
+      "type": "text",
+      "method": "text_replace",
+      "flagged": false,
+      "comp": "Template 2",
+      "effects": [
+        "Fill"
+      ],
+      "expressions": true,
+      "isPrecomp": false
+    },
+    {
+      "name": "Robert Chambers |  Search and Rescue team",
+      "type": "text",
+      "method": "text_replace",
+      "flagged": false,
+      "comp": "Template 2",
+      "effects": [
+        "Fill"
+      ],
+      "expressions": true,
+      "isPrecomp": false
+    },
+    {
+      "name": "image placeholder 2",
+      "type": "precomp",
+      "method": "comp_inject",
+      "flagged": false,
+      "comp": "Template 2",
+      "effects": [],
+      "expressions": false,
+      "isPrecomp": true
+    }
+  ]
+}

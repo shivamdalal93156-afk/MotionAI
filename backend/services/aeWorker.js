@@ -100,8 +100,12 @@ function buildJSX(job, templateConfig, jobDir) {
       if (!(${compFilter})) continue;
       for (var L = 1; L <= comp.numLayers; L++) {
         var layer = comp.layer(L);
+        try { if (layer.locked) layer.locked = false; } catch(e) {}
         if (layer.name === '${layer.layerName}' && layer.property('Source Text')) {
-          layer.property('Source Text').setValue(new TextDocument('${safe}'));
+          var textProp = layer.property('Source Text');
+          var doc = textProp.value;
+          doc.text = '${safe}';
+          textProp.setValue(doc);
           log('TEXT OK: "${layer.compName}.${layer.layerName}" -> "${safe}"');
           found = true;
         }
@@ -190,6 +194,7 @@ function buildJSX(job, templateConfig, jobDir) {
         var replaced = false;
         for (var L = 1; L <= targetComp.numLayers; L++) {
           var lyr = targetComp.layer(L);
+          try { if (lyr.locked) lyr.locked = false; } catch(e) {}
           try {
             if (lyr.source instanceof FootageItem &&
                 lyr.source.name === '${layer.layerName}') {
@@ -301,6 +306,7 @@ function buildJSX(job, templateConfig, jobDir) {
       if (depth > 4) return false;
       for (var L = 1; L <= comp.numLayers; L++) {
         var lyr = comp.layer(L);
+        try { if (lyr.locked) lyr.locked = false; } catch(e) {}
         try {
           if (lyr.source instanceof FootageItem) {
             var isSolid = false;

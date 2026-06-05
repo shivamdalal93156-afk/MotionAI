@@ -1,5 +1,5 @@
 {
-  "name": "Investigation Board II",
+  "name": "Investigation Board",
   "aepFile": "Investigation_Board_II (converted).aep",
   "compName": "Main",
   "fps": 29.97,
@@ -10,225 +10,329 @@
       "key": "cover_title",
       "layerName": "CONFIDENTIAL",
       "compName": "Сover",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Cover — Title",
+      "absIn": 0,
+      "absOut": 191.604
     },
     {
       "key": "cover_subtitle",
       "layerName": "Please do not open if you do not  have the required tolerance",
       "compName": "Сover",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Cover — Subtitle",
+      "absIn": 0,
+      "absOut": 191.604
     },
     {
-      "key": "badge_type",
+      "key": "badge_role",
       "layerName": "VISITOR",
       "compName": "10 - Badge",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Badge — Role",
+      "absIn": 0,
+      "absOut": 183.717
     },
     {
-      "key": "badge_name",
+      "key": "badge_first_name",
       "layerName": "Name",
       "compName": "10 - Badge",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Badge — First Name",
+      "absIn": 0,
+      "absOut": 183.550
     },
     {
-      "key": "badge_surname",
+      "key": "badge_last_name",
       "layerName": "Surname",
       "compName": "10 - Badge",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Badge — Last Name",
+      "absIn": 0,
+      "absOut": 183.550
     },
     {
-      "key": "card1_name",
+      "key": "businesscard1_name",
       "layerName": "Herbert Paul Jones",
       "compName": "BusinessCard_01",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Business Card 1 — Name",
+      "absIn": 0,
+      "absOut": 299.967
     },
     {
-      "key": "card1_title",
+      "key": "businesscard1_title",
       "layerName": "PRIVATE INVESTIGATOR",
       "compName": "BusinessCard_01",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Business Card 1 — Title",
+      "absIn": 0,
+      "absOut": 299.967
     },
     {
-      "key": "card1_website",
+      "key": "businesscard1_website",
       "layerName": "www.Herbert-Pail.com",
       "compName": "BusinessCard_01",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Business Card 1 — Website",
+      "absIn": 0,
+      "absOut": 299.967
     },
     {
-      "key": "card2_name",
+      "key": "businesscard2_name",
       "layerName": "Peter  Cornelius  Jones",
       "compName": "BusinessCard_02",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Business Card 2 — Name",
+      "absIn": 0,
+      "absOut": 299.967
     },
     {
-      "key": "card2_title",
+      "key": "businesscard2_title",
       "layerName": "FBI consultant",
       "compName": "BusinessCard_02",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Business Card 2 — Title",
+      "absIn": 0,
+      "absOut": 299.967
     },
     {
       "key": "sticker1_text",
       "layerName": "Get it before  everybody else!",
       "compName": "Sticker_01",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Sticker 1 — Headline Text",
+      "absIn": 0,
+      "absOut": 179.980
     },
     {
       "key": "sticker2_text",
       "layerName": "Get to the heart  of the matter",
       "compName": "Sticker_02",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Sticker 2 — Callout Text",
+      "absIn": 0,
+      "absOut": 179.980
     },
     {
       "key": "sticker3_text",
       "layerName": "The police are still investigating the crime",
       "compName": "Sticker_03",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Sticker 3 — Status Log Text",
+      "absIn": 0,
+      "absOut": 179.980
     },
     {
       "key": "sticker4_text",
       "layerName": "Get to the heart  of the matter",
       "compName": "Sticker_04",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Sticker 4 — Alternative Text",
+      "absIn": 0,
+      "absOut": 179.980
     },
     {
       "key": "sticker5_text",
       "layerName": "Jeremy Cornelius  Murphy",
       "compName": "Sticker_05",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Sticker 5 — Name Label",
+      "absIn": 0,
+      "absOut": 179.980
     },
     {
-      "key": "person1_name",
+      "key": "photo1_name",
       "layerName": "Peter James Thompson",
       "compName": "01 - Newspaper-Big",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 1 — Newspaper Headline Name",
+      "absIn": 0,
+      "absOut": 179.980
     },
     {
-      "key": "person2_name",
-      "layerName": "\"Jimmy The Gent\" Burke",
+      "key": "photo2_name",
+      "layerName": "“Jimmy The Gent” Burke",
       "compName": "02 - Palaroid",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 2 — Polaroid Handwriting Name",
+      "absIn": 0,
+      "absOut": 317.417
     },
     {
-      "key": "person3_name",
+      "key": "photo3_name",
       "layerName": "Beverly Adrian Parrish",
       "compName": "03 - Photo",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 3 — Typewritten Name Card",
+      "absIn": 0,
+      "absOut": 299.967
     },
     {
-      "key": "person5_name",
+      "key": "photo5_name",
       "layerName": "Maria Rodriguez",
       "compName": "05 - Photo",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 5 — Typewritten Name Card",
+      "absIn": 0,
+      "absOut": 299.967
     },
     {
-      "key": "person6_name",
+      "key": "photo6_name",
       "layerName": "Sophia Johnson ",
       "compName": "06 - Newspaper-Small",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 6 — Column Heading Name",
+      "absIn": 0,
+      "absOut": 299.967
     },
     {
-      "key": "person6_body",
+      "key": "photo6_body",
       "layerName": "The police power is the basis for land-use planning authority in the United States.  This authority is usually delegated by state governments to local governments,  including counties and municipalities.  It is these local governments that most frequently exercise police power in land use planning matters. The regulation of land  use based on police power is distinct from the taking of private property by the government through the power of eminent domain. If the regulation of land use is done under the authority of the",
       "compName": "06 - Newspaper-Small",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 6 — Newspaper Body Text Block",
+      "absIn": 0,
+      "absOut": 299.967
     },
     {
-      "key": "person7_name",
+      "key": "photo7_name",
       "layerName": "Beverly Adrian Parrish",
       "compName": "07 - Photo",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 7 — Document Identity Label",
+      "absIn": 0,
+      "absOut": 299.967
     },
     {
-      "key": "person8_name",
-      "layerName": "\"Jimmy The Gent\" Burke",
+      "key": "photo8_name",
+      "layerName": "“Jimmy The Gent” Burke",
       "compName": "08 - Palaroid",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 8 — Polaroid Handwriting Name",
+      "absIn": 0,
+      "absOut": 317.417
     },
     {
-      "key": "person9_name",
-      "layerName": "\"Jimmy The Gent\" Burke",
+      "key": "photo9_name",
+      "layerName": "“Jimmy The Gent” Burke",
       "compName": "09 - Palaroid",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 9 — Polaroid Handwriting Name",
+      "absIn": 0,
+      "absOut": 317.417
     },
     {
-      "key": "person11_name",
-      "layerName": "\"Jimmy The Gent\" Burke",
+      "key": "photo11_name",
+      "layerName": "“Jimmy The Gent” Burke",
       "compName": "11 - Palaroid",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 11 — Polaroid Handwriting Name",
+      "absIn": 0,
+      "absOut": 317.417
     },
     {
-      "key": "person12_name",
+      "key": "photo12_name",
       "layerName": "Isabella Jones ",
       "compName": "12 - Newspaper-Tall",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 12 — Newspaper Headline Name",
+      "absIn": 0,
+      "absOut": 179.980
     },
     {
-      "key": "person13_name",
-      "layerName": "\"Jimmy The Gent\" Burke",
+      "key": "photo13_name",
+      "layerName": "“Jimmy The Gent” Burke",
       "compName": "13 - Palaroid",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 13 — Polaroid Handwriting Name",
+      "absIn": 0,
+      "absOut": 317.417
     },
     {
-      "key": "person14_name",
-      "layerName": "\"Jimmy The Gent\" Burke",
+      "key": "photo14_name",
+      "layerName": "“Jimmy The Gent” Burke",
       "compName": "14 - Palaroid",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 14 — Polaroid Handwriting Name",
+      "absIn": 0,
+      "absOut": 317.417
     },
     {
-      "key": "person15_name",
+      "key": "photo15_name",
       "layerName": "Roger Simon Wheeler",
       "compName": "15 - Photo",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 15 — Document Identity Label",
+      "absIn": 0,
+      "absOut": 299.967
     },
     {
-      "key": "magazine_title",
+      "key": "magazine_page_num",
+      "layerName": "PAGE 12",
+      "compName": "16 - Magazine",
+      "label": "Photo 16 — Magazine Page Identifier",
+      "absIn": 0,
+      "absOut": 179.980
+    },
+    {
+      "key": "magazine_main_title",
+      "layerName": "THE ULTIMATE GUIDE TO CROWD- FUNDING",
+      "compName": "16 - Magazine",
+      "label": "Photo 16 — Magazine Main Cover Title",
+      "absIn": 0,
+      "absOut": 179.980
+    },
+    {
+      "key": "magazine_teaser_1",
+      "layerName": "Laptop  travel ban?  Here's  what  you need  to know",
+      "compName": "16 - Magazine",
+      "label": "Photo 16 — Magazine Left Side Teaser 1",
+      "absIn": 0,
+      "absOut": 179.980
+    },
+    {
+      "key": "magazine_teaser_2",
+      "layerName": "25 amazing  gifts that  women  actually  want",
+      "compName": "16 - Magazine",
+      "label": "Photo 16 — Magazine Left Side Teaser 2",
+      "absIn": 0,
+      "absOut": 179.980
+    },
+    {
+      "key": "magazine_teaser_3",
+      "layerName": "50 state  road trip:  Free tourist  attractions",
+      "compName": "16 - Magazine",
+      "label": "Photo 16 — Magazine Left Side Teaser 3",
+      "absIn": 0,
+      "absOut": 179.980
+    },
+    {
+      "key": "magazine_badge_bold",
+      "layerName": "Effective  and Safe ",
+      "compName": "16 - Magazine",
+      "label": "Photo 16 — Magazine Feature Badge Heading",
+      "absIn": 0,
+      "absOut": 179.980
+    },
+    {
+      "key": "magazine_badge_sub",
+      "layerName": "SAVE UP TO 25% RIGHT NOW!!! ",
+      "compName": "16 - Magazine",
+      "label": "Photo 16 — Magazine Promo Callout Tag",
+      "absIn": 0,
+      "absOut": 179.980
+    },
+    {
+      "key": "magazine_teaser_right_1",
+      "layerName": "Got a will? Here are 11 more end-of-life documents you may need",
+      "compName": "16 - Magazine",
+      "label": "Photo 16 — Magazine Right Side Teaser 1",
+      "absIn": 0,
+      "absOut": 179.980
+    },
+    {
+      "key": "magazine_teaser_right_2",
+      "layerName": "Laptop travel ban? Here's what you need to know",
+      "compName": "16 - Magazine",
+      "label": "Photo 16 — Magazine Right Side Teaser 2",
+      "absIn": 0,
+      "absOut": 179.980
+    },
+    {
+      "key": "magazine_bold_word_1",
       "layerName": "How",
       "compName": "16 - Magazine",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 16 — Magazine Block Heading Accent 1",
+      "absIn": 0,
+      "absOut": 179.980
     },
     {
-      "key": "magazine_subtitle",
+      "key": "magazine_bold_word_2",
       "layerName": "I Did It",
       "compName": "16 - Magazine",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 16 — Magazine Block Heading Accent 2",
+      "absIn": 0,
+      "absOut": 179.980
     },
     {
-      "key": "person17_name",
+      "key": "photo17_name",
       "layerName": "John Peter Gallagher",
       "compName": "17 - Photo",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "label": "Photo 17 — Document Identity Label",
+      "absIn": 0,
+      "absOut": 299.967
     }
   ],
   "imageLayers": [
@@ -236,539 +340,533 @@
       "key": "photo_01",
       "compName": "01 - Newspaper-Big",
       "layerName": "Photo_01",
+      "label": "Photo Slot 1 (Newspaper Big Insert)",
       "type": "solid_replace",
-      "label": "Person 1 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 3.937,
+      "absOut": 10.644
     },
     {
       "key": "photo_02",
       "compName": "02 - Palaroid",
       "layerName": "Photo_02",
+      "label": "Photo Slot 2 (Polaroid Portrait)",
       "type": "solid_replace",
-      "label": "Person 2 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 10.644,
+      "absOut": 16.817
     },
     {
       "key": "photo_03",
       "compName": "03 - Photo",
       "layerName": "Photo_03",
+      "label": "Photo Slot 3 (Crime Scene Profile)",
       "type": "solid_replace",
-      "label": "Person 3 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 16.817,
+      "absOut": 23.457
     },
     {
       "key": "photo_04",
       "compName": "04 - Photo",
       "layerName": "Photo_04",
+      "label": "Photo Slot 4 (Evidence Sheet Document)",
       "type": "solid_replace",
-      "label": "Person 4 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 23.457,
+      "absOut": 30.564
     },
     {
       "key": "photo_05",
       "compName": "05 - Photo",
       "layerName": "Photo_05",
+      "label": "Photo Slot 5 (Evidence Profile Document)",
       "type": "solid_replace",
-      "label": "Person 5 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 30.564,
+      "absOut": 38.372
     },
     {
       "key": "photo_06",
       "compName": "06 - Newspaper-Small",
       "layerName": "Photo_06",
+      "label": "Photo Slot 6 (Newspaper Column Insert)",
       "type": "solid_replace",
-      "label": "Person 6 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 38.372,
+      "absOut": 44.811
     },
     {
       "key": "photo_07",
       "compName": "07 - Photo",
       "layerName": "Photo_07",
+      "label": "Photo Slot 7 (Evidence Report Page)",
       "type": "solid_replace",
-      "label": "Person 7 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 44.778,
+      "absOut": 50.951
     },
     {
       "key": "photo_08",
       "compName": "08 - Palaroid",
       "layerName": "Photo_08",
+      "label": "Photo Slot 8 (Polaroid Snapshot)",
       "type": "solid_replace",
-      "label": "Person 8 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 50.951,
+      "absOut": 57.257
     },
     {
       "key": "photo_09",
       "compName": "09 - Palaroid",
       "layerName": "Photo_09",
+      "label": "Photo Slot 9 (Polaroid Snapshot)",
       "type": "solid_replace",
-      "label": "Person 9 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
+      "absIn": 57.257,
+      "absOut": 63.597
+    },
+    {
+      "key": "photo_10",
+      "compName": "10 - Badge",
+      "layerName": "Photo_10",
+      "label": "Photo Slot 10 (ID Badge Portrait)",
+      "type": "solid_replace",
       "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "slotW": 1920,
+      "slotH": 1080,
+      "maskShape": "rectangle",
+      "absIn": 63.564,
+      "absOut": 69.937
     },
     {
       "key": "photo_11",
       "compName": "11 - Palaroid",
       "layerName": "Photo_11",
+      "label": "Photo Slot 11 (Polaroid Snapshot)",
       "type": "solid_replace",
-      "label": "Person 11 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 69.937,
+      "absOut": 76.109
     },
     {
       "key": "photo_12",
       "compName": "12 - Newspaper-Tall",
       "layerName": "Photo_12",
+      "label": "Photo Slot 12 (Newspaper Panel Insert)",
       "type": "solid_replace",
-      "label": "Person 12 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 76.109,
+      "absOut": 82.549
     },
     {
       "key": "photo_13",
       "compName": "13 - Palaroid",
       "layerName": "Photo_13",
+      "label": "Photo Slot 13 (Polaroid Snapshot)",
       "type": "solid_replace",
-      "label": "Person 13 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 88.889,
+      "absOut": 95.095
     },
     {
       "key": "photo_14",
       "compName": "14 - Palaroid",
       "layerName": "Photo_14",
+      "label": "Photo Slot 14 (Polaroid Snapshot)",
       "type": "solid_replace",
-      "label": "Person 14 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 95.095,
+      "absOut": 101.502
     },
     {
       "key": "photo_15",
       "compName": "15 - Photo",
       "layerName": "Photo_15",
+      "label": "Photo Slot 15 (Evidence Log Document)",
       "type": "solid_replace",
-      "label": "Person 15 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 101.502,
+      "absOut": 107.741
     },
     {
       "key": "photo_16",
       "compName": "16 - Magazine",
       "layerName": "Photo_16",
+      "label": "Photo Slot 16 (Magazine Cover Page)",
       "type": "solid_replace",
-      "label": "Magazine Cover Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 107.708,
+      "absOut": 114.081
     },
     {
       "key": "photo_17",
       "compName": "17 - Photo",
       "layerName": "Photo_17",
+      "label": "Photo Slot 17 (Evidence Detail Sheet)",
       "type": "solid_replace",
-      "label": "Person 17 Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 114.081,
+      "absOut": 120.320
     },
     {
       "key": "photo_18",
       "compName": "18 - Photo Frame",
       "layerName": "Photo_18",
+      "label": "Photo Slot 18 (Framed Desk Snapshot)",
       "type": "solid_replace",
-      "label": "Photo Frame Image",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 120.320,
+      "absOut": 126.393
     },
     {
-      "key": "badge_photo",
-      "compName": "10 - Badge",
-      "layerName": "Photo_10",
+      "key": "photo_19",
+      "compName": "19 - Logo",
+      "layerName": "Photo_19 - Logo",
+      "label": "Closing Logo Slot",
       "type": "solid_replace",
-      "label": "Badge Photo",
+      "ratio": "16:9",
       "slotW": 1920,
       "slotH": 1080,
       "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "16:9",
-      "absIn": 0.0,
-      "absOut": 150.918
-    },
-    {
-      "key": "map_main",
-      "compName": "Map_01",
-      "layerName": "Map_01.png",
-      "type": "replace",
-      "label": "Main Map Image",
-      "slotW": 5000,
-      "slotH": 2914,
-      "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "2500:1457",
-      "absIn": 0.0,
-      "absOut": 150.918
-    },
-    {
-      "key": "map_small",
-      "compName": "Map_02",
-      "layerName": "Map_02.jpg",
-      "type": "replace",
-      "label": "Small Map Image",
-      "slotW": 992,
-      "slotH": 937,
-      "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "992:937",
-      "absIn": 0.0,
-      "absOut": 150.918
-    },
-    {
-      "key": "floorplan",
-      "compName": "FloorPlan",
-      "layerName": "FloorPlan.jpg",
-      "type": "replace",
-      "label": "Floor Plan Image",
-      "slotW": 1800,
-      "slotH": 2164,
-      "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "450:541",
-      "absIn": 0.0,
-      "absOut": 150.918
-    },
-    {
-      "key": "warehouse",
-      "compName": "Warehouse",
-      "layerName": "Warehouse.jpg",
-      "type": "replace",
-      "label": "Warehouse Image",
-      "slotW": 852,
-      "slotH": 480,
-      "maskShape": "rectangle",
-      "cornerRadius": 0,
-      "ratio": "71:40",
-      "absIn": 0.0,
-      "absOut": 150.918
+      "absIn": 140.374,
+      "absOut": 151.151
     }
   ],
   "expressionControls": [
     {
-      "key": "threads_color",
-      "compName": "Investigation Board",
+      "key": "helping_numbers",
       "layerName": "Investigation Board Settings",
-      "effectName": "Threads Color",
+      "compName": "Investigation Board",
+      "effectName": "Helping Numbers",
+      "label": "Show Map Pin Asset Numbers",
+      "type": "checkbox",
+      "default": "false"
+    },
+    {
+      "key": "helping_numbers_color",
+      "layerName": "Investigation Board Settings",
+      "compName": "Investigation Board",
+      "effectName": "Helping Numbers Color",
+      "label": "Asset Index Label Color",
       "type": "color",
-      "label": "Thread / String Color",
+      "default": "#ffffff"
+    },
+    {
+      "key": "threads_color",
+      "layerName": "Investigation Board Settings",
+      "compName": "Investigation Board",
+      "effectName": "Threads Color",
+      "label": "String Link Linker Line Color",
+      "type": "color",
       "default": "#ae2323"
     },
     {
-      "key": "shade_color",
-      "compName": "Main",
+      "key": "police_flashing",
       "layerName": "Main Settings",
+      "compName": "Main",
+      "effectName": "Police Flashing",
+      "label": "Emergency Flashing Strobe Flare Volume",
+      "type": "slider",
+      "default": "25"
+    },
+    {
+      "key": "jalousie",
+      "layerName": "Main Settings",
+      "compName": "Main",
+      "effectName": "Jalousie",
+      "label": "Shadow Venetian Blind Filter Volume",
+      "type": "slider",
+      "default": "15"
+    },
+    {
+      "key": "shade_color",
+      "layerName": "Main Settings",
+      "compName": "Main",
       "effectName": "Shade Color",
+      "label": "Ambient Room Environmental Tint Tint Color",
       "type": "color",
-      "label": "Overall Shade Color",
       "default": "#dfb126"
     },
     {
-      "key": "police_flashing",
-      "compName": "Main",
+      "key": "shade_color_intensity",
       "layerName": "Main Settings",
-      "effectName": "Police Flashing",
+      "compName": "Main",
+      "effectName": "Shade Color Intensity",
+      "label": "Ambient Room Tint Overlay Volume",
       "type": "slider",
-      "label": "Police Light Intensity (0-100)",
-      "default": 25
+      "default": "20"
     },
     {
       "key": "film_noise",
-      "compName": "Main",
       "layerName": "Main Settings",
+      "compName": "Main",
       "effectName": "Film Noise",
+      "label": "Vintage Analog Texturing Amount",
       "type": "slider",
-      "label": "Film Grain Intensity (0-100)",
-      "default": 100
+      "default": "100"
     },
     {
-      "key": "bg_01",
-      "compName": "Main",
+      "key": "background_01",
       "layerName": "Main Settings",
+      "compName": "Main",
       "effectName": "Background 01",
+      "label": "Wall Texture Option 1 (Default Theme)",
       "type": "checkbox",
-      "label": "Use Background Style 1",
-      "default": true
+      "default": "true"
     },
     {
-      "key": "bg_02",
-      "compName": "Main",
+      "key": "background_02",
       "layerName": "Main Settings",
+      "compName": "Main",
       "effectName": "Background 02",
+      "label": "Wall Texture Option 2 (Industrial Style)",
       "type": "checkbox",
-      "label": "Use Background Style 2",
-      "default": false
+      "default": "false"
     },
     {
-      "key": "bg_03",
-      "compName": "Main",
+      "key": "background_03",
       "layerName": "Main Settings",
+      "compName": "Main",
       "effectName": "Background 03",
+      "label": "Wall Texture Option 3 (Retro Style)",
       "type": "checkbox",
-      "label": "Use Background Style 3",
-      "default": false
-    },
-    {
-      "key": "helping_numbers",
-      "compName": "Investigation Board",
-      "layerName": "Investigation Board Settings",
-      "effectName": "Helping Numbers",
-      "type": "checkbox",
-      "label": "Show Scene Numbers (debug)",
-      "default": false
+      "default": "false"
     }
   ],
   "sceneMap": {
-    "scene1": {
-      "outpoint": 7.174,
+    "overall_intro": {
+      "keys": [],
+      "outpoint": 3.937
+    },
+    "newspaper_big": {
       "keys": [
         "photo_01",
-        "person1_name"
-      ]
+        "photo1_name"
+      ],
+      "outpoint": 10.644
     },
-    "scene2": {
-      "outpoint": 13.914,
+    "polaroid_02": {
       "keys": [
         "photo_02",
-        "person2_name"
-      ]
+        "photo2_name"
+      ],
+      "outpoint": 16.817
     },
-    "scene3": {
-      "outpoint": 20.821,
+    "photo_03": {
       "keys": [
         "photo_03",
-        "person3_name"
-      ]
+        "photo3_name"
+      ],
+      "outpoint": 23.457
     },
-    "scene4": {
-      "outpoint": 27.027,
+    "photo_04": {
       "keys": [
         "photo_04"
-      ]
+      ],
+      "outpoint": 30.564
     },
-    "scene5": {
-      "outpoint": 34.768,
+    "photo_05": {
       "keys": [
         "photo_05",
-        "person5_name"
-      ]
+        "photo5_name"
+      ],
+      "outpoint": 38.372
     },
-    "scene6": {
-      "outpoint": 41.608,
+    "newspaper_small": {
       "keys": [
         "photo_06",
-        "person6_name",
-        "person6_body"
-      ]
+        "photo6_name",
+        "photo6_body"
+      ],
+      "outpoint": 44.811
     },
-    "scene7": {
-      "outpoint": 47.948,
+    "photo_07": {
       "keys": [
         "photo_07",
-        "person7_name"
-      ]
+        "photo7_name"
+      ],
+      "outpoint": 50.951
     },
-    "scene8": {
-      "outpoint": 53.954,
+    "polaroid_08": {
       "keys": [
         "photo_08",
-        "person8_name"
-      ]
+        "photo8_name"
+      ],
+      "outpoint": 57.257
     },
-    "scene9": {
-      "outpoint": 60.594,
+    "polaroid_09": {
       "keys": [
         "photo_09",
-        "person9_name"
-      ]
+        "photo9_name"
+      ],
+      "outpoint": 63.597
     },
-    "scene10": {
-      "outpoint": 66.934,
+    "badge": {
       "keys": [
-        "badge_photo",
-        "badge_type",
-        "badge_name",
-        "badge_surname"
-      ]
+        "photo_10",
+        "badge_role",
+        "badge_first_name",
+        "badge_last_name"
+      ],
+      "outpoint": 69.937
     },
-    "scene11": {
-      "outpoint": 73.006,
+    "polaroid_11": {
       "keys": [
         "photo_11",
-        "person11_name"
-      ]
+        "photo11_name"
+      ],
+      "outpoint": 76.109
     },
-    "scene12": {
-      "outpoint": 79.279,
+    "newspaper_tall": {
       "keys": [
         "photo_12",
-        "person12_name"
-      ]
+        "photo12_name"
+      ],
+      "outpoint": 82.549
     },
-    "scene13": {
-      "outpoint": 85.752,
-      "keys": [
-        "sticker1_text",
-        "sticker2_text"
-      ]
+    "board_overview_pacing": {
+      "keys": [],
+      "outpoint": 88.889
     },
-    "scene14": {
-      "outpoint": 92.025,
+    "polaroid_13": {
       "keys": [
         "photo_13",
-        "person13_name"
-      ]
+        "photo13_name"
+      ],
+      "outpoint": 95.095
     },
-    "scene15": {
-      "outpoint": 98.599,
+    "polaroid_14": {
       "keys": [
         "photo_14",
-        "person14_name"
-      ]
+        "photo14_name"
+      ],
+      "outpoint": 101.502
     },
-    "scene16": {
-      "outpoint": 105.005,
+    "photo_15": {
       "keys": [
         "photo_15",
-        "person15_name"
-      ]
+        "photo15_name"
+      ],
+      "outpoint": 107.741
     },
-    "scene17": {
-      "outpoint": 111.311,
+    "magazine": {
       "keys": [
         "photo_16",
-        "magazine_title",
-        "magazine_subtitle"
-      ]
+        "magazine_page_num",
+        "magazine_main_title",
+        "magazine_teaser_1",
+        "magazine_teaser_2",
+        "magazine_teaser_3",
+        "magazine_badge_bold",
+        "magazine_badge_sub",
+        "magazine_teaser_right_1",
+        "magazine_teaser_right_2",
+        "magazine_bold_word_1",
+        "magazine_bold_word_2"
+      ],
+      "outpoint": 114.081
     },
-    "scene18": {
-      "outpoint": 117.451,
+    "photo_17": {
       "keys": [
         "photo_17",
-        "person17_name"
-      ]
+        "photo17_name"
+      ],
+      "outpoint": 120.320
     },
-    "scene19": {
-      "outpoint": 123.59,
+    "photo_frame": {
       "keys": [
         "photo_18"
-      ]
+      ],
+      "outpoint": 126.393
     },
-    "scene20": {
-      "outpoint": 133.8,
+    "panoramic_board_sweep": {
+      "keys": [],
+      "outpoint": 140.374
+    },
+    "logo": {
       "keys": [
-        "map_main",
-        "map_small",
-        "floorplan",
-        "warehouse"
-      ]
+        "photo_19"
+      ],
+      "outpoint": 151.151
     },
-    "scene21": {
-      "outpoint": 150.918,
+    "cover_group": {
       "keys": [
         "cover_title",
-        "cover_subtitle",
-        "card1_name",
-        "card1_title",
-        "card2_name"
-      ]
+        "cover_subtitle"
+      ],
+      "outpoint": 150.918
+    },
+    "businesscards_group": {
+      "keys": [
+        "businesscard1_name",
+        "businesscard1_title",
+        "businesscard1_website",
+        "businesscard2_name",
+        "businesscard2_title"
+      ],
+      "outpoint": 150.918
+    },
+    "stickers_group": {
+      "keys": [
+        "sticker1_text",
+        "sticker2_text",
+        "sticker3_text",
+        "sticker4_text",
+        "sticker5_text"
+      ],
+      "outpoint": 150.918
     }
   }
 }

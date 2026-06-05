@@ -1,299 +1,724 @@
-=== MOTIONAI COMPLETE SCAN v4.0 ===
+=== MOTIONAI COMPLETE SCAN v5.0 ===
 template: Modern QR Code
-aep: C:/Users/SHIVAM/Desktop/motionai/backend/templates/Modern QR Code/Modern QR Code Titles.aep
-scanned_at: Fri May 08 2026 05:46:02 GMT+0530
+aep: C:/Users/SHIVAM/Desktop/motionai/backend/templates/Modern QR Code/Modern QR Code Titles (converted).aep
+scanned_at: Sun May 31 2026 22:00:25 GMT+0530
 
 OPEN_OK|items:92
 
 === RENDER COMP CANDIDATES ===
-RENDER_COMP|name:#Render|dur:75.950|fps:60.000|res:1920x1080|confidence:MEDIUM|score:90
-RENDER_COMP|name:CHANGE COLOR HERE!!!|dur:1224.300|fps:60.000|res:1920x1080|confidence:MEDIUM|score:60
+RENDER_COMP|name:#Render|dur:75.950|fps:60.000|res:1920x1080|frames:4557|confidence:MEDIUM|score:90
+RENDER_COMP|name:CHANGE COLOR HERE!!!|dur:1224.300|fps:60.000|res:1920x1080|frames:73458|confidence:MEDIUM|score:60
+
+=== COMP MARKERS ===
 
 === PROJECT FOOTAGE ITEMS ===
 FOOTAGE_ITEM|id:92|name:Delete This!!!.png|w:1920|h:1080|instances:7|missing:undefined|isMedia:true|ext:png|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
+FOOTAGE_SUMMARY|total_missing:0
 
 === COMP LAYER DETAIL ===
-COMP|name:#Render|dur:75.950|fps:60.000|w:1920|h:1080|layers:9
-  PRECOMP|name:1|source:1|in:0.000|out:5.917|absIn:0.000|absOut:5.917
-  PRECOMP|name:2|source:2|in:5.917|out:11.917|absIn:5.917|absOut:11.917
-  PRECOMP|name:4|source:4|in:11.917|out:17.900|absIn:11.917|absOut:17.900
-  PRECOMP|name:5|source:5|in:17.900|out:23.883|absIn:17.900|absOut:23.883
-  PRECOMP|name:6|source:6|in:23.883|out:29.850|absIn:23.883|absOut:29.850
-  PRECOMP|name:9|source:9|in:29.850|out:35.850|absIn:29.850|absOut:35.850
-  PRECOMP|name:3|source:3|in:35.850|out:41.850|absIn:35.850|absOut:41.850
-  PRECOMP|name:7|source:7|in:41.850|out:47.867|absIn:41.850|absOut:47.867
-  PRECOMP|name:8|source:8|in:47.867|out:53.867|absIn:47.867|absOut:53.867
-COMP|name:PLACEHOLDER HERE 1!!!|dur:5.917|fps:60.000|w:1920|h:1080|layers:1
-  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:5.917|absIn:0.000|absOut:5.917|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:330|layers:1
-  SHAPE|name:Vector
-COMP|name:1|dur:5.917|fps:60.000|w:1920|h:1080|layers:11
-  SHAPE|name:Shape Layer 4
-  SOLID|name:Null 1
-  PRECOMP|name:Union Comp 2|source:Union Comp 2|in:0.033|out:5.883|absIn:0.033|absOut:5.883
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.333|out:5.667|absIn:0.333|absOut:5.667
-  TEXT|name:scan here|in:0.667|out:5.883|absIn:0.667|absOut:5.883|val:SCAN HERE
-  PRECOMP|name:Shape Layer 1 Comp 2|source:Shape Layer 1 Comp 2|in:0.483|out:5.983|absIn:0.483|absOut:5.983
-  SHAPE|name:Shape Layer 3
-  SHAPE|name:Shape Layer 2
-  SOLID|name:Union Null 1
-  PRECOMP|name:Union Comp 1|source:Union Comp 1|in:0.000|out:5.883|absIn:0.000|absOut:5.883
-  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:5.917|absIn:0.000|absOut:5.917
-COMP|name:PLACEHOLDER HERE 1!!!|dur:13.417|fps:60.000|w:1920|h:1080|layers:0
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:329|layers:1
-  SHAPE|name:Vector
-COMP|name:2|dur:6.000|fps:60.000|w:1920|h:1080|layers:10
-  SHAPE|name:Shape Layer 4
-  TEXT|name:scan here|in:1.550|out:7.550|absIn:1.550|absOut:7.550|val:SCAN HERE
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.883|out:5.350|absIn:0.883|absOut:5.350
-  PRECOMP|name:Shape Layer 1 Comp 1|source:Shape Layer 1 Comp 1|in:0.817|out:5.283|absIn:0.817|absOut:5.283
-  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.483|out:5.283|absIn:0.483|absOut:5.283
-  TEXT|name:Live Music Festival 2026|in:1.033|out:7.033|absIn:1.033|absOut:7.033|val:LIVE MUSIC FESTIVAL 2026
-  SOLID|name:Null 1
-  SHAPE|name:Shape Layer 3
-  SHAPE|name:Shape Layer 2
-  PRECOMP|name:Vector 1 Comp 1|source:Vector 1 Comp 1|in:0.467|out:5.433|absIn:0.467|absOut:5.433
-COMP|name:PLACEHOLDER HERE 1!!!|dur:6.000|fps:60.000|w:409|h:408|layers:0
-COMP|name:PLACEHOLDER HERE 2!!!|dur:6.000|fps:60.000|w:1920|h:1080|layers:1
-  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:6.000|absIn:0.000|absOut:6.000|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:6.000|fps:60.000|w:343|h:330|layers:1
-  SHAPE|name:Vector
-COMP|name:3|dur:6.000|fps:60.000|w:1920|h:1080|layers:14
-  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.950|out:5.367|absIn:0.950|absOut:5.367
-  TEXT|name:scan here|in:0.400|out:5.400|absIn:0.400|absOut:5.400|val:SCAN HERE
-  PRECOMP|name:Pre-comp 1|source:Pre-comp 1|in:0.433|out:5.583|absIn:0.433|absOut:5.583
-  PRECOMP|name:Shape Layer 1 Comp 3|source:Shape Layer 1 Comp 3|in:0.483|out:5.983|absIn:0.483|absOut:5.983
-  SHAPE|name:Shape Layer 7
-  TEXT|name:Explore contemporary works from emerging visual artists|in:1.283|out:5.367|absIn:1.283|absOut:5.367|val:Explore Contemporary Works From Emerging Visual Artists
-  TEXT|name:Modern Art Showcase|in:0.983|out:5.233|absIn:0.983|absOut:5.233|val:MODERN ART SHOWCASE
-  SHAPE|name:Shape Layer 5
-  SHAPE|name:Shape Layer 6
-  SHAPE|name:Shape Layer 4
-  SHAPE|name:Shape Layer 3
-  SHAPE|name:Shape Layer 2
-  PRECOMP|name:Pre-comp 3|source:Pre-comp 3|in:0.483|out:5.517|absIn:0.483|absOut:5.517
-  PRECOMP|name:PLACEHOLDER HERE 2!!!|source:PLACEHOLDER HERE 2!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000
-COMP|name:PLACEHOLDER HERE 1!!!|dur:5.983|fps:60.000|w:1920|h:1080|layers:1
-  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:5.983|absIn:0.000|absOut:5.983|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:330|layers:1
-  SHAPE|name:Vector
-COMP|name:4|dur:5.983|fps:60.000|w:1920|h:1080|layers:12
-  TEXT|name:Final Championship Game|in:0.183|out:5.983|absIn:0.183|absOut:5.983|val:FINAL CHAMPIONSHIPGAME
-  PRECOMP|name:Vector Comp 3|source:Vector Comp 3|in:0.383|out:5.650|absIn:0.383|absOut:5.650
-  PRECOMP|name:Vector Comp 2|source:Vector Comp 2|in:0.083|out:5.500|absIn:0.083|absOut:5.500
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.550|out:5.683|absIn:0.550|absOut:5.683
-  TEXT|name:scan here|in:0.800|out:5.983|absIn:0.800|absOut:5.983|val:SCAN HERE
-  PRECOMP|name:Shape Layer 6 Comp 1|source:Shape Layer 6 Comp 1|in:0.483|out:5.983|absIn:0.483|absOut:5.983
-  PRECOMP|name:Vector Comp 4|source:Vector Comp 4|in:0.000|out:5.450|absIn:0.000|absOut:5.450
-  SHAPE|name:Shape Layer 5
-  SHAPE|name:Shape Layer 4
-  SHAPE|name:Shape Layer 3
-  SHAPE|name:Shape Layer 2
-  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:5.983|absIn:0.000|absOut:5.983
-COMP|name:PLACEHOLDER HERE 1!!!|dur:5.983|fps:60.000|w:1920|h:1080|layers:1
-  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:5.983|absIn:0.000|absOut:5.983|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:377|h:364|layers:1
-  SHAPE|name:Vector
-COMP|name:5|dur:5.983|fps:60.000|w:1920|h:1080|layers:10
-  SHAPE|name:Shape Layer 6
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:5.933|absIn:0.000|absOut:5.933
-  TEXT|name:scan here|in:0.000|out:5.933|absIn:0.000|absOut:5.933|val:SCAN HERE
-  PRECOMP|name:Shape Layer 1 Comp 4|source:Shape Layer 1 Comp 4|in:0.317|out:5.683|absIn:0.317|absOut:5.683
-  PRECOMP|name:Pre-comp 4|source:Pre-comp 4|in:0.000|out:5.733|absIn:0.000|absOut:5.733
-  SHAPE|name:Shape Layer 5
-  SHAPE|name:Shape Layer 4
-  SHAPE|name:Shape Layer 3
-  SHAPE|name:Shape Layer 2
-  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:5.983|absIn:0.000|absOut:5.983
-COMP|name:PLACEHOLDER HERE 1!!!|dur:20.517|fps:60.000|w:4096|h:2160|layers:0
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:329|layers:1
-  SHAPE|name:Vector
-COMP|name:6|dur:5.967|fps:60.000|w:1920|h:1080|layers:9
-  SHAPE|name:Shape Layer 5
-  TEXT|name:Movie Premiere|in:0.000|out:5.967|absIn:0.000|absOut:5.967|val:MOVIE PREMIERE
-  TEXT|name:scan here|in:0.000|out:5.967|absIn:0.000|absOut:5.967|val:SCAN HERE
-  PRECOMP|name:Shape Layer 1 Comp 5|source:Shape Layer 1 Comp 5|in:0.350|out:5.850|absIn:0.350|absOut:5.850
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.000|absOut:15.000
-  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.183|out:15.183|absIn:0.183|absOut:15.183
-  PRECOMP|name:Vector 2 Comp 1|source:Vector 2 Comp 1|in:0.000|out:5.967|absIn:0.000|absOut:5.967
-  SHAPE|name:Shape Layer 3
-  SHAPE|name:Shape Layer 2
-COMP|name:PLACEHOLDER HERE 1!!!|dur:6.017|fps:60.000|w:1920|h:1080|layers:1
-  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:6.017|absIn:0.000|absOut:6.017|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
-COMP|name:7|dur:6.017|fps:60.000|w:1920|h:1080|layers:9
-  PRECOMP|name:Rectangle 7 Comp 1|source:Rectangle 7 Comp 1|in:0.067|out:5.750|absIn:0.067|absOut:5.750
-  PRECOMP|name:Vector Comp 5|source:Vector Comp 5|in:0.083|out:6.017|absIn:0.083|absOut:6.017
-  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:5.950|absIn:0.000|absOut:5.950
-  TEXT|name:Creative Design Conference|in:0.100|out:5.833|absIn:0.100|absOut:5.833|val:CREATIVE DESIGN CONFERENCE
-  SHAPE|name:Shape Layer 4
-  SHAPE|name:Shape Layer 5
-  SHAPE|name:Shape Layer 3
-  SHAPE|name:Shape Layer 2
-  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:6.017|absIn:0.000|absOut:6.017
-COMP|name:PLACEHOLDER HERE 1!!!|dur:15.000|fps:60.000|w:299|h:304|layers:1
-  SHAPE|name:Rectangle 8
-COMP|name:PLACEHOLDER HERE 2!!!|dur:6.000|fps:60.000|w:1920|h:1080|layers:1
-  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:6.000|absIn:0.000|absOut:6.000|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:227|h:219|layers:1
-  SHAPE|name:PLACEYOURQRCODEHERE 1!!!
-COMP|name:8|dur:6.000|fps:60.000|w:1920|h:1080|layers:10
-  PRECOMP|name:Vector Comp 1|source:Vector Comp 1|in:0.117|out:6.267|absIn:0.117|absOut:6.267
-  PRECOMP|name:Vector Comp 1|source:Vector Comp 1|in:0.000|out:6.150|absIn:0.000|absOut:6.150
-  TEXT|name:scan here|in:0.550|out:6.000|absIn:0.550|absOut:6.000|val:SCAN HERE
-  PRECOMP|name:Shape Layer 1 Comp 6|source:Shape Layer 1 Comp 6|in:0.433|out:6.000|absIn:0.433|absOut:6.000
-  PRECOMP|name:Vector Comp 1|source:Vector Comp 1|in:-1.800|out:6.150|absIn:0.000|absOut:6.150
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.167|out:6.317|absIn:0.167|absOut:6.317
-  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.433|out:5.983|absIn:0.433|absOut:5.983
-  SHAPE|name:Shape Layer 3
-  SHAPE|name:Shape Layer 2
-  PRECOMP|name:PLACEHOLDER HERE 2!!!|source:PLACEHOLDER HERE 2!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000
-COMP|name:PLACEHOLDER HERE 1!!!|dur:6.000|fps:60.000|w:1920|h:1080|layers:1
-  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|in:0.000|out:6.000|absIn:0.000|absOut:6.000|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:6.000|fps:60.000|w:382|h:369|layers:1
-  SHAPE|name:Vector
-COMP|name:9|dur:6.000|fps:60.000|w:1920|h:1080|layers:12
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000
-  SHAPE|name:Shape Layer 8
-  SHAPE|name:Shape Layer 7
-  TEXT|name:scan here|in:0.450|out:6.450|absIn:0.450|absOut:6.450|val:SCAN HERE
-  PRECOMP|name:Shape Layer 1 Comp 7|source:Shape Layer 1 Comp 7|in:0.333|out:5.833|absIn:0.333|absOut:5.833
-  TEXT|name:New Collection Drop|in:0.000|out:6.000|absIn:0.000|absOut:6.000|val:NEW COLLECTION DROP
-  SHAPE|name:Shape Layer 5
-  SHAPE|name:Shape Layer 4
-  SHAPE|name:Shape Layer 3
-  SHAPE|name:Shape Layer 2
-  PRECOMP|name:Pre-comp 5|source:Pre-comp 5|in:0.000|out:6.000|absIn:0.000|absOut:6.000
-  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000
-COMP|name:CHANGE COLOR HERE!!!|dur:1224.300|fps:60.000|w:1920|h:1080|layers:10
-  PRECOMP|name:8|source:8|in:0.000|out:6.000|absIn:0.000|absOut:6.000
-  PRECOMP|name:7|source:7|in:0.000|out:6.017|absIn:0.000|absOut:6.017
-  PRECOMP|name:3|source:3|in:0.000|out:6.000|absIn:0.000|absOut:6.000
-  PRECOMP|name:9|source:9|in:0.000|out:6.000|absIn:0.000|absOut:6.000
-  PRECOMP|name:6|source:6|in:0.000|out:5.967|absIn:0.000|absOut:5.967
-  PRECOMP|name:5|source:5|in:0.000|out:5.983|absIn:0.000|absOut:5.983
-  PRECOMP|name:4|source:4|in:0.000|out:5.983|absIn:0.000|absOut:5.983
-  PRECOMP|name:2|source:2|in:0.000|out:6.000|absIn:0.000|absOut:6.000
-  PRECOMP|name:1|source:1|in:0.000|out:5.917|absIn:0.000|absOut:5.917
-  SHAPE|name:Style Controller
-COMP|name:PLACEHOLDER HERE 1!!!|dur:15.000|fps:60.000|w:542|h:329|layers:2
-  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:13.417|absIn:0.000|absOut:13.417
-  SHAPE|name:Rectangle 4
-COMP|name:PLACEHOLDER HERE 1!!!|dur:6.000|fps:60.000|w:409|h:408|layers:2
-  SHAPE|name:Rectangle 5
-  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000
-COMP|name:PLACEHOLDER HERE 1!!!|dur:15.000|fps:60.000|w:342|h:688|layers:2
-  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:20.517|absIn:0.000|absOut:20.517
-  SHAPE|name:Rectangle 6
-COMP|name:PLACEHOLDER HERE 1!!!|dur:15.000|fps:60.000|w:205|h:198|layers:2
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.000|absOut:15.000
-  SHAPE|name:Rectangle 1
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:330|layers:2
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133
-  SHAPE|name:Rectangle 1
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:329|layers:2
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133
-  SHAPE|name:Rectangle 1
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:330|layers:2
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133
-  SHAPE|name:Rectangle 1
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:377|h:364|layers:2
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133
-  SHAPE|name:Rectangle 2
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:329|layers:2
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133
-  SHAPE|name:Rectangle 1
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:227|h:219|layers:2
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133
-  SHAPE|name:Rectangle 1
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:6.000|fps:60.000|w:382|h:369|layers:2
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:6.000|absIn:0.133|absOut:6.133
-  SHAPE|name:Rectangle 2
-COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:205|h:198|layers:1
-  SHAPE|name:Vector
-COMP|name:Pre-comp 1|dur:6.000|fps:60.000|w:343|h:330|layers:2
-  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000
-  SHAPE|name:Rectangle 1
-COMP|name:Pre-comp 3|dur:5.033|fps:60.000|w:1920|h:1080|layers:2
-  SHAPE|name:Vector
-  SHAPE|name:Vector
-COMP|name:Pre-comp 4|dur:5.733|fps:60.000|w:1920|h:1080|layers:2
-  SHAPE|name:Vector
-  SHAPE|name:Vector
-COMP|name:Pre-comp 5|dur:6.000|fps:60.000|w:1920|h:1080|layers:2
-  SHAPE|name:Union
-  SHAPE|name:Union
-COMP|name:Rectangle 7 Comp 1|dur:5.683|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Rectangle 7
-COMP|name:Shape Layer 1 Comp 1|dur:4.467|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Shape Layer 1
-COMP|name:Shape Layer 1 Comp 2|dur:5.500|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Shape Layer 1
-COMP|name:Shape Layer 1 Comp 3|dur:5.500|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Shape Layer 1
-COMP|name:Shape Layer 1 Comp 4|dur:5.367|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Shape Layer 1
-COMP|name:Shape Layer 1 Comp 5|dur:5.500|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Shape Layer 1
-COMP|name:Shape Layer 1 Comp 6|dur:5.567|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Shape Layer 1
-COMP|name:Shape Layer 1 Comp 7|dur:5.500|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Shape Layer 1
-COMP|name:Shape Layer 6 Comp 1|dur:5.500|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Shape Layer 6
-COMP|name:Union Comp 1|dur:5.883|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Union
-COMP|name:Union Comp 2|dur:5.850|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Union
-COMP|name:Vector 1 Comp 1|dur:4.967|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Vector 1
-COMP|name:Vector 2 Comp 1|dur:5.967|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Vector 2
-COMP|name:Vector Comp 1|dur:15.000|fps:60.000|w:113|h:209|layers:3
-  SHAPE|name:Shape Layer 3
-  SHAPE|name:Shape Layer 2
-  SHAPE|name:Shape Layer 1
-COMP|name:Vector Comp 2|dur:5.417|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Vector
-COMP|name:Vector Comp 3|dur:5.267|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Vector
-COMP|name:Vector Comp 4|dur:5.450|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Vector
-COMP|name:Vector Comp 5|dur:5.933|fps:60.000|w:1920|h:1080|layers:1
-  SHAPE|name:Vector
+COMP|name:#Render|dur:75.950|fps:60.000|w:1920|h:1080|layers:9|markers:
+  PRECOMP|name:1|source:1|in:0.000|out:5.917|absIn:0.000|absOut:5.917|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:2|source:2|in:5.917|out:11.917|absIn:5.917|absOut:11.917|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:4|source:4|in:11.917|out:17.900|absIn:11.917|absOut:17.900|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:5|source:5|in:17.900|out:23.883|absIn:17.900|absOut:23.883|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:6|source:6|in:23.883|out:29.850|absIn:23.883|absOut:29.850|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:9|source:9|in:29.850|out:35.850|absIn:29.850|absOut:35.850|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:3|source:3|in:35.850|out:41.850|absIn:35.850|absOut:41.850|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:7|source:7|in:41.850|out:47.867|absIn:41.850|absOut:47.867|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:8|source:8|in:47.867|out:53.867|absIn:47.867|absOut:53.867|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEHOLDER HERE 1!!!|dur:5.917|fps:60.000|w:1920|h:1080|layers:1|markers:
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|missing:undefined|maskShape:rectangle|maskW:1920|maskH:1080|in:0.000|out:5.917|absIn:0.000|absOut:5.917|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:330|layers:1|markers:
+  SHAPE|name:Vector|colors:fill:#000000;|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:1|dur:5.917|fps:60.000|w:1920|h:1080|layers:11|markers:
+  SHAPE|name:Shape Layer 4|colors:stroke:#ffffff;fill:#000000;|in:0.000|out:5.883|absIn:0.000|absOut:5.883|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SOLID|name:Null 1|hex:#ffffff|maskShape:rectangle|maskW:1920|maskH:1080|maskCount:0|in:0.400|out:5.883|absIn:0.400|absOut:5.883|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:|markers:
+    EFFECT|name:AC FX [H6B] Controls|matchName:Pseudo/MHAC PrCtrl H6B 8|thirdParty:true
+  PRECOMP|name:Union Comp 2|source:Union Comp 2|in:0.033|out:5.883|absIn:0.033|absOut:5.883|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.333|out:5.667|absIn:0.333|absOut:5.667|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:4|parent:|markers:TR In@0.77;TR Out@4.98;
+  TEXT|name:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|in:0.667|out:5.883|absIn:0.667|absOut:5.883|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha_inverted|keys:4|exprs:1|parent:|markers:
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+  PRECOMP|name:Shape Layer 1 Comp 2|source:Shape Layer 1 Comp 2|in:0.483|out:5.983|absIn:0.483|absOut:5.983|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Shape Layer 3|colors:stroke:#ffffff;fill:#000000;|in:0.000|out:5.933|absIn:0.000|absOut:5.933|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:3|parent:|markers:
+  SHAPE|name:Shape Layer 2|colors:stroke:#ffffff;fill:#020202;|in:0.000|out:5.950|absIn:0.000|absOut:5.950|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+  SOLID|name:Union Null 1|hex:#ffffff|maskShape:rectangle|maskW:1920|maskH:1080|maskCount:0|in:0.617|out:5.883|absIn:0.617|absOut:5.883|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:|markers:
+    EFFECT|name:AC FX [H6B] Controls|matchName:Pseudo/MHAC PrCtrl H6B 8|thirdParty:true
+  PRECOMP|name:Union Comp 1|source:Union Comp 1|in:0.000|out:5.883|absIn:0.000|absOut:5.883|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:5.917|absIn:0.000|absOut:5.917|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEHOLDER HERE 1!!!|dur:13.417|fps:60.000|w:1920|h:1080|layers:0|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:329|layers:1|markers:
+  SHAPE|name:Vector|colors:fill:#000000;|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:2|dur:6.000|fps:60.000|w:1920|h:1080|layers:10|markers:
+  SHAPE|name:Shape Layer 4|colors:stroke:#ffffff;fill:#000000;|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  TEXT|name:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|in:1.550|out:7.550|absIn:1.550|absOut:7.550|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:4|exprs:1|parent:|markers:
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.883|out:5.350|absIn:0.883|absOut:5.350|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:3|parent:|markers:TR In@1.45;TR Out@5.17;
+  PRECOMP|name:Shape Layer 1 Comp 1|source:Shape Layer 1 Comp 1|in:0.817|out:5.283|absIn:0.817|absOut:5.283|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.483|out:5.283|absIn:0.483|absOut:5.283|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:3|parent:|markers:TR In@1.05;TR Out@5;
+  TEXT|name:Live Music Festival 2026|val:LIVE MUSIC FESTIVAL 2026|font:Archivo-SemiBold|size:39|align:center|hasAnimator:false|in:1.033|out:7.033|absIn:1.033|absOut:7.033|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:4|exprs:1|parent:|markers:
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+  SOLID|name:Null 1|hex:#ffffff|maskShape:rectangle|maskW:1920|maskH:1080|maskCount:0|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:2|parent:|markers:
+    EFFECT|name:AC FX [ZBH] Controls|matchName:Pseudo/MHAC PrCtrl ZBH 9|thirdParty:true
+  SHAPE|name:Shape Layer 3|colors:stroke:#ffffff;fill:#000000;|in:0.000|out:5.933|absIn:0.000|absOut:5.933|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:2|parent:|markers:
+  SHAPE|name:Shape Layer 2|colors:stroke:#ffffff;fill:#020202;|in:0.000|out:5.950|absIn:0.000|absOut:5.950|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+  PRECOMP|name:Vector 1 Comp 1|source:Vector 1 Comp 1|in:0.467|out:5.433|absIn:0.467|absOut:5.433|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEHOLDER HERE 1!!!|dur:6.000|fps:60.000|w:409|h:408|layers:0|markers:
+COMP|name:PLACEHOLDER HERE 2!!!|dur:6.000|fps:60.000|w:1920|h:1080|layers:1|markers:
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|missing:undefined|maskShape:rectangle|maskW:1920|maskH:1080|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:6.000|fps:60.000|w:343|h:330|layers:1|markers:
+  SHAPE|name:Vector|colors:fill:#000000;|in:0.000|out:6.000|absIn:0.133|absOut:6.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:3|dur:6.000|fps:60.000|w:1920|h:1080|layers:14|markers:
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.950|out:5.367|absIn:0.950|absOut:5.367|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:3|parent:|markers:TR In@1.52;TR Out@4.93;
+  TEXT|name:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|in:0.400|out:5.400|absIn:0.400|absOut:5.400|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:4|exprs:1|parent:|markers:
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+  PRECOMP|name:Pre-comp 1|source:Pre-comp 1|in:0.433|out:5.583|absIn:0.433|absOut:5.583|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:3|parent:|markers:TR In@1;TR Out@5.22;
+  PRECOMP|name:Shape Layer 1 Comp 3|source:Shape Layer 1 Comp 3|in:0.483|out:5.983|absIn:0.483|absOut:5.983|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Shape Layer 7|colors:stroke:#ffffff;fill:#020202;|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  TEXT|name:Explore contemporary works from emerging visual artists|val:Explore Contemporary Works From Emerging Visual Artists|font:Archivo-Light|size:38|align:left|hasAnimator:true|in:1.283|out:5.367|absIn:1.283|absOut:5.367|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:0|exprs:1|parent:|markers:TR In@2.02;TR Out@4.93;
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+    EFFECT|name:AC IN [DYM] Controls|matchName:Pseudo/MHAC PrCtrl DYM 22|thirdParty:true
+    EFFECT|name:AC OUT [WZE] Controls|matchName:Pseudo/MHAC PrCtrl WZE 22|thirdParty:true
+  TEXT|name:Modern Art Showcase|val:MODERN ART SHOWCASE|font:Archivo-Bold|size:71|align:left|hasAnimator:true|in:0.983|out:5.233|absIn:0.983|absOut:5.233|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:0|exprs:1|parent:|markers:TR In@1.72;TR Out@4.85;
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+    EFFECT|name:AC IN [DYM] Controls|matchName:Pseudo/MHAC PrCtrl DYM 22|thirdParty:true
+    EFFECT|name:AC OUT [WZE] Controls|matchName:Pseudo/MHAC PrCtrl WZE 22|thirdParty:true
+  SHAPE|name:Shape Layer 5|colors:stroke:#ffffff;fill:#020202;|in:0.333|out:6.283|absIn:0.333|absOut:6.283|enabled:false|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:|markers:
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+  SHAPE|name:Shape Layer 6|colors:stroke:#ffffff;fill:#020202;|in:0.333|out:6.283|absIn:0.333|absOut:6.283|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:|markers:
+  SHAPE|name:Shape Layer 4|colors:stroke:#ffffff;fill:#020202;|in:0.333|out:6.283|absIn:0.333|absOut:6.283|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+  SHAPE|name:Shape Layer 3|colors:stroke:#ffffff;fill:#000000;|in:0.017|out:5.950|absIn:0.017|absOut:5.950|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:2|parent:|markers:
+  SHAPE|name:Shape Layer 2|colors:stroke:#ffffff;fill:#020202;|in:0.017|out:5.967|absIn:0.017|absOut:5.967|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+  PRECOMP|name:Pre-comp 3|source:Pre-comp 3|in:0.483|out:5.517|absIn:0.483|absOut:5.517|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:PLACEHOLDER HERE 2!!!|source:PLACEHOLDER HERE 2!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEHOLDER HERE 1!!!|dur:5.983|fps:60.000|w:1920|h:1080|layers:1|markers:
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|missing:undefined|maskShape:rectangle|maskW:1920|maskH:1080|in:0.000|out:5.983|absIn:0.000|absOut:5.983|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:330|layers:1|markers:
+  SHAPE|name:Vector|colors:fill:#000000;|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:4|dur:5.983|fps:60.000|w:1920|h:1080|layers:12|markers:
+  TEXT|name:Final Championship Game|val:FINAL CHAMPIONSHIPGAME|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|in:0.183|out:5.983|absIn:0.183|absOut:5.983|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:8|exprs:1|parent:|markers:
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+  PRECOMP|name:Vector Comp 3|source:Vector Comp 3|in:0.383|out:5.650|absIn:0.383|absOut:5.650|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:Vector Comp 2|source:Vector Comp 2|in:0.083|out:5.500|absIn:0.083|absOut:5.500|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.550|out:5.683|absIn:0.550|absOut:5.683|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:3|parent:|markers:TR In@1.12;TR Out@4.8;
+  TEXT|name:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|in:0.800|out:5.983|absIn:0.800|absOut:5.983|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:4|exprs:1|parent:|markers:
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+  PRECOMP|name:Shape Layer 6 Comp 1|source:Shape Layer 6 Comp 1|in:0.483|out:5.983|absIn:0.483|absOut:5.983|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:Vector Comp 4|source:Vector Comp 4|in:0.000|out:5.450|absIn:0.000|absOut:5.450|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Shape Layer 5|colors:stroke:#ffffff;fill:#000000;|in:0.050|out:5.983|absIn:0.050|absOut:5.983|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:2|parent:|markers:
+  SHAPE|name:Shape Layer 4|colors:stroke:#ffffff;fill:#020202;|in:0.050|out:5.983|absIn:0.050|absOut:5.983|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+  SHAPE|name:Shape Layer 3|colors:stroke:#ffffff;fill:#000000;|in:0.050|out:5.983|absIn:0.050|absOut:5.983|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:2|parent:|markers:
+  SHAPE|name:Shape Layer 2|colors:stroke:#ffffff;fill:#020202;|in:0.050|out:5.983|absIn:0.050|absOut:5.983|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:5.983|absIn:0.000|absOut:5.983|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEHOLDER HERE 1!!!|dur:5.983|fps:60.000|w:1920|h:1080|layers:1|markers:
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|missing:undefined|maskShape:rectangle|maskW:1920|maskH:1080|in:0.000|out:5.983|absIn:0.000|absOut:5.983|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:377|h:364|layers:1|markers:
+  SHAPE|name:Vector|colors:fill:#000000;|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:5|dur:5.983|fps:60.000|w:1920|h:1080|layers:10|markers:
+  SHAPE|name:Shape Layer 6|colors:stroke:#ffffff;fill:#ff0000;|in:0.000|out:5.983|absIn:0.000|absOut:5.983|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:5.933|absIn:0.000|absOut:5.933|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:4|exprs:1|parent:|markers:
+  TEXT|name:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|in:0.000|out:5.933|absIn:0.000|absOut:5.933|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:4|exprs:1|parent:Shape Layer 1 Comp 4|markers:
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+  PRECOMP|name:Shape Layer 1 Comp 4|source:Shape Layer 1 Comp 4|in:0.317|out:5.683|absIn:0.317|absOut:5.683|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:Pre-comp 4|source:Pre-comp 4|in:0.000|out:5.733|absIn:0.000|absOut:5.733|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Shape Layer 5|colors:stroke:#ffffff;fill:#020202;|in:0.000|out:5.933|absIn:0.000|absOut:5.933|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:3|parent:|markers:
+  SHAPE|name:Shape Layer 4|colors:stroke:#ffffff;fill:#020202;|in:0.000|out:5.933|absIn:0.000|absOut:5.933|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:4|exprs:1|parent:|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+  SHAPE|name:Shape Layer 3|colors:stroke:#ffffff;fill:#000000;|in:0.000|out:5.983|absIn:0.000|absOut:5.983|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:3|parent:|markers:
+  SHAPE|name:Shape Layer 2|colors:stroke:#ffffff;fill:#020202;|in:0.000|out:5.983|absIn:0.000|absOut:5.983|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:5.983|absIn:0.000|absOut:5.983|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEHOLDER HERE 1!!!|dur:20.517|fps:60.000|w:4096|h:2160|layers:0|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:329|layers:1|markers:
+  SHAPE|name:Vector|colors:fill:#000000;|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:6|dur:5.967|fps:60.000|w:1920|h:1080|layers:9|markers:
+  SHAPE|name:Shape Layer 5|colors:stroke:#ffffff;fill:#020202;|in:0.000|out:5.967|absIn:0.000|absOut:5.967|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:Shape Layer 2|markers:
+  TEXT|name:Movie Premiere|val:MOVIE PREMIERE|font:Archivo-Bold|size:39|align:left|hasAnimator:false|in:0.000|out:5.967|absIn:0.000|absOut:5.967|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha_inverted|keys:2|exprs:1|parent:Shape Layer 2|markers:
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+  TEXT|name:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|in:0.000|out:5.967|absIn:0.000|absOut:5.967|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:2|exprs:1|parent:Shape Layer 2|markers:
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+  PRECOMP|name:Shape Layer 1 Comp 5|source:Shape Layer 1 Comp 5|in:0.350|out:5.850|absIn:0.350|absOut:5.850|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:Shape Layer 2|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.000|absOut:15.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:2|parent:Shape Layer 2|markers:TR In@0.57;
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.183|out:15.183|absIn:0.183|absOut:15.183|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:2|parent:Shape Layer 2|markers:TR In@0.75;
+  PRECOMP|name:Vector 2 Comp 1|source:Vector 2 Comp 1|in:0.000|out:5.967|absIn:0.000|absOut:5.967|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:Shape Layer 2|markers:
+  SHAPE|name:Shape Layer 3|colors:stroke:#ffffff;fill:#000000;|in:0.000|out:5.967|absIn:0.000|absOut:5.967|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:2|parent:|markers:
+  SHAPE|name:Shape Layer 2|colors:stroke:#ffffff;fill:#020202;|in:0.000|out:5.967|absIn:0.000|absOut:5.967|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:6|exprs:3|parent:|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+COMP|name:PLACEHOLDER HERE 1!!!|dur:6.017|fps:60.000|w:1920|h:1080|layers:1|markers:
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|missing:undefined|maskShape:rectangle|maskW:1920|maskH:1080|in:0.000|out:6.017|absIn:0.000|absOut:6.017|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:7|dur:6.017|fps:60.000|w:1920|h:1080|layers:9|markers:
+  PRECOMP|name:Rectangle 7 Comp 1|source:Rectangle 7 Comp 1|in:0.067|out:5.750|absIn:0.067|absOut:5.750|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:Vector Comp 5|source:Vector Comp 5|in:0.083|out:6.017|absIn:0.083|absOut:6.017|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:5.950|absIn:0.000|absOut:5.950|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:4|exprs:1|parent:|markers:
+  TEXT|name:Creative Design Conference|val:CREATIVE DESIGN CONFERENCE|font:Archivo-Bold|size:46|align:left|hasAnimator:true|in:0.100|out:5.833|absIn:0.100|absOut:5.833|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:0|exprs:1|parent:|markers:TR In@0.83;TR Out@5.32;
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+    EFFECT|name:AC IN [DYM] Controls|matchName:Pseudo/MHAC PrCtrl DYM 22|thirdParty:true
+    EFFECT|name:AC OUT [WZE] Controls|matchName:Pseudo/MHAC PrCtrl WZE 22|thirdParty:true
+  SHAPE|name:Shape Layer 4|colors:stroke:#ffffff;fill:#000000;|in:0.017|out:5.950|absIn:0.017|absOut:5.950|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:2|parent:|markers:
+  SHAPE|name:Shape Layer 5|colors:stroke:#ffffff;fill:#020202;|in:0.017|out:5.967|absIn:0.017|absOut:5.967|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+    EFFECT|name:CC Light Sweep|matchName:CC Light Sweep|thirdParty:true
+    EFFECT|name:CC Light Sweep 2|matchName:CC Light Sweep|thirdParty:true
+  SHAPE|name:Shape Layer 3|colors:stroke:#ffffff;fill:#000000;|in:0.017|out:5.950|absIn:0.017|absOut:5.950|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:2|parent:|markers:
+  SHAPE|name:Shape Layer 2|colors:stroke:#ffffff;fill:#020202;|in:0.017|out:5.967|absIn:0.017|absOut:5.967|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+    EFFECT|name:CC Light Sweep|matchName:CC Light Sweep|thirdParty:true
+    EFFECT|name:CC Light Sweep 2|matchName:CC Light Sweep|thirdParty:true
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:6.017|absIn:0.000|absOut:6.017|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEHOLDER HERE 1!!!|dur:15.000|fps:60.000|w:299|h:304|layers:1|markers:
+  SHAPE|name:Rectangle 8|colors:fill:#f2f2f2;|in:0.000|out:15.000|absIn:0.000|absOut:15.000|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEHOLDER HERE 2!!!|dur:6.000|fps:60.000|w:1920|h:1080|layers:1|markers:
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|missing:undefined|maskShape:rectangle|maskW:1920|maskH:1080|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:227|h:219|layers:1|markers:
+  SHAPE|name:PLACEYOURQRCODEHERE 1!!!|colors:fill:#000000;|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:8|dur:6.000|fps:60.000|w:1920|h:1080|layers:10|markers:
+  PRECOMP|name:Vector Comp 1|source:Vector Comp 1|in:0.117|out:6.267|absIn:0.117|absOut:6.267|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:Shape Layer 2|markers:
+  PRECOMP|name:Vector Comp 1|source:Vector Comp 1|in:0.000|out:6.150|absIn:0.000|absOut:6.150|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:Shape Layer 2|markers:
+  TEXT|name:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:24|align:center|hasAnimator:false|in:0.550|out:6.000|absIn:0.550|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:4|exprs:1|parent:Shape Layer 2|markers:
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+  PRECOMP|name:Shape Layer 1 Comp 6|source:Shape Layer 1 Comp 6|in:0.433|out:6.000|absIn:0.433|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:Shape Layer 2|markers:
+  PRECOMP|name:Vector Comp 1|source:Vector Comp 1|in:-1.800|out:6.150|absIn:0.000|absOut:6.150|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:Shape Layer 2|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.167|out:6.317|absIn:0.167|absOut:6.317|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:3|parent:Shape Layer 2|markers:TR In@0.73;TR Out@5.62;
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.433|out:5.983|absIn:0.433|absOut:5.983|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:3|parent:Shape Layer 2|markers:TR In@1;TR Out@5.35;
+  SHAPE|name:Shape Layer 3|colors:stroke:#ffffff;fill:#000000;|in:0.000|out:5.933|absIn:0.000|absOut:5.933|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:2|parent:Shape Layer 2|markers:
+  SHAPE|name:Shape Layer 2|colors:stroke:#ffffff;fill:#020202;|in:0.000|out:5.950|absIn:0.000|absOut:5.950|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:4|exprs:2|parent:|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+  PRECOMP|name:PLACEHOLDER HERE 2!!!|source:PLACEHOLDER HERE 2!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEHOLDER HERE 1!!!|dur:6.000|fps:60.000|w:1920|h:1080|layers:1|markers:
+  FOOTAGE|name:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|missing:undefined|maskShape:rectangle|maskW:1920|maskH:1080|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:6.000|fps:60.000|w:382|h:369|layers:1|markers:
+  SHAPE|name:Vector|colors:fill:#000000;|in:0.000|out:6.000|absIn:0.133|absOut:6.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:9|dur:6.000|fps:60.000|w:1920|h:1080|layers:12|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:Shape Layer 7|markers:
+  SHAPE|name:Shape Layer 8|colors:stroke:#ffffff;fill:#000000;|in:0.000|out:6.050|absIn:0.000|absOut:6.050|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:2|parent:Shape Layer 7|markers:
+  SHAPE|name:Shape Layer 7|colors:stroke:#ffffff;fill:#020202;|in:0.000|out:6.100|absIn:0.000|absOut:6.100|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:6|exprs:1|parent:|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+  TEXT|name:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|in:0.450|out:6.450|absIn:0.450|absOut:6.450|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:2|exprs:1|parent:Shape Layer 7|markers:
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+  PRECOMP|name:Shape Layer 1 Comp 7|source:Shape Layer 1 Comp 7|in:0.333|out:5.833|absIn:0.333|absOut:5.833|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:Shape Layer 7|markers:
+  TEXT|name:New Collection Drop|val:NEW COLLECTION DROP|font:Archivo-ExtraBold|size:28|align:center|hasAnimator:false|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:2|exprs:1|parent:Shape Layer 7|markers:
+    EFFECT|name:Fill|matchName:ADBE Fill|thirdParty:false
+  SHAPE|name:Shape Layer 5|colors:stroke:#ffffff;fill:#000000;|in:0.333|out:6.317|absIn:0.333|absOut:6.317|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:3|parent:Shape Layer 7|markers:
+  SHAPE|name:Shape Layer 4|colors:stroke:#ffffff;fill:#020202;|in:0.000|out:5.983|absIn:0.000|absOut:5.983|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:Shape Layer 7|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+  SHAPE|name:Shape Layer 3|colors:stroke:#ffffff;fill:#000000;|in:0.000|out:5.983|absIn:0.000|absOut:5.983|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:3|parent:Shape Layer 7|markers:
+  SHAPE|name:Shape Layer 2|colors:stroke:#ffffff;fill:#020202;|in:0.150|out:6.133|absIn:0.150|absOut:6.133|enabled:true|adjustment:true|3d:false|blend:normal|matte:none|keys:0|exprs:1|parent:Shape Layer 7|markers:
+    EFFECT|name:Brightness & Contrast|matchName:ADBE Brightness & Contrast 2|thirdParty:false
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:Noise|matchName:ADBE Noise2|thirdParty:false
+    EFFECT|name:Transform|matchName:ADBE Geometry2|thirdParty:false
+    EFFECT|name:Displacement Map|matchName:ADBE Displacement Map|thirdParty:false
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+  PRECOMP|name:Pre-comp 5|source:Pre-comp 5|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:Shape Layer 7|markers:
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:CHANGE COLOR HERE!!!|dur:1224.300|fps:60.000|w:1920|h:1080|layers:10|markers:
+  PRECOMP|name:8|source:8|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:7|source:7|in:0.000|out:6.017|absIn:0.000|absOut:6.017|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:3|source:3|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:9|source:9|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:6|source:6|in:0.000|out:5.967|absIn:0.000|absOut:5.967|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:5|source:5|in:0.000|out:5.983|absIn:0.000|absOut:5.983|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:4|source:4|in:0.000|out:5.983|absIn:0.000|absOut:5.983|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:2|source:2|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:1|source:1|in:0.000|out:5.917|absIn:0.000|absOut:5.917|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Style Controller|colors:|in:0.000|out:1224.300|absIn:0.000|absOut:1224.300|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+    EFFECT|name:CL: Color 16|matchName:ADBE Color Control|thirdParty:false
+    EFFECT|name:CL: Color 7|matchName:ADBE Color Control|thirdParty:false
+    EFFECT|name:CL: Color 3|matchName:ADBE Color Control|thirdParty:false
+    EFFECT|name:CL: Color 15|matchName:ADBE Color Control|thirdParty:false
+    EFFECT|name:CL: Color 1|matchName:ADBE Color Control|thirdParty:false
+    EFFECT|name:CL: Color 11|matchName:ADBE Color Control|thirdParty:false
+COMP|name:PLACEHOLDER HERE 1!!!|dur:15.000|fps:60.000|w:542|h:329|layers:2|markers:
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:13.417|absIn:0.000|absOut:13.417|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Rectangle 4|colors:fill:#f2f2f2;|in:0.000|out:15.000|absIn:0.000|absOut:15.000|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEHOLDER HERE 1!!!|dur:6.000|fps:60.000|w:409|h:408|layers:2|markers:
+  SHAPE|name:Rectangle 5|colors:fill:#f2f2f2;|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEHOLDER HERE 1!!!|dur:15.000|fps:60.000|w:342|h:688|layers:2|markers:
+  PRECOMP|name:PLACEHOLDER HERE 1!!!|source:PLACEHOLDER HERE 1!!!|in:0.000|out:20.517|absIn:0.000|absOut:20.517|enabled:true|adjustment:false|3d:false|blend:normal|matte:alpha|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Rectangle 6|colors:fill:#f2f2f2;|in:0.000|out:15.000|absIn:0.000|absOut:15.000|enabled:false|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEHOLDER HERE 1!!!|dur:15.000|fps:60.000|w:205|h:198|layers:2|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.000|absOut:15.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Rectangle 1|colors:fill:#f2f2f2;|in:0.000|out:15.000|absIn:0.000|absOut:15.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:330|layers:2|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Rectangle 1|colors:fill:#f2f2f2;|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:329|layers:2|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Rectangle 1|colors:fill:#f2f2f2;|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:330|layers:2|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Rectangle 1|colors:fill:#f2f2f2;|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:377|h:364|layers:2|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Rectangle 2|colors:fill:#f2f2f2;|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:342|h:329|layers:2|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Rectangle 1|colors:fill:#f2f2f2;|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:227|h:219|layers:2|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Rectangle 1|colors:fill:#f2f2f2;|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:6.000|fps:60.000|w:382|h:369|layers:2|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:6.000|absIn:0.133|absOut:6.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Rectangle 2|colors:fill:#f2f2f2;|in:0.000|out:6.000|absIn:0.133|absOut:6.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:PLACEYOURQRCODEHERE 1!!!|dur:15.000|fps:60.000|w:205|h:198|layers:1|markers:
+  SHAPE|name:Vector|colors:fill:#000000;|in:0.000|out:15.000|absIn:0.133|absOut:15.133|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:Pre-comp 1|dur:6.000|fps:60.000|w:343|h:330|layers:2|markers:
+  PRECOMP|name:PLACEYOURQRCODEHERE 1!!!|source:PLACEYOURQRCODEHERE 1!!!|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+  SHAPE|name:Rectangle 1|colors:fill:#f2f2f2;|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:0|parent:|markers:
+COMP|name:Pre-comp 3|dur:5.033|fps:60.000|w:1920|h:1080|layers:2|markers:
+  SHAPE|name:Vector|colors:|in:0.083|out:4.733|absIn:0.083|absOut:4.733|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:4|exprs:11|parent:|markers:TR In@0.65;TR Out@4.22;
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:AC FX [H6B] Controls|matchName:Pseudo/MHAC PrCtrl H6B 8|thirdParty:true
+    EFFECT|name:AC IN [LKC] Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:AC OUT [LKC] 2 Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+  SHAPE|name:Vector|colors:|in:0.000|out:5.033|absIn:0.000|absOut:5.033|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:4|exprs:11|parent:|markers:TR In@0.57;TR Out@4.37;
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:AC FX [H6B] Controls|matchName:Pseudo/MHAC PrCtrl H6B 8|thirdParty:true
+    EFFECT|name:AC IN [LKC] Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:AC OUT [LKC] 2 Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+COMP|name:Pre-comp 4|dur:5.733|fps:60.000|w:1920|h:1080|layers:2|markers:
+  SHAPE|name:Vector|colors:|in:0.000|out:5.683|absIn:0.000|absOut:5.683|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:2|exprs:14|parent:|markers:TR In@0.57;TR Out@4.93;
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:AC FX [UDB] Controls|matchName:Pseudo/MHAC PrCtrl UDB 6|thirdParty:true
+    EFFECT|name:AC FX [8E9] Controls|matchName:Pseudo/MHAC PrCtrl 8E9 7|thirdParty:true
+    EFFECT|name:AC OUT [LKC] Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:AC IN [LKC] 2 Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:AC OUT [LKC] 3 Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+  SHAPE|name:Vector|colors:|in:0.000|out:5.733|absIn:0.000|absOut:5.733|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:2|exprs:14|parent:|markers:TR In@0.57;TR Out@5.1;
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:AC FX [UDB] Controls|matchName:Pseudo/MHAC PrCtrl UDB 6|thirdParty:true
+    EFFECT|name:AC FX [8E9] Controls|matchName:Pseudo/MHAC PrCtrl 8E9 7|thirdParty:true
+    EFFECT|name:AC OUT [LKC] Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:AC IN [LKC] 2 Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:AC OUT [LKC] 3 Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+COMP|name:Pre-comp 5|dur:6.000|fps:60.000|w:1920|h:1080|layers:2|markers:
+  SHAPE|name:Union|colors:|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:2|exprs:9|parent:|markers:TR In@0.57;
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:AC IN [LKC] Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+  SHAPE|name:Union|colors:|in:0.000|out:6.000|absIn:0.000|absOut:6.000|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:2|exprs:9|parent:|markers:TR In@0.57;
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:AC IN [LKC] Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+COMP|name:Rectangle 7 Comp 1|dur:5.683|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Rectangle 7|colors:|in:0.000|out:5.683|absIn:0.000|absOut:5.683|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:10|exprs:10|parent:|markers:TR In@0.5;TR Out@5.02;
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:AC IN [LKC] Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:AC OUT [LKC] 2 Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+COMP|name:Shape Layer 1 Comp 1|dur:4.467|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Shape Layer 1|colors:fill:#000000;|in:0.000|out:4.467|absIn:0.000|absOut:4.467|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:2|exprs:7|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+COMP|name:Shape Layer 1 Comp 2|dur:5.500|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Shape Layer 1|colors:fill:#000000;|in:0.000|out:5.500|absIn:0.000|absOut:5.500|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:2|exprs:7|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+COMP|name:Shape Layer 1 Comp 3|dur:5.500|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Shape Layer 1|colors:fill:#000000;|in:0.000|out:5.500|absIn:0.000|absOut:5.500|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:2|exprs:7|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+COMP|name:Shape Layer 1 Comp 4|dur:5.367|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Shape Layer 1|colors:fill:#000000;|in:0.000|out:5.367|absIn:0.000|absOut:5.367|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:2|exprs:7|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+COMP|name:Shape Layer 1 Comp 5|dur:5.500|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Shape Layer 1|colors:fill:#000000;|in:0.000|out:5.500|absIn:0.000|absOut:5.500|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:7|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+COMP|name:Shape Layer 1 Comp 6|dur:5.567|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Shape Layer 1|colors:fill:#000000;|in:0.000|out:5.567|absIn:0.000|absOut:5.567|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:2|exprs:7|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+COMP|name:Shape Layer 1 Comp 7|dur:5.500|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Shape Layer 1|colors:fill:#000000;|in:0.000|out:5.500|absIn:0.000|absOut:5.500|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:7|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+COMP|name:Shape Layer 6 Comp 1|dur:5.500|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Shape Layer 6|colors:fill:#000000;|in:0.000|out:5.500|absIn:0.000|absOut:5.500|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:2|exprs:7|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+COMP|name:Union Comp 1|dur:5.883|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Union|colors:|in:0.000|out:5.883|absIn:0.000|absOut:5.883|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:16|exprs:9|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+    EFFECT|name:Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+COMP|name:Union Comp 2|dur:5.850|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Union|colors:|in:0.000|out:5.850|absIn:0.000|absOut:5.850|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:12|exprs:9|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:Smart Bounce|matchName:Pseudo/PSE Smart Bounce 1.3|thirdParty:true
+COMP|name:Vector 1 Comp 1|dur:4.967|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Vector 1|colors:|in:0.000|out:4.967|absIn:0.000|absOut:4.967|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:8|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:AC FX [1DF] Controls|matchName:Pseudo/MHAC PrCtrl 1DF 7|thirdParty:true
+    EFFECT|name:AC FX [1DF] Wave Warp|matchName:ADBE Wave Warp|thirdParty:false
+COMP|name:Vector 2 Comp 1|dur:5.967|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Vector 2|colors:|in:0.000|out:5.967|absIn:0.000|absOut:5.967|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:7|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+COMP|name:Vector Comp 1|dur:15.000|fps:60.000|w:113|h:209|layers:3|markers:
+  SHAPE|name:Shape Layer 3|colors:fill:#ff0000;|in:2.000|out:18.300|absIn:3.800|absOut:20.100|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:8|exprs:9|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+  SHAPE|name:Shape Layer 2|colors:fill:#ff0000;|in:1.000|out:17.300|absIn:2.800|absOut:19.100|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:8|exprs:9|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+  SHAPE|name:Shape Layer 1|colors:fill:#ff0000;|in:0.000|out:15.383|absIn:1.800|absOut:17.183|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:8|exprs:9|parent:|markers:
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+COMP|name:Vector Comp 2|dur:5.417|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Vector|colors:|in:0.000|out:5.417|absIn:0.000|absOut:5.417|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:13|parent:|markers:TR In@0.57;TR Out@4.98;
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:AC FX [ZBH] Controls|matchName:Pseudo/MHAC PrCtrl ZBH 9|thirdParty:true
+    EFFECT|name:AC OUT [LKC] Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:AC IN [LKC] 2 Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:AC OUT [LKC] 3 Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+COMP|name:Vector Comp 3|dur:5.267|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Vector|colors:|in:0.000|out:5.267|absIn:0.000|absOut:5.267|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:13|parent:|markers:TR In@0.57;TR Out@4.8;
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:AC FX [ZBH] Controls|matchName:Pseudo/MHAC PrCtrl ZBH 9|thirdParty:true
+    EFFECT|name:AC OUT [LKC] Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:AC IN [LKC] 2 Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:AC OUT [LKC] 3 Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+COMP|name:Vector Comp 4|dur:5.450|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Vector|colors:|in:0.000|out:5.450|absIn:0.000|absOut:5.450|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:13|parent:|markers:TR In@0.57;TR Out@4.83;
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:AC FX [ZBH] Controls|matchName:Pseudo/MHAC PrCtrl ZBH 9|thirdParty:true
+    EFFECT|name:AC OUT [LKC] Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:AC IN [LKC] 2 Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+    EFFECT|name:AC OUT [LKC] 3 Gaussian Blur|matchName:ADBE Gaussian Blur 2|thirdParty:false
+COMP|name:Vector Comp 5|dur:5.933|fps:60.000|w:1920|h:1080|layers:1|markers:
+  SHAPE|name:Vector|colors:|in:0.000|out:5.933|absIn:0.000|absOut:5.933|enabled:true|adjustment:false|3d:false|blend:normal|matte:none|keys:0|exprs:10|parent:|markers:TR In@1.57;TR Out@4.53;
+    EFFECT|name:Gradient Ramp|matchName:ADBE Ramp|thirdParty:false
+    EFFECT|name:CC Toner|matchName:CC Toner|thirdParty:true
+    EFFECT|name:AC FX [ZBH] Controls|matchName:Pseudo/MHAC PrCtrl ZBH 9|thirdParty:true
+    EFFECT|name:AC IN [NWX] Controls|matchName:Pseudo/MHAC PrCtrl NWX 10|thirdParty:true
+    EFFECT|name:AC OUT [NWX] 2 Controls|matchName:Pseudo/MHAC PrCtrl NWX 10|thirdParty:true
+
+=== THIRD PARTY PLUGINS DETECTED ===
+PLUGIN|matchName:Pseudo/MHAC PrCtrl H6B 8|name:AC FX [H6B] Controls|vendor:Pseudo/MHAC
+PLUGIN|matchName:Pseudo/PSE Smart Bounce 1.3|name:Smart Bounce|vendor:Pseudo/PSE
+PLUGIN|matchName:Pseudo/MHAC PrCtrl ZBH 9|name:AC FX [ZBH] Controls|vendor:Pseudo/MHAC
+PLUGIN|matchName:Pseudo/MHAC PrCtrl DYM 22|name:AC IN [DYM] Controls|vendor:Pseudo/MHAC
+PLUGIN|matchName:Pseudo/MHAC PrCtrl WZE 22|name:AC OUT [WZE] Controls|vendor:Pseudo/MHAC
+PLUGIN|matchName:CC Light Sweep|name:CC Light Sweep 2|vendor:CC
+PLUGIN|matchName:CC Toner|name:CC Toner|vendor:CC
+PLUGIN|matchName:Pseudo/MHAC PrCtrl UDB 6|name:AC FX [UDB] Controls|vendor:Pseudo/MHAC
+PLUGIN|matchName:Pseudo/MHAC PrCtrl 8E9 7|name:AC FX [8E9] Controls|vendor:Pseudo/MHAC
+PLUGIN|matchName:Pseudo/MHAC PrCtrl 1DF 7|name:AC FX [1DF] Controls|vendor:Pseudo/MHAC
+PLUGIN|matchName:Pseudo/MHAC PrCtrl NWX 10|name:AC OUT [NWX] 2 Controls|vendor:Pseudo/MHAC
+
+=== ESSENTIAL PROPERTIES ===
 
 === INJECTABLE SUMMARY ===
 -- TEXT INJECTABLES --
-TEXT_INJECT|comp:1|layer:scan here|absIn:0.667|absOut:5.883|val:SCAN HERE
-TEXT_INJECT|comp:2|layer:scan here|absIn:1.550|absOut:7.550|val:SCAN HERE
-TEXT_INJECT|comp:2|layer:Live Music Festival 2026|absIn:1.033|absOut:7.033|val:LIVE MUSIC FESTIVAL 2026
-TEXT_INJECT|comp:3|layer:scan here|absIn:0.400|absOut:5.400|val:SCAN HERE
-TEXT_INJECT|comp:3|layer:Explore contemporary works from emerging visual artists|absIn:1.283|absOut:5.367|val:Explore Contemporary Works From Emerging Visual Artists
-TEXT_INJECT|comp:3|layer:Modern Art Showcase|absIn:0.983|absOut:5.233|val:MODERN ART SHOWCASE
-TEXT_INJECT|comp:4|layer:Final Championship Game|absIn:0.183|absOut:5.983|val:FINAL CHAMPIONSHIPGAME
-TEXT_INJECT|comp:4|layer:scan here|absIn:0.800|absOut:5.983|val:SCAN HERE
-TEXT_INJECT|comp:5|layer:scan here|absIn:0.000|absOut:5.933|val:SCAN HERE
-TEXT_INJECT|comp:6|layer:Movie Premiere|absIn:0.000|absOut:5.967|val:MOVIE PREMIERE
-TEXT_INJECT|comp:6|layer:scan here|absIn:0.000|absOut:5.967|val:SCAN HERE
-TEXT_INJECT|comp:7|layer:Creative Design Conference|absIn:0.100|absOut:5.833|val:CREATIVE DESIGN CONFERENCE
-TEXT_INJECT|comp:8|layer:scan here|absIn:0.550|absOut:6.000|val:SCAN HERE
-TEXT_INJECT|comp:9|layer:scan here|absIn:0.450|absOut:6.450|val:SCAN HERE
-TEXT_INJECT|comp:9|layer:New Collection Drop|absIn:0.000|absOut:6.000|val:NEW COLLECTION DROP
+TEXT_INJECT|comp:1|layer:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|absIn:0.667|absOut:5.883
+TEXT_INJECT|comp:2|layer:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|absIn:1.550|absOut:7.550
+TEXT_INJECT|comp:2|layer:Live Music Festival 2026|val:LIVE MUSIC FESTIVAL 2026|font:Archivo-SemiBold|size:39|align:center|hasAnimator:false|absIn:1.033|absOut:7.033
+TEXT_INJECT|comp:3|layer:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|absIn:0.400|absOut:5.400
+TEXT_INJECT|comp:3|layer:Explore contemporary works from emerging visual artists|val:Explore Contemporary Works From Emerging Visual Artists|font:Archivo-Light|size:38|align:left|hasAnimator:true|absIn:1.283|absOut:5.367
+TEXT_INJECT|comp:3|layer:Modern Art Showcase|val:MODERN ART SHOWCASE|font:Archivo-Bold|size:71|align:left|hasAnimator:true|absIn:0.983|absOut:5.233
+TEXT_INJECT|comp:4|layer:Final Championship Game|val:FINAL CHAMPIONSHIPGAME|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|absIn:0.183|absOut:5.983
+TEXT_INJECT|comp:4|layer:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|absIn:0.800|absOut:5.983
+TEXT_INJECT|comp:5|layer:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|absIn:0.000|absOut:5.933
+TEXT_INJECT|comp:6|layer:Movie Premiere|val:MOVIE PREMIERE|font:Archivo-Bold|size:39|align:left|hasAnimator:false|absIn:0.000|absOut:5.967
+TEXT_INJECT|comp:6|layer:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|absIn:0.000|absOut:5.967
+TEXT_INJECT|comp:7|layer:Creative Design Conference|val:CREATIVE DESIGN CONFERENCE|font:Archivo-Bold|size:46|align:left|hasAnimator:true|absIn:0.100|absOut:5.833
+TEXT_INJECT|comp:8|layer:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:24|align:center|hasAnimator:false|absIn:0.550|absOut:6.000
+TEXT_INJECT|comp:9|layer:scan here|val:SCAN HERE|font:Archivo-SemiBold|size:31|align:center|hasAnimator:false|absIn:0.450|absOut:6.450
+TEXT_INJECT|comp:9|layer:New Collection Drop|val:NEW COLLECTION DROP|font:Archivo-ExtraBold|size:28|align:center|hasAnimator:false|absIn:0.000|absOut:6.000
 
 -- IMAGE INJECTABLES --
-IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:5.917
-IMAGE_INJECT|type:comp_inject|comp:PLACEHOLDER HERE 1!!!|w:1920|h:1080|absIn:0.000|absOut:13.417
-IMAGE_INJECT|type:comp_inject|comp:PLACEHOLDER HERE 1!!!|w:409|h:408|absIn:0.000|absOut:6.000
-IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 2!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:6.000
-IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:5.983
-IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:5.983
-IMAGE_INJECT|type:comp_inject|comp:PLACEHOLDER HERE 1!!!|w:4096|h:2160|absIn:0.000|absOut:20.517
-IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:6.017
-IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 2!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:6.000
-IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|absIn:0.000|absOut:6.000
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|ratio:16:9|maskShape:rectangle|absIn:0.000|absOut:5.917
+IMAGE_INJECT|type:comp_inject|comp:PLACEHOLDER HERE 1!!!|w:1920|h:1080|ratio:16:9|absIn:0.000|absOut:13.417
+IMAGE_INJECT|type:comp_inject|comp:PLACEHOLDER HERE 1!!!|w:409|h:408|ratio:409:408|absIn:0.000|absOut:6.000
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 2!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|ratio:16:9|maskShape:rectangle|absIn:0.000|absOut:6.000
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|ratio:16:9|maskShape:rectangle|absIn:0.000|absOut:5.983
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|ratio:16:9|maskShape:rectangle|absIn:0.000|absOut:5.983
+IMAGE_INJECT|type:comp_inject|comp:PLACEHOLDER HERE 1!!!|w:4096|h:2160|ratio:256:135|absIn:0.000|absOut:20.517
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|ratio:16:9|maskShape:rectangle|absIn:0.000|absOut:6.017
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 2!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|ratio:16:9|maskShape:rectangle|absIn:0.000|absOut:6.000
+IMAGE_INJECT|type:replace|comp:PLACEHOLDER HERE 1!!!|layer:Delete This!!!.png|source:Delete This!!!.png|w:1920|h:1080|ratio:16:9|maskShape:rectangle|absIn:0.000|absOut:6.000
 
 -- SOLID INJECTABLES --
 
--- PROJECT LEVEL FOOTAGE --
-PROJECT_FOOTAGE|id:92|name:Delete This!!!.png|w:1920|h:1080|instances:7|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
+=== EXPRESSION CONTROLS ===
+EXPR_CONTROL|comp:CHANGE COLOR HERE!!!|layer:Style Controller|effect:CL: Color 16|type:color|value:#fd01f7|hasKeyframes:false|compW:1920|compH:1080
+EXPR_CONTROL|comp:CHANGE COLOR HERE!!!|layer:Style Controller|effect:CL: Color 7|type:color|value:#1200fe|hasKeyframes:false|compW:1920|compH:1080
+EXPR_CONTROL|comp:CHANGE COLOR HERE!!!|layer:Style Controller|effect:CL: Color 3|type:color|value:#02fcf9|hasKeyframes:false|compW:1920|compH:1080
+EXPR_CONTROL|comp:CHANGE COLOR HERE!!!|layer:Style Controller|effect:CL: Color 15|type:color|value:#f8d158|hasKeyframes:false|compW:1920|compH:1080
+EXPR_CONTROL|comp:CHANGE COLOR HERE!!!|layer:Style Controller|effect:CL: Color 1|type:color|value:#000000|hasKeyframes:false|compW:1920|compH:1080
+EXPR_CONTROL|comp:CHANGE COLOR HERE!!!|layer:Style Controller|effect:CL: Color 11|type:color|value:#f2f2f2|hasKeyframes:false|compW:1920|compH:1080
+
+=== SHAPE LAYER COLORS ===
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|type:fill|hex:#000000
+SHAPE_COLOR|comp:1|layer:Shape Layer 4|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:1|layer:Shape Layer 4|type:fill|hex:#000000
+SHAPE_COLOR|comp:1|layer:Shape Layer 3|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:1|layer:Shape Layer 3|type:fill|hex:#000000
+SHAPE_COLOR|comp:1|layer:Shape Layer 2|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:1|layer:Shape Layer 2|type:fill|hex:#020202
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|type:fill|hex:#000000
+SHAPE_COLOR|comp:2|layer:Shape Layer 4|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:2|layer:Shape Layer 4|type:fill|hex:#000000
+SHAPE_COLOR|comp:2|layer:Shape Layer 3|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:2|layer:Shape Layer 3|type:fill|hex:#000000
+SHAPE_COLOR|comp:2|layer:Shape Layer 2|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:2|layer:Shape Layer 2|type:fill|hex:#020202
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|type:fill|hex:#000000
+SHAPE_COLOR|comp:3|layer:Shape Layer 7|type:stroke|hex:#ffffff|strokeWidth:2
+SHAPE_COLOR|comp:3|layer:Shape Layer 7|type:fill|hex:#020202
+SHAPE_COLOR|comp:3|layer:Shape Layer 5|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:3|layer:Shape Layer 5|type:fill|hex:#020202
+SHAPE_COLOR|comp:3|layer:Shape Layer 6|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:3|layer:Shape Layer 6|type:fill|hex:#020202
+SHAPE_COLOR|comp:3|layer:Shape Layer 4|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:3|layer:Shape Layer 4|type:fill|hex:#020202
+SHAPE_COLOR|comp:3|layer:Shape Layer 3|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:3|layer:Shape Layer 3|type:fill|hex:#000000
+SHAPE_COLOR|comp:3|layer:Shape Layer 2|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:3|layer:Shape Layer 2|type:fill|hex:#020202
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|type:fill|hex:#000000
+SHAPE_COLOR|comp:4|layer:Shape Layer 5|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:4|layer:Shape Layer 5|type:fill|hex:#000000
+SHAPE_COLOR|comp:4|layer:Shape Layer 4|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:4|layer:Shape Layer 4|type:fill|hex:#020202
+SHAPE_COLOR|comp:4|layer:Shape Layer 3|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:4|layer:Shape Layer 3|type:fill|hex:#000000
+SHAPE_COLOR|comp:4|layer:Shape Layer 2|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:4|layer:Shape Layer 2|type:fill|hex:#020202
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|type:fill|hex:#000000
+SHAPE_COLOR|comp:5|layer:Shape Layer 6|type:stroke|hex:#ffffff|strokeWidth:2
+SHAPE_COLOR|comp:5|layer:Shape Layer 6|type:fill|hex:#ff0000
+SHAPE_COLOR|comp:5|layer:Shape Layer 5|type:stroke|hex:#ffffff|strokeWidth:2
+SHAPE_COLOR|comp:5|layer:Shape Layer 5|type:fill|hex:#020202
+SHAPE_COLOR|comp:5|layer:Shape Layer 4|type:stroke|hex:#ffffff|strokeWidth:2
+SHAPE_COLOR|comp:5|layer:Shape Layer 4|type:fill|hex:#020202
+SHAPE_COLOR|comp:5|layer:Shape Layer 3|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:5|layer:Shape Layer 3|type:fill|hex:#000000
+SHAPE_COLOR|comp:5|layer:Shape Layer 2|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:5|layer:Shape Layer 2|type:fill|hex:#020202
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|type:fill|hex:#000000
+SHAPE_COLOR|comp:6|layer:Shape Layer 5|type:stroke|hex:#ffffff|strokeWidth:2
+SHAPE_COLOR|comp:6|layer:Shape Layer 5|type:fill|hex:#020202
+SHAPE_COLOR|comp:6|layer:Shape Layer 3|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:6|layer:Shape Layer 3|type:fill|hex:#000000
+SHAPE_COLOR|comp:6|layer:Shape Layer 2|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:6|layer:Shape Layer 2|type:fill|hex:#020202
+SHAPE_COLOR|comp:7|layer:Shape Layer 4|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:7|layer:Shape Layer 4|type:fill|hex:#000000
+SHAPE_COLOR|comp:7|layer:Shape Layer 5|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:7|layer:Shape Layer 5|type:fill|hex:#020202
+SHAPE_COLOR|comp:7|layer:Shape Layer 3|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:7|layer:Shape Layer 3|type:fill|hex:#000000
+SHAPE_COLOR|comp:7|layer:Shape Layer 2|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:7|layer:Shape Layer 2|type:fill|hex:#020202
+SHAPE_COLOR|comp:PLACEHOLDER HERE 1!!!|layer:Rectangle 8|type:fill|hex:#f2f2f2
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:PLACEYOURQRCODEHERE 1!!!|type:fill|hex:#000000
+SHAPE_COLOR|comp:8|layer:Shape Layer 3|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:8|layer:Shape Layer 3|type:fill|hex:#000000
+SHAPE_COLOR|comp:8|layer:Shape Layer 2|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:8|layer:Shape Layer 2|type:fill|hex:#020202
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|type:fill|hex:#000000
+SHAPE_COLOR|comp:9|layer:Shape Layer 8|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:9|layer:Shape Layer 8|type:fill|hex:#000000
+SHAPE_COLOR|comp:9|layer:Shape Layer 7|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:9|layer:Shape Layer 7|type:fill|hex:#020202
+SHAPE_COLOR|comp:9|layer:Shape Layer 5|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:9|layer:Shape Layer 5|type:fill|hex:#000000
+SHAPE_COLOR|comp:9|layer:Shape Layer 4|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:9|layer:Shape Layer 4|type:fill|hex:#020202
+SHAPE_COLOR|comp:9|layer:Shape Layer 3|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:9|layer:Shape Layer 3|type:fill|hex:#000000
+SHAPE_COLOR|comp:9|layer:Shape Layer 2|type:stroke|hex:#ffffff|strokeWidth:6
+SHAPE_COLOR|comp:9|layer:Shape Layer 2|type:fill|hex:#020202
+SHAPE_COLOR|comp:PLACEHOLDER HERE 1!!!|layer:Rectangle 4|type:fill|hex:#f2f2f2
+SHAPE_COLOR|comp:PLACEHOLDER HERE 1!!!|layer:Rectangle 5|type:fill|hex:#f2f2f2
+SHAPE_COLOR|comp:PLACEHOLDER HERE 1!!!|layer:Rectangle 6|type:fill|hex:#f2f2f2
+SHAPE_COLOR|comp:PLACEHOLDER HERE 1!!!|layer:Rectangle 1|type:fill|hex:#f2f2f2
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Rectangle 1|type:fill|hex:#f2f2f2
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Rectangle 1|type:fill|hex:#f2f2f2
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Rectangle 1|type:fill|hex:#f2f2f2
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Rectangle 2|type:fill|hex:#f2f2f2
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Rectangle 1|type:fill|hex:#f2f2f2
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Rectangle 1|type:fill|hex:#f2f2f2
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Rectangle 2|type:fill|hex:#f2f2f2
+SHAPE_COLOR|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|type:fill|hex:#000000
+SHAPE_COLOR|comp:Pre-comp 1|layer:Rectangle 1|type:fill|hex:#f2f2f2
+SHAPE_COLOR|comp:Shape Layer 1 Comp 1|layer:Shape Layer 1|type:fill|hex:#000000
+SHAPE_COLOR|comp:Shape Layer 1 Comp 2|layer:Shape Layer 1|type:fill|hex:#000000
+SHAPE_COLOR|comp:Shape Layer 1 Comp 3|layer:Shape Layer 1|type:fill|hex:#000000
+SHAPE_COLOR|comp:Shape Layer 1 Comp 4|layer:Shape Layer 1|type:fill|hex:#000000
+SHAPE_COLOR|comp:Shape Layer 1 Comp 5|layer:Shape Layer 1|type:fill|hex:#000000
+SHAPE_COLOR|comp:Shape Layer 1 Comp 6|layer:Shape Layer 1|type:fill|hex:#000000
+SHAPE_COLOR|comp:Shape Layer 1 Comp 7|layer:Shape Layer 1|type:fill|hex:#000000
+SHAPE_COLOR|comp:Shape Layer 6 Comp 1|layer:Shape Layer 6|type:fill|hex:#000000
+SHAPE_COLOR|comp:Vector Comp 1|layer:Shape Layer 3|type:fill|hex:#ff0000
+SHAPE_COLOR|comp:Vector Comp 1|layer:Shape Layer 2|type:fill|hex:#ff0000
+SHAPE_COLOR|comp:Vector Comp 1|layer:Shape Layer 1|type:fill|hex:#ff0000
+
+=== AUDIO LAYERS ===
+
+=== SOLID COLORS ===
+
+=== POSITION MARKERS ===
+POSITION_MARKER|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|layerType:shape|x:172|y:161|visible:true|compW:342|compH:330
+POSITION_MARKER|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|layerType:shape|x:171|y:161|visible:true|compW:342|compH:329
+POSITION_MARKER|comp:2|layer:Vector 1 Comp 1|layerType:precomp|x:960|y:540|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|layerType:shape|x:172|y:162|visible:true|compW:343|compH:330
+POSITION_MARKER|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|layerType:shape|x:172|y:161|visible:true|compW:342|compH:330
+POSITION_MARKER|comp:4|layer:Vector Comp 3|layerType:precomp|x:960|y:540|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:4|layer:Vector Comp 2|layerType:precomp|x:960|y:540|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:4|layer:Vector Comp 4|layerType:precomp|x:960|y:540|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|layerType:shape|x:189|y:183|visible:true|compW:377|compH:364
+POSITION_MARKER|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|layerType:shape|x:171|y:161|visible:true|compW:342|compH:329
+POSITION_MARKER|comp:6|layer:Vector 2 Comp 1|layerType:precomp|x:554|y:26|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:7|layer:Vector Comp 5|layerType:precomp|x:960|y:540|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:8|layer:Vector Comp 1|layerType:precomp|x:-475|y:254|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:8|layer:Vector Comp 1|layerType:precomp|x:-159|y:-90|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:8|layer:Vector Comp 1|layerType:precomp|x:147|y:110|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|layerType:shape|x:192|y:181|visible:true|compW:382|compH:369
+POSITION_MARKER|comp:PLACEYOURQRCODEHERE 1!!!|layer:Vector|layerType:shape|x:103|y:99|visible:true|compW:205|compH:198
+POSITION_MARKER|comp:Pre-comp 3|layer:Vector|layerType:shape|x:262|y:338|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:Pre-comp 3|layer:Vector|layerType:shape|x:1658|y:800|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:Pre-comp 4|layer:Vector|layerType:shape|x:1227|y:265|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:Pre-comp 4|layer:Vector|layerType:shape|x:873|y:556|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:Vector 1 Comp 1|layer:Vector 1|layerType:shape|x:955|y:483|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:Vector 2 Comp 1|layer:Vector 2|layerType:shape|x:330|y:520|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:Vector Comp 2|layer:Vector|layerType:shape|x:1162|y:608|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:Vector Comp 3|layer:Vector|layerType:shape|x:737|y:893|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:Vector Comp 4|layer:Vector|layerType:shape|x:779|y:215|visible:true|compW:1920|compH:1080
+POSITION_MARKER|comp:Vector Comp 5|layer:Vector|layerType:shape|x:814|y:159|visible:true|compW:1920|compH:1080
+
+=== TOGGLE LAYERS ===
+TOGGLE_GROUP|comp:1|type:pattern|count:4|prefix:shape
+TOGGLE_LAYER|comp:1|layer:Shape Layer 4|defaultVisible:false|type:pattern|centerX:960|centerY:540
+TOGGLE_LAYER|comp:1|layer:Shape Layer 1 Comp 2|defaultVisible:true|type:pattern|centerX:960|centerY:540
+TOGGLE_LAYER|comp:1|layer:Shape Layer 3|defaultVisible:false|type:pattern|centerX:1031|centerY:569
+TOGGLE_LAYER|comp:1|layer:Shape Layer 2|defaultVisible:true|type:pattern|centerX:1031|centerY:569
+TOGGLE_GROUP|comp:2|type:pattern|count:4|prefix:shape
+TOGGLE_LAYER|comp:2|layer:Shape Layer 4|defaultVisible:false|type:pattern|centerX:960|centerY:540
+TOGGLE_LAYER|comp:2|layer:Shape Layer 1 Comp 1|defaultVisible:true|type:pattern|centerX:960|centerY:540
+TOGGLE_LAYER|comp:2|layer:Shape Layer 3|defaultVisible:false|type:pattern|centerX:1017|centerY:533
+TOGGLE_LAYER|comp:2|layer:Shape Layer 2|defaultVisible:true|type:pattern|centerX:1017|centerY:533
+TOGGLE_GROUP|comp:5|type:pattern|count:6|prefix:shape
+TOGGLE_LAYER|comp:5|layer:Shape Layer 6|defaultVisible:true|type:pattern|centerX:960|centerY:540
+TOGGLE_LAYER|comp:5|layer:Shape Layer 1 Comp 4|defaultVisible:true|type:pattern|centerX:960|centerY:540
+TOGGLE_LAYER|comp:5|layer:Shape Layer 5|defaultVisible:false|type:pattern|centerX:1043|centerY:423
+TOGGLE_LAYER|comp:5|layer:Shape Layer 4|defaultVisible:true|type:pattern|centerX:1043|centerY:423
+TOGGLE_LAYER|comp:5|layer:Shape Layer 3|defaultVisible:false|type:pattern|centerX:1049|centerY:732
+TOGGLE_LAYER|comp:5|layer:Shape Layer 2|defaultVisible:true|type:pattern|centerX:1049|centerY:732
+TOGGLE_GROUP|comp:6|type:pattern|count:4|prefix:shape
+TOGGLE_LAYER|comp:6|layer:Shape Layer 5|defaultVisible:false|type:pattern|centerX:573|centerY:-44
+TOGGLE_LAYER|comp:6|layer:Shape Layer 1 Comp 5|defaultVisible:true|type:pattern|centerX:639|centerY:-40
+TOGGLE_LAYER|comp:6|layer:Shape Layer 3|defaultVisible:false|type:pattern|centerX:-203|centerY:583
+TOGGLE_LAYER|comp:6|layer:Shape Layer 2|defaultVisible:true|type:pattern|centerX:-203|centerY:583
+
+=== SCENE STRUCTURE ===
+SCENE_CONTAINER|name:#Render|dur:75.950
+SCENE|block:1|mainIn:0.000|mainOut:5.917|dur:5.917|footageCount:0|footage:|textLayers:scan here
+SCENE|block:2|mainIn:5.917|mainOut:11.917|dur:6.000|footageCount:0|footage:|textLayers:scan here,Live Music Festival 2026
+SCENE|block:4|mainIn:11.917|mainOut:17.900|dur:5.983|footageCount:0|footage:|textLayers:Final Championship Game,scan here
+SCENE|block:5|mainIn:17.900|mainOut:23.883|dur:5.983|footageCount:0|footage:|textLayers:scan here
+SCENE|block:6|mainIn:23.883|mainOut:29.850|dur:5.967|footageCount:0|footage:|textLayers:Movie Premiere,scan here
+SCENE|block:9|mainIn:29.850|mainOut:35.850|dur:6.000|footageCount:0|footage:|textLayers:scan here,New Collection Drop
+SCENE|block:3|mainIn:35.850|mainOut:41.850|dur:6.000|footageCount:0|footage:|textLayers:scan here,Explore contemporary works from emerging visual artists,Modern Art Showcase
+SCENE|block:7|mainIn:41.850|mainOut:47.867|dur:6.017|footageCount:0|footage:|textLayers:Creative Design Conference
+SCENE|block:8|mainIn:47.867|mainOut:53.867|dur:6.000|footageCount:0|footage:|textLayers:scan here
+
+=== MAP CALIBRATION ===
+
+=== PROJECT LEVEL FOOTAGE ===
+PROJECT_FOOTAGE|id:92|name:Delete This!!!.png|w:1920|h:1080|instances:7|missing:undefined|file:C:\Users\SHIVAM\Desktop\motionai\backend\templates\Modern QR Code\(Footage)\misc\Graphics\Delete This!!!.png
 
 SCAN_COMPLETE

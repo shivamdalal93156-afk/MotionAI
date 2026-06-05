@@ -1,0 +1,171 @@
+PROBE_PROJECT_OPEN: 168 items
+PROBE_TEXT_OK: Сover.CONFIDENTIAL
+PROBE_TEXT_OK: Сover.Please do not open if you do not  have the required tolerance
+PROBE_TEXT_OK: 10 - Badge.VISITOR
+PROBE_TEXT_OK: 10 - Badge.Name
+PROBE_TEXT_OK: 10 - Badge.Surname
+PROBE_TEXT_OK: BusinessCard_01.www.Herbert-Pail.com
+PROBE_TEXT_OK: BusinessCard_01.PRIVATE INVESTIGATOR
+PROBE_TEXT_OK: BusinessCard_01.Herbert Paul Jones
+PROBE_TEXT_OK: BusinessCard_02.FBI consultant
+PROBE_TEXT_OK: BusinessCard_02.Peter  Cornelius  Jones
+PROBE_TEXT_OK: Sticker_01.Get it before  everybody else!
+PROBE_TEXT_OK: Sticker_02.Get to the heart  of the matter
+PROBE_TEXT_OK: Sticker_03.The police are still investigating the crime
+PROBE_TEXT_OK: Sticker_04.Get to the heart  of the matter
+PROBE_TEXT_OK: Sticker_05.Jeremy Cornelius  Murphy
+PROBE_TEXT_OK: 01 - Newspaper-Big.Peter James Thompson
+PROBE_TEXT_OK: 02 - Palaroid.“Jimmy The Gent” Burke
+PROBE_TEXT_OK: 03 - Photo.Beverly Adrian Parrish
+PROBE_TEXT_OK: 05 - Photo.Maria Rodriguez
+PROBE_TEXT_FAIL: 06 - Newspaper-Small.Sophia Johnson :: layer not found
+PROBE_TEXT_OK: 06 - Newspaper-Small.The police power is the basis for land-use planning authority in the United States.  This authority is usually delegated by state governments to local governments,  including counties and municipalities.  It is these local governments that most frequently exercise police power in land use planning matters. The regulation of land  use based on police power is distinct from the taking of private property by the government through the power of eminent domain. If the regulation of land use is done under the authority of the
+PROBE_TEXT_OK: 07 - Photo.Beverly Adrian Parrish
+PROBE_TEXT_OK: 08 - Palaroid.“Jimmy The Gent” Burke
+PROBE_TEXT_OK: 09 - Palaroid.“Jimmy The Gent” Burke
+PROBE_TEXT_OK: 11 - Palaroid.“Jimmy The Gent” Burke
+PROBE_TEXT_FAIL: 12 - Newspaper-Tall.Isabella Jones :: layer not found
+PROBE_TEXT_OK: 13 - Palaroid.“Jimmy The Gent” Burke
+PROBE_TEXT_OK: 14 - Palaroid.“Jimmy The Gent” Burke
+PROBE_TEXT_OK: 15 - Photo.Roger Simon Wheeler
+PROBE_TEXT_OK: 16 - Magazine.PAGE 12
+PROBE_TEXT_OK: 16 - Magazine.THE ULTIMATE GUIDE TO CROWD- FUNDING
+PROBE_TEXT_OK: 16 - Magazine.Laptop  travel ban?  Here's  what  you need  to know
+PROBE_TEXT_OK: 16 - Magazine.25 amazing  gifts that  women  actually  want
+PROBE_TEXT_OK: 16 - Magazine.50 state  road trip:  Free tourist  attractions
+PROBE_TEXT_FAIL: 16 - Magazine.Effective  and Safe :: layer not found
+PROBE_TEXT_FAIL: 16 - Magazine.SAVE UP TO 25% RIGHT NOW!!! :: layer not found
+PROBE_TEXT_OK: 16 - Magazine.Got a will? Here are 11 more end-of-life documents you may need
+PROBE_TEXT_OK: 16 - Magazine.Laptop travel ban? Here's what you need to know
+PROBE_TEXT_OK: 16 - Magazine.How
+PROBE_TEXT_OK: 16 - Magazine.I Did It
+PROBE_TEXT_OK: 17 - Photo.John Peter Gallagher
+PROBE_SOLID_OK: 10 - Badge.Photo_10
+PROBE_SOLID_OK: 01 - Newspaper-Big.Photo_01
+PROBE_SOLID_OK: 02 - Palaroid.Photo_02
+PROBE_SOLID_OK: 03 - Photo.Photo_03
+PROBE_SOLID_OK: 04 - Photo.Photo_04
+PROBE_SOLID_OK: 05 - Photo.Photo_05
+PROBE_SOLID_OK: 06 - Newspaper-Small.Photo_06
+PROBE_SOLID_OK: 07 - Photo.Photo_07
+PROBE_SOLID_OK: 08 - Palaroid.Photo_08
+PROBE_SOLID_OK: 09 - Palaroid.Photo_09
+PROBE_SOLID_OK: 11 - Palaroid.Photo_11
+PROBE_SOLID_OK: 12 - Newspaper-Tall.Photo_12
+PROBE_SOLID_OK: 13 - Palaroid.Photo_13
+PROBE_SOLID_OK: 14 - Palaroid.Photo_14
+PROBE_SOLID_OK: 15 - Photo.Photo_15
+PROBE_SOLID_OK: 16 - Magazine.Photo_16
+PROBE_SOLID_OK: 17 - Photo.Photo_17
+PROBE_SOLID_OK: 18 - Photo Frame.Photo_18
+PROBE_SOLID_OK: 19 - Logo.Photo_19 - Logo
+PROBE_IMAGE_OK: Сover.Cover.png
+PROBE_IMAGE_OK: 10 - Badge.Badge.png
+PROBE_IMAGE_OK: 10 - Badge.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 10 - Badge.Dirty_02.png
+PROBE_IMAGE_OK: 10 - Badge.Dirty_01.png
+PROBE_IMAGE_OK: Background.Background_01.jpg
+PROBE_IMAGE_OK: Background.Background_01.jpg
+PROBE_IMAGE_OK: Background.Background_02.jpg
+PROBE_IMAGE_OK: Background.Background_03.jpg
+PROBE_IMAGE_OK: Background 2.Background_01.jpg
+PROBE_IMAGE_OK: BusinessCard_01.BusinessCard_01.png
+PROBE_IMAGE_OK: BusinessCard_02.BusinessCard_02.jpg
+PROBE_IMAGE_OK: CD.CD.png
+PROBE_IMAGE_OK: Clip.Clip.png
+PROBE_IMAGE_OK: Clothes Hanger.ClothesHanger.png
+PROBE_IMAGE_OK: Cover_02.Cover_02.png
+PROBE_IMAGE_OK: Dock_01.Dock_01.png
+PROBE_IMAGE_OK: Dock_02.Dock_02.png
+PROBE_IMAGE_OK: Dock_03.Dock_03.png
+PROBE_IMAGE_OK: Dock_04.Dock_04.png
+PROBE_IMAGE_OK: EnvelopePostal.EnvelopePostal.png
+PROBE_IMAGE_OK: FloorPlan.FloorPlan.jpg
+PROBE_IMAGE_OK: knot.knot.png
+PROBE_IMAGE_OK: Map_01.Map_01.png
+PROBE_IMAGE_OK: Map_02.Map_02.jpg
+PROBE_IMAGE_OK: Map_04.Map_04.jpg
+PROBE_IMAGE_OK: Palaroid.Palaroid.png
+PROBE_IMAGE_OK: ParkingViolation.ParkingViolation.png
+PROBE_IMAGE_OK: Police-Flashing.mp4_looped.Police-Flashing.mp4
+PROBE_IMAGE_OK: Police-Flashing.mp4_looped.Police-Flashing.mp4
+PROBE_IMAGE_OK: Pushpin_01.Pushpin_01.png
+PROBE_IMAGE_OK: Pushpin_02.Pushpin_02.png
+PROBE_IMAGE_OK: ScotchTape_01.ScotchTape_01.png
+PROBE_IMAGE_OK: ScotchTape_02.ScotchTape_02.png
+PROBE_IMAGE_OK: ScotchTape_03.ScotchTape_03.png
+PROBE_IMAGE_OK: ScotchTape_04.ScotchTape_04.png
+PROBE_IMAGE_OK: ScotchTape_05.ScotchTape_05.png
+PROBE_IMAGE_OK: ScotchTape_06.ScotchTape_06.png
+PROBE_IMAGE_OK: ScotchTape_07.ScotchTape_07.png
+PROBE_IMAGE_OK: ScotchTape_08.ScotchTape_08.png
+PROBE_IMAGE_OK: steam.steam.mp4
+PROBE_IMAGE_OK: steam.steam.mp4
+PROBE_IMAGE_OK: steam.steam.mp4
+PROBE_IMAGE_OK: Sticker_01.sticker.png
+PROBE_IMAGE_OK: Sticker_02.sticker.png
+PROBE_IMAGE_OK: Sticker_03.sticker.png
+PROBE_IMAGE_OK: Sticker_04.sticker.png
+PROBE_IMAGE_OK: Sticker_05.sticker.png
+PROBE_IMAGE_OK: Table Comp.Table Mask
+PROBE_IMAGE_OK: Table Comp.Table.png
+PROBE_IMAGE_OK: Test.Background_01.jpg
+PROBE_IMAGE_OK: Ticket_01.Ticket_01.png
+PROBE_IMAGE_OK: Warehouse.Warehouse.jpg
+PROBE_IMAGE_OK: WhileYouWereOut.WhileYouWereOut.png
+PROBE_IMAGE_OK: 01 - Newspaper-Big.Newspaper-Big.png
+PROBE_IMAGE_OK: 01 - Newspaper-Big.dirty1.png
+PROBE_IMAGE_OK: 01 - Newspaper-Big.Dirty_02.png
+PROBE_IMAGE_OK: 01 - Newspaper-Big.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 02 - Palaroid.Dirty_01.png
+PROBE_IMAGE_OK: 02 - Palaroid.Dirty_02.png
+PROBE_IMAGE_OK: 02 - Palaroid.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 03 - Photo.dirty1.png
+PROBE_IMAGE_OK: 03 - Photo.Dirty_02.png
+PROBE_IMAGE_OK: 03 - Photo.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 04 - Photo.dirty1.png
+PROBE_IMAGE_OK: 04 - Photo.Dirty_02.png
+PROBE_IMAGE_OK: 04 - Photo.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 05 - Photo.dirty1.png
+PROBE_IMAGE_OK: 05 - Photo.Dirty_02.png
+PROBE_IMAGE_OK: 05 - Photo.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 06 - Newspaper-Small.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 06 - Newspaper-Small.Newspaper-Small.png
+PROBE_IMAGE_OK: 06 - Newspaper-Small.Newspaper-Small.png
+PROBE_IMAGE_OK: 07 - Photo.dirty1.png
+PROBE_IMAGE_OK: 07 - Photo.Dirty_02.png
+PROBE_IMAGE_OK: 07 - Photo.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 08 - Palaroid.Dirty_01.png
+PROBE_IMAGE_OK: 08 - Palaroid.Dirty_02.png
+PROBE_IMAGE_OK: 08 - Palaroid.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 09 - Palaroid.Dirty_01.png
+PROBE_IMAGE_OK: 09 - Palaroid.Dirty_02.png
+PROBE_IMAGE_OK: 09 - Palaroid.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 11 - Palaroid.Dirty_01.png
+PROBE_IMAGE_OK: 11 - Palaroid.Dirty_02.png
+PROBE_IMAGE_OK: 11 - Palaroid.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 12 - Newspaper-Tall.Newspaper-Tall.png
+PROBE_IMAGE_OK: 12 - Newspaper-Tall.dirty1.png
+PROBE_IMAGE_OK: 12 - Newspaper-Tall.Dirty_02.png
+PROBE_IMAGE_OK: 12 - Newspaper-Tall.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 12 - Newspaper-Tall.Background
+PROBE_IMAGE_OK: 13 - Palaroid.Dirty_01.png
+PROBE_IMAGE_OK: 13 - Palaroid.Dirty_02.png
+PROBE_IMAGE_OK: 13 - Palaroid.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 14 - Palaroid.Dirty_01.png
+PROBE_IMAGE_OK: 14 - Palaroid.Dirty_02.png
+PROBE_IMAGE_OK: 14 - Palaroid.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 15 - Photo.dirty1.png
+PROBE_IMAGE_OK: 15 - Photo.Dirty_02.png
+PROBE_IMAGE_OK: 15 - Photo.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 16 - Magazine.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 16 - Magazine.Dirty_02.png
+PROBE_IMAGE_OK: 16 - Magazine.dirty1.png
+PROBE_IMAGE_OK: 17 - Photo.dirty1.png
+PROBE_IMAGE_OK: 17 - Photo.Dirty_02.png
+PROBE_IMAGE_OK: 17 - Photo.paper-crumpled_02.jpg
+PROBE_IMAGE_OK: 18 - Photo Frame.Table.png
+PROBE_IMAGE_OK: 18 - Photo Frame.dirty1.png
+PROBE_IMAGE_OK: 18 - Photo Frame.Dirty_02.png
+PROBE_IMAGE_OK: 18 - Photo Frame.paper-crumpled_02.jpg
+PROBE_SAVE_COMPLETE
