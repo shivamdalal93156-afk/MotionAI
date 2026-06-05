@@ -14,3 +14,5 @@ temp/
 *.psd
 *.ai
 (Footage)/
+temp_probe/
+uploads/
