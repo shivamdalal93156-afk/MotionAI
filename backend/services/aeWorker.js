@@ -478,6 +478,44 @@ function buildJSX(job, templateConfig, jobDir) {
 
     return `log('EXPR SKIP: unsupported type "${ecType}" for key "${ec.key}"');`;
   }).join('\n');
+  // ── Icon toggle injection ─────────────────────────────────────
+const iconToggleSlots = (templateConfig.iconToggleLayers || {}).slots || [];
+const iconToggleLines = iconToggleSlots.map(slot => {
+  const value = inputData[slot.key];
+  // Use provided value, fall back to default from config
+  const selectedIcon = value || slot.default;
+  if (!selectedIcon) return `log('ICON SKIP: key "${slot.key}" has no value and no default');`;
+  
+  const safeComp = String(slot.compName).replace(/'/g, "\\'");
+  const safeIcon = String(selectedIcon).replace(/'/g, "\\'");
+
+  return `
+(function() {
+  var iconComp = null;
+  for (var ci = 1; ci <= app.project.numItems; ci++) {
+    var it = app.project.item(ci);
+    if (it instanceof CompItem && it.name === '${safeComp}') {
+      iconComp = it; break;
+    }
+  }
+  if (!iconComp) {
+    log('ICON MISS: comp "${safeComp}" not found');
+    return;
+  }
+  var found = false;
+  for (var li = 1; li <= iconComp.numLayers; li++) {
+    var lyr = iconComp.layer(li);
+    try { if (lyr.locked) lyr.locked = false; } catch(e) {}
+    var match = (lyr.name === '${safeIcon}');
+    lyr.enabled = match;
+    if (match) {
+      found = true;
+      log('ICON ON: "${safeComp}" -> "${safeIcon}"');
+    }
+  }
+  if (!found) log('ICON MISS: layer "${safeIcon}" not found in "${safeComp}"');
+})();`;
+}).join('\n');
 
   // ── Country lines ─────────────────────────────────────────────
   // Calibration: two known pixel→angle mappings stored in config.
@@ -734,6 +772,9 @@ try {
 
   log('EXPR: setting expression controls...');
   ${exprLines}
+  writeHeartbeat();
+  log('ICON: toggling icon layers...');
+  ${iconToggleLines}
   writeHeartbeat();
 
   log('COUNTRY: setting country visibility...');
