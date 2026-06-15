@@ -3,6 +3,7 @@ const router  = express.Router();
 const multer  = require('multer');
 const path    = require('path');
 const fs      = require('fs');
+const { createAutomaticImageMask } = require('../services/maskWorker');
 
 const UPLOADS_DIR = path.resolve(__dirname, '..', 'uploads');
 if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true });
@@ -52,24 +53,41 @@ const upload = multer({
 });
 
 // POST /api/upload
-router.post('/', upload.single('file'), (req, res) => {
+router.post('/', upload.single('file'), async (req, res) => {
   if (!req.file) {
     return res.status(400).json({ error: 'NO_FILE', message: 'No file received' });
   }
 
-  const absolutePath = req.file.path.replace(/\\/g, '/');
-const serverPath   = `/uploads/${req.file.filename}`;
+  let finalPath = req.file.path;
+  let finalFilename = req.file.filename;
+  let masked = false;
 
-res.json({
-  ok:           true,
-  fileName:     req.file.filename,
-  originalName: req.file.originalname,
-  filePath:     absolutePath,   // full path for AE injection
-  path:         absolutePath,   // alias — some frontend code uses this
-  serverPath:   serverPath,     // web-accessible URL for preview
-  sizeKB:       Math.round(req.file.size / 1024),
-  mimeType:     req.file.mimetype,
-});
+  // Run automatic background masking on images
+  try {
+    const maskedPath = await createAutomaticImageMask(req.file.path);
+    if (maskedPath !== req.file.path) {
+      finalPath = maskedPath;
+      finalFilename = path.basename(maskedPath);
+      masked = true;
+    }
+  } catch (e) {
+    console.error('[Upload] Masking failed, using original file:', e.message);
+  }
+
+  const absolutePath = finalPath.replace(/\\/g, '/');
+  const serverPath   = `/uploads/${finalFilename}`;
+
+  res.json({
+    ok:           true,
+    fileName:     finalFilename,
+    originalName: req.file.originalname,
+    filePath:     absolutePath,   // full path for AE injection
+    path:         absolutePath,   // alias — some frontend code uses this
+    serverPath:   serverPath,     // web-accessible URL for preview
+    sizeKB:       Math.round(fs.statSync(finalPath).size / 1024),
+    mimeType:     req.file.mimetype,
+    masked:       masked,
+  });
 })
 // DELETE /api/upload/:filename — cleanup after render
 router.delete('/:filename', (req, res) => {
